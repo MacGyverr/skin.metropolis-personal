@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<action>ActivateWindow(Videos,Addons,return)</action>
+		<label>1212</label>
+		<label2>32020</label2>
+		<defaultID>1212</defaultID>
+		<icon>DefaultAddonPicture.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(MusicFiles,Addons,return)</action>
+		<label>1211</label>
+		<label2>32020</label2>
+		<defaultID>1211</defaultID>
+		<icon>DefaultAddonPicture.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(Pictures,Addons,return)</action>
+		<label>1213</label>
+		<label2>32020</label2>
+		<defaultID>1213</defaultID>
+		<icon>DefaultAddonPicture.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(addonbrowser)</action>
+		<label>Browser</label>
+		<label2>32020</label2>
+		<defaultID>Browser</defaultID>
+		<icon>DefaultAddonPicture.png</icon>
+		<thumb />
+	</shortcut>
+</shortcuts>

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<action>ActivateWindow(Videos,MusicVideoTitles,Return)</action>
+		<label>556</label>
+		<label2>32019</label2>
+		<defaultID>556</defaultID>
+		<icon>DefaultFolder.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(Videos,MusicVideoGenres,return)</action>
+		<label>135</label>
+		<label2>32019</label2>
+		<defaultID>135</defaultID>
+		<icon>DefaultFolder.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(Videos,MusicVideoYears,return)</action>
+		<label>652</label>
+		<label2>32019</label2>
+		<defaultID>652</defaultID>
+		<icon>DefaultFolder.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(Videos,MusicVideoArtists,return)</action>
+		<label>133</label>
+		<label2>32019</label2>
+		<defaultID>133</defaultID>
+		<icon>DefaultFolder.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(Videos,MusicVideoAlbums,return)</action>
+		<label>132</label>
+		<label2>32019</label2>
+		<defaultID>132</defaultID>
+		<icon>DefaultFolder.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(Videos,Files)</action>
+		<label>31289</label>
+		<label2>32019</label2>
+		<defaultID>31289</defaultID>
+		<icon>DefaultFolder.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>UpdateLibrary(video)</action>
+		<label>653</label>
+		<label2>32019</label2>
+		<defaultID>653</defaultID>
+		<icon>DefaultFolder.png</icon>
+		<thumb />
+	</shortcut>
+</shortcuts>

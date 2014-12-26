@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<action>ActivateWindow(Videos,TvShowGenres,return)</action>
+		<label>135</label>
+		<label2>20343</label2>
+		<defaultID>135</defaultID>
+		<icon>DefaultGenre.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(Videos,TvShowYears,return)</action>
+		<label>562</label>
+		<label2>20343</label2>
+		<defaultID>562</defaultID>
+		<icon>DefaultYear.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(Videos,TvShowActors,return)</action>
+		<label>344</label>
+		<label2>20343</label2>
+		<defaultID>344</defaultID>
+		<icon>DefaultActor.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(Videos,TVShowStudios,return)</action>
+		<label>20388</label>
+		<label2>20343</label2>
+		<defaultID>344</defaultID>
+		<icon>DefaultActor.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(Videos,TvShowTags,return)</action>
+		<label>20459</label>
+		<label2>20343</label2>
+		<defaultID>344</defaultID>
+		<icon>DefaultActor.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(Videos,Files,return)</action>
+		<label>31289</label>
+		<label2>20343</label2>
+		<defaultID>344</defaultID>
+		<icon>DefaultActor.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>CleanLibrary(video)</action>
+		<label>31465</label>
+		<label2>20343</label2>
+		<defaultID>344</defaultID>
+		<icon>DefaultActor.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>UpdateLibrary(video)</action>
+		<label>653</label>
+		<label2>20343</label2>
+		<defaultID>344</defaultID>
+		<icon>DefaultActor.png</icon>
+		<thumb />
+	</shortcut>
+</shortcuts>

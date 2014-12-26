@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<action>RunScript(script.globalsearch,movies=true)</action>
+		<label>Movies</label>
+		<label2>32034</label2>
+		<defaultID>searchmovies</defaultID>
+		<icon>DefaultFolder.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>RunScript(script.globalsearch,actors=true)</action>
+		<label>Actors</label>
+		<label2>32034</label2>
+		<defaultID>searchactors</defaultID>
+		<icon>DefaultFolder.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>RunScript(script.globalsearch,tvshows=true)</action>
+		<label>TV Shows</label>
+		<label2>32034</label2>
+		<defaultID>searchtvshows</defaultID>
+		<icon>UnknownUser.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>RunScript(script.globalsearch,musicvideos=true)</action>
+		<label>Music Videos</label>
+		<label2>32034</label2>
+		<defaultID>searchmusicvideos</defaultID>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>RunScript(script.globalsearch,songs=true)</action>
+		<label>Songs</label>
+		<label2>32034</label2>
+		<defaultID>searchsongs</defaultID>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>RunScript(script.globalsearch,artists=true)</action>
+		<label>Artists</label>
+		<label2>32034</label2>
+		<defaultID>searchartists</defaultID>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+	</shortcut>
+</shortcuts>

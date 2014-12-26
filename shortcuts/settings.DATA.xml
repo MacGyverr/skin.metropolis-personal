@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<action>ActivateWindow(SkinSettings)</action>
+		<label>31011</label>
+		<label2>32034</label2>
+		<defaultID>31011</defaultID>
+		<icon>DefaultFolder.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(SystemSettings)</action>
+		<label>13000</label>
+		<label2>32034</label2>
+		<defaultID>13000</defaultID>
+		<icon>UnknownUser.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(ServiceSettings)</action>
+		<label>31468</label>
+		<label2>32034</label2>
+		<defaultID>31468</defaultID>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(AppearanceSettings)</action>
+		<label>31469</label>
+		<label2>32034</label2>
+		<defaultID>31469</defaultID>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(FileManager)</action>
+		<label>7</label>
+		<label2>32034</label2>
+		<defaultID>7</defaultID>
+		<icon>DefaultFolder.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(Profiles)</action>
+		<label>13200</label>
+		<label2>32034</label2>
+		<defaultID>13200</defaultID>
+		<icon>UnknownUser.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(SystemInfo)</action>
+		<label>10007</label>
+		<label2>32034</label2>
+		<defaultID>10007</defaultID>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+	</shortcut>
+</shortcuts>

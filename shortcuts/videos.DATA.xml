@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<action>ActivateWindow(Videos,root)</action>
+		<label>15100</label>
+		<label2>32014</label2>
+		<defaultID>744</defaultID>
+		<icon>DefaultFolder.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(MusicLibrary,MovieTitles,return)</action>
+		<label>20342</label>
+		<label2>32034</label2>
+		<defaultID>movietitles</defaultID>
+		<icon>DefaultMusicVideos.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(MusicLibrary,TvShowTitles,return)</action>
+		<label>20343</label>
+		<label2>32034</label2>
+		<defaultID>tvshowtitles</defaultID>
+		<icon>DefaultMusicVideos.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(MusicLibrary,MusicVideos,return)</action>
+		<label>20389</label>
+		<label2>32034</label2>
+		<defaultID>musicvideos</defaultID>
+		<icon>DefaultMusicVideos.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(Videos,Playlists,return)</action>
+		<label>136</label>
+		<label2>32014</label2>
+		<defaultID>136</defaultID>
+		<icon>DefaultAddonVideo.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>CleanLibrary(video)</action>
+		<label>31465</label>
+		<label2>32014</label2>
+		<defaultID>31465</defaultID>
+		<icon>DefaultAddonVideo.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>UpdateLibrary(video)</action>
+		<label>653</label>
+		<label2>32014</label2>
+		<defaultID>653</defaultID>
+		<icon>DefaultAddonVideo.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(VideosSettings)</action>
+		<label>5</label>
+		<label2>32014</label2>
+		<defaultID>5</defaultID>
+		<icon>DefaultAddonVideo.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(Videos,Addons,return)</action>
+		<label>1037</label>
+		<label2>32014</label2>
+		<defaultID>1037</defaultID>
+		<icon>DefaultAddonVideo.png</icon>
+		<thumb />
+	</shortcut>
+</shortcuts>
