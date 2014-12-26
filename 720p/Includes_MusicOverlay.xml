@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="Global_Music">
+		<control type="group">
+			<visible>!Window.IsActive(visualisation) + !Window.IsActive(karaoke) + !SubString(Window(videolibrary).Property(TvTunesIsAlive),True)</visible>
+			<control type="group" id="9904">
+				<posx>17</posx>
+				<posy>560</posy>
+				<visible>Player.HasAudio + Skin.HasSetting(MusicCoverArtOverlay)</visible>
+				<control type="image">
+					<posx>18</posx>
+					<posy>8</posy>
+					<width>135</width>
+					<height>135</height>
+					<include>Animation_SpinningCD</include>
+				</control>
+				<control type="image">
+					<description>cover image</description>
+					<width>150</width>
+					<height>150</height>
+					<texture background="true">$INFO[MusicPlayer.Cover]</texture>
+					<aspectratio aligny="bottom">scale</aspectratio>
+					<bordertexture border="8">thumb_border.png</bordertexture>
+					<bordersize>6</bordersize>
+				</control>
+			</control>
+			<control type="group" id="9905">
+				<posx>30</posx>
+				<posy>560</posy>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<animation effect="slide" start="0,0" end="204,0" time="600" tween="cubic" easing="out" condition="Skin.HasSetting(MusicCoverArtOverlay)">Conditional</animation>
+				<visible>[Player.HasAudio + Skin.HasSetting(MusicSongInfoOverlay)]</visible>
+				<visible>[[Control.HasFocus(9000) | Control.HasFocus(9001)] + ![StringCompare(Container(9000).ListItem.Property(submenuVisibility),weather) + !Skin.HasSetting(NoWeather)]] | [Container.Content(files) | Window.IsActive(2) | Window.IsActive(502)]</visible>
+				<control type="grouplist">
+					<posx>0</posx>
+					<posy>20</posy>
+					<width>260</width>
+					<itemgap>10</itemgap>
+					<orientation>vertical</orientation>
+					<align>left</align>
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>30</height>
+						<aligny>center</aligny>
+						<width min="10" max="270">auto</width>
+					<scrollout>false</scrollout>
+					<pauseatend>1800</pauseatend>
+					<scrollspeed>40</scrollspeed>
+					<scroll>true</scroll>
+						<font>METF_TitleTextSmall</font>
+						<label>$INFO[MusicPlayer.Artist]</label>
+						<textcolor>NowPlayingTitle</textcolor>
+					</control>
+			<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>30</height>
+						<aligny>center</aligny>
+						<width min="10" max="270">auto</width>
+					<scrollout>false</scrollout>
+					<pauseatend>1800</pauseatend>
+					<scrollspeed>40</scrollspeed>
+					<scroll>true</scroll>
+					<font>METF_TitleTextSmall</font>
+					<label>$INFO[MusicPlayer.Title]</label>
+					<textcolor>NowPlayingDetails</textcolor>
+				</control>			
+					
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>30</height>
+						<aligny>center</aligny>
+						<width min="10" max="270">auto</width>
+					<scrollout>false</scrollout>
+					<pauseatend>1800</pauseatend>
+					<scrollspeed>40</scrollspeed>
+					<scroll>true</scroll>
+						<font>METF_TitleTextSmall</font>
+						<label>$INFO[MusicPlayer.Album]</label>
+						<textcolor>NowPlayingDetails</textcolor>
+					</control>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>
