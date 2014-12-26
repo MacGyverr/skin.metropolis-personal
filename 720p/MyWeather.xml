@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window id="2600"> 
+<window id="2600">
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
@@ -7,11 +7,12 @@
 		<control type="button" id="50">
 			<texturefocus>-</texturefocus>
 			<texturenofocus>-</texturenofocus>
-			<include condition="!Skin.HasSetting(ViewLockdown)">OnLeft7000</include>
-			<onright>7000</onright>
-			<include condition="!Skin.HasSetting(ViewLockdown)">OnUp7000</include>
+<!--		<include condition="!Skin.HasSetting(ViewLockdown)">OnLeft7000</include>
+			<include condition="!Skin.HasSetting(ViewLockdown)">OnUp7000</include>  -->
+			<onup>7000</onup>
 			<ondown>7000</ondown>
-			<onclick />
+			<onleft>Control.Move(53,1)</onleft>
+			<onright>Control.Move(53,-1)</onright>
 		</control>
 		<control type="group">
 			<visible>System.HasNetwork</visible>
@@ -4486,22 +4487,130 @@
 					</control>
 				</control>
 			</control>
+			
 			<!-- Weather Map -->
-			<control type="multiimage">
-				<description>radar multiimage</description>
-				<visible>SubString(Skin.String(WeatherDisplay),WeatherMap)</visible>
-				<top>50</top>
-				<left>WeatherPanelLeft</left>
-				<height>WeatherMapHeight</height>
-				<width>WeatherMapWidth</width>
-				<imagepath>$INFO[Window.Property(MapPath)]</imagepath>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<timeperimage>1000</timeperimage>
-				<pauseatend>1000</pauseatend>
-				<fadetime>0</fadetime>
-				<randomize>false</randomize>
-				<loop>yes</loop>
-			</control>
+			<control type="group">
+				<visible>SubString(Skin.String(WeatherDisplay),WeatherMap) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+				<top>-10</top>
+				<left>350</left>
+				<control type="image">
+					<left>160</left>
+					<top>568</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>Arrow2Left.png</texture>
+					<colordiffuse>ArrowDiffuse</colordiffuse>
+				</control>
+				<control type="label">
+					<description>heading label</description>
+					<left>75</left>
+					<top>565</top>
+					<width>500</width>
+					<height>30</height>
+					<font>METF_WeatherOutlookWeekend</font>
+					<label>$INFO[Container(53).ListItem.Label]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<left>470</left>
+					<top>568</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>Arrow2Right.png</texture>
+					<colordiffuse>ArrowDiffuse</colordiffuse>
+				</control>
+				<control type="list" id="53">
+					<left>30</left>
+					<top>70</top>
+					<width>590</width>
+					<height>470</height>
+					<onleft>7000</onleft>
+					<onright>7000</onright>
+					<onup>7000</onup>
+					<ondown>7000</ondown>
+					<viewtype label="535">list</viewtype>
+					<scrolltime>200</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>!IsEmpty(Window.Property(Map.IsFetched))</visible>
+					<itemlayout height="470" width="590">
+					</itemlayout>
+					<focusedlayout height="490" width="590">
+						<control type="image">
+							<description>layer image</description>
+							<left>0</left>
+							<top>0</top>
+							<width>590</width>
+							<height>470</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio>scale</aspectratio>
+						</control>
+						<control type="image">
+							<description>area image</description>
+							<left>0</left>
+							<top>0</top>
+							<width>590</width>
+							<height>470</height>
+							<texture>$INFO[ListItem.Property(Layer)]</texture>
+							<aspectratio>scale</aspectratio>
+							<colordiffuse>70FFFFFF</colordiffuse>
+						</control>
+						<control type="image">
+							<description>legend image</description>
+							<left>360</left>
+							<top>425</top>
+							<width>224</width>
+							<height>45</height>
+							<texture>$INFO[ListItem.Label2]</texture>
+						</control>
+					</focusedlayout>
+					<content>
+						<item>
+							<label>$INFO[Window.Property(Map.1.Heading)]</label>
+							<label2>$INFO[Window.Property(Map.1.Legend)]</label2>
+							<icon>$INFO[Window.Property(Map.1.Area)]</icon>
+							<property name="Layer">$INFO[Window.Property(Map.1.Layer)]</property>
+							<onclick>noop</onclick>
+							<visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.1.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+						</item>
+						<item>
+							<label>$INFO[Window.Property(Map.2.Heading)]</label>
+							<label2>$INFO[Window.Property(Map.2.Legend)]</label2>
+							<icon>$INFO[Window.Property(Map.2.Area)]</icon>
+							<property name="Layer">$INFO[Window.Property(Map.2.Layer)]</property>
+							<onclick>noop</onclick>
+							<visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.2.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+						</item>
+						<item>
+							<label>$INFO[Window.Property(Map.3.Heading)]</label>
+							<label2>$INFO[Window.Property(Map.3.Legend)]</label2>
+							<icon>$INFO[Window.Property(Map.3.Area)]</icon>
+							<property name="Layer">$INFO[Window.Property(Map.3.Layer)]</property>
+							<onclick>noop</onclick>
+							<visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.3.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+						</item>
+						<item>
+							<label>$INFO[Window.Property(Map.4.Heading)]</label>
+							<label2>$INFO[Window.Property(Map.4.Legend)]</label2>
+							<icon>$INFO[Window.Property(Map.4.Area)]</icon>
+							<property name="Layer">$INFO[Window.Property(Map.4.Layer)]</property>
+							<onclick>noop</onclick>
+							<visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.4.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+						</item>
+						<item>
+							<label>$INFO[Window.Property(Map.5.Heading)]</label>
+							<label2>$INFO[Window.Property(Map.5.Legend)]</label2>
+							<icon>$INFO[Window.Property(Map.5.Area)]</icon>
+							<property name="Layer">$INFO[Window.Property(Map.5.Layer)]</property>
+							<onclick>noop</onclick>
+							<visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.5.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+						</item>
+					</content>
+				</control>
+			</control>			
+			
 			<!-- Alerts -->
 			<control type="textbox">
 				<top>560</top>
@@ -4514,6 +4623,8 @@
 				<include condition="!Skin.HasSetting(AutoScrollFast)">AutoScrollShort</include>
 				<include condition="Skin.HasSetting(AutoScrollFast)">AutoScrollShortFast</include>
 				<textcolor>WeatherDetails</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+				<scroll>true</scroll>
 			</control>
 		</control>
 		<include>Global_ContextFilter</include>
@@ -4528,7 +4639,7 @@
 				<width>340</width>
 				<height>548</height>
 				<onleft>50</onleft>
-				<onright>50</onright>
+				<onright>992</onright>
 				<onup>7000</onup>
 				<ondown>7000</ondown>
 				<itemgap>2</itemgap>
@@ -4622,6 +4733,7 @@
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<pulseonselect>false</pulseonselect>
+					<onclick>Skin.SetString(WeatherDisplay,WeatherMap)</onclick>
 					<onclick>Skin.SetString(WeatherDisplay,WeatherMap)</onclick>
 				</control>
 				<control type="button" id="2">
