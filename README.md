@@ -1,4 +1,4 @@
-Metropolis (MacGyver Helix MOD)
+Metropolis (MacGyver's Personal Mod)
 ==========
 
 Personal version of Metropolis skin for Kodi
@@ -14,9 +14,8 @@ but only after they have been set my way first.
 
 Do not bother the real Metropolis Devs with issues you have with my version.
 
-To use this skin extract the contents of the helix-custommenu-rewrite.zip, rename the helix-custommenu-rewrite folder to "skin.metropolis-kodi-fob", now put that folder and contents in your addons folder of your Kodi install.
-This is located at C:\Users\username\AppData\Roaming\Kodi\addons\  for installs a on Windows computer.
+To use this skin, download the "skin.metropolis-personal-master.zip" by pressing the "Download Zip" button on the Git page (or use this URL https://github.com/MacGyverr/skin.metropolis-personal/archive/master.zip, then from inside a Helix version of Kodi, click Settings->Addons->Install From Zip File, point it to the downloaded file you got from the Git.
 
-Reboot your Kodi, select the Metropolis (MacGyver Nightly Kodi Mod) version from the skin list.
+After selecting the skin, reboot your Kodi install.
 
-(note that this method will not create XBTs for the images, and so themes will be broken unless you put the compiled XBTs for them in the themes folder yourself (Git is not an ideal distribution method for a skin).
+(note that this method will not create the texture.XBT for the media images, (Git is not an ideal distribution method for a skin).
