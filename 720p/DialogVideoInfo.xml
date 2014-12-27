@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="2003">
-	<onload condition="System.HasAddon(script.videoextras)">XBMC.RunScript(script.videoextras,check,"$INFO[ListItem.FilenameAndPath]")</onload>
+	<onload condition="System.HasAddon(script.videoextras)">RunScript(script.videoextras,check,"$INFO[ListItem.FilenameAndPath]")</onload>
 	<onload condition="Skin.HasSetting(TvTunes) + !SubString(Window(Videos).Property(CinemaExperienceRunning),True)">RunScript(script.tvtunes,backend=True)</onload>
 	<defaultcontrol always="true">7003</defaultcontrol>
 	<controls>
@@ -555,7 +555,7 @@
 				<visible>Skin.HasSetting(TvTunes) + System.HasAddon(script.tvtunes) + [Container.Content(TVShows) | Container.Content(movies) | Container.Content(musicvideos)]</visible>
 				<include>Animation_ButtonFocus</include>
 				<label>$LOCALIZE[31956]</label>
-				<onclick>XBMC.RunScript(script.tvtunes,mode=solo)</onclick>
+				<onclick>RunScript(script.tvtunes,mode=solo)</onclick>
 			</control>
 			<!-- Video Extras -->
 			<control type="button" id="22">
