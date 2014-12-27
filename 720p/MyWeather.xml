@@ -4527,7 +4527,7 @@
 					<width>590</width>
 					<height>470</height>
 					<texture>DefaultThumb.png</texture>
-					<visible>IsEmpty(Window.Property(Map.IsFetched))</visible>
+					<visible>IsEmpty(Window.Property(Map.1.Area))</visible>
 				</control>
 				<control type="list" id="53">
 					<left>30</left>
