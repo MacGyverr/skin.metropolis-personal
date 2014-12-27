@@ -7,12 +7,11 @@
 		<control type="button" id="50">
 			<texturefocus>-</texturefocus>
 			<texturenofocus>-</texturenofocus>
-<!--		<include condition="!Skin.HasSetting(ViewLockdown)">OnLeft7000</include>
-			<include condition="!Skin.HasSetting(ViewLockdown)">OnUp7000</include>  -->
-			<onup>7000</onup>
-			<ondown>7000</ondown>
-			<onleft>Control.Move(53,1)</onleft>
-			<onright>Control.Move(53,-1)</onright>
+			<include condition="!Skin.HasSetting(ViewLockdown)">OnLeft7000</include>
+			<onright>7000</onright>
+			<!-- for switching between weather maps -->
+			<onup>Control.Move(53,1)</onup>
+			<ondown>Control.Move(53,-1)</ondown>
 		</control>
 		<control type="group">
 			<visible>System.HasNetwork</visible>
@@ -4487,7 +4486,7 @@
 					</control>
 				</control>
 			</control>
-			
+
 			<!-- Weather Map -->
 			<control type="group">
 				<visible>SubString(Skin.String(WeatherDisplay),WeatherMap) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
@@ -4498,7 +4497,7 @@
 					<top>568</top>
 					<width>24</width>
 					<height>24</height>
-					<texture>Arrow2Left.png</texture>
+					<texture>Arrow2Up.png</texture>
 					<colordiffuse>ArrowDiffuse</colordiffuse>
 				</control>
 				<control type="label">
@@ -4508,7 +4507,7 @@
 					<width>500</width>
 					<height>30</height>
 					<font>METF_WeatherOutlookWeekend</font>
-					<label>$INFO[Container(53).ListItem.Label]</label>
+					<label fallback="Maps Loading...">$INFO[Container(53).ListItem.Label]</label>
 					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
@@ -4519,8 +4518,15 @@
 					<top>568</top>
 					<width>24</width>
 					<height>24</height>
-					<texture>Arrow2Right.png</texture>
+					<texture>Arrow2Down.png</texture>
 					<colordiffuse>ArrowDiffuse</colordiffuse>
+				</control>
+				<control type="image">
+					<left>30</left>
+					<top>70</top>
+					<width>590</width>
+					<height>470</height>
+					<texture>DefaultThumb.png</texture>
 				</control>
 				<control type="list" id="53">
 					<left>30</left>
@@ -4529,8 +4535,6 @@
 					<height>470</height>
 					<onleft>7000</onleft>
 					<onright>7000</onright>
-					<onup>7000</onup>
-					<ondown>7000</ondown>
 					<viewtype label="535">list</viewtype>
 					<scrolltime>200</scrolltime>
 					<orientation>horizontal</orientation>
@@ -4609,26 +4613,26 @@
 						</item>
 					</content>
 				</control>
-			</control>			
-			
+			</control>
+
 			<!-- Alerts -->
 			<control type="textbox">
-				<top>560</top>
+				<top>590</top>
 				<left>300</left>
 				<width>680</width>
-				<height>140</height>
+				<height>110</height>
 				<align>center</align>
 				<label>$INFO[Window.Property(Alerts)]</label>
 				<font>METF_WeatherInfoTextSmall</font>
 				<include condition="!Skin.HasSetting(AutoScrollFast)">AutoScrollShort</include>
 				<include condition="Skin.HasSetting(AutoScrollFast)">AutoScrollShortFast</include>
-				<textcolor>WeatherDetails</textcolor>
+				<textcolor>WeatherHeading</textcolor>
 				<wrapmultiline>true</wrapmultiline>
 				<scroll>true</scroll>
 			</control>
 		</control>
 		<include>Global_ContextFilter</include>
-		
+
 		<control type="group">
 			<include>Animation_NavMenu</include>
 			<include>NavMenuBackground</include>
@@ -4639,7 +4643,7 @@
 				<width>340</width>
 				<height>548</height>
 				<onleft>50</onleft>
-				<onright>992</onright>
+				<onright>50</onright>
 				<onup>7000</onup>
 				<ondown>7000</ondown>
 				<itemgap>2</itemgap>
@@ -4733,7 +4737,6 @@
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<pulseonselect>false</pulseonselect>
-					<onclick>Skin.SetString(WeatherDisplay,WeatherMap)</onclick>
 					<onclick>Skin.SetString(WeatherDisplay,WeatherMap)</onclick>
 				</control>
 				<control type="button" id="2">
