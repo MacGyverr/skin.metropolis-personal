@@ -14,7 +14,7 @@
 			<texturefocus>-</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<onfocus>SendClick(MovieInformation,5)</onfocus>
-			<onfocus>SetFocus(50)</onfocus>
+			<onfocus>SetFocus(300)</onfocus>
 		</control>
 		<control type="button" id="5">
 			<label>-</label>
@@ -150,9 +150,9 @@
 			<control type="group">
 				<posx>550</posx>
 				<posy>225</posy>
-				<visible>!Control.IsVisible(50) + [![Container.Content(tvshows) | Container.Content(seasons)] | !Skin.HasSetting(NextAired)]</visible>
+				<visible>!Control.HasFocus(50) + [![Container.Content(tvshows) | Container.Content(seasons)] | !Skin.HasSetting(NextAired)]</visible>
 				<!-- Director -->
-				<control type="label">
+<!--				<control type="label">
 					<posx>0</posx>
 					<posy>76</posy>
 					<width>340</width>
@@ -163,7 +163,7 @@
 					<aligny>center</aligny>
 					<label>$LOCALIZE[20339]</label>
 				</control>
-				<control type="label">
+-->				<control type="label">
 					<posx>0</posx>
 					<posy>99</posy>
 					<width>340</width>
@@ -178,9 +178,9 @@
 			<control type="group">
 				<posx>550</posx>
 				<posy>225</posy>
-				<visible>!Control.IsVisible(50) + [Container.Content(tvshows) | Container.Content(seasons)] + Skin.HasSetting(NextAired)</visible>
+				<visible>!Control.HasFocus(50) + [Container.Content(tvshows) | Container.Content(seasons)] + Skin.HasSetting(NextAired)</visible>
 				<!-- TV Show Status -->
-				<control type="label">
+<!--				<control type="label">
 					<posx>0</posx>
 					<posy>76</posy>
 					<width>340</width>
@@ -191,7 +191,7 @@
 					<aligny>center</aligny>
 					<label>$LOCALIZE[31471]</label>
 				</control>
-				<control type="label">
+-->				<control type="label">
 					<posx>0</posx>
 					<posy>99</posy>
 					<width>340</width>
@@ -206,9 +206,9 @@
 			<control type="group">
 				<posx>550</posx>
 				<posy>353</posy>
-				<visible>!Control.IsVisible(50)</visible>
+				<visible>!Control.HasFocus(50)</visible>
 				<!-- Cast -->
-				<control type="label">
+<!--				<control type="label">
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>340</width>
@@ -219,7 +219,7 @@
 					<textcolor>MediaDetailsInfo</textcolor>
 					<label>$LOCALIZE[344]</label>
 				</control>
-				<control type="textbox">
+-->				<control type="textbox">
 					<posx>0</posx>
 					<posy>20</posy>
 					<width>340</width>
@@ -228,7 +228,7 @@
 					<font>METF_PlotText</font>
 					<textcolor>TextNF</textcolor>
 					<label fallback="161">$INFO[ListItem.Cast]</label>
-					<visible>!Control.IsVisible(50)</visible>
+					<visible>!Control.HasFocus(50) | !Control.HasFocus(300)</visible>
 				</control>
 				<control type="label">
 					<posx>0</posx>
@@ -240,7 +240,19 @@
 					<font>METF_HelpText</font>
 					<textcolor>HelpText</textcolor>
 					<label>$LOCALIZE[31407]</label>
-					<visible>!Control.IsVisible(50) + !Skin.HasSetting(HideHelpText)</visible>
+					<visible>!Control.HasFocus(300) + !Control.HasFocus(50) + !Skin.HasSetting(HideHelpText)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>160</posy>
+					<width>340</width>
+					<height>25</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>METF_HelpText</font>
+					<textcolor>HelpText</textcolor>
+					<label>*Select Item for more info*</label>
+					<visible>Control.HasFocus(300) + !Control.HasFocus(50) + !Skin.HasSetting(HideHelpText)</visible>
 				</control>
 			</control>
 			<!-- Plot -->
@@ -255,8 +267,68 @@
 				<label fallback="161">$INFO[ListItem.Plot]</label>
 				<include condition="!Skin.HasSetting(AutoScrollFast)">AutoScrollLong</include>
 				<include condition="Skin.HasSetting(AutoScrollFast)">AutoScrollLongFast</include>
-				<visible>!Control.IsVisible(50)</visible>
+				<visible>!Control.HasFocus(50)</visible>
 			</control>
+			<!-- Director/Status/Cast selector -->
+			<control type="panel" id="300">
+				<posx>552</posx>
+				<posy>302</posy>
+				<width>340</width>
+				<height>300</height>
+				<onup>300</onup>
+				<ondown>7050</ondown>
+				<onleft>7050</onleft>
+				<onright>7050</onright>
+				<orientation>vertical</orientation>
+				<itemlayout height="51" width="340">		
+					<control type="label">
+						<top>0</top>
+						<width>340</width>
+						<height>48</height>
+						<align>center</align>
+						<aligny>top</aligny>
+						<font>METF_PlotText</font>
+						<textcolor>MediaDetailsInfo</textcolor>
+						<label fallback="161">$INFO[ListItem.Label]</label>
+					</control>		
+				</itemlayout>
+				<focusedlayout height="51" width="340">
+					<control type="image">
+						<top>0</top>
+						<width>340</width>
+						<height>24</height>
+						<texture border="4">ButtonFo.png</texture>
+						<visible>Control.HasFocus(300)</visible>
+					</control>
+					<control type="label">
+						<top>0</top>
+						<width>340</width>
+						<height>48</height>
+						<align>center</align>
+						<aligny>top</aligny>
+						<font>METF_PlotText</font>
+						<textcolor>MediaDetailsInfo</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<label>$LOCALIZE[31471]</label>
+						<onclick>noop</onclick>
+						<visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[20339]</label>
+						<onclick>SendClick(2003,13)</onclick>
+						<visible>![Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[344]</label>
+						<onclick>SetFocus(5)</onclick>
+					</item>
+				</content>
+			</control>
+
 			<!-- Cast -->
 			<control type="panel" id="50">
 				<posx>-8</posx>
@@ -271,6 +343,7 @@
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
+				<visible>!Control.HasFocus(300)</visible>
 				<itemlayout height="24" width="515">
 					<control type="label">
 						<posx>0</posx>
@@ -282,6 +355,7 @@
 						<font>METF_InfoText</font>
 						<textcolor>TextNF</textcolor>
 						<label>$INFO[ListItem.Label]</label>
+						<visible>Control.HasFocus(50) + !Control.HasFocus(300)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="24" width="516">
@@ -296,6 +370,7 @@
 						<textcolor>TextFO</textcolor>
 						<scrollspeed>30</scrollspeed>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<visible>Control.HasFocus(50) + !Control.HasFocus(300)</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -307,7 +382,7 @@
 				<height>218</height>
 				<texture>frames/ClassicFrame_Background.png</texture>
 				<aspectratio align="center" aligny="center">stretch</aspectratio>
-				<visible>Control.IsVisible(50)</visible>
+				<visible>Control.HasFocus(50) + !Control.HasFocus(300)</visible>
 			</control>
 			<control type="image">
 				<description>Actor image</description>
@@ -317,7 +392,7 @@
 				<height>218</height>
 				<texture>$INFO[Container(50).Listitem.Icon]</texture>
 				<aspectratio align="center" aligny="center">scale</aspectratio>
-				<visible>Control.IsVisible(50) + !substring(Container(50).Listitem.Icon,default)</visible>
+				<visible>Control.HasFocus(50) + !substring(Container(50).Listitem.Icon,default) + !Control.HasFocus(300)</visible>
 			</control>
 			<control type="image">
 				<description>Actor image</description>
@@ -327,7 +402,7 @@
 				<height>218</height>
 				<texture>$INFO[Container(50).Listitem.Icon]</texture>
 				<aspectratio align="center" aligny="center">scale</aspectratio>
-				<visible>Control.IsVisible(50) + substring(Container(50).Listitem.Icon,default)</visible>
+				<visible>Control.HasFocus(50) + substring(Container(50).Listitem.Icon,default) + !Control.HasFocus(300)</visible>
 			</control>
 			<control type="image">
 				<posx>628</posx>
@@ -336,7 +411,7 @@
 				<height>250</height>
 				<texture background="true">frames/ClassicFrame_PosterSmall.png</texture>
 				<aspectratio scalediffuse="false">scale</aspectratio>
-				<visible>Control.IsVisible(50)</visible>
+				<visible>Control.HasFocus(50) + !Control.HasFocus(300)</visible>
 			</control>
 		</control>
 		
