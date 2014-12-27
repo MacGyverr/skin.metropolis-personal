@@ -150,7 +150,7 @@
 			<posy>450</posy>
 			<width>1420</width>
 			<height>63</height>
-			<texture flipy="true">osd/osddialogback.png</texture>
+			<texture flipy="true">osd/OSDdialogback.png</texture>
 			<colordiffuse>BackgroundColor</colordiffuse>
 		</control>
 
