@@ -26,8 +26,8 @@
 					<itemlayout height="60" width="550">
 						<control type="label">	
 							<description>Channel number label</description>
-							<posx>110</posx>
-							<posy>0</posy>
+							<left>0</left>
+							<top>0</top>
 							<width>110</width>
 							<height>35</height>
 							<align>right</align>
@@ -87,8 +87,8 @@
 						</control>
 						<control type="label">
 							<description>Channel number label</description>
-							<posx>110</posx>
-							<posy>0</posy>
+							<left>0</left>
+							<top>0</top>
 							<width>110</width>
 							<height>35</height>
 							<align>right</align>
