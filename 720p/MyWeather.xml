@@ -4628,8 +4628,6 @@
 				<include condition="!Skin.HasSetting(AutoScrollFast)">AutoScrollShort</include>
 				<include condition="Skin.HasSetting(AutoScrollFast)">AutoScrollShortFast</include>
 				<textcolor>WeatherHeading</textcolor>
-				<wrapmultiline>true</wrapmultiline>
-				<scroll>true</scroll>
 			</control>
 		</control>
 		<include>Global_ContextFilter</include>
