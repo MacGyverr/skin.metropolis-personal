@@ -935,7 +935,7 @@
 					</focusedlayout>
 				</control>
 
-<!--------fixxxxx -->
+<!-- fixxxxx -->
 				<control type="scrollbar" id="76">
 					<description>Channel scrollbar</description>
 					<posx>1187</posx>
