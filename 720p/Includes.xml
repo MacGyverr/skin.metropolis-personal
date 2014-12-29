@@ -1231,14 +1231,24 @@
 					<visible>VideoPlayer.Content(Episodes) + !SubString(VideoPlayer.Cover,default) + !Skin.HasSetting(Enable_OSDClearArt)</visible>
 				</control>
 				<control type="image">
-					<description>TV Show Clear Art/Logo</description>
+					<description>TV Show Clear Logo</description>
 					<posx>25</posx>
-					<posy>450</posy>
+					<posy>470</posy>
 					<width>250</width>
 					<height>230</height>
-					<texture background="true">$VAR[PlayerTVShowClearartClearlogo]</texture>
+					<texture background="true">$INFO[Player.Art(tvshow.clearlogo)]</texture>
 					<aspectratio align="center" aligny="bottom">keep</aspectratio>
-					<visible>Skin.HasSetting(Enable_OSDClearArt) + VideoPlayer.Content(Episodes)</visible>
+					<visible>Skin.HasSetting(Enable_OSDClearArt) + Skin.HasSetting(ViewPreferClearLogo) + VideoPlayer.Content(Episodes)</visible>
+				</control>
+				<control type="image">
+					<description>TV Show Clear Art</description>
+					<posx>25</posx>
+					<posy>470</posy>
+					<width>250</width>
+					<height>230</height>
+					<texture background="true">$INFO[Player.Art(tvshow.clearart)]</texture>
+					<aspectratio align="center" aligny="bottom">keep</aspectratio>
+					<visible>Skin.HasSetting(Enable_OSDClearArt) + !Skin.HasSetting(ViewPreferClearLogo) + VideoPlayer.Content(Episodes)</visible>
 				</control>
 				<!-- Movie Poster -->
 				<control type="image">
