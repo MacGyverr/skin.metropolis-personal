@@ -1219,7 +1219,7 @@
 					<height>300</height>
 					<texture background="true">$INFO[Player.Art(tvshow.poster)]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<visible>VideoPlayer.Content(Episodes) + !SubString(VideoPlayer.Cover,default) + !Skin.HasSetting(Enable_OSDClearArt)</visible>
+					<visible>VideoPlayer.Content(Episodes) + !SubString(VideoPlayer.Cover,default) + !Skin.HasSetting(Enable_OSDClearArt) | [[IsEmpty(Player.Art(tvshow.clearlogo)) + IsEmpty(Player.Art(tvshow.clearart))] + Skin.HasSetting(Enable_OSDClearArt) + VideoPlayer.Content(Episodes)]</visible>
 				</control>
 				<control type="image">
 					<description>TV Show Thumbnail Frame</description>
@@ -1228,27 +1228,17 @@
 					<width>253</width>
 					<height>343</height>
 					<texture>frames/ClassicFrame_PosterSmall.png</texture>
-					<visible>VideoPlayer.Content(Episodes) + !SubString(VideoPlayer.Cover,default) + !Skin.HasSetting(Enable_OSDClearArt)</visible>
+					<visible>VideoPlayer.Content(Episodes) + !SubString(VideoPlayer.Cover,default) + !Skin.HasSetting(Enable_OSDClearArt) | [[IsEmpty(Player.Art(tvshow.clearlogo)) + IsEmpty(Player.Art(tvshow.clearart))] + Skin.HasSetting(Enable_OSDClearArt) + VideoPlayer.Content(Episodes)]</visible>
 				</control>
 				<control type="image">
-					<description>TV Show Clear Logo</description>
+					<description>TV Show Clear Art/Logo</description>
 					<posx>25</posx>
 					<posy>470</posy>
 					<width>250</width>
 					<height>230</height>
-					<texture background="true">$INFO[Player.Art(tvshow.clearlogo)]</texture>
+					<texture background="true" >$VAR[PlayerTVShowClearartClearlogo]</texture>
 					<aspectratio align="center" aligny="bottom">keep</aspectratio>
-					<visible>Skin.HasSetting(Enable_OSDClearArt) + Skin.HasSetting(ViewPreferClearLogo) + VideoPlayer.Content(Episodes)</visible>
-				</control>
-				<control type="image">
-					<description>TV Show Clear Art</description>
-					<posx>25</posx>
-					<posy>470</posy>
-					<width>250</width>
-					<height>230</height>
-					<texture background="true">$INFO[Player.Art(tvshow.clearart)]</texture>
-					<aspectratio align="center" aligny="bottom">keep</aspectratio>
-					<visible>Skin.HasSetting(Enable_OSDClearArt) + !Skin.HasSetting(ViewPreferClearLogo) + VideoPlayer.Content(Episodes)</visible>
+					<visible>Skin.HasSetting(Enable_OSDClearArt) + VideoPlayer.Content(Episodes)</visible>
 				</control>
 				<!-- Movie Poster -->
 				<control type="image">
