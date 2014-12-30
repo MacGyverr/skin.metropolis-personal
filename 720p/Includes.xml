@@ -127,7 +127,7 @@
 		<width>1220</width>
 		<height>30</height>
 		<font>METF_Heading</font>
-		<textcolor>GlobalHeading</textcolor>
+		<textcolor>SettingsDetail</textcolor>
 		<align>center</align>
 		<aligny>center</aligny>
 		<include>Animation_HiddenByInfo</include>
