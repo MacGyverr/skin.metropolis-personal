@@ -175,7 +175,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>205</label>
-					<textcolor>ffa8e612</textcolor>
+					<textcolor>OSDProgressBar</textcolor>
 					<font>METF_Votes_Title</font>
 				</control>
 				<control type="label">
