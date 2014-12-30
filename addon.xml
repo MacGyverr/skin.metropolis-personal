@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <addon 
 	id="skin.metropolis-personal-master"
-	version="2.9.0"
+	version="3.0.0"
 	name="Metropolis (MacGyver's Personal Mod)"
 	provider-name="Amra, Stoli, jingai">
 	<requires>
