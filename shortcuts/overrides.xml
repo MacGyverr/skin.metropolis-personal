@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <overrides>
-
 	<!-- Movies -->
 	<!-- Recent movies -->
 	<widget label="Recent movies">RecentMovies</widget>
@@ -58,30 +57,35 @@
 	
 	<!-- Playlists -->
 	<widgetPlaylists>True</widgetPlaylists>
-<widget label="Current weather">Weather</widget>
-<widget label="Recent Videos" type="media">RecentVideos</widget>
-<widget label="Recently added albums" type="media">RecentAlbums</widget>
-<widget label="Recommended albums" type="media">RecommendedAlbums</widget>
-<widget label="Random albums" type="media">RandomAlbums</widget>
-<widgetdefault labelID="weather">Weather</widgetdefault>
-<background label="Movies">Movies</background>
-<background label="TV Shows">TVShows</background>
-<background label="Music Videos">MusicVideos</background>
-<background label="PVR">PVR</background>
-<background label="Videos">Videos</background>
-<background label="Music">Music</background>
-<background label="Programs">Programs</background>
-<background label="Weather">Weather</background>
-<background label="Settings">Settings</background>
-<background label="Pictures">Pictures</background>
-<backgrounddefault labelID="movies">Movies</backgrounddefault>
-<backgrounddefault labelID="tvshows">TVShows</backgrounddefault>
-<backgrounddefault labelID="livetv">PVR</backgrounddefault>
-<backgrounddefault labelID="videos">Videos</backgrounddefault>
-<backgrounddefault labelID="music">Music</backgrounddefault>
-<backgrounddefault labelID="programs">Programs</backgrounddefault>
-<backgrounddefault labelID="weather">Weather</backgrounddefault>
-<backgrounddefault labelID="settings">Settings</backgrounddefault>
-<backgrounddefault labelID="pictures">Pictures</backgrounddefault>
+	<widget label="Current weather">Weather</widget>
+	<widget label="Recent Videos" type="media">RecentVideos</widget>
+	<widget label="Recently added albums" type="media">RecentAlbums</widget>
+	<widget label="Recommended albums" type="media">RecommendedAlbums</widget>
+	<widget label="Random albums" type="media">RandomAlbums</widget>
+	<widgetdefault labelID="weather">Weather</widgetdefault>
+	<background label="Movies">Movies</background>
+	<background label="TV Shows">TVShows</background>
+	<background label="Music Videos">MusicVideos</background>
+	<background label="PVR">PVR</background>
+	<background label="Videos">Videos</background>
+	<background label="Music">Music</background>
+	<background label="Programs">Programs</background>
+	<background label="Weather">Weather</background>
+	<background label="Settings">Settings</background>
+	<background label="Pictures">Pictures</background>
+	<backgrounddefault labelID="movies">Movies</backgrounddefault>
+	<backgrounddefault labelID="tvshows">TVShows</backgrounddefault>
+	<backgrounddefault labelID="livetv">PVR</backgrounddefault>
+	<backgrounddefault labelID="videos">Videos</backgrounddefault>
+	<backgrounddefault labelID="music">Music</backgrounddefault>
+	<backgrounddefault labelID="programs">Programs</backgrounddefault>
+	<backgrounddefault labelID="weather">Weather</backgrounddefault>
+	<backgrounddefault labelID="settings">Settings</backgrounddefault>
+	<backgrounddefault labelID="pictures">Pictures</backgrounddefault>
+	
+	<!-- Settings -->
+	<warn heading="About to lock yourself out of the house?" message="Doing this will make all Settings menus go away, you will be unable to undo this.  Why are you doing this?  Is this a kids profile, and you have another profile already, and it's not set to auto-login?  You need to practice manually deleting your guisetings.xml file?  Are you a visitor using someone else's media center and trying to mess with them.  Really do this?">ActivateWindow(Settings)</warn>
+	<forcesettings>True</forcesettings>
+	
 	<backgroundBrowse>True</backgroundBrowse>
 </overrides>

@@ -241,9 +241,9 @@
 			<thumb>home_art/livetv.jpg</thumb>
 			<property name="labelID">livetv</property>
 			<property name="defaultID">livetv</property>
-			<visible>[system.getbool(pvrmanager.enabled)] + [System.GetBool(pvrmanager.enabled)]</visible>
-			<onclick>ActivateWindowAndFocus(MyPVR,34,0 ,13,0)</onclick>
-			<property name="path">ActivateWindowAndFocus(MyPVR,34,0 ,13,0)</property>
+			<visible>[PVR.HasTVChannels] + [System.GetBool(pvrmanager.enabled)]</visible>
+			<onclick>ActivateWindow(TVChannels)</onclick>
+			<property name="path">ActivateWindow(TVChannels)</property>
 			<visible>StringCompare(System.ProfileName,Master user)</visible>
 			<property name="submenuVisibility">livetv</property>
 			<property name="group">mainmenu</property>
