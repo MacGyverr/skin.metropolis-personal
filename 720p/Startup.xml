@@ -3,25 +3,34 @@
 	<defaultcontrol always="true">10</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(Enable_OSDFade)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(AutoScrollFast)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(AutoScroll)</onload>
+	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(AutoScrollFast)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(ShowVideoPlotFullscreen)</onload>
+	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(Enable_OSDClearArt)</onload>
+	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(ViewPreferClearLogo)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(WeatherIcons2)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(HomeForecast)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(CaseOveralys)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(Scrollbar)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(Show_PlotOutline)</onload>
+	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(MusicCoverArtOverlay)</onload>
+	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(MusicSongInfoOverlay)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(Home3)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(UseExtendedWeather)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(DynamicWeather)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(HomeStats)</onload>
+	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(HomeForecast)</onload>
+	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(DynamicWeather)</onload>
+	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(Show_PlotOutline)</onload>
+	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(Scrollbar)</onload>
+	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(NextAired)</onload>
+	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(UseExtendedWeather)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(OneButtonSubtitles)</onload>
+	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(CaseOveralys)</onload>
+	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(CommandLabels)</onload>
+	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(Enable_OSDFade)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(LibraryUpdated)</onload>
+	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(SkinShortcuts-FullMenu)</onload>
+	<onload condition="!Skin.HasSetting(defallt)">Skin.SetString(OSDFade,Complete)</onload>
+	<onload condition="!Skin.HasSetting(defallt)">Skin.SetString(OSDFadeTime,5)</onload>
+	<onload condition="!Skin.HasSetting(defallt)">Skin.SetString(DateFormat,YMD)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetString(DefaultOSD,714)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(defallt)</onload>
 
-	
 	<controls>
 		<control type="button" id="10">
 			<description>Weather</description>
