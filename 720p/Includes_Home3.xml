@@ -258,7 +258,7 @@
 			<posy>2</posy>
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByMenu</include>
-			<visible>[Control.HasFocus(9000) | Control.HasFocus(9001)] + !StringCompare(Container(9000).ListItem.Property(hasSubmenu),True) + [Control.HasFocus(9000) + !Skin.HasSetting(HomeCleanLibrary)]</visible>
+			<visible>[Control.HasFocus(9000) | Control.HasFocus(9001)] + SubString(Container(9000).ListItem.Property(hasSubmenu),True) + [Control.HasFocus(9000) + !Skin.HasSetting(HomeCleanLibrary)]</visible>
 			<control type="image">
 				<posx>625</posx>
 				<posy>508</posy>
@@ -268,7 +268,6 @@
 				<colordiffuse>HelpArrowDiffuse</colordiffuse>
 			</control>
 		</control>
-		
 		<!-- Submenu  -->
 		
 		<control type="list" id="9001">
