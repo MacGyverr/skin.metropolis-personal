@@ -123,4 +123,13 @@
 		<action>ActivateWindow(TVChannels)</action>
 		<visible>System.GetBool(pvrmanager.enabled)</visible>
 	</shortcut>
+	<shortcut>
+		<defaultID>script.tvguide</defaultID>
+		<label>TV Guide</label>
+		<label2>Program</label2>
+		<icon>DefaultAddon.png</icon>
+		<thumb>MissingLandscapeJpeg.jpg</thumb>
+		<action>RunAddOn(script.tvguide)</action>
+		<visible>System.HasAddon(script.tvguide)</visible>
+	</shortcut>
 </shortcuts>
