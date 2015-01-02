@@ -688,6 +688,12 @@
 						<onclick>RunScript(script.artwork.downloader, mode=custom, mediatype=tvshow, seasonposter, landscape, clearart, clearlogo, characterart)</onclick>
 						<visible>System.HasAddon(script.artwork.downloader)</visible>
 					</control>
+					<control type="radiobutton" id="714">
+						<include>SettingsLabel</include>
+						<label>Cycle Artwork in Video Info</label>
+						<onclick>Skin.ToggleSetting(CycleArt)</onclick>
+						<selected>Skin.HasSetting(CycleArt)</selected>
+					</control>
 					<control type="radiobutton" id="704">
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31410]</label>

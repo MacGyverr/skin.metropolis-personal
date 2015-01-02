@@ -90,6 +90,27 @@
 		</control>
 	</include>
 
+	<!-- VideoInfo Dialog Artwork description label -->
+		<include name="ArtworkLabel">
+			<left>720</left>
+			<top>53</top>
+			<width>150</width>
+			<height>42</height>
+			<align>right</align>
+			<aligny>center</aligny>
+			<font>METF_PlotText</font>
+			<textcolor>MediaDetailsYear</textcolor>
+			<scroll>false</scroll>
+		</include>	
+		
+	<!-- VideoInfo Dialog Artwork placement -->
+		<include name="ArtworkPlacement">
+			<posx>918</posx>
+			<posy>79</posy>
+			<width>324</width>
+			<height>182</height>
+		</include>		
+
 	<!-- View Lockdowns -->
 	<include name="OnUp7000">
 		<onup>7000</onup>

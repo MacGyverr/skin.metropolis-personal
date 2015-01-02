@@ -707,8 +707,103 @@
 					<height>182</height>
 					<texture fallback="home_art/movies.jpg">$INFO[ListItem.Art(fanart)]</texture>
 					<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
-					<visible>!Container.Content(episodes)</visible>
+					<visible>!Skin.HasSetting(CycleArt) + !Container.Content(episodes)</visible>
+				</control> 	
+				
+				<!-- Cyclic Artwork Images --> 	 						
+				<control type="group">
+						<visible>Skin.HasSetting(CycleArt) + !Container.Content(episodes)</visible>
+					<control type="group">
+						<visible>Substring(Control.GetLabel(7009),fanart)</visible>
+						<animation effect="fade" start="0" end="100" time="450" delay="150" >Visible</animation>
+						<animation effect="fade" start="100" end="0" time="450" delay="150" >Hidden</animation>
+						<control type="label">
+							<include>ArtworkLabel</include>
+							<label>Fanart</label>
+						</control>
+						<control type="image">
+							<include>ArtworkPlacement</include>
+							<texture fallback="DefaultThumb3.png">$INFO[ListItem.Art(fanart)]</texture>
+							<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
+						</control>
+					</control>
+					<control type="group">
+						<visible>Substring(Control.GetLabel(7009),clearart)</visible>
+						<animation effect="fade" start="0" end="100" time="450" delay="150" >Visible</animation>
+						<animation effect="fade" start="100" end="0" time="450" delay="150" >Hidden</animation>
+						<control type="label">
+							<include>ArtworkLabel</include>
+							<label>ClearArt</label>
+						</control>
+						<control type="image">
+							<include>ArtworkPlacement</include>
+							<texture fallback="DefaultThumb3.png">$INFO[ListItem.Art(clearart)]</texture>
+							<aspectratio aligny="center">keep</aspectratio>
+						</control>
+					</control>
+					<control type="group">
+						<visible>Substring(Control.GetLabel(7009),clearlogo)</visible>
+						<animation effect="fade" start="0" end="100" time="450" delay="150" >Visible</animation>
+						<animation effect="fade" start="100" end="0" time="450" delay="150" >Hidden</animation>
+						<control type="label">
+							<include>ArtworkLabel</include>
+							<label>ClearLogo</label>
+						</control>
+						<control type="image">
+							<include>ArtworkPlacement</include>
+							<texture fallback="DefaultThumb3.png">$INFO[ListItem.Art(clearlogo)]</texture>
+							<aspectratio aligny="center">keep</aspectratio>
+						</control>
+					</control>		
+					<control type="group">
+						<visible>Substring(Control.GetLabel(7009),landscape)</visible>
+						<animation effect="fade" start="0" end="100" time="450" delay="150" >Visible</animation>
+						<animation effect="fade" start="100" end="0" time="450" delay="150" >Hidden</animation>
+						<control type="label">
+							<include>ArtworkLabel</include>
+							<label>Landscape</label>
+						</control>
+						<control type="image">
+							<include>ArtworkPlacement</include>
+							<texture fallback="DefaultThumb3.png">$INFO[ListItem.Art(landscape)]</texture>
+							<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
+						</control>
+					</control>	
+					<control type="group">
+						<visible>Substring(Control.GetLabel(7009),banner)</visible>
+						<animation effect="fade" start="0" end="100" time="450" delay="150" >Visible</animation>
+						<animation effect="fade" start="100" end="0" time="450" delay="150" >Hidden</animation>
+						<control type="label">
+							<include>ArtworkLabel</include>
+							<label>Banner</label>
+						</control>
+						<control type="image">
+							<include>ArtworkPlacement</include>
+							<texture fallback="DefaultThumb3.png">$INFO[ListItem.Art(banner)]</texture>
+							<aspectratio aligny="center">keep</aspectratio>
+						</control>
+					</control>	
+					<control type="fadelabel" id="7009">
+						<animation effect="fade" start="0" end="0" time="0" condition="true" >Conditional</animation>
+						<left>0</left>
+						<top>0</top>
+						<width>500</width>
+						<height>40</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>METF_PlotText</font>
+						<textcolor>TextNF</textcolor>
+						<scroll>false</scroll>
+						<label>fanart</label>
+						<label>clearart</label>
+						<label>clearlogo</label>
+						<label>landscape</label>
+						<label>banner</label>
+						<scrollspeed>20</scrollspeed>
+						<pauseatend>1000</pauseatend>
+					</control>
 				</control>
+			
 				<!-- TV Show Episode Fanart Image -->
 				<control type="image">
 					<posx>918</posx>
