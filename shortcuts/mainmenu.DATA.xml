@@ -115,7 +115,7 @@
 		<action>System.LogOff</action>
 	</shortcut>	
 	<shortcut>
-		<label>$LOCALIZE[32022]</label>
+		<label>Live TV</label>
 		<label2>Common Shortcut</label2>
 		<defaultID>livetv</defaultID>
 		<icon>home_icons/livetv.png</icon>
@@ -124,11 +124,20 @@
 		<visible>System.GetBool(pvrmanager.enabled)</visible>
 	</shortcut>
 	<shortcut>
+		<label>Live Radio</label>
+		<label2>Common Shortcut</label2>
+		<defaultID>radio</defaultID>
+		<icon>home_icons/radio.png</icon>
+		<thumb>home_art/radio.jpg</thumb>
+		<action>ActivateWindow(RadioChannels)</action>
+		<visible>System.GetBool(pvrmanager.enabled)</visible>
+	</shortcut>
+	<shortcut>
 		<defaultID>script.tvguide</defaultID>
 		<label>TV Guide</label>
 		<label2>Program</label2>
-		<icon>DefaultAddon.png</icon>
-		<thumb>MissingLandscapeJpeg.jpg</thumb>
+		<icon>home_icons/tvguide.png</icon>
+		<thumb>home_art/tvguide.jpg</thumb>
 		<action>RunAddOn(script.tvguide)</action>
 		<visible>System.HasAddon(script.tvguide)</visible>
 	</shortcut>

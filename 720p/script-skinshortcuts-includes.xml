@@ -235,7 +235,7 @@
 			<property name="hasSubmenu">False</property>
 		</item>
 		<item id="15">
-			<label>$ADDON[script.skinshortcuts 32022]</label>
+			<label>Live TV</label>
 			<label2>Common Shortcut</label2>
 			<icon>home_icons/livetv.png</icon>
 			<thumb>home_art/livetv.jpg</thumb>
@@ -252,6 +252,36 @@
 			<property name="background">PVR</property>
 			<property name="backgroundName">PVR</property>
 			<property name="hasSubmenu">True</property>
+		</item>
+		<item id="16">
+			<label>Live Radio</label>
+			<label2>Common Shortcut</label2>
+			<icon>home_icons/radio.png</icon>
+			<thumb>home_art/radio.jpg</thumb>
+			<property name="labelID">liveradio</property>
+			<property name="defaultID">radio</property>
+			<visible>[PVR.HasRadioChannels] + [System.GetBool(pvrmanager.enabled)]</visible>
+			<onclick>ActivateWindow(RadioChannels)</onclick>
+			<property name="path">ActivateWindow(RadioChannels)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">liveradio</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">True</property>
+		</item>
+		<item id="17">
+			<label>TV Guide</label>
+			<label2>Program</label2>
+			<icon>home_icons/tvguide.png</icon>
+			<thumb>home_art/tvguide.jpg</thumb>
+			<property name="labelID">script.tvguide</property>
+			<property name="defaultID">script.tvguide</property>
+			<visible>System.HasAddon(script.tvguide)</visible>
+			<onclick>RunAddOn(script.tvguide)</onclick>
+			<property name="path">RunAddOn(script.tvguide)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">script-tvguide</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
 		</item>
 	</include>
 	<include />
@@ -1283,11 +1313,11 @@
 			<property name="group">13005</property>
 		</item>
 		<item id="1">
-			<label>$LOCALIZE[19019]</label>
-			<label2>$ADDON[script.skinshortcuts 32017]</label2>
-			<icon>DefaultTVShows.png</icon>
+			<label>$LOCALIZE[19023]</label>
+			<label2>Live TV</label2>
+			<icon>DefaultShortcut.png</icon>
 			<thumb />
-			<property name="labelID">19019</property>
+			<property name="labelID">19023</property>
 			<property name="defaultID">19019</property>
 			<visible>PVR.HasTVChannels</visible>
 			<onclick>ActivateWindow(TVChannels)</onclick>
@@ -1298,8 +1328,8 @@
 		</item>
 		<item id="2">
 			<label>$LOCALIZE[22020]</label>
-			<label2>$ADDON[script.skinshortcuts 32017]</label2>
-			<icon>DefaultTVShows.png</icon>
+			<label2>Live TV</label2>
+			<icon>DefaultShortcut.png</icon>
 			<thumb />
 			<property name="labelID">22020</property>
 			<property name="defaultID">22020</property>
@@ -1312,8 +1342,8 @@
 		</item>
 		<item id="3">
 			<label>$LOCALIZE[19163]</label>
-			<label2>$ADDON[script.skinshortcuts 32017]</label2>
-			<icon>DefaultTVShows.png</icon>
+			<label2>Live TV</label2>
+			<icon>DefaultShortcut.png</icon>
 			<thumb />
 			<property name="labelID">19163</property>
 			<property name="defaultID">19163</property>
@@ -1326,8 +1356,8 @@
 		</item>
 		<item id="4">
 			<label>$LOCALIZE[19040]</label>
-			<label2>$ADDON[script.skinshortcuts 32017]</label2>
-			<icon>DefaultTVShows.png</icon>
+			<label2>Live TV</label2>
+			<icon>DefaultShortcut.png</icon>
 			<thumb />
 			<property name="labelID">19040</property>
 			<property name="defaultID">19040</property>
@@ -1340,8 +1370,8 @@
 		</item>
 		<item id="5">
 			<label>$LOCALIZE[137]</label>
-			<label2>$ADDON[script.skinshortcuts 32017]</label2>
-			<icon>DefaultTVShows.png</icon>
+			<label2>Live TV</label2>
+			<icon>DefaultShortcut.png</icon>
 			<thumb />
 			<property name="labelID">137</property>
 			<property name="defaultID">137</property>
@@ -1351,6 +1381,76 @@
 			<visible>StringCompare(System.ProfileName,Master user) + [StringCompare(Container(9000).ListItem.Property(submenuVisibility),livetv)]</visible>
 			<property name="isSubmenu">True</property>
 			<property name="group">livetv</property>
+		</item>
+		<item id="1">
+			<label>$LOCALIZE[19024]</label>
+			<label2>Radio</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">19024</property>
+			<property name="defaultID">19019</property>
+			<visible>PVR.HasRadioChannels</visible>
+			<onclick>ActivateWindow(RadioChannels)</onclick>
+			<property name="path">ActivateWindow(RadioChannels)</property>
+			<visible>StringCompare(System.ProfileName,Master user) + [StringCompare(Container(9000).ListItem.Property(submenuVisibility),liveradio)]</visible>
+			<property name="isSubmenu">True</property>
+			<property name="group">liveradio</property>
+		</item>
+		<item id="2">
+			<label>$LOCALIZE[22020]</label>
+			<label2>Radio</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">22020</property>
+			<property name="defaultID">22020</property>
+			<visible>PVR.HasRadioChannels</visible>
+			<onclick>ActivateWindow(RadioGuide)</onclick>
+			<property name="path">ActivateWindow(RadioGuide)</property>
+			<visible>StringCompare(System.ProfileName,Master user) + [StringCompare(Container(9000).ListItem.Property(submenuVisibility),liveradio)]</visible>
+			<property name="isSubmenu">True</property>
+			<property name="group">liveradio</property>
+		</item>
+		<item id="3">
+			<label>$LOCALIZE[19163]</label>
+			<label2>Radio</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">19163</property>
+			<property name="defaultID">19163</property>
+			<visible>PVR.HasRadioChannels</visible>
+			<onclick>ActivateWindow(RadioRecordings)</onclick>
+			<property name="path">ActivateWindow(RadioRecordings)</property>
+			<visible>StringCompare(System.ProfileName,Master user) + [StringCompare(Container(9000).ListItem.Property(submenuVisibility),liveradio)]</visible>
+			<property name="isSubmenu">True</property>
+			<property name="group">liveradio</property>
+		</item>
+		<item id="4">
+			<label>$LOCALIZE[19040]</label>
+			<label2>Radio</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">19040</property>
+			<property name="defaultID">19040</property>
+			<visible>PVR.HasRadioChannels</visible>
+			<onclick>ActivateWindow(RadioTimers)</onclick>
+			<property name="path">ActivateWindow(RadioTimers)</property>
+			<visible>StringCompare(System.ProfileName,Master user) + [StringCompare(Container(9000).ListItem.Property(submenuVisibility),liveradio)]</visible>
+			<property name="isSubmenu">True</property>
+			<property name="group">liveradio</property>
+		</item>
+		<item id="5">
+			<label>$LOCALIZE[137]</label>
+			<label2>Radio</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">137</property>
+			<property name="defaultID">137</property>
+			<visible>PVR.HasRadioChannels</visible>
+			<onclick>ActivateWindow(RadioSearch)</onclick>
+			<property name="path">ActivateWindow(RadioSearch)</property>
+			<visible>StringCompare(System.ProfileName,Master user) + [StringCompare(Container(9000).ListItem.Property(submenuVisibility),liveradio)]</visible>
+			<property name="isSubmenu">True</property>
+			<property name="group">liveradio</property>
 		</item>
 	</include>
 	<include />
@@ -3413,11 +3513,11 @@
 	<include name="skinshortcuts-group-alt-20126-1" />
 	<include name="skinshortcuts-group-livetv">
 		<item id="1">
-			<label>$LOCALIZE[19019]</label>
-			<label2>$ADDON[script.skinshortcuts 32017]</label2>
-			<icon>DefaultTVShows.png</icon>
+			<label>$LOCALIZE[19023]</label>
+			<label2>Live TV</label2>
+			<icon>DefaultShortcut.png</icon>
 			<thumb />
-			<property name="labelID">19019</property>
+			<property name="labelID">19023</property>
 			<property name="defaultID">19019</property>
 			<visible>PVR.HasTVChannels</visible>
 			<onclick>ActivateWindow(TVChannels)</onclick>
@@ -3427,8 +3527,8 @@
 		</item>
 		<item id="2">
 			<label>$LOCALIZE[22020]</label>
-			<label2>$ADDON[script.skinshortcuts 32017]</label2>
-			<icon>DefaultTVShows.png</icon>
+			<label2>Live TV</label2>
+			<icon>DefaultShortcut.png</icon>
 			<thumb />
 			<property name="labelID">22020</property>
 			<property name="defaultID">22020</property>
@@ -3440,8 +3540,8 @@
 		</item>
 		<item id="3">
 			<label>$LOCALIZE[19163]</label>
-			<label2>$ADDON[script.skinshortcuts 32017]</label2>
-			<icon>DefaultTVShows.png</icon>
+			<label2>Live TV</label2>
+			<icon>DefaultShortcut.png</icon>
 			<thumb />
 			<property name="labelID">19163</property>
 			<property name="defaultID">19163</property>
@@ -3453,8 +3553,8 @@
 		</item>
 		<item id="4">
 			<label>$LOCALIZE[19040]</label>
-			<label2>$ADDON[script.skinshortcuts 32017]</label2>
-			<icon>DefaultTVShows.png</icon>
+			<label2>Live TV</label2>
+			<icon>DefaultShortcut.png</icon>
 			<thumb />
 			<property name="labelID">19040</property>
 			<property name="defaultID">19040</property>
@@ -3466,8 +3566,8 @@
 		</item>
 		<item id="5">
 			<label>$LOCALIZE[137]</label>
-			<label2>$ADDON[script.skinshortcuts 32017]</label2>
-			<icon>DefaultTVShows.png</icon>
+			<label2>Live TV</label2>
+			<icon>DefaultShortcut.png</icon>
 			<thumb />
 			<property name="labelID">137</property>
 			<property name="defaultID">137</property>
@@ -3480,11 +3580,11 @@
 	</include>
 	<include name="skinshortcuts-group-alt-livetv">
 		<item id="1">
-			<label>$LOCALIZE[19019]</label>
-			<label2>$ADDON[script.skinshortcuts 32017]</label2>
-			<icon>DefaultTVShows.png</icon>
+			<label>$LOCALIZE[19023]</label>
+			<label2>Live TV</label2>
+			<icon>DefaultShortcut.png</icon>
 			<thumb />
-			<property name="labelID">19019</property>
+			<property name="labelID">19023</property>
 			<property name="defaultID">19019</property>
 			<visible>PVR.HasTVChannels</visible>
 			<onclick>ActivateWindow(TVChannels)</onclick>
@@ -3495,8 +3595,8 @@
 		</item>
 		<item id="2">
 			<label>$LOCALIZE[22020]</label>
-			<label2>$ADDON[script.skinshortcuts 32017]</label2>
-			<icon>DefaultTVShows.png</icon>
+			<label2>Live TV</label2>
+			<icon>DefaultShortcut.png</icon>
 			<thumb />
 			<property name="labelID">22020</property>
 			<property name="defaultID">22020</property>
@@ -3509,8 +3609,8 @@
 		</item>
 		<item id="3">
 			<label>$LOCALIZE[19163]</label>
-			<label2>$ADDON[script.skinshortcuts 32017]</label2>
-			<icon>DefaultTVShows.png</icon>
+			<label2>Live TV</label2>
+			<icon>DefaultShortcut.png</icon>
 			<thumb />
 			<property name="labelID">19163</property>
 			<property name="defaultID">19163</property>
@@ -3523,8 +3623,8 @@
 		</item>
 		<item id="4">
 			<label>$LOCALIZE[19040]</label>
-			<label2>$ADDON[script.skinshortcuts 32017]</label2>
-			<icon>DefaultTVShows.png</icon>
+			<label2>Live TV</label2>
+			<icon>DefaultShortcut.png</icon>
 			<thumb />
 			<property name="labelID">19040</property>
 			<property name="defaultID">19040</property>
@@ -3537,8 +3637,8 @@
 		</item>
 		<item id="5">
 			<label>$LOCALIZE[137]</label>
-			<label2>$ADDON[script.skinshortcuts 32017]</label2>
-			<icon>DefaultTVShows.png</icon>
+			<label2>Live TV</label2>
+			<icon>DefaultShortcut.png</icon>
 			<thumb />
 			<property name="labelID">137</property>
 			<property name="defaultID">137</property>
@@ -3552,4 +3652,149 @@
 	</include>
 	<include name="skinshortcuts-group-livetv-1" />
 	<include name="skinshortcuts-group-alt-livetv-1" />
+	<include name="skinshortcuts-group-liveradio">
+		<item id="1">
+			<label>$LOCALIZE[19024]</label>
+			<label2>Radio</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">19024</property>
+			<property name="defaultID">19019</property>
+			<visible>PVR.HasRadioChannels</visible>
+			<onclick>ActivateWindow(RadioChannels)</onclick>
+			<property name="path">ActivateWindow(RadioChannels)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">liveradio</property>
+		</item>
+		<item id="2">
+			<label>$LOCALIZE[22020]</label>
+			<label2>Radio</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">22020</property>
+			<property name="defaultID">22020</property>
+			<visible>PVR.HasRadioChannels</visible>
+			<onclick>ActivateWindow(RadioGuide)</onclick>
+			<property name="path">ActivateWindow(RadioGuide)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">liveradio</property>
+		</item>
+		<item id="3">
+			<label>$LOCALIZE[19163]</label>
+			<label2>Radio</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">19163</property>
+			<property name="defaultID">19163</property>
+			<visible>PVR.HasRadioChannels</visible>
+			<onclick>ActivateWindow(RadioRecordings)</onclick>
+			<property name="path">ActivateWindow(RadioRecordings)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">liveradio</property>
+		</item>
+		<item id="4">
+			<label>$LOCALIZE[19040]</label>
+			<label2>Radio</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">19040</property>
+			<property name="defaultID">19040</property>
+			<visible>PVR.HasRadioChannels</visible>
+			<onclick>ActivateWindow(RadioTimers)</onclick>
+			<property name="path">ActivateWindow(RadioTimers)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">liveradio</property>
+		</item>
+		<item id="5">
+			<label>$LOCALIZE[137]</label>
+			<label2>Radio</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">137</property>
+			<property name="defaultID">137</property>
+			<visible>PVR.HasRadioChannels</visible>
+			<onclick>ActivateWindow(RadioSearch)</onclick>
+			<property name="path">ActivateWindow(RadioSearch)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">liveradio</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-liveradio">
+		<item id="1">
+			<label>$LOCALIZE[19024]</label>
+			<label2>Radio</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">19024</property>
+			<property name="defaultID">19019</property>
+			<visible>PVR.HasRadioChannels</visible>
+			<onclick>ActivateWindow(RadioChannels)</onclick>
+			<property name="path">ActivateWindow(RadioChannels)</property>
+			<visible>StringCompare(System.ProfileName,Master user) + [StringCompare(Window(10000).Property(submenuVisibility),liveradio)]</visible>
+			<property name="isSubmenu">True</property>
+			<property name="group">liveradio</property>
+		</item>
+		<item id="2">
+			<label>$LOCALIZE[22020]</label>
+			<label2>Radio</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">22020</property>
+			<property name="defaultID">22020</property>
+			<visible>PVR.HasRadioChannels</visible>
+			<onclick>ActivateWindow(RadioGuide)</onclick>
+			<property name="path">ActivateWindow(RadioGuide)</property>
+			<visible>StringCompare(System.ProfileName,Master user) + [StringCompare(Window(10000).Property(submenuVisibility),liveradio)]</visible>
+			<property name="isSubmenu">True</property>
+			<property name="group">liveradio</property>
+		</item>
+		<item id="3">
+			<label>$LOCALIZE[19163]</label>
+			<label2>Radio</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">19163</property>
+			<property name="defaultID">19163</property>
+			<visible>PVR.HasRadioChannels</visible>
+			<onclick>ActivateWindow(RadioRecordings)</onclick>
+			<property name="path">ActivateWindow(RadioRecordings)</property>
+			<visible>StringCompare(System.ProfileName,Master user) + [StringCompare(Window(10000).Property(submenuVisibility),liveradio)]</visible>
+			<property name="isSubmenu">True</property>
+			<property name="group">liveradio</property>
+		</item>
+		<item id="4">
+			<label>$LOCALIZE[19040]</label>
+			<label2>Radio</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">19040</property>
+			<property name="defaultID">19040</property>
+			<visible>PVR.HasRadioChannels</visible>
+			<onclick>ActivateWindow(RadioTimers)</onclick>
+			<property name="path">ActivateWindow(RadioTimers)</property>
+			<visible>StringCompare(System.ProfileName,Master user) + [StringCompare(Window(10000).Property(submenuVisibility),liveradio)]</visible>
+			<property name="isSubmenu">True</property>
+			<property name="group">liveradio</property>
+		</item>
+		<item id="5">
+			<label>$LOCALIZE[137]</label>
+			<label2>Radio</label2>
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<property name="labelID">137</property>
+			<property name="defaultID">137</property>
+			<visible>PVR.HasRadioChannels</visible>
+			<onclick>ActivateWindow(RadioSearch)</onclick>
+			<property name="path">ActivateWindow(RadioSearch)</property>
+			<visible>StringCompare(System.ProfileName,Master user) + [StringCompare(Window(10000).Property(submenuVisibility),liveradio)]</visible>
+			<property name="isSubmenu">True</property>
+			<property name="group">liveradio</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-liveradio-1" />
+	<include name="skinshortcuts-group-alt-liveradio-1" />
+	<include name="skinshortcuts-group-script-tvguide" />
+	<include name="skinshortcuts-group-alt-script-tvguide" />
+	<include name="skinshortcuts-group-script-tvguide-1" />
+	<include name="skinshortcuts-group-alt-script-tvguide-1" />
 </includes>
