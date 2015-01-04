@@ -601,6 +601,14 @@
 						<onclick>Skin.ToggleSetting(NoViewBannerPoster)</onclick>
 						<selected>Skin.HasSetting(NoViewBannerPoster)</selected>
 					</control>
+					<!-- View 513 -->
+					<control type="radiobutton" id="622">
+						<description>Banner Fixed</description>
+						<include>SettingsLabel</include>
+						<label>$LOCALIZE[31441] Banner Fixed</label>
+						<onclick>Skin.ToggleSetting(NoViewBannerFixed)</onclick>
+						<selected>Skin.HasSetting(NoViewBannerFixed)</selected>
+					</control>
 					<!-- View 52 -->
 					<control type="radiobutton" id="615">
 						<description>Landscape</description>
