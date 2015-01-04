@@ -37,12 +37,9 @@
 				<posx>50</posx>
 				<posy>85</posy>
 				<width>530</width>
-				<height>120</height>
+				<height>30</height>
 				<font>METF_InfoText</font>
 				<textcolor>TextNF</textcolor>
-				<wrapmultiline>true</wrapmultiline>
-				<scroll>true</scroll>
-				<scrollspeed>50</scrollspeed>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>-</label>
