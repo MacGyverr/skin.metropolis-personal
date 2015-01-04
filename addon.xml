@@ -20,7 +20,7 @@
 	</extension>
 
 	<extension point="xbmc.addon.metadata">
-		<summary lang="be">A Mix of Retro and Modern (and crap I want). Original Metropolis skin by Amra - continued by Stoli</summary>
+		<summary lang="be">A Mix of Retro and Modern (and crap I want). Original Metropolis skin by Amra - continued by Stoli and jingai</summary>
 		<summary lang="de">Für Eden angepasst, ein Mix aus Retro und Moderne. Original Metropolis-Skin von Amra - weiterentwickelt von Stoli</summary>
 		<summary lang="el">Ένα μείγμα Παλαιού και Νέου. Το αρχικό κέλυφος Metropolis από τον Amra - συντήρηση και εξέλιξη από τον Stoli</summary>
 		<summary lang="en">A Mix of Retro and Modern.</summary>
@@ -36,7 +36,7 @@
 		<summary lang="pt_BR">Atualizada para Eden, um Mix de Retro e Modern. Skin Original Metropolis por Amra - continuada por Stoli</summary>
 		<summary lang="ru">Смесь ретро и модерна</summary>
 		<summary lang="sv">En blandning av Retro och Modernt. Original Metropolisskalet gjordes av Amra - Utvecklas av Stoli</summary>
-		<description lang="be">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</description>
+		<description lang="be">Official Metropolis is designed to show as much media info as possible with easy to read text and icons, this personal version, not so much. I'm really just trying to keep the skin smooth and simple for my family members with some themes but extremely customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis, which I use as a base for my version.</description>
 		<description lang="da">Metropolis er designet til at vise så mange medier som muligt med læsbar tekst og ikoner. Alt sammen mens skin'et holdes strømlinet og simpelt at bruge for alle familiemedlemmer, med flere temaer og justerbare menuer og visninger. Tak til Hitcher for Alaska Revisited, det er blevet brugt som grundlag for Metropolis.</description>
 		<description lang="de">Metropolis wurde entwickelt um so viel wie möglich Medien-Informationen mit leicht lesbarem Text und Symbolen darzustellen. Es wird versucht die Anzeige so ausgeglichen und einfach zu halten um für jedes Familienmitglied mit verschiedene Themen und anpassbare Menüs und Anzeigen optimal bedienbar zu sein. Dank geht an Hitcher für sein Alaska Revisited, welches als Basis für Metropolis diente.</description>
 		<description lang="el">Το Metropolis είναι σχεδιασμένο να εμφανίζει κατά το δυνατόν περισσότερες πληροφορίες πολυμέσων μέσω ευανάγνωστου κειμένου και εικονιδίων. Όλα αυτά ενώ το κέλυφος παραμένει προσιτό και απλό στη χρήση από όλα τα μέλη της οικογένειας, με πολλαπλά θέματα και προσαρμόσιμα μενού και τύπους προβολής. Ευχαριστούμε τον Hitcher για το Alaska Revisited που αποτέλεσε τη βάση για το Metropolis.</description>
