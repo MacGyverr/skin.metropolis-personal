@@ -258,7 +258,7 @@
 			<posy>2</posy>
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByMenu</include>
-			<visible>[Control.HasFocus(9000) | Control.HasFocus(9001)] + SubString(Container(9000).ListItem.Property(hasSubmenu),True) + [Control.HasFocus(9000) + !Skin.HasSetting(HomeCleanLibrary)]</visible>
+			<visible>Control.HasFocus(9001) | [Control.HasFocus(9000) | Control.HasFocus(9001)] + SubString(Container(9000).ListItem.Property(hasSubmenu),True) + [Control.HasFocus(9000) + !Skin.HasSetting(HomeCleanLibrary)]</visible>
 			<control type="image">
 				<posx>625</posx>
 				<posy>508</posy>
@@ -280,7 +280,7 @@
 			<onleft>9000</onleft>
 			<onright>9000</onright>
 			<orientation>vertical</orientation>
-			<visible allowhiddenfocus="true">![Control.HasFocus(9000) + [StringCompare(Container(9000).ListItem.Property(submenuVisibility),weather) + Skin.HasSetting(HomeForecast)] | [Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8003)] | [Control.HasFocus(9000) + Skin.HasSetting(HomeCleanLibrary)]]</visible>
+			<visible allowhiddenfocus="true">Control.HasFocus(9001) | ![Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8003)] + [Control.HasFocus(9000) + !Skin.HasSetting(HomeCleanLibrary)] + !StringCompare(Container(9000).ListItem.Property(Widget),HomeForecast)</visible>
 			<defaultcontrol always="true">1</defaultcontrol>
 			<scrolltime tween="sine" easing="out">240</scrolltime>
 			<itemlayout width="300" height="20">

@@ -1,91 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <overrides>
-	<!-- Movies -->
-	<!-- Recent movies -->
-	<widget label="Recent movies">RecentMovies</widget>
-	<widgetdefault labelID="movies">RecentMovies</widgetdefault>
-	<!-- Recommended movies -->
-	<widget label="Recommended movies">RecommendedMovies</widget>
-	<!-- Random movies -->
-	<widget label="Random movies">RandomMovies</widget>
-
-	<!-- Episodes -->
-	<!-- Recent episodes -->
-	<widget label="Recent episodes">RecentEpisodes</widget>
-	<widgetdefault labelID="tvshows">RecentEpisodes</widgetdefault>
-	<!-- Recommended Recommended episodes -->
-	<widget label="Recommended episodes">RecommendedEpisodes</widget>
-	<!-- Random episodes -->
-	<widget label="Random episodes">RandomEpisodes</widget>
-
-	<!-- Albums -->
-	<!-- Recent albums -->
-	<widget label="Recent albums">RecentAlbums</widget>
-	<widgetdefault labelID="132">RecentAlbums</widgetdefault>
-	<!-- Recommended albums -->
-	<widget label="Recommended albums">RecommendedAlbums</widget>
-	<!-- Random albums -->
-	<widget label="Random albums">RandomAlbums</widget>
+	<!-- Widgets -->
+	<!-- Recently Added -->
+	<widget label="Recently Added Movies">MoviesRecentlyAdded</widget>
+	<widget label="Recently Added TV Shows">TVShowsRecentlyAdded</widget>
+	<widget label="Recently Added Music">MusicRecentlyAdded</widget>
+	<widget label="Recently Added Music Videos">MusicVideosRecentlyAdded</widget>
+	
+	<!-- Recommended -->
+	<widget label="Recommended Movies">MoviesWatchlist</widget>
+	<widget label="Recommended TV Shows">TVShowsWatchlist</widget>
+	<widget label="Recommended Music">MusicWatchlist</widget>
+	<widget label="Recommended Added Music Videos">MusicVideosWatchlist</widget>
+	
+	<!-- Random -->
+	<widget label="Random Movies">MoviesRandomItems</widget>
+	<widget label="Random TV Shows">TVShowsRandomItems</widget>
+	<widget label="Random Music">MusicRandomItems</widget>
+	<widget label="Random Added Music Videos">MusicVideosRandomItems</widget>
 
 	<!-- Weather -->
-	<widget label="Weather Forecast">WeatherWidget</widget>
-	<widgetdefault labelID="weather">WeatherWidget</widgetdefault>
+	<widget label="Weather Forecast">HomeForecast</widget>
 	
-	<!-- Video addons -->
+	<!-- Default widgets -->
+	<widgetdefault labelID="movies">MoviesRecentlyAdded</widgetdefault>
+	<widgetdefault labelID="tvshows">TVShowsRecentlyAdded</widgetdefault>
+	<widgetdefault labelID="music">MusicRecentlyAdded</widgetdefault>
+	<widgetdefault labelID="musicvideos">MusicVideosRecentlyAdded</widgetdefault>
+	<widgetdefault labelID="weather">HomeForecast</widgetdefault>
+	
+	<!-- Video addons 
 	<widget label="Video addons">VideoAddons</widget>
-	<widgetdefault labelID="videos">VideoAddons</widgetdefault>
+	<widgetdefault labelID="videos">VideoAddons</widgetdefault> -->
 	
-	<!-- Music addons -->
+	<!-- Music addons 
 	<widget label="Music addons">MusicAddons</widget>
-	<widgetdefault labelID="music">MusicAddons</widgetdefault>
+	<widgetdefault labelID="music">MusicAddons</widgetdefault> -->
 	
-	<!-- Pictures addons -->
+	<!-- Pictures addons 
 	<widget label="Pictures addons">PictureAddons</widget>
-	<widgetdefault labelID="pictures">PictureAddons</widgetdefault>
+	<widgetdefault labelID="pictures">PictureAddons</widgetdefault> -->
 	
-	<!-- Program addons -->
+	<!-- Program addons 
 	<widget label="Program addons">ProgramAddons</widget>
-	<widgetdefault labelID="programs">ProgramAddons</widgetdefault>
+	<widgetdefault labelID="programs">ProgramAddons</widgetdefault> -->
 	
-	<!-- Favourites -->
+	<!-- Favourites 
 	<widget label="Favourites">Favourites</widget>
-	<widgetdefault labelID="1036">Favourites</widgetdefault>
+	<widgetdefault labelID="1036">Favourites</widgetdefault> -->
 	
-	<!-- PVR -->
+	<!-- PVR 
 	<widget label="PVR Status">PVR</widget>
-	<widgetdefault labelID="livetv">PVR</widgetdefault>
+	<widgetdefault labelID="livetv">PVR</widgetdefault> -->
 	
-	<!-- Playlists -->
-	<widgetPlaylists>True</widgetPlaylists>
+	<!-- Playlists 
 	<widget label="Current weather">Weather</widget>
 	<widget label="Recent Videos" type="media">RecentVideos</widget>
 	<widget label="Recently added albums" type="media">RecentAlbums</widget>
 	<widget label="Recommended albums" type="media">RecommendedAlbums</widget>
-	<widget label="Random albums" type="media">RandomAlbums</widget>
-	<widgetdefault labelID="weather">Weather</widgetdefault>
-	<background label="Movies">Movies</background>
-	<background label="TV Shows">TVShows</background>
-	<background label="Music Videos">MusicVideos</background>
-	<background label="PVR">PVR</background>
-	<background label="Videos">Videos</background>
-	<background label="Music">Music</background>
-	<background label="Programs">Programs</background>
-	<background label="Weather">Weather</background>
-	<background label="Settings">Settings</background>
-	<background label="Pictures">Pictures</background>
-	<backgrounddefault labelID="movies">Movies</backgrounddefault>
-	<backgrounddefault labelID="tvshows">TVShows</backgrounddefault>
-	<backgrounddefault labelID="livetv">PVR</backgrounddefault>
-	<backgrounddefault labelID="videos">Videos</backgrounddefault>
-	<backgrounddefault labelID="music">Music</backgrounddefault>
-	<backgrounddefault labelID="programs">Programs</backgrounddefault>
-	<backgrounddefault labelID="weather">Weather</backgrounddefault>
-	<backgrounddefault labelID="settings">Settings</backgrounddefault>
-	<backgrounddefault labelID="pictures">Pictures</backgrounddefault>
+	<widget label="Random albums" type="media">RandomAlbums</widget> 
+	<widgetPlaylists>True</widgetPlaylists> -->
+	
 	
 	<!-- Settings -->
-	<warn heading="About to lock yourself out of the house?" message="Doing this will make all Settings menus go away, you will be unable to undo this.  Why are you doing this?  Is this a kids profile, and you have another profile already, and it's not set to auto-login?  You need to practice manually deleting your guisetings.xml file?  Are you a visitor using someone else's media center and trying to mess with them.  Really do this?">ActivateWindow(Settings)</warn>
-	<forcesettings>True</forcesettings>
+	<warn heading="You are making a mistake!  Really do this?" message="There is NO coming back from this action?  It will end badly!">ActivateWindow(Settings)</warn>
+	<forcesettings>False</forcesettings>
 	
-	<backgroundBrowse>True</backgroundBrowse>
+	<!-- Backgrounds -->
+	<backgroundBrowse default="special://skin/extras">True</backgroundBrowse>
 </overrides>

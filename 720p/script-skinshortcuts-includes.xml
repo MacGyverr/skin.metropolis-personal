@@ -14,12 +14,8 @@
 			<visible>StringCompare(System.ProfileName,Master user)</visible>
 			<property name="submenuVisibility">weather</property>
 			<property name="group">mainmenu</property>
-			<property name="widget">WeatherWidget</property>
+			<property name="widget">HomeForecast</property>
 			<property name="widgetName">Weather Forecast</property>
-			<property name="widget">Weather</property>
-			<property name="widgetName">Current weather</property>
-			<property name="background">Weather</property>
-			<property name="backgroundName">Weather</property>
 			<property name="hasSubmenu">True</property>
 		</item>
 		<item id="2">
@@ -34,10 +30,6 @@
 			<visible>StringCompare(System.ProfileName,Master user)</visible>
 			<property name="submenuVisibility">videos</property>
 			<property name="group">mainmenu</property>
-			<property name="widget">VideoAddons</property>
-			<property name="widgetName">Video addons</property>
-			<property name="background">Videos</property>
-			<property name="backgroundName">Videos</property>
 			<property name="hasSubmenu">True</property>
 		</item>
 		<item id="3">
@@ -68,10 +60,8 @@
 			<visible>StringCompare(System.ProfileName,Master user)</visible>
 			<property name="submenuVisibility">movies</property>
 			<property name="group">mainmenu</property>
-			<property name="widget">RecentMovies</property>
-			<property name="widgetName">Recent movies</property>
-			<property name="background">Movies</property>
-			<property name="backgroundName">Movies</property>
+			<property name="widget">MoviesRecentlyAdded</property>
+			<property name="widgetName">Recently Added Movies</property>
 			<property name="hasSubmenu">True</property>
 		</item>
 		<item id="5">
@@ -87,10 +77,8 @@
 			<visible>StringCompare(System.ProfileName,Master user)</visible>
 			<property name="submenuVisibility">tvshows</property>
 			<property name="group">mainmenu</property>
-			<property name="widget">RecentEpisodes</property>
-			<property name="widgetName">Recent episodes</property>
-			<property name="background">TVShows</property>
-			<property name="backgroundName">TV Shows</property>
+			<property name="widget">TVShowsRecentlyAdded</property>
+			<property name="widgetName">Recently Added TV Shows</property>
 			<property name="hasSubmenu">True</property>
 		</item>
 		<item id="6">
@@ -105,10 +93,8 @@
 			<visible>StringCompare(System.ProfileName,Master user)</visible>
 			<property name="submenuVisibility">music</property>
 			<property name="group">mainmenu</property>
-			<property name="widget">MusicAddons</property>
-			<property name="widgetName">Music addons</property>
-			<property name="background">Music</property>
-			<property name="backgroundName">Music</property>
+			<property name="widget">MusicRecentlyAdded</property>
+			<property name="widgetName">Recently Added Music</property>
 			<property name="hasSubmenu">True</property>
 		</item>
 		<item id="7">
@@ -124,6 +110,8 @@
 			<visible>StringCompare(System.ProfileName,Master user)</visible>
 			<property name="submenuVisibility">musicvideos</property>
 			<property name="group">mainmenu</property>
+			<property name="widget">MusicVideosRecentlyAdded</property>
+			<property name="widgetName">Recently Added Music Videos</property>
 			<property name="hasSubmenu">True</property>
 		</item>
 		<item id="8">
@@ -138,10 +126,6 @@
 			<visible>StringCompare(System.ProfileName,Master user)</visible>
 			<property name="submenuVisibility">pictures</property>
 			<property name="group">mainmenu</property>
-			<property name="widget">PictureAddons</property>
-			<property name="widgetName">Pictures addons</property>
-			<property name="background">Pictures</property>
-			<property name="backgroundName">Pictures</property>
 			<property name="hasSubmenu">True</property>
 		</item>
 		<item id="9">
@@ -156,8 +140,6 @@
 			<visible>StringCompare(System.ProfileName,Master user)</visible>
 			<property name="submenuVisibility">num-1036</property>
 			<property name="group">mainmenu</property>
-			<property name="widget">Favourites</property>
-			<property name="widgetName">Favourites</property>
 			<property name="hasSubmenu">False</property>
 		</item>
 		<item id="10">
@@ -186,8 +168,6 @@
 			<visible>StringCompare(System.ProfileName,Master user)</visible>
 			<property name="submenuVisibility">settings</property>
 			<property name="group">mainmenu</property>
-			<property name="background">Settings</property>
-			<property name="backgroundName">Settings</property>
 			<property name="hasSubmenu">True</property>
 		</item>
 		<item id="12">
@@ -247,10 +227,6 @@
 			<visible>StringCompare(System.ProfileName,Master user)</visible>
 			<property name="submenuVisibility">livetv</property>
 			<property name="group">mainmenu</property>
-			<property name="widget">PVR</property>
-			<property name="widgetName">PVR Status</property>
-			<property name="background">PVR</property>
-			<property name="backgroundName">PVR</property>
 			<property name="hasSubmenu">True</property>
 		</item>
 		<item id="16">
