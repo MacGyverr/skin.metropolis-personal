@@ -53,13 +53,8 @@
 	<widget label="PVR Status">PVR</widget>
 	<widgetdefault labelID="livetv">PVR</widgetdefault> -->
 	
-	<!-- Playlists 
-	<widget label="Current weather">Weather</widget>
-	<widget label="Recent Videos" type="media">RecentVideos</widget>
-	<widget label="Recently added albums" type="media">RecentAlbums</widget>
-	<widget label="Recommended albums" type="media">RecommendedAlbums</widget>
-	<widget label="Random albums" type="media">RandomAlbums</widget> 
-	<widgetPlaylists>True</widgetPlaylists> -->
+	<!-- Playlists -->
+	<widgetPlaylists>True</widgetPlaylists>
 	
 	
 	<!-- Settings -->

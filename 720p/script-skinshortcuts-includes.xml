@@ -140,6 +140,9 @@
 			<visible>StringCompare(System.ProfileName,Master user)</visible>
 			<property name="submenuVisibility">num-1036</property>
 			<property name="group">mainmenu</property>
+			<property name="widget">Playlist</property>
+			<property name="widgetName">IMDB Top 250</property>
+			<property name="widgetPlaylist">C:\Users\User\AppData\Roaming\Kodi\addons\skin.metropolis-personal-master\playlists\IMDB Top 250.xsp</property>
 			<property name="hasSubmenu">False</property>
 		</item>
 		<item id="10">
