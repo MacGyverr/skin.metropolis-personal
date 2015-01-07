@@ -49,9 +49,9 @@
 	<widget label="Favourites">Favourites</widget>
 	<widgetdefault labelID="1036">Favourites</widgetdefault> -->
 	
-	<!-- PVR 
+	<!-- PVR -->
 	<widget label="PVR Status">PVR</widget>
-	<widgetdefault labelID="livetv">PVR</widgetdefault> -->
+	<widgetdefault labelID="livetv">PVR</widgetdefault> 
 	
 	<!-- Playlists -->
 	<widgetPlaylists>True</widgetPlaylists>

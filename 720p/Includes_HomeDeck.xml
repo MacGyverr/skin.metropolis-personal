@@ -4,28 +4,28 @@
 	<!-- Submenu title for all home views -->
 	
 	<include name="RecentlyAddedArrow1">
-			<posx>238</posx>
-			<posy>510</posy>
-			<width>30</width>
-			<height>30</height>
-			<texture>ArrowLeft.png</texture>
-			<colordiffuse>HelpArrowDiffuse</colordiffuse>
+		<posx>238</posx>
+		<posy>510</posy>
+		<width>30</width>
+		<height>30</height>
+		<texture>ArrowLeft.png</texture>
+		<colordiffuse>HelpArrowDiffuse</colordiffuse>
 	</include>			
 	<include name="RecentlyAddedArrow2">
-			<posx>625</posx>
-			<posy>45</posy>
-			<width>30</width>
-			<height>30</height>
-			<texture>ArrowUp.png</texture>
-			<colordiffuse>HelpArrowDiffuse</colordiffuse>
+		<posx>625</posx>
+		<posy>45</posy>
+		<width>30</width>
+		<height>30</height>
+		<texture>ArrowUp.png</texture>
+		<colordiffuse>HelpArrowDiffuse</colordiffuse>
 	</include>
 	<include name="RecentlyAddedArrow3">
-			<posx>625</posx>
-			<posy>420</posy>
-			<width>30</width>
-			<height>30</height>
-			<texture>ArrowUp.png</texture>
-			<colordiffuse>HelpArrowDiffuse</colordiffuse>
+		<posx>625</posx>
+		<posy>420</posy>
+		<width>30</width>
+		<height>30</height>
+		<texture>ArrowUp.png</texture>
+		<colordiffuse>HelpArrowDiffuse</colordiffuse>
 	</include>
 	
 	<include name="RecentlyAddedTitle1">
@@ -299,17 +299,16 @@
 	<include name="HomeDeck">
 		<control type="group">
 			<!-- Widgets for all home views -->
-
-				<!-- Widget arrow for all home views -->
+			<!-- Widget arrow for all home views -->
 			<control type="group">
 				<include>Animation_OpenCloseFade</include>
 				<include>Animation_FadedByMenu</include>
-					<visible>true</visible>
+				<visible>true</visible>
 				<control type="image">
 					<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">RecentlyAddedArrow1</include>
 					<include condition="Skin.HasSetting(Home2)">RecentlyAddedArrow2</include>
 					<include condition="Skin.HasSetting(Home3)">RecentlyAddedArrow3</include>
-					<visible>!IsEmpty(Container(9000).ListItem.Property(widget)) + !StringCompare(Container(9000).ListItem.Property(Widget),HomeForecast)</visible>
+					<visible>!IsEmpty(Container(9000).ListItem.Property(widget)) + !StringCompare(Container(9000).ListItem.Property(Widget),HomeForecast) + ![[StringCompare(Container(9000).ListItem.Property(Widget),PVR) + !PVR.IsRecording] + [StringCompare(Container(9000).ListItem.Property(Widget),PVR) + !PVR.HasNonRecordingTimer]]</visible>
 				</control>
 				
 				<!-- Widget titles for all home views -->
@@ -319,10 +318,10 @@
 					<include condition="Skin.HasSetting(Home3)">RecentlyAddedTitle3</include>
 					<label>[B]$INFO[Container(9000).ListItem.Property(widgetName)][/B]</label>
 					<shadowcolor>ff000000</shadowcolor>
-					<visible>!IsEmpty(Container(9000).ListItem.Property(widget)) + !StringCompare(Container(9000).ListItem.Property(Widget),HomeForecast)</visible>
+					<visible>!IsEmpty(Container(9000).ListItem.Property(widget)) + !StringCompare(Container(9000).ListItem.Property(Widget),HomeForecast) + ![[StringCompare(Container(9000).ListItem.Property(Widget),PVR) + !PVR.IsRecording] + [StringCompare(Container(9000).ListItem.Property(Widget),PVR) + !PVR.HasNonRecordingTimer]]</visible>
 				</control>
 			</control>
-
+			
 			<control type="group" id="9002">
 				<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(9002).HasFocus()">conditional</animation>
 				<animation effect="fade" start="0" end="100" delay="200" time="200" condition="ControlGroup(9002).HasFocus()">conditional</animation>
@@ -540,9 +539,157 @@
 					</control>		
 				</control>
 				
+				<!-- PVR Widget button -->
+				<control type="button" id="8004">
+					<left>1</left>
+					<top>1</top>
+					<width>1</width>
+					<height>1</height>
+					<label>-</label>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>8004</onup>
+					<ondown>8004</ondown>
+					<onclick>ActivateWindow(TVTimers)</onclick>
+					<visible>StringCompare(Container(9000).ListItem.Property(Widget),PVR) + [PVR.IsRecording | PVR.HasNonRecordingTimer]</visible>
+				</control>
 			</control>
+
+			<!-- PVR Widget -->
+			<control type="group">
+				<left>470</left>
+				<top>554</top>
+				<visible>Control.HasFocus(8004) + [StringCompare(Container(9000).ListItem.Property(Widget),PVR) + [PVR.IsRecording | PVR.HasNonRecordingTimer]]</visible>
+				<animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(Favourites)">conditional</animation>
+				<control type="group">
+					<animation effect="slide" start="0,0" end="0,80" time="0" condition="PVR.IsRecording">conditional</animation>
+					<visible>PVR.HasNonRecordingTimer</visible>
+					<control type="image">
+						<left>-100</left>
+						<top>0</top>
+						<width>80</width>
+						<height>80</height>
+						<aspectratio>keep</aspectratio>
+						<texture background="true" fallback="DefaultVideoCover.png">$INFO[PVR.NextRecordingChannelIcon]</texture>
+						<bordertexture border="8">ThumbBorder.png</bordertexture>
+						<bordersize>4</bordersize>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>5</top>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<texture>PVR-HasTimer.png</texture>
+					</control>
+					<control type="label">
+						<description>Next Timer Header label</description>
+						<left>40</left>
+						<top>5</top>
+						<height>25</height>
+						<width>400</width>
+						<label>$LOCALIZE[19157]</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>METF_RecentlyAddedListText</font>
+						<textcolor>Temp</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+						<description>NextRecordingDateTime</description>
+						<left>0</left>
+						<top>30</top>
+						<height>25</height>
+						<width>400</width>
+						<label>$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19126] - ]</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>METF_RecentlyAddedListText</font>
+						<textcolor>RecentlyAddedNF</textcolor>
+						<scroll>true</scroll>
+						<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+						<description>NextRecordingTitle Channel</description>
+						<left>0</left>
+						<top>50</top>
+						<height>25</height>
+						<width>800</width>
+						<label>$INFO[PVR.NextRecordingTitle][COLOR=SubmenuTextFocused]$INFO[PVR.NextRecordingChannel, - [COLOR=SubmenuTextFocused]([/COLOR],[COLOR=SubmenuTextFocused])[/COLOR]][/COLOR]</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>METF_RecentlyAddedListText</font>
+						<textcolor>RecentlyAddedNF</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<scroll>true</scroll>
+					</control>
+				</control>
+				
+				<control type="group">
+					<visible>PVR.IsRecording</visible>
+					<control type="image">
+						<left>-100</left>
+						<top>0</top>
+						<width>80</width>
+						<height>80</height>
+						<aspectratio>keep</aspectratio>
+						<texture background="true" fallback="DefaultVideoCover.png">$INFO[PVR.NowRecordingChannelIcon]</texture>
+						<bordertexture border="8">ThumbBorder.png</bordertexture>
+						<bordersize>4</bordersize>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>5</top>
+						<width>30</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<texture>PVR-IsRecording.png</texture>
+					</control>
+					<control type="label">
+						<description>Is Recording Header label</description>
+						<left>40</left>
+						<top>5</top>
+						<height>25</height>
+						<width>400</width>
+						<label>$LOCALIZE[19158]</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>METF_RecentlyAddedListText</font>
+						<textcolor>Temp</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+						<description>NextRecordingDateTime</description>
+						<left>0</left>
+						<top>30</top>
+						<height>25</height>
+						<width>400</width>
+						<label>$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>METF_RecentlyAddedListText</font>
+						<textcolor>RecentlyAddedNF</textcolor>
+						<scroll>true</scroll>
+						<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+						<description>NextRecordingTitle Channel</description>
+						<left>0</left>
+						<top>50</top>
+						<height>30</height>
+						<width>800</width>
+						<label>$INFO[PVR.NowRecordingTitle][COLOR=SubmenuTextFocused]$INFO[PVR.NowRecordingChannel, - [COLOR=SubmenuTextFocused]([/COLOR],[COLOR=SubmenuTextFocused])[/COLOR]][/COLOR]</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>METF_RecentlyAddedListText</font>
+						<textcolor>RecentlyAddedNF</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<scroll>true</scroll>
+					</control>
+				</control>
+			</control>				
 			
-				<!-- 7 Day Forecast -->
+			<!-- 7 Day Forecast -->
 			<control type="grouplist">
 				<visible>Control.HasFocus(9000) + StringCompare(Container(9000).ListItem.Property(Widget),HomeForecast)</visible>
 				<top>WeatherHomeTop</top>
