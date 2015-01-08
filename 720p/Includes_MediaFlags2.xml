@@ -231,7 +231,7 @@
 					<textcolor>MediaFlagDiffuse</textcolor>
 					<font>METF_Votes</font>
 				</control>
-				<control type="image">
+			<control type="image">
 					<width>104</width>
 					<height>54</height>
 					<texture>flags/flag_framesquare.png</texture>
@@ -245,18 +245,21 @@
 				<height>62</height>
 				<visible>!IsEmpty(ListItem.SubtitleLanguage) | [IsEmpty(ListItem.SubtitleLanguage) + !IsEmpty(VideoPlayer.SubtitleLanguage)]</visible>
 				<control type="image">
-					<include>MediaFlagsVarsSquare</include>
-					<texture>flags/cc.png</texture>
-					<colordiffuse>MediaFlagDiffuse</colordiffuse>
-				</control>
-				<control type="image">
 					<posx>2</posx>
 					<width>66</width>
 					<height>54</height>
 					<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
 					<texture>flags/flag_framesquare.png</texture>
 				</control>
-			</control>
+					<control type="image">
+					<top>-8</top>
+					<left>6</left>
+					<width>60</width>
+					<height>70</height>
+					<texture background="true" diffuse="flags/cc.png">$INFO[ListItem.SubtitleLanguage,flags/Subtitles/,.png]</texture>
+					<aspectratio aligny="center" scalediffuse="true">stretch</aspectratio>
+					</control>
+				</control>
 
 			<!-- MPAA Flag (only shown in fullscreen video info) -->
 			
