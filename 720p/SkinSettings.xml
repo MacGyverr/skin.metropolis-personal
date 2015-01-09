@@ -559,12 +559,58 @@
 						<include>Settings_Line</include>
 						<visible>System.HasAddon(script.artwork.downloader)</visible>
 					</control>
-					<control type="button" id="703">
+					<control type="label" id="703">
 						<include>SettingsLabel</include>
-						<label>$LOCALIZE[31126]</label>
-						<onclick>RunScript(script.artwork.downloader, mode=custom, mediatype=tvshow, seasonposter, landscape, clearart, clearlogo, characterart)</onclick>
+						<label>Extra Artwork Downloader</label>
+			<!--		<onclick>RunScript(script.artwork.downloader, mode=custom, mediatype=tvshow, seasonposter, landscape, clearart, clearlogo, characterart)</onclick>
+			-->			<visible>System.HasAddon(script.artwork.downloader)</visible>
+					</control>
+					<control type="button" id="715">
+						<include>SettingsLabel</include>
+						<label> - Download [COLOR=DialogTextFO]logo.png[/COLOR] for all TV Shows</label>
+						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,clearlogo)</onclick>
 						<visible>System.HasAddon(script.artwork.downloader)</visible>
 					</control>
+					<control type="button" id="716">
+						<include>SettingsLabel</include>
+						<label> - Download [COLOR=DialogTextFO]clearart.png[/COLOR] for all TV Shows</label>
+						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,clearart)</onclick>
+						<visible>System.HasAddon(script.artwork.downloader)</visible>
+					</control>
+					<control type="button" id="717">
+						<include>SettingsLabel</include>
+						<label> - Download [COLOR=DialogTextFO]landscape.jpg[/COLOR] for all TV Shows</label>
+						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,landscape)</onclick>
+						<visible>System.HasAddon(script.artwork.downloader)</visible>
+					</control>
+					<control type="button" id="718">
+						<include>SettingsLabel</include>
+						<label> - Download [COLOR=DialogTextFO]banner.jpg[/COLOR] for all TV Shows</label>
+						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,banner)</onclick>
+						<visible>System.HasAddon(script.artwork.downloader)</visible>
+					</control>
+					<control type="button" id="719">
+						<include>SettingsLabel</include>
+						<label> - Download [COLOR=DialogTextFO]poster.jpg[/COLOR] for all TV Shows</label>
+						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,poster)</onclick>
+						<visible>System.HasAddon(script.artwork.downloader)</visible>
+					</control>
+					<control type="button" id="720">
+						<include>SettingsLabel</include>
+						<label> - Download [COLOR=DialogTextFO]disc.png[/COLOR] for all Movies</label>
+						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=movie,discart)</onclick>
+						<visible>System.HasAddon(script.artwork.downloader)</visible>
+					</control>
+					<control type="button" id="721">
+						<include>SettingsLabel</include>
+						<label> - Download [COLOR=DialogTextFO]logo.png[/COLOR] for all Movies</label>
+						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=movie,clearlogo)</onclick>
+						<visible>System.HasAddon(script.artwork.downloader)</visible>
+					</control>	
+					<control type="image" id="722">
+						<include>Settings_Line</include>
+						<visible>System.HasAddon(script.artwork.downloader)</visible>
+					</control>				
 					<control type="radiobutton" id="714">
 						<include>SettingsLabel</include>
 						<label>Cycle Artwork in Video Info</label>
