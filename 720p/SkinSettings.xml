@@ -597,17 +597,23 @@
 					</control>
 					<control type="button" id="720">
 						<include>SettingsLabel</include>
+						<label> - Download [COLOR=DialogTextFO]All Artwork[/COLOR] for all TV Shows</label>
+						<onclick>RunScript(script.artwork.downloader, mode=custom, mediatype=tvshow, seasonposter, landscape, clearart, clearlogo, characterart)</onclick>
+						<visible>System.HasAddon(script.artwork.downloader)</visible>
+					</control>
+					<control type="button" id="721">
+						<include>SettingsLabel</include>
 						<label> - Download [COLOR=DialogTextFO]disc.png[/COLOR] for all Movies</label>
 						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=movie,discart)</onclick>
 						<visible>System.HasAddon(script.artwork.downloader)</visible>
 					</control>
-					<control type="button" id="721">
+					<control type="button" id="722">
 						<include>SettingsLabel</include>
 						<label> - Download [COLOR=DialogTextFO]logo.png[/COLOR] for all Movies</label>
 						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=movie,clearlogo)</onclick>
 						<visible>System.HasAddon(script.artwork.downloader)</visible>
 					</control>	
-					<control type="image" id="722">
+					<control type="image" id="723">
 						<include>Settings_Line</include>
 						<visible>System.HasAddon(script.artwork.downloader)</visible>
 					</control>				
