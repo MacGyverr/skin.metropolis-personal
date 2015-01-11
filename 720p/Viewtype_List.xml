@@ -448,10 +448,23 @@
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>!IsEmpty(ListItem.Title) + Skin.HasSetting(CaseOveralys)</visible>		
 					</control>
-					<include>HD-DVD_Cover</include>
-					<include>Blu-Ray_Cover</include>
-					<include>3D-Blu-Ray_Cover</include>
-					<include>DVD_Cover</include>
+					<control type="group">	
+						<visible>!IsEmpty(ListItem.Title) + Skin.HasSetting(CaseOveralys)</visible>		
+						<control type="image">
+							<posx>-42</posx>
+							<posy>10</posy>
+							<width>380</width>
+							<height>440</height>
+							<texture>$VAR[SourceFlagCase,flags/Overlays/,.png]</texture>
+						</control>
+						<control type="image">
+							<posx>130</posx>
+							<posy>10</posy>
+							<width>81</width>
+							<height>44</height>
+							<texture>$VAR[SourceFlagType,flags/Overlays/,.png]</texture>
+						</control>
+					</control>			
 				</control>
 				<!-- Episode Posters -->
 				<control type="group">
