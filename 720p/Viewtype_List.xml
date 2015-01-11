@@ -438,18 +438,17 @@
 						<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(CaseOveralys)</visible>
 					</control>
 					<!-- Custom Case Overlays -->	
-					<control type="image">
-						<posx>17</posx>
-						<posy>45</posy>
-						<width>300</width>
-						<height>380</height>
-						<fadetime>100</fadetime>
-						<texture background="true" fallback="DefaultThumb.png">$VAR[PosterThumb]</texture>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<visible>!IsEmpty(ListItem.Title) + Skin.HasSetting(CaseOveralys)</visible>		
-					</control>
 					<control type="group">	
-						<visible>!IsEmpty(ListItem.Title) + Skin.HasSetting(CaseOveralys)</visible>		
+					<visible>!IsEmpty(ListItem.Title) + Skin.HasSetting(CaseOveralys)</visible>	
+						<control type="image">
+							<posx>17</posx>
+							<posy>45</posy>
+							<width>300</width>
+							<height>380</height>
+							<fadetime>100</fadetime>
+							<texture background="true" fallback="DefaultThumb.png">$VAR[PosterThumb]</texture>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+						</control>	
 						<control type="image">
 							<posx>-42</posx>
 							<posy>10</posy>
