@@ -437,7 +437,7 @@
 						<texture>frames/ClassicFrame_PosterMedium.png</texture>
 						<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(CaseOveralys)</visible>
 					</control>
-					<!-- Custom Case Overlays -->					
+					<!-- Custom Case Overlays -->	
 					<control type="image">
 						<posx>17</posx>
 						<posy>45</posy>
@@ -446,16 +446,12 @@
 						<fadetime>100</fadetime>
 						<texture background="true" fallback="DefaultThumb.png">$VAR[PosterThumb]</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<visible>!IsEmpty(ListItem.Title) + Skin.HasSetting(CaseOveralys)</visible>
+						<visible>!IsEmpty(ListItem.Title) + Skin.HasSetting(CaseOveralys)</visible>		
 					</control>
-					<control type="image">
-						<posx>-42</posx>
-						<posy>10</posy>
-						<width>380</width>
-						<height>440</height>
-						<texture>$INFO[ListItem.VideoResolution,flags/Overlays/,.png]</texture>
-						<visible>!IsEmpty(ListItem.Title) + Skin.HasSetting(CaseOveralys)</visible>
-					</control>
+					<include>HD-DVD_Cover</include>
+					<include>Blu-Ray_Cover</include>
+					<include>3D-Blu-Ray_Cover</include>
+					<include>DVD_Cover</include>
 				</control>
 				<!-- Episode Posters -->
 				<control type="group">
