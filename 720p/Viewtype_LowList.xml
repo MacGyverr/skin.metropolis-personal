@@ -187,32 +187,25 @@
 				<!-- LEFT SIDE OF SCREEN -->
 				
 			<!-- Custom Case Overlays -->	
-			<control type="group">	
-				<visible>Window.IsActive(videolibrary) + Skin.HasSetting(CaseOveralys) + ![Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums) | Container.Content(addons)] + !IsEmpty(ListItem.Title)</visible>			
-				<control type="image">
-					<posx>37</posx>
-					<posy>216</posy>
-					<width>300</width>
-					<height>380</height>
-					<fadetime>100</fadetime>
-					<texture background="true" fallback="DefaultThumb.png">$VAR[PosterThumb]</texture>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
+				<control type="group">	
+					<visible>Window.IsActive(videolibrary) + Skin.HasSetting(CaseOveralys) + ![Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums) | Container.Content(addons)] + !IsEmpty(ListItem.Title)</visible>			
+					<control type="image">
+						<posx>37</posx>
+						<posy>216</posy>
+						<width>300</width>
+						<height>380</height>
+						<fadetime>100</fadetime>
+						<texture background="true" fallback="DefaultThumb.png">$VAR[PosterThumb]</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+					</control>
+					<control type="image">
+						<posx>-22</posx>
+						<posy>180</posy>
+						<width>380</width>
+						<height>440</height>
+						<texture fallback="flags/Overlays/default.png">$VAR[SourceFlagType,flags/Overlays/,.png]</texture>
+					</control>
 				</control>
-				<control type="image">
-					<posx>-22</posx>
-					<posy>180</posy>
-					<width>380</width>
-					<height>440</height>
-					<texture>$VAR[SourceFlagCase,flags/Overlays/,.png]</texture>
-				</control>
-				<control type="image">
-					<posx>150</posx>
-					<posy>180</posy>
-					<width>81</width>
-					<height>44</height>
-					<texture>$VAR[SourceFlagType,flags/Overlays/,.png]</texture>
-				</control>
-			</control>
 				
 				<!-- Default Poster Image  -->
 				<control type="image">

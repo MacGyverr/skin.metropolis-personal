@@ -229,7 +229,7 @@
 							<posy>-10</posy>
 							<width>295</width>
 							<height>417</height>
-							<texture>$INFO[ListItem.VideoResolution,flags/Overlays/,.png]</texture>
+							<texture fallback="flags/Overlays/default.png">$VAR[SourceFlagType,flags/Overlays/,.png]</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<visible>!IsEmpty(ListItem.Title) + Skin.HasSetting(CaseOveralys)</visible>
 						</control>									
@@ -312,7 +312,7 @@
 							<posy>0</posy>
 							<width>366</width>
 							<height>504</height>
-							<texture>$INFO[ListItem.VideoResolution,flags/Overlays/,.png]</texture>
+							<texture fallback="flags/Overlays/default.png">$VAR[SourceFlagType,flags/Overlays/,.png]</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<visible>!IsEmpty(ListItem.Title) + Skin.HasSetting(CaseOveralys)</visible>
 						</control>							
