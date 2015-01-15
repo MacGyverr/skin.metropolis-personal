@@ -261,6 +261,21 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">False</property>
 		</item>
+		<item id="18">
+			<label>$LOCALIZE[31334]</label>
+			<label2>Program</label2>
+			<icon>home_icons/trailers.png</icon>
+			<thumb>home_art/trailers.jpg</thumb>
+			<property name="labelID">plugin.video.itunes_trailers</property>
+			<property name="defaultID">script.trailers</property>
+			<visible>System.HasAddon(plugin.video.itunes_trailers)</visible>
+			<onclick>ActivateWindow(Videos,plugin://plugin.video.itunes_trailers,return)</onclick>
+			<property name="path">ActivateWindow(Videos,plugin://plugin.video.itunes_trailers,return)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">plugin-video-itunes-trailers</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
 	</include>
 	<include />
 	<include name="skinshortcuts-submenu">
@@ -3775,4 +3790,8 @@
 	<include name="skinshortcuts-group-alt-script-tvguide" />
 	<include name="skinshortcuts-group-script-tvguide-1" />
 	<include name="skinshortcuts-group-alt-script-tvguide-1" />
+	<include name="skinshortcuts-group-plugin-video-itunes-trailers" />
+	<include name="skinshortcuts-group-alt-plugin-video-itunes-trailers" />
+	<include name="skinshortcuts-group-plugin-video-itunes-trailers-1" />
+	<include name="skinshortcuts-group-alt-plugin-video-itunes-trailers-1" />
 </includes>

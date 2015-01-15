@@ -9,7 +9,7 @@
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(Enable_OSDClearArt)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(ViewPreferClearLogo)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(WeatherIcons2)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(MusicCoverArtOverlay)</onload>
+	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(MediaOverlay)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(MusicSongInfoOverlay)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(Home3)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(HomeStats)</onload>

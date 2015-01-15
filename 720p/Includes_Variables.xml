@@ -27,7 +27,7 @@
 		<value condition="!IsEmpty(ListItem.Title) + Skin.HasSetting(CaseOveralys) + ![SubString(ListItem.Filename,hddvd) | SubString(ListItem.Filename,hd-dvd)] + [SubString(ListItem.Filename,bluray) | SubString(ListItem.Filename,blu-ray) | SubString(ListItem.Filename,bdrip) | SubString(ListItem.Filename,brrip) | SubString(ListItem.VideoResolution,720) | SubString(ListItem.VideoResolution,1080)] + ListItem.IsStereoscopic">bluray3d</value>
 		<value condition="!IsEmpty(ListItem.Title) + Skin.HasSetting(CaseOveralys) + [SubString(ListItem.VideoResolution,480) | SubString(ListItem.VideoResolution,540) | SubString(ListItem.VideoResolution,576)] + ![SubString(ListItem.Filename,hddvd) | SubString(ListItem.Filename,hd-dvd)] + ![SubString(ListItem.Filename,bluray) | SubString(ListItem.Filename,blu-ray) | SubString(ListItem.Filename,bdrip) | SubString(ListItem.Filename,brrip) | SubString(ListItem.VideoResolution,720) | SubString(ListItem.VideoResolution,1080)] + !ListItem.IsStereoscopic">dvd</value>
 	</variable>
-	
+
 	<variable name="RatingColor">
 		<value condition="!SubString(ListItem.Votes,$COMMA)">FFFF0000</value>
 		<value condition="SubString(ListItem.Votes,1$COMMA,Left)">FFFF5555</value>
