@@ -176,8 +176,6 @@
 				<include>VisibleIfNotMovieSet</include>
 			</control>
 			<include>ScrollBar_Horizontal</include>
-		</control>
-
 		<!-- Poster -->		
 		<control type="image">
 			<posx>180</posx>
@@ -191,6 +189,8 @@
 				<effect type="zoom" center="auto" start="50" end="100" time="400" tween="back" easing="out" />
 			</animation>
 		</control>
+		</control>
+
 		
 	</include>
 </includes>

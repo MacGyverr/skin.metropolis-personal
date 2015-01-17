@@ -28,7 +28,7 @@
 			<include>Animation_FadedByOSDSettings</include>
 			<include>OSD_Player_Banner</include>
 			<include>OSD_Progress_Bar2</include>
-			<include>OSD_Player_Details</include>
+			<include>OSD_Player_Details</include> 
 			<include>OSD_Player_Time</include>
 			<control type="grouplist" id="2001">
 				<posx>292</posx>
