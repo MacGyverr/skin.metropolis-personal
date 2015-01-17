@@ -15,6 +15,7 @@
 	<include file="Viewtype_Banner.xml" />			<!-- 511 -->
 	<include file="Viewtype_BannerPoster.xml" />		<!-- 510 -->
 	<include file="Viewtype_Banner_Fixed.xml" />		<!-- 513 -->
+	<include file="Viewtype_Artwork_Check.xml" />		<!-- 514 -->
 	<include file="Viewtype_Coverflow.xml" />		<!-- 512 -->
 	<include file="Viewtype_Fanart.xml" />			<!-- 504 -->
 	<include file="Viewtype_FanartBanner.xml" />		<!-- 508 -->

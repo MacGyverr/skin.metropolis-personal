@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="Viewtype_Artwork_Check">
+		<control type="group">
+			<visible>Control.IsVisible(514)</visible>
+			<!-- Browser -->
+			<control type="fixedlist" id="514">
+				<posx>-330</posx>
+				<posy>50</posy>
+				<height>800</height>
+				<width>1610</width>
+				<include condition="!Skin.HasSetting(ViewLockdown)">OnUp7000</include>
+				<ondown>60</ondown>
+				<onleft>514</onleft>
+				<onright>514</onright>
+				<viewtype label="Artwork Checker">icon</viewtype>
+				<orientation>horizontal</orientation>
+				<focusposition>2</focusposition>
+				<scrolltime>200</scrolltime>
+				<preloaditems>2</preloaditems>
+				<pagecontrol>60</pagecontrol>
+				<include>Animation_FadedByMenu</include>
+				<include>Animation_OpenCloseFade</include>
+				<include>Animation_HiddenByInfo</include>
+				<visible>!Skin.HasSetting(NoViewArtworkCheck)</visible>
+				<visible>Window.IsActive(videolibrary) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+				<itemlayout width="385" height="853">
+					<control type="image">
+						<posx>12</posx>
+						<posy>15</posy>
+						<width>375</width>
+						<height>70</height>
+						<texture background="true" fallback="default_banner.png" diffuse="frames/banner_diffuse.png">$INFO[ListItem.Art(banner)]</texture>
+						<fadetime>200</fadetime>
+						<colordiffuse>LandscapeDiffuse</colordiffuse>
+						<aspectratio aligny="center">keep</aspectratio>
+						<include>Animation_HiddenByInfo</include>
+					</control>
+					<control type="image">
+						<posx>12</posx>
+						<posy>100</posy>
+						<width>375</width>
+						<height>70</height>
+						<texture background="true" fallback="default_clearart.png" diffuse="frames/banner_diffuse.png">$INFO[ListItem.Art(clearart)]</texture>
+						<fadetime>200</fadetime>
+						<colordiffuse>LandscapeDiffuse</colordiffuse>
+						<aspectratio aligny="center">keep</aspectratio>
+						<include>Animation_HiddenByInfo</include>
+					</control>
+					<control type="image">
+						<posx>12</posx>
+						<posy>185</posy>
+						<width>375</width>
+						<height>70</height>
+						<texture background="true" fallback="default_fanart.png" diffuse="frames/banner_diffuse.png">$INFO[ListItem.Art(fanart)]</texture>
+						<fadetime>200</fadetime>
+						<colordiffuse>LandscapeDiffuse</colordiffuse>
+						<aspectratio aligny="center">keep</aspectratio>
+						<include>Animation_HiddenByInfo</include>
+					</control>
+					<control type="image">
+						<posx>12</posx>
+						<posy>270</posy>
+						<width>375</width>
+						<height>70</height>
+						<texture background="true" fallback="default_clearlogo.png" diffuse="frames/banner_diffuse.png">$INFO[ListItem.Art(clearlogo)]</texture>
+						<fadetime>200</fadetime>
+						<colordiffuse>LandscapeDiffuse</colordiffuse>
+						<aspectratio aligny="center">keep</aspectratio>
+						<include>Animation_HiddenByInfo</include>
+					</control>
+					<control type="image">
+						<posx>12</posx>
+						<posy>355</posy>
+						<width>375</width>
+						<height>70</height>
+						<texture background="true" fallback="default_landscape.png" diffuse="frames/banner_diffuse.png">$INFO[ListItem.Art(landscape)]</texture>
+						<fadetime>200</fadetime>
+						<colordiffuse>LandscapeDiffuse</colordiffuse>
+						<aspectratio aligny="center">keep</aspectratio>
+						<include>Animation_HiddenByInfo</include>
+					</control>
+				</itemlayout>
+				<focusedlayout width="385" height="90">
+					<control type="image">
+						<posx>12</posx>
+						<posy>15</posy>
+						<width>375</width>
+						<height>70</height>
+						<texture background="true" fallback="default_banner.png" diffuse="frames/banner_diffuse.png">$INFO[ListItem.Art(banner)]</texture>
+						<fadetime>200</fadetime>
+						<aspectratio aligny="center">keep</aspectratio>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="auto" start="50" end="100" time="400" tween="back" easing="out" />
+						</animation>
+					</control>
+					<control type="image">
+						<posx>12</posx>
+						<posy>100</posy>
+						<width>375</width>
+						<height>70</height>
+						<texture background="true" fallback="default_clearart.png" diffuse="frames/banner_diffuse.png">$INFO[ListItem.Art(clearart)]</texture>
+						<fadetime>200</fadetime>
+						<aspectratio aligny="center">keep</aspectratio>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="auto" start="50" end="100" time="400" tween="back" easing="out" />
+						</animation>
+					</control>
+					<control type="image">
+						<posx>12</posx>
+						<posy>185</posy>
+						<width>375</width>
+						<height>70</height>
+						<texture background="true" fallback="default_fanart.png" diffuse="frames/banner_diffuse.png">$INFO[ListItem.Art(fanart)]</texture>
+						<fadetime>200</fadetime>
+						<aspectratio aligny="center">keep</aspectratio>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="auto" start="50" end="100" time="400" tween="back" easing="out" />
+						</animation>
+					</control>
+					<control type="image">
+						<posx>12</posx>
+						<posy>270</posy>
+						<width>375</width>
+						<height>70</height>
+						<texture background="true" fallback="default_clearlogo.png" diffuse="frames/banner_diffuse.png">$INFO[ListItem.Art(clearlogo)]</texture>
+						<fadetime>200</fadetime>
+						<aspectratio aligny="center">keep</aspectratio>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="auto" start="50" end="100" time="400" tween="back" easing="out" />
+						</animation>
+					</control>
+					<control type="image">
+						<posx>12</posx>
+						<posy>355</posy>
+						<width>375</width>
+						<height>70</height>
+						<texture background="true" fallback="default_landscape.png" diffuse="frames/banner_diffuse.png">$INFO[ListItem.Art(landscape)]</texture>
+						<fadetime>200</fadetime>
+						<aspectratio aligny="center">keep</aspectratio>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="auto" start="50" end="100" time="400" tween="back" easing="out" />
+						</animation>
+					</control>
+				</focusedlayout>
+			</control>
+			<!-- Browser labels -->
+			<!-- Title -->
+			<control type="label">
+				<posx>40</posx>
+				<posy>495</posy>
+				<width>1200</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>METF_TitleTextLarge</font>
+				<textcolor>TitleText</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+				<include>Animation_OpenCloseFade</include>
+				<include>Animation_FadedByMenu</include>
+				<include>Animation_HiddenByInfo</include>
+				<visible>Window.IsActive(videolibrary) + [Container.Content(tvshows) | Container.Content(movies)]</visible>
+			</control>
+			<control type="grouplist">
+				<posx>40</posx>
+				<posy>505</posy>
+				<width>1200</width>
+				<height>30</height>
+				<align>center</align>
+				<itemgap>10</itemgap>
+				<orientation>horizontal</orientation>
+				<include>Animation_OpenCloseFade</include>
+				<include>Animation_FadedByMenu</include>
+				<include>Animation_HiddenByInfo</include>
+				<visible>Window.IsActive(VideoLibrary) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+				<include>VisibleIfNotMovieSet</include>
+			</control>
+			<include>ScrollBar_Horizontal</include>
+		</control>
+
+		<!-- Poster -->		
+		<control type="image">
+			<posx>180</posx>
+			<posy>550</posy>
+			<width>90</width>
+			<height>170</height>
+			<texture background="true" fallback="default_poster.png" diffuse="frames/banner_diffuse.png">$INFO[ListItem.Art(poster)]</texture>
+			<fadetime>200</fadetime>
+			<aspectratio aligny="center">keep</aspectratio>
+			<animation type="Focus" reversible="false">
+				<effect type="zoom" center="auto" start="50" end="100" time="400" tween="back" easing="out" />
+			</animation>
+		</control>
+		
+	</include>
+</includes>

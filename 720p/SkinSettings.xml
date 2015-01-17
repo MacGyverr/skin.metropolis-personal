@@ -541,6 +541,14 @@
 						<selected>Skin.HasSetting(NoViewGames)</selected>
 						<visible>System.HasAddon(plugin.program.advanced.launcher)</visible>
 					</control>
+					<!-- View 514 -->
+					<control type="radiobutton" id="623">
+						<description>Artwork Check</description>
+						<include>SettingsLabel</include>
+						<label>$LOCALIZE[31441] Artwork Check</label>
+						<onclick>Skin.ToggleSetting(NoViewArtworkCheck)</onclick>
+						<selected>Skin.HasSetting(NoViewArtworkCheck)</selected>
+					</control>
 				</control>
 				
 				<!-- Scripts/Extras -->
