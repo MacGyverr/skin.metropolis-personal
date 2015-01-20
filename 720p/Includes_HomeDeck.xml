@@ -422,6 +422,23 @@
 					</control>
 				</control>
 
+				<!-- Extended Info Widget Thumbnail-->
+				<control type="group">
+					<control type="image">
+						<include>Animation_CommonFade</include>
+						<include>Animation_FadedByMenu</include>
+						<posx>265</posx>
+						<posy>560</posy>
+						<width>250</width>
+						<height>140</height>
+						<aspectratio align="right" aligny="center">keep</aspectratio>
+						<bordertexture border="6">frames/thumb_border.png</bordertexture>
+						<bordersize>6</bordersize>
+						<texture diffuse="frames/EpisodeMatte.png">$INFO[Container(8005).ListItem.Icon]</texture>
+						<visible>[Control.HasFocus(8005)] + [StringCompare(Container(9000).ListItem.Property(Widget),InTheatersMovies) | StringCompare(Container(9000).ListItem.Property(Widget),ComingSoonMovies) | StringCompare(Container(9000).ListItem.Property(Widget),Opening) | StringCompare(Container(9000).ListItem.Property(Widget),BoxOffice) | StringCompare(Container(9000).ListItem.Property(Widget),Top10Rentals) | StringCompare(Container(9000).ListItem.Property(Widget),CurrentDVDs) | StringCompare(Container(9000).ListItem.Property(Widget),NewDVDs) | StringCompare(Container(9000).ListItem.Property(Widget),UpcomingDVDs) | StringCompare(Container(9000).ListItem.Property(Widget),InCinemasMovies) | StringCompare(Container(9000).ListItem.Property(Widget),UpcomingMovies) | StringCompare(Container(9000).ListItem.Property(Widget),PopularMovies) | StringCompare(Container(9000).ListItem.Property(Widget),TopRatedMovies) | StringCompare(Container(9000).ListItem.Property(Widget),PopularTVShows) | StringCompare(Container(9000).ListItem.Property(Widget),TopRatedTVShows) | StringCompare(Container(9000).ListItem.Property(Widget),OnAirTVShows) | StringCompare(Container(9000).ListItem.Property(Widget),AiringTodayTVShows) | StringCompare(Container(9000).ListItem.Property(Widget),TrendingMovies) | StringCompare(Container(9000).ListItem.Property(Widget),TrendingTVShows) | StringCompare(Container(9000).ListItem.Property(Widget),AiringShows) | StringCompare(Container(9000).ListItem.Property(Widget),PremiereShows)]</visible>
+					</control>
+				</control>
+				
 				<!-- Widget Menus -->
 				<!-- Movies Widget -->
 				<control type="group">
@@ -445,10 +462,10 @@
 						<include>RandomMovieContents</include>
 					</control>
 				</control>
-
+				
 				<!-- TVShows Widget -->
 				<control type="group">
-						<visible>[StringCompare(Container(9000).ListItem.Property(Widget),TVShowsRecentlyAdded)] + Library.HasContent(TVShows)</visible>
+					<visible>[StringCompare(Container(9000).ListItem.Property(Widget),TVShowsRecentlyAdded)] + Library.HasContent(TVShows)</visible>
 					<control type="list" id="8001">
 						<include>Global_TVShowDeck</include>
 						<include>RecentlyAddedTVShowContents</include>
@@ -468,7 +485,7 @@
 						<include>RandomTVShowContents</include>
 					</control>
 				</control>
-
+				
 				<!-- Music Widget -->
 				<control type="group">
 					<visible>[StringCompare(Container(9000).ListItem.Property(Widget),MusicRecentlyAdded)] + Library.HasContent(Music)</visible>
@@ -494,27 +511,36 @@
 
 				<!-- MusicVideos Widget -->
 				<control type="group">
-						<visible>[StringCompare(Container(9000).ListItem.Property(Widget),MusicVideosRecentlyAdded)] + Library.HasContent(MusicVideos)</visible>
+					<visible>[StringCompare(Container(9000).ListItem.Property(Widget),MusicVideosRecentlyAdded)] + Library.HasContent(MusicVideos)</visible>
 					<control type="list" id="8003">
 						<include>Global_MusicVideoDeck</include>
 						<include>RecentlyAddedMusicVideoContents</include>
 					</control>
 				</control>
 				<control type="group">
-						<visible>[StringCompare(Container(9000).ListItem.Property(Widget),MusicVideosWatchlist)] + Library.HasContent(MusicVideos)</visible>
+					<visible>[StringCompare(Container(9000).ListItem.Property(Widget),MusicVideosWatchlist)] + Library.HasContent(MusicVideos)</visible>
 					<control type="list" id="8003">
 						<include>Global_MusicVideoDeck</include>
 						<include>WatchlistMusicVideoContents</include>
 					</control>
 				</control>
 				<control type="group">
-						<visible>[StringCompare(Container(9000).ListItem.Property(Widget),MusicVideosRandomItems)] + Library.HasContent(MusicVideos)</visible>
+					<visible>[StringCompare(Container(9000).ListItem.Property(Widget),MusicVideosRandomItems)] + Library.HasContent(MusicVideos)</visible>
 					<control type="list" id="8003">
 						<include>Global_MusicVideoDeck</include>
 						<include>RandomMusicVideoContents</include>
 					</control>
 				</control>
 
+				<!-- Extended Info Widget -->
+				<control type="group">
+					<visible>[StringCompare(Container(9000).ListItem.Property(Widget),InTheatersMovies) | StringCompare(Container(9000).ListItem.Property(Widget),ComingSoonMovies) | StringCompare(Container(9000).ListItem.Property(Widget),Opening) | StringCompare(Container(9000).ListItem.Property(Widget),BoxOffice) | StringCompare(Container(9000).ListItem.Property(Widget),Top10Rentals) | StringCompare(Container(9000).ListItem.Property(Widget),CurrentDVDs) | StringCompare(Container(9000).ListItem.Property(Widget),NewDVDs) | StringCompare(Container(9000).ListItem.Property(Widget),UpcomingDVDs) | StringCompare(Container(9000).ListItem.Property(Widget),InCinemasMovies) | StringCompare(Container(9000).ListItem.Property(Widget),UpcomingMovies) | StringCompare(Container(9000).ListItem.Property(Widget),PopularMovies) | StringCompare(Container(9000).ListItem.Property(Widget),TopRatedMovies) | StringCompare(Container(9000).ListItem.Property(Widget),PopularTVShows) | StringCompare(Container(9000).ListItem.Property(Widget),TopRatedTVShows) | StringCompare(Container(9000).ListItem.Property(Widget),OnAirTVShows) | StringCompare(Container(9000).ListItem.Property(Widget),AiringTodayTVShows) | StringCompare(Container(9000).ListItem.Property(Widget),TrendingMovies) | StringCompare(Container(9000).ListItem.Property(Widget),TrendingTVShows) | StringCompare(Container(9000).ListItem.Property(Widget),AiringShows) | StringCompare(Container(9000).ListItem.Property(Widget),PremiereShows)] + System.HasAddon(script.extendedinfo)</visible>
+					<control type="list" id="8005">
+						<include>Global_ExtendedInfo</include>
+						<content target="video">$VAR[ExtendedInfoWidgetContent]</content>
+					</control>
+				</control>
+				
 				<!-- Playlist Widget -->
 				<control type="group">
 					<visible>StringCompare(Container(9000).ListItem.Property(Widget),Playlist)</visible>
@@ -1306,6 +1332,65 @@
 		</focusedlayout>
 	</include>
 
+	<include name="Global_ExtendedInfo">
+		<include>Animation_CommonFade</include>
+		<include>Animation_FadedByMenu</include>
+		<posx>522</posx>
+		<posy>563</posy>
+		<width>510</width>
+		<height>135</height>
+		<onup>8001</onup>
+		<ondown>8001</ondown>
+		<onleft>9000</onleft>
+		<onright>9000</onright>
+		<viewtype>list</viewtype>
+		<orientation>vertical</orientation>
+		<scrolltime>200</scrolltime>
+		<itemlayout width="510" height="27">
+			<control type="label">
+				<posx>10</posx>
+				<posy>-2</posy>
+				<width>500</width>
+				<height>27</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<scrollout>false</scrollout>
+				<pauseatend>600</pauseatend>
+				<scrollspeed>20</scrollspeed>
+				<font>METF_RecentlyAddedListText</font>
+				<textcolor>RecentlyAddedNF</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+		</itemlayout>
+		<focusedlayout width="510" height="27">
+			<!-- Focus Bar -->
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>510</width>
+				<height>27</height>
+				<aligny>center</aligny>
+				<texture>FocusLine.png</texture>
+				<colordiffuse>FocusBar</colordiffuse>
+				<visible>Control.HasFocus(8005)</visible>
+			</control>
+			<control type="label">
+				<posx>10</posx>
+				<posy>-2</posy>
+				<width>500</width>
+				<height>27</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<scrollout>false</scrollout>
+				<pauseatend>600</pauseatend>
+				<scrollspeed>20</scrollspeed>
+				<font>METF_RecentlyAddedListText</font>
+				<textcolor>FocusBarText</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+		</focusedlayout>
+	</include>	
+	
 	<include name="Global_Widget">
 		<include>Animation_CommonFade</include>
 		<include>Animation_FadedByMenu</include>

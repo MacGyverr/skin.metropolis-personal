@@ -33,6 +33,33 @@
 	<widget label="Video addons">VideoAddons</widget>
 	<widgetdefault labelID="videos">VideoAddons</widgetdefault> -->
 	
+	<!-- Extended Info Script Widgets -->
+	<widget labelID="movies" label="Rotten Tomatoes (In Theaters)">InTheatersMovies</widget>
+	<widget labelID="movies" label="Rotten Tomatoes (Coming Soon)">ComingSoonMovies</widget>
+	<widget labelID="movies" label="Rotten Tomatoes (Opening)">Opening</widget>
+	<widget labelID="movies" label="Rotten Tomatoes (Box Office)">BoxOffice</widget>
+	<widget labelID="movies" label="Rotten Tomatoes (Top 10 Rentals)">Top10Rentals</widget>
+	<widget labelID="movies" label="Rotten Tomatoes (Current DVD Releases)">CurrentDVDs</widget>
+	<widget labelID="movies" label="Rotten Tomatoes (New DVD Releases)">NewDVDs</widget>
+<!--	<widget labelID="movies" label="Rotten Tomatoes (Upcoming DVD Releases)">UpcomingDVDs</widget>  -->
+
+	<widget labelID="movies" label="The MovieDB (In Cinemas)">InCinemasMovies</widget>
+	<widget labelID="movies" label="The MovieDB (Upcoming Movies)">UpcomingMovies</widget>
+	<widget labelID="movies" label="The MovieDB (Popular Movies)">PopularMovies</widget>
+	<widget labelID="movies" label="The MovieDB (Top Rated Movies)">TopRatedMovies</widget>
+	<widget labelID="movies" label="The MovieDB (Popular TV Shows)">PopularTVShows</widget>
+	<widget labelID="movies" label="The MovieDB (Top Rated TV Shows)">TopRatedTVShows</widget>
+	<widget labelID="movies" label="The MovieDB (On Air TV Shows)">OnAirTVShows</widget>
+	<widget labelID="movies" label="The MovieDB (Airing Today TV Shows)">AiringTodayTVShows</widget>
+	
+	<widget labelID="movies" label="Trakt.tv (Trending Movies)">TrendingMovies</widget>
+	<widget labelID="tvshows" label="Trakt.tv (Trending TV Shows)">TrendingTVShows</widget>
+<!--	<widget labelID="tvshows" label="Trakt.tv (Airing TV Shows)">AiringShows</widget>
+	<widget labelID="tvshows" label="Trakt.tv (Premiere TV Shows)">PremiereShows</widget> -->
+	
+
+	
+	
 	<!-- Music addons 
 	<widget label="Music addons">MusicAddons</widget>
 	<widgetdefault labelID="music">MusicAddons</widgetdefault> -->

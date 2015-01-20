@@ -19,7 +19,30 @@
 		<value condition="Control.HasFocus(171)">$INFO[Container(171).ListItem.Property(Fanart_Image)]</value>
 		<value condition="Control.HasFocus(181)">$INFO[Container(181).ListItem.Property(Fanart_Image)]</value>
 	</variable>	
-
+					
+	<variable name="ExtendedInfoWidgetContent">
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),InTheatersMovies)">plugin://script.extendedinfo?info=intheaters</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),ComingSoonMovies)">plugin://script.extendedinfo?info=comingsoon</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),Opening)">plugin://script.extendedinfo?info=opening</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),BoxOffice)">plugin://script.extendedinfo?info=boxoffice</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),Top10Rentals)">plugin://script.extendedinfo?info=toprentals</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),CurrentDVDs)">plugin://script.extendedinfo?info=currentdvdreleases</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),NewDVDs)">plugin://script.extendedinfo?info=newdvdreleases</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),UpcomingDVDs)">plugin://script.extendedinfo?info=upcomingdvds</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),InCinemasMovies)">plugin://script.extendedinfo?info=incinemas</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),UpcomingMovies)">plugin://script.extendedinfo?info=upcoming</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),PopularMovies)">plugin://script.extendedinfo?info=popularmovies</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),TopRatedMovies)">plugin://script.extendedinfo?info=topratedmovies</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),PopularTVShows)">plugin://script.extendedinfo?info=populartvshows</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),TopRatedTVShows)">plugin://script.extendedinfo?info=topratedtvshows</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),OnAirTVShows)">plugin://script.extendedinfo?info=onairtvshows</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),AiringTodayTVShows)">plugin://script.extendedinfo?info=airingtodaytvshows</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),TrendingMovies)">plugin://script.extendedinfo?info=trendingmovies</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),TrendingTVShows)">plugin://script.extendedinfo?info=trendingshows</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),AiringShows)">plugin://script.extendedinfo?info=airingshows</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),PremiereShows)">plugin://script.extendedinfo?info=premiereshows</value>
+	</variable>	
+	
 	<!-- Video thumbnail case overlay names -->	
 	<variable name="SourceFlagType">
 		<value condition="!IsEmpty(ListItem.Title) + Skin.HasSetting(CaseOveralys) + [SubString(ListItem.Filename,hddvd) | SubString(ListItem.Filename,hd-dvd)] + ![SubString(ListItem.Filename,bluray) | SubString(ListItem.Filename,blu-ray) | SubString(ListItem.Filename,bdrip) | SubString(ListItem.Filename,brrip)]">hddvd</value>
