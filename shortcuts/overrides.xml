@@ -4,20 +4,19 @@
 	<!-- Recently Added -->
 	<widget label="Recently Added Movies">MoviesRecentlyAdded</widget>
 	<widget label="Recently Added TV Shows">TVShowsRecentlyAdded</widget>
-	<widget label="Recently Added Music">MusicRecentlyAdded</widget>
-	<widget label="Recently Added Music Videos">MusicVideosRecentlyAdded</widget>
+	<widget label="Recently Added Albums">MusicRecentlyAdded</widget>
+	<widget label="Recently Added Videos">VideosRecentlyAdded</widget>
 	
 	<!-- Recommended -->
 	<widget label="Recommended Movies">MoviesWatchlist</widget>
 	<widget label="Recommended TV Shows">TVShowsWatchlist</widget>
-	<widget label="Recommended Music">MusicWatchlist</widget>
-	<widget label="Recommended Added Music Videos">MusicVideosWatchlist</widget>
+	<widget label="Recommended Albums">MusicWatchlist</widget>
 	
 	<!-- Random -->
 	<widget label="Random Movies">MoviesRandomItems</widget>
 	<widget label="Random TV Shows">TVShowsRandomItems</widget>
-	<widget label="Random Music">MusicRandomItems</widget>
-	<widget label="Random Added Music Videos">MusicVideosRandomItems</widget>
+	<widget label="Random Album">MusicRandomItems</widget>
+	<widget label="Random Songs">SongsRandomItems</widget>
 
 	<!-- Weather -->
 	<widget label="Weather Forecast">HomeForecast</widget>
@@ -26,7 +25,6 @@
 	<widgetdefault labelID="movies">MoviesRecentlyAdded</widgetdefault>
 	<widgetdefault labelID="tvshows">TVShowsRecentlyAdded</widgetdefault>
 	<widgetdefault labelID="music">MusicRecentlyAdded</widgetdefault>
-	<widgetdefault labelID="musicvideos">MusicVideosRecentlyAdded</widgetdefault>
 	<widgetdefault labelID="weather">HomeForecast</widgetdefault>
 	
 	<!-- Video addons 

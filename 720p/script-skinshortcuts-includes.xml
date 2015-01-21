@@ -94,7 +94,7 @@
 			<property name="submenuVisibility">music</property>
 			<property name="group">mainmenu</property>
 			<property name="widget">MusicRecentlyAdded</property>
-			<property name="widgetName">Recently Added Music</property>
+			<property name="widgetName">Recently Added Albums</property>
 			<property name="hasSubmenu">True</property>
 		</item>
 		<item id="7">
@@ -110,8 +110,6 @@
 			<visible>StringCompare(System.ProfileName,Master user)</visible>
 			<property name="submenuVisibility">musicvideos</property>
 			<property name="group">mainmenu</property>
-			<property name="widget">MusicVideosRecentlyAdded</property>
-			<property name="widgetName">Recently Added Music Videos</property>
 			<property name="hasSubmenu">True</property>
 		</item>
 		<item id="8">
