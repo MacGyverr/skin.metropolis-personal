@@ -27,6 +27,7 @@
 	<widgetdefault labelID="music">MusicRecentlyAdded</widgetdefault>
 	<widgetdefault labelID="weather">HomeForecast</widgetdefault>
 	
+	
 	<!-- Video addons 
 	<widget label="Video addons">VideoAddons</widget>
 	<widgetdefault labelID="videos">VideoAddons</widgetdefault> -->
@@ -56,7 +57,10 @@
 	<widget labelID="tvshows" label="Trakt.tv (Premiere TV Shows)">PremiereShows</widget> -->
 	
 
-	
+	<widget label="Random XKCD Comics">XKCD</widget>
+	<widget label="Random Cyanide and Happiness Comics">Cyanide</widget>
+	<widget label="DailyBabe">Dailybabe</widget>
+	<widget label="DailyBabes">Dailybabes</widget>
 	
 	<!-- Music addons 
 	<widget label="Music addons">MusicAddons</widget>

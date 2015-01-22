@@ -42,6 +42,10 @@
 		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),TrendingTVShows)">plugin://script.extendedinfo?info=trendingshows</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),AiringShows)">plugin://script.extendedinfo?info=airingshows</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),PremiereShows)">plugin://script.extendedinfo?info=premiereshows</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),XKCD)">plugin://script.extendedinfo?info=xkcd</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),Cyanide)">plugin://script.extendedinfo?info=cyanide</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),Dailybabe)">plugin://script.extendedinfo?info=dailybabe</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),Dailybabes)">plugin://script.extendedinfo?info=dailybabes</value>
 		<!--service.library.data.provider content -->
 		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),MoviesRecentlyAdded)">plugin://service.library.data.provider?type=recentmovies&amp;reload=$INFO[Window(Home).Property(recentmovies)]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),MoviesWatchlist)">plugin://service.library.data.provider?type=recommendedmovies&amp;reload=$INFO[Window(Home).Property(recommendedmovies)]</value>

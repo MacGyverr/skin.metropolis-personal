@@ -344,6 +344,23 @@
 					</control>
 				</control>
 				
+				<!-- Picture/Comic Widget Thumbnail-->
+				<control type="group">
+					<control type="image">
+						<include>Animation_CommonFade</include>
+						<include>Animation_FadedByMenu</include>
+						<posx>340</posx>
+						<posy>3</posy>
+						<width>600</width>
+						<height>400</height>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<bordertexture border="6">frames/thumb_border.png</bordertexture>
+						<bordersize>6</bordersize>
+						<texture diffuse="frames/EpisodeMatte.png">$INFO[Container(8000).ListItem.Icon]</texture>
+						<visible>!IsEmpty(Container(9000).ListItem.Property(widget)) + !StringCompare(Container(9000).ListItem.Property(Widget),HomeForecast) + !StringCompare(Container(9000).ListItem.Property(Widget),PVR) + !StringCompare(Container(9000).ListItem.Property(Widget),Playlist) + [StringCompare(Container(9000).ListItem.Property(Widget),XKCD) | StringCompare(Container(9000).ListItem.Property(Widget),Cyanide) | StringCompare(Container(9000).ListItem.Property(Widget),Dailybabe) | StringCompare(Container(9000).ListItem.Property(Widget),Dailybabes)]</visible>
+					</control>
+				</control>
+				
 				<!-- Playlist Widget Thumbnails-->
 				<control type="group">
 					<!-- Fanart/CD Cover/Missing Thumbnail-->
