@@ -56,6 +56,7 @@
 				<height>450</height>
 				<texture>frames/ClassicFrame_Background.png</texture>
 				<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
+			<visible allowhiddenfocus="true">StringCompare(Container(9000).ListItem.Property(submenuVisibility),weather) + !Skin.HasSetting(NoWeather) + Skin.HasSetting(DynamicWeather) + !Skin.HasSetting(Home2) + ![Control.HasFocus(8000) + [StringCompare(Container(9000).ListItem.Property(Widget),XKCD) | StringCompare(Container(9000).ListItem.Property(Widget),Cyanide) | StringCompare(Container(9000).ListItem.Property(Widget),Dailybabe) | StringCompare(Container(9000).ListItem.Property(Widget),Dailybabes)]]</visible>
 			</control>
 			<control type="multiimage">
 				<posx>240</posx>
@@ -67,7 +68,7 @@
 				<fadetime>500</fadetime>
 				<imagepath background="true">$INFO[Container(9000).ListItem.Icon]</imagepath>
 				<aspectratio>stretch</aspectratio>
-				<visible>!Window.IsActive(videooverlay)</visible>
+				<visible>!Window.IsActive(videooverlay) + ![Control.HasFocus(8000) + [StringCompare(Container(9000).ListItem.Property(Widget),XKCD) | StringCompare(Container(9000).ListItem.Property(Widget),Cyanide) | StringCompare(Container(9000).ListItem.Property(Widget),Dailybabe) | StringCompare(Container(9000).ListItem.Property(Widget),Dailybabes)]]</visible>
 			<visible allowhiddenfocus="true">![StringCompare(Container(9000).ListItem.Property(submenuVisibility),weather) + !Skin.HasSetting(NoWeather) + Skin.HasSetting(DynamicWeather) + !Skin.HasSetting(Home2)]</visible>
 			</control>
 			<control type="image">
@@ -78,7 +79,7 @@
 				<texture>special://skin/extras/weather/weather-$INFO[Window(Weather).Property(Current.FanartCode)].jpg</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>!Window.IsActive(videooverlay)</visible>
-			<visible allowhiddenfocus="true">StringCompare(Container(9000).ListItem.Property(submenuVisibility),weather) + !Skin.HasSetting(NoWeather) + Skin.HasSetting(DynamicWeather) + !Skin.HasSetting(Home2)</visible>
+			<visible allowhiddenfocus="true">StringCompare(Container(9000).ListItem.Property(submenuVisibility),weather) + !Skin.HasSetting(NoWeather) + Skin.HasSetting(DynamicWeather) + !Skin.HasSetting(Home2) + ![Control.HasFocus(8000) + [StringCompare(Container(9000).ListItem.Property(Widget),XKCD) | StringCompare(Container(9000).ListItem.Property(Widget),Cyanide) | StringCompare(Container(9000).ListItem.Property(Widget),Dailybabe) | StringCompare(Container(9000).ListItem.Property(Widget),Dailybabes)]]</visible>
 			</control>
 			<control type="videowindow">
 				<posx>240</posx>
@@ -93,6 +94,7 @@
 				<width>848</width>
 				<height>507</height>
 				<texture>frames/ClassicFrame_Fanart.png</texture>
+			<visible allowhiddenfocus="true">![Control.HasFocus(8000) + [StringCompare(Container(9000).ListItem.Property(Widget),XKCD) | StringCompare(Container(9000).ListItem.Property(Widget),Cyanide) | StringCompare(Container(9000).ListItem.Property(Widget),Dailybabe) | StringCompare(Container(9000).ListItem.Property(Widget),Dailybabes)]]</visible>
 			</control>
 		</control>
 		
