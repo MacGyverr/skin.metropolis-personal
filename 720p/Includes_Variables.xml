@@ -21,6 +21,14 @@
 	</variable>	
 					
 	<variable name="GlobalWidgetContent">
+		<!-- built-in library content -->	
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyAddedMovies)">videodb://recentlyaddedmovies/</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyAddedEpisodes)">videodb://recentlyaddedepisodes/</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyAddedMusicVideos)">videodb://recentlyaddedmusicvideos/</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyAddedAlbums)">musicdb://recentlyaddedalbums/</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyPlayedAlbums )">musicdb://recentlyplayedalbums/ </value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryAddons)">addons://sources/executable/</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryFavourites)">favourites://</value>
 		<!-- script.extendedinfo content -->
 		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),InTheatersMovies)">plugin://script.extendedinfo?info=intheaters</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),ComingSoonMovies)">plugin://script.extendedinfo?info=comingsoon</value>

@@ -2,32 +2,30 @@
 <overrides>
 	<!-- Widgets -->
 	<!-- Recently Added -->
+	<widget label="Recently Added Movies (Build-in)">LibraryRecentlyAddedMovies</widget>
 	<widget label="Recently Added Movies">MoviesRecentlyAdded</widget>
-	<widget label="Recently Added TV Shows">TVShowsRecentlyAdded</widget>
+	<widget label="Recently Added TV Episodes (Build-in)">LibraryRecentlyAddedEpisodes</widget>
+	<widget label="Recently Added TV Episodes">TVShowsRecentlyAdded</widget>
+	<widget label="Recently Added Videos">VideosRecentlyAdded</widget>	
+	<widget label="Recently Added Albums (Build-in)">LibraryRecentlyAddedAlbums</widget>
 	<widget label="Recently Added Albums">MusicRecentlyAdded</widget>
-	<widget label="Recently Added Videos">VideosRecentlyAdded</widget>
+	<widget label="Recently Added Music Videos (Build-in)">LibraryRecentlyAddedMusicVideos</widget>
+	<widget label="Recently Played Albums (Build-in)">LibraryRecentlyPlayedAlbums</widget>
 	
 	<!-- Recommended -->
 	<widget label="Recommended Movies">MoviesWatchlist</widget>
-	<widget label="Recommended TV Shows">TVShowsWatchlist</widget>
+	<widget label="Recommended TV Episodes">TVShowsWatchlist</widget>
 	<widget label="Recommended Albums">MusicWatchlist</widget>
 	
 	<!-- Random -->
 	<widget label="Random Movies">MoviesRandomItems</widget>
-	<widget label="Random TV Shows">TVShowsRandomItems</widget>
+	<widget label="Random TV Episodes">TVShowsRandomItems</widget>
 	<widget label="Random Album">MusicRandomItems</widget>
 	<widget label="Random Songs">SongsRandomItems</widget>
 
 	<!-- Weather -->
 	<widget label="Weather Forecast">HomeForecast</widget>
-	
-	<!-- Default widgets -->
-	<widgetdefault labelID="movies">MoviesRecentlyAdded</widgetdefault>
-	<widgetdefault labelID="tvshows">TVShowsRecentlyAdded</widgetdefault>
-	<widgetdefault labelID="music">MusicRecentlyAdded</widgetdefault>
-	<widgetdefault labelID="weather">HomeForecast</widgetdefault>
-	
-	
+
 	<!-- Video addons 
 	<widget label="Video addons">VideoAddons</widget>
 	<widgetdefault labelID="videos">VideoAddons</widgetdefault> -->
@@ -56,35 +54,39 @@
 <!--	<widget labelID="tvshows" label="Trakt.tv (Airing TV Shows)">AiringShows</widget>
 	<widget labelID="tvshows" label="Trakt.tv (Premiere TV Shows)">PremiereShows</widget> -->
 	
-
 	<widget label="Random XKCD Comics">XKCD</widget>
 	<widget label="Random Cyanide and Happiness Comics">Cyanide</widget>
 	<widget label="DailyBabe">Dailybabe</widget>
 	<widget label="DailyBabes">Dailybabes</widget>
 	
-	<!-- Music addons 
-	<widget label="Music addons">MusicAddons</widget>
-	<widgetdefault labelID="music">MusicAddons</widgetdefault> -->
+	<!-- Music addons -->
 	
 	<!-- Pictures addons 
 	<widget label="Pictures addons">PictureAddons</widget>
 	<widgetdefault labelID="pictures">PictureAddons</widgetdefault> -->
 	
-	<!-- Program addons 
-	<widget label="Program addons">ProgramAddons</widget>
-	<widgetdefault labelID="programs">ProgramAddons</widgetdefault> -->
+	<!-- Program addons  -->
+	<widget label="Program Addons">LibraryAddons</widget>
 	
 	<!-- Favourites 
 	<widget label="Favourites">Favourites</widget>
+	<widget label="Favourites">LibraryFavourites</widget>
 	<widgetdefault labelID="1036">Favourites</widgetdefault> -->
 	
 	<!-- PVR -->
 	<widget label="PVR Status">PVR</widget>
 	<widgetdefault labelID="livetv">PVR</widgetdefault> 
 	
+	<!-- Default widgets -->
+	<widgetdefault labelID="movies">MoviesRecentlyAdded</widgetdefault>
+	<widgetdefault labelID="tvshows">TVShowsRecentlyAdded</widgetdefault>
+	<widgetdefault labelID="music">MusicRecentlyAdded</widgetdefault>
+	<widgetdefault labelID="weather">HomeForecast</widgetdefault>
+	<widgetdefault labelID="programs">LibraryAddons</widgetdefault>
+	<widgetdefault labelID="musicvideos">LibraryRecentlyAddedMusicVideos</widgetdefault>
+	
 	<!-- Playlists -->
 	<widgetPlaylists>True</widgetPlaylists>
-	
 	
 	<!-- Settings -->
 	<warn heading="You are making a mistake!  Really do this?" message="There is NO coming back from this action?  It will end badly!">ActivateWindow(Settings)</warn>
