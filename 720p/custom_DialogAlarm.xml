@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1115">
+<defaultcontrol>710</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="group">
+			<animation effect="slide" start="-300,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-300,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>40</posy>
+				<width>300</width>
+				<height>100</height>
+				<texture background="true">black.png</texture>
+				<aspectratio>scale</aspectratio>
+				<colordiffuse>f0000000</colordiffuse>
+				<bordertexture border="8,8,0,8">border.png</bordertexture>
+				<bordersize>4,4,0,4</bordersize>
+			</control>
+			<control type="label">
+				<description>header label</description>
+				<posx>15</posx>
+				<posy>35</posy>
+				<width>270</width>
+				<height>38</height>
+				<font>METF_ContextValue</font>
+				<textcolor>DialogTextFO</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>Popup Timer</label>
+			</control>
+			<control type="button" id="710">
+				<posx>15</posx>
+				<posy>65</posy>
+				<width>270</width>
+				<height>25</height>
+				<ondown>711</ondown>
+				<onup>712</onup>
+				<onleft>Close</onleft>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>ButtonText</textcolor>
+				<onfocus condition="IsEmpty(Skin.String(OSDTimer))">Skin.SetString(OSDTimer,0)</onfocus>
+				<label>$INFO[Skin.String(OSDTimer),, minutes]</label>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),0)">Skin.SetString(OSDTimer,1)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),1)">Skin.SetString(OSDTimer,2)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),2)">Skin.SetString(OSDTimer,3)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),3)">Skin.SetString(OSDTimer,4)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),4)">Skin.SetString(OSDTimer,5)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),5)">Skin.SetString(OSDTimer,6)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),6)">Skin.SetString(OSDTimer,7)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),7)">Skin.SetString(OSDTimer,8)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),8)">Skin.SetString(OSDTimer,9)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),9)">Skin.SetString(OSDTimer,10)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),10)">Skin.SetString(OSDTimer,11)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),11)">Skin.SetString(OSDTimer,12)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),12)">Skin.SetString(OSDTimer,13)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),13)">Skin.SetString(OSDTimer,14)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),14)">Skin.SetString(OSDTimer,15)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),15)">Skin.SetString(OSDTimer,16)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),16)">Skin.SetString(OSDTimer,17)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),17)">Skin.SetString(OSDTimer,18)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),18)">Skin.SetString(OSDTimer,19)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),19)">Skin.SetString(OSDTimer,20)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),20) | IsEmpty(Skin.String(OSDTimer))">Skin.SetString(OSDTimer,0)</onclick>
+			</control>		
+			<control type="button" id="711">
+				<posx>15</posx>
+				<posy>85</posy>
+				<width>270</width>
+				<height>25</height>
+				<ondown>712</ondown>
+				<onup>710</onup>
+				<onleft>Close</onleft>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>ButtonText</textcolor>
+				<label>Activate</label>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),0)">CancelAlarm(timmer)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),1)">AlarmClock(timmer,Notification(Alert,1 Minute Timer has elapsed,5500),1)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),2)">AlarmClock(timmer,Notification(Alert,2 Minute Timer has elapsed,5500),2)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),3)">AlarmClock(timmer,Notification(Alert,3 Minute Timer has elapsed,5500),3)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),4)">AlarmClock(timmer,Notification(Alert,4 Minute Timer has elapsed,5500),4)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),5)">AlarmClock(timmer,Notification(Alert,5 Minute Timer has elapsed,5500),5)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),6)">AlarmClock(timmer,Notification(Alert,6 Minute Timer has elapsed,5500),6)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),7)">AlarmClock(timmer,Notification(Alert,7 Minute Timer has elapsed,5500),7)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),8)">AlarmClock(timmer,Notification(Alert,8 Minute Timer has elapsed,5500),8)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),9)">AlarmClock(timmer,Notification(Alert,9 Minute Timer has elapsed,5500),9)</onclick>	
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),10)">AlarmClock(timmer,Notification(Alert,10 Minute Timer has elapsed,1500),10)</onclick>	
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),11)">AlarmClock(timmer,Notification(Alert,11 Minute Timer has elapsed,5500),11)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),12)">AlarmClock(timmer,Notification(Alert,12 Minute Timer has elapsed,5500),12)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),13)">AlarmClock(timmer,Notification(Alert,13 Minute Timer has elapsed,5500),13)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),14)">AlarmClock(timmer,Notification(Alert,14 Minute Timer has elapsed,5500),14)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),15)">AlarmClock(timmer,Notification(Alert,15 Minute Timer has elapsed,5500),15)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),16)">AlarmClock(timmer,Notification(Alert,16 Minute Timer has elapsed,5500),16)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),17)">AlarmClock(timmer,Notification(Alert,17 Minute Timer has elapsed,5500),17)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),18)">AlarmClock(timmer,Notification(Alert,18 Minute Timer has elapsed,5500),18)</onclick>
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),19)">AlarmClock(timmer,Notification(Alert,19 Minute Timer has elapsed,5500),19)</onclick>	
+				<onclick condition="Stringcompare(Skin.String(OSDTimer),20)">AlarmClock(timmer,Notification(Alert,20 Minute Timer has elapsed,5500),20)</onclick>	
+				<onclick>close</onclick>			
+				<visible>!Stringcompare(Skin.String(OSDTimer),0) | !IsEmpty(Skin.String(OSDTimer))</visible>
+			</control>
+			<control type="button" id="712">
+				<posx>15</posx>
+				<posy>105</posy>
+				<width>270</width>
+				<height>25</height>
+				<ondown>710</ondown>
+				<onup>711</onup>
+				<onleft>Close</onleft>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>ButtonText</textcolor>
+				<label>Deactivate</label>
+				<onclick>CancelAlarm(timmer)</onclick>
+				<onclick>Skin.SetString(OSDTimer,0)</onclick>
+				<onclick>close</onclick>
+				<visible>!Stringcompare(Skin.String(OSDTimer),0) | !IsEmpty(Skin.String(OSDTimer))</visible>
+			</control>
+		</control>
+	</controls>
+</window>
