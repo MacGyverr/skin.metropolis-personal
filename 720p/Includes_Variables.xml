@@ -83,6 +83,15 @@
 		<value>$INFO[ListItem.Label]</value>
 	</variable>	
 	
+	<!--setting the dynamic content target variable -->
+	<variable name="GlobalWidgetType">
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgetType),music)">music</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgetType),programs)">programs</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgetType),pictures)">pictures</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgetType),pictures)">video</value>
+		<value>video</value>
+	</variable>
+	
 	<!-- Video thumbnail case overlay names -->	
 	<variable name="SourceFlagType">
 		<value condition="!IsEmpty(ListItem.Title) + Skin.HasSetting(CaseOveralys) + [SubString(ListItem.Filename,hddvd) | SubString(ListItem.Filename,hd-dvd)] + ![SubString(ListItem.Filename,bluray) | SubString(ListItem.Filename,blu-ray) | SubString(ListItem.Filename,bdrip) | SubString(ListItem.Filename,brrip)]">hddvd</value>

@@ -54,10 +54,10 @@
 <!--	<widget labelID="tvshows" label="Trakt.tv (Airing TV Shows)">AiringShows</widget>
 	<widget labelID="tvshows" label="Trakt.tv (Premiere TV Shows)">PremiereShows</widget> -->
 	
-	<widget label="Random XKCD Comics">XKCD</widget>
-	<widget label="Random Cyanide and Happiness Comics">Cyanide</widget>
-	<widget label="DailyBabe">Dailybabe</widget>
-	<widget label="DailyBabes">Dailybabes</widget>
+	<widget labelID="pictures" type="pictures" label="Random XKCD Comics">XKCD</widget>
+	<widget labelID="pictures" type="pictures" label="Random Cyanide and Happiness Comics">Cyanide</widget>
+	<widget labelID="pictures" type="pictures" label="DailyBabe">Dailybabe</widget>
+	<widget labelID="pictures" type="pictures" label="DailyBabes">Dailybabes</widget>
 	
 	<!-- Music addons -->
 	

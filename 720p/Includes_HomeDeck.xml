@@ -344,23 +344,6 @@
 					</control>
 				</control>
 				
-				<!-- Picture/Comic Widget Thumbnail-->
-				<control type="group">
-					<control type="image">
-						<include>Animation_CommonFade</include>
-						<include>Animation_FadedByMenu</include>
-						<posx>340</posx>
-						<posy>3</posy>
-						<width>600</width>
-						<height>400</height>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<bordertexture border="6">frames/thumb_border.png</bordertexture>
-						<bordersize>6</bordersize>
-						<texture diffuse="frames/EpisodeMatte.png">$INFO[Container(8000).ListItem.Icon]</texture>
-						<visible>!IsEmpty(Container(9000).ListItem.Property(widget)) + !StringCompare(Container(9000).ListItem.Property(Widget),HomeForecast) + !StringCompare(Container(9000).ListItem.Property(Widget),PVR) + !StringCompare(Container(9000).ListItem.Property(Widget),Playlist) + [StringCompare(Container(9000).ListItem.Property(Widget),XKCD) | StringCompare(Container(9000).ListItem.Property(Widget),Cyanide) | StringCompare(Container(9000).ListItem.Property(Widget),Dailybabe) | StringCompare(Container(9000).ListItem.Property(Widget),Dailybabes)]</visible>
-					</control>
-				</control>
-				
 				<!-- Playlist Widget Thumbnails-->
 				<control type="group">
 					<!-- Fanart/CD Cover/Missing Thumbnail-->
@@ -396,10 +379,19 @@
 				<!-- Widget Menus -->
 				<!-- script.extendedinfo/service.library.data.provider Widget Menus-->
 				<control type="group">
+					<control type="button" id="7999">
+						<description>Fake button for picture-based widgets</description>
+						<onup>Control.Move(8000,-1)</onup>
+						<ondown>Control.Move(8000,1)</ondown>
+						<onleft>9000</onleft>
+						<onright>9000</onright>
+						<onclick condition="IsEmpty(Container(8000).ListItem.PicturePath)">ShowPicture($INFO[Container(8000).ListItem.Thumb])</onclick>
+						<visible>StringCompare(Container(9000).ListItem.Property(widgetType),pictures)</visible>
+					</control>
 					<visible>!IsEmpty(Container(9000).ListItem.Property(widget)) + !StringCompare(Container(9000).ListItem.Property(Widget),HomeForecast) + !StringCompare(Container(9000).ListItem.Property(Widget),PVR) + !StringCompare(Container(9000).ListItem.Property(Widget),Playlist)</visible>
 					<control type="list" id="8000">
 						<include>Global_Widget</include>
-						<content target="video">$VAR[GlobalWidgetContent]</content>
+						<content target="$VAR[GlobalWidgetType]">$VAR[GlobalWidgetContent]</content>
 					</control>
 				</control>
 
@@ -1000,7 +992,7 @@
 				<aligny>center</aligny>
 				<texture>FocusLine.png</texture>
 				<colordiffuse>FocusBar</colordiffuse>
-				<visible>Control.HasFocus(8000)</visible>
+				<visible>[Control.HasFocus(8000) | Control.HasFocus(7999)] </visible>
 			</control>
 			<control type="label">
 				<posx>10</posx>
