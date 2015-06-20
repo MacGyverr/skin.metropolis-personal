@@ -436,6 +436,15 @@
 				<include condition="Stringcompare(Skin.String(DateFormat),YMD)">DateLabelYMD</include>
 				<include condition="Stringcompare(Skin.String(DateFormat),DOW) | IsEmpty(Skin.String(DateFormat))">DateLabelDOW</include>
 			</control>
+			<control type="button">
+				<description>Close Button for moderate touch support</description>
+				<posx>1000</posx>
+				<posy>560</posy>
+				<width>300</width>
+				<height>300</height>
+				<font>-</font>
+				<onclick>back</onclick>
+			</control>
 		</control>
 	</include>
 
@@ -1134,6 +1143,15 @@
 				<colordiffuse>OSDProgressBar</colordiffuse>
 				<overlaytexture>-</overlaytexture>
 			</control>
+			<control type="slider" id="87">
+				<description>Seek Slider</description>
+				<posx>30</posx>
+				<posy>572</posy>
+				<width>1220</width>
+				<height>18</height>
+				<action>seek</action>
+				<visible>![Window.IsVisible(SliderDialog)]</visible>
+			</control>
 		</control>
 	</include>
 	<include name="OSD_Progress_Bar2">
@@ -1176,6 +1194,15 @@
 				<righttexture>osd/osd_progress_right.png</righttexture>
 				<colordiffuse>OSDProgressBar</colordiffuse>
 				<overlaytexture>-</overlaytexture>
+			</control>
+			<control type="slider" id="87">
+				<description>Seek Slider</description>
+				<posx>295</posx>
+				<posy>627</posy>
+				<width>960</width>
+				<height>15</height>
+				<action>seek</action>
+				<visible>![Window.IsVisible(SliderDialog)]</visible>
 			</control>
 			<!-- Current position / Total Time -->
 			<control type="label">
@@ -1366,6 +1393,15 @@
 				<righttexture>osd/osd_progress_right.png</righttexture>
 				<colordiffuse>OSDProgressBar</colordiffuse>
 				<overlaytexture>-</overlaytexture>
+			</control>
+			<control type="slider" id="87">
+				<description>Seek Slider</description>
+				<posx>295</posx>
+				<posy>47</posy>
+				<width>700</width>
+				<height>15</height>
+				<action>seek</action>
+				<visible>![Window.IsVisible(SliderDialog)]</visible>
 			</control>
 			<!-- Current position / Total Time -->
 			<control type="label">
