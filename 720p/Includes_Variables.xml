@@ -88,7 +88,7 @@
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgetType),music)">music</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgetType),programs)">programs</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgetType),pictures)">pictures</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(widgetType),pictures)">video</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widgetType),video)">video</value>
 		<value>video</value>
 	</variable>
 	
