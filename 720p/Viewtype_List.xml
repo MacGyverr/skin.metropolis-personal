@@ -686,7 +686,7 @@
 				<textureslidernib colordiffuse="WatchedOverlay">ScrollBarV_Nib_Focus.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarV_Nib_Focus.png</textureslidernibfocus>
 				<onleft>55</onleft>
-				<onright>noop</onright>
+				<onright>5</onright>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 			</control>	
@@ -702,10 +702,50 @@
 				<textureslidernib>ScrollBarV_Nib_Focus.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarV_Nib_Focus.png</textureslidernibfocus>
 				<onleft>55</onleft>
-				<onright>noop</onright>
+				<onright>5</onright>
 				<showonepage>true</showonepage>
 				<orientation>vertical</orientation>
 				<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(998) | Container.Scrolling">Conditional</animation>
+			</control>
+
+			<!-- Scroll Up or Down by letters -->	
+			<control type="button" id="5">
+				<include>Animation_OpenCloseFade</include>
+				<include>Animation_FadedByMenu</include>
+				<posx>1240</posx>
+				<posy>300</posy>
+				<width>35</width>
+				<height>35</height>
+				<label>-</label>
+				<font>-</font>
+				<texturefocus colordiffuse="SubmenuTextFocused">ArrowUpFo.png</texturefocus>
+				<texturenofocus colordiffuse="SubmenuTextFocused">ArrowUpNF.png</texturenofocus>
+				<onup>5</onup>
+				<ondown>6</ondown>
+				<onleft>998</onleft>
+				<onclick>SetFocus(55)</onclick>
+				<onclick>Action(PrevLetter)</onclick>
+				<onclick>SetFocus(5)</onclick>
+				<visible allowhiddenfocus="true">Control.HasFocus(5) | Control.HasFocus(6)</visible>
+			</control>
+			<control type="button" id="6">
+				<include>Animation_OpenCloseFade</include>
+				<include>Animation_FadedByMenu</include>
+				<posx>1240</posx>
+				<posy>340</posy>
+				<width>35</width>
+				<height>35</height>
+				<label>-</label>
+				<font>-</font>
+				<texturefocus colordiffuse="SubmenuTextFocused">ArrowDownFo.png</texturefocus>
+				<texturenofocus colordiffuse="SubmenuTextFocused">ArrowDownNF.png</texturenofocus>
+				<onup>5</onup>
+				<ondown>6</ondown>
+				<onleft>998</onleft>
+				<onclick>SetFocus(55)</onclick>
+				<onclick>Action(NextLetter)</onclick>
+				<onclick>SetFocus(6)</onclick>
+				<visible allowhiddenfocus="true">Control.HasFocus(5) | Control.HasFocus(6)</visible>
 			</control>
 			
 		</control>
