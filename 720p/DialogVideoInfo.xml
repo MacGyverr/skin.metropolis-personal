@@ -558,10 +558,14 @@
 				<texturenofocus>buttons/button_videoextras.png</texturenofocus>
 				<texturefocus>buttons/button_videoextrasFO.png</texturefocus>
 				<include>Animation_ButtonFocus</include>
-				<onclick condition="!Container.Content(tvshows)">RunScript(script.videoextras,display,"$INFO[ListItem.FilenameAndPath]")</onclick>
+	<!--		<onclick condition="!Container.Content(tvshows)">RunScript(script.videoextras,display,"$INFO[ListItem.FilenameAndPath]")</onclick>
 				<onclick condition="Container.Content(tvshows)">RunScript(script.videoextras,display,"$INFO[ListItem.Path]")</onclick>
-				<label>$INFO[System.AddonTitle(script.videoextras)]</label>
+	-->			<onclick condition="!Container.Content(tvshows)">RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[ListItem.DBID])</onclick>
+				<onclick condition="Container.Content(tvshows)">RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[ListItem.DBID])</onclick>
+	<!--		<label>$INFO[System.AddonTitle(script.videoextras)]</label>
 				<visible>System.HasAddon(script.videoextras)</visible>
+	-->			<label>Extended Info Script</label>
+				<visible>System.HasAddon(script.extendedinfo)</visible>
 				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos)]</visible>
 			</control>
 			<!-- Refresh -->
@@ -604,7 +608,7 @@
 			<control type="label">
 				<description>Video Extras</description>
 				<include>VideoInfoButtonLabel</include>
-				<label>$INFO[System.AddonTitle(script.videoextras)]</label>
+				<label>$INFO[System.AddonTitle(script.extendedinfo)]</label>
 				<visible>ControlGroup(7003).HasFocus(22)</visible>
 			</control>
 			<control type="label">
