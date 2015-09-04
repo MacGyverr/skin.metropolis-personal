@@ -49,7 +49,6 @@
 					<include>MediaFlagsVarsWide</include>
 					<texture fallback="flags/default.png">flags/Source/bluray.png</texture>
 					<colordiffuse>MediaFlagDiffuse</colordiffuse>
-					<visible>substring(listitem.filename,bluray) | substring(listitem.filename,blu-ray) | substring(listitem.filename,brrip) | substring(listitem.filename,bdrip) | substring(listitem.filename,.mt2s,Right) | [[!substring(listitem.filename,sddvd) + !substring(listitem.filename,blu-ray) + !substring(listitem.filename,brrip) + !substring(listitem.filename,bdrip) + !substring(listitem.filename,tvrip) + !substring(listitem.filename,pdtv) + !substring(listitem.filename,hddvd) + !substring(listitem.filename,sdtv) + !substring(listitem.filename,hdtv) + !substring(listitem.filename,.evo,Right) + !substring(listitem.filename,.ifo,Right) + !substring(listitem.filename,.vob,Right) + !substring(listitem.filename,r5) + !substring(listitem.filename,dvdscr) + !substring(listitem.filename,screener) + !substring(listitem.filename,web-dl) + !substring(listitem.filename,webrip)] + [Container.Content(movies) | Container.Content(MusicVideos)] + [substring(ListItem.VideoResolution,720) | substring(ListItem.VideoResolution,1080) | substring(ListItem.VideoResolution,4K)]]</visible>
 					<visible>!ListItem.IsStereoscopic + [substring(listitem.filename,bluray) | substring(listitem.filename,blu-ray) | substring(listitem.filename,brrip) | substring(listitem.filename,bdrip) | substring(listitem.filename,.mt2s,Right) | [[!substring(listitem.filename,sddvd) + !substring(listitem.filename,blu-ray) + !substring(listitem.filename,brrip) + !substring(listitem.filename,bdrip) + !substring(listitem.filename,tvrip) + !substring(listitem.filename,pdtv) + !substring(listitem.filename,hddvd) + !substring(listitem.filename,sdtv) + !substring(listitem.filename,hdtv) + !substring(listitem.filename,.evo,Right) + !substring(listitem.filename,.ifo,Right) + !substring(listitem.filename,.vob,Right) + !substring(listitem.filename,r5) + !substring(listitem.filename,dvdscr) + !substring(listitem.filename,screener) + !substring(listitem.filename,web-dl) + !substring(listitem.filename,webrip)] + [Container.Content(movies) | Container.Content(MusicVideos)] + [substring(ListItem.VideoResolution,720) | substring(ListItem.VideoResolution,1080) | substring(ListItem.VideoResolution,4K)]]]</visible>
 				</control>
 				<control type="image">
@@ -168,7 +167,7 @@
 					<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
 				</control>
 			</control>
-			
+
 			<!-- IMDB Votes -->			
 			<control type="group">
 				<width>90</width>
@@ -196,6 +195,7 @@
 					<textcolor>MediaFlagDiffuse</textcolor>
 					<font>METF_Votes</font>
 				</control>
+				
 				<control type="image">
 					<width>104</width>
 					<height>54</height>
@@ -203,13 +203,12 @@
 					<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
 				</control>
 			</control>
-			
 			<!-- IMDB Votes Fullscreen video-->			
 			<control type="group">
 				<width>90</width>
 				<height>62</height>
 				<visible>![Container.Content(movies) | Container.Content(episodes) | Container.Content(MusicVideos)]</visible>
-			<control type="label">
+				<control type="label">
 					<posx>12</posx>
 					<posy>3</posy>
 					<width>80</width>
@@ -217,7 +216,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>205</label>
-					<textcolor>ffa8e612</textcolor>
+					<textcolor>OSDProgressBar</textcolor>
 					<font>METF_Votes_Title</font>
 				</control>
 				<control type="label">
@@ -231,14 +230,13 @@
 					<textcolor>MediaFlagDiffuse</textcolor>
 					<font>METF_Votes</font>
 				</control>
-			<control type="image">
+				<control type="image">
 					<width>104</width>
 					<height>54</height>
 					<texture>flags/flag_framesquare.png</texture>
 					<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
 				</control>
-			</control>			
-			
+			</control>	
 			<!-- Audio Language and Subtitles : Flag=Audio Language, CC=has subtitles -->
 			<control type="group">
 				<width>58</width>
@@ -279,11 +277,11 @@
 					<aspectratio aligny="center" scalediffuse="true">stretch</aspectratio>
 				</control>
 			</control>
-
+	
 			<!-- MPAA Flag (only shown in fullscreen video info) -->
-			
-			<!--	XXX: this doesn't really belong with the other media flags.
-				commenting out for now until people complain about it.-->
+			<!--
+				XXX: this doesn't really belong with the other media flags.
+				commenting out for now until people complain about it.
 			<control type="group">
 				<width>58</width>
 				<height>62</height>
@@ -301,12 +299,12 @@
 					<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
 				</control>
 			</control>
-			
+			-->
 
 			<!-- Star Rating (only shown in fullscreen video info) -->
-			
-			<!--	XXX: this doesn't really belong with the other media flags.
-				commenting out for now until people complain about it.-->
+			<!--
+				XXX: this doesn't really belong with the other media flags.
+				commenting out for now until people complain about it.
 			<control type="group">
 				<width>58</width>
 				<height>62</height>
@@ -332,11 +330,7 @@
 					<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
 				</control>
 			</control>
-						
-			
-
-
-			
+			-->
 		</control>
 	</include>
 </includes>

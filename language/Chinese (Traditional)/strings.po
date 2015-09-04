@@ -1,4 +1,4 @@
-# XBMC Media Center language file
+# Kodi Media Center language file
 # Addon Name: Metropolis
 # Addon id: skin.metropolis
 # Addon Provider: Amra, Stoli, jingai
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: XBMC Translation Team\n"
+"Last-Translator: Kodi Translation Team\n"
 "Language-Team: Chinese (Traditional) (http://www.transifex.com/projects/p/xbmc-skins/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,6 +36,10 @@ msgctxt "#31054"
 msgid "Logo"
 msgstr "標誌"
 
+msgctxt "#31183"
+msgid "Viewtype"
+msgstr "展示類型"
+
 msgctxt "#31207"
 msgid "Current"
 msgstr "目前的"
@@ -55,6 +59,10 @@ msgstr "我的最愛"
 msgctxt "#31275"
 msgid "Multi Image"
 msgstr "多張圖片"
+
+msgctxt "#31277"
+msgid "Item"
+msgstr "項目"
 
 msgctxt "#31281"
 msgid "Items"
@@ -87,6 +95,10 @@ msgstr "橫向"
 msgctxt "#31334"
 msgid "Trailers"
 msgstr "預告片"
+
+msgctxt "#31413"
+msgid "Local subtitle available"
+msgstr "找到本杝端的字幕"
 
 msgctxt "#31423"
 msgid "Author"
@@ -128,6 +140,14 @@ msgctxt "#31469"
 msgid "Appearance"
 msgstr "外觀"
 
+msgctxt "#31471"
+msgid "Show Status"
+msgstr "顯示狀態"
+
+msgctxt "#31472"
+msgid "Ended"
+msgstr "結束"
+
 msgctxt "#31601"
 msgid "Live TV"
 msgstr "電視"
@@ -147,3 +167,27 @@ msgstr "刪除群組"
 msgctxt "#31610"
 msgid "Scheduled Time"
 msgstr "已排程的時間"
+
+msgctxt "#31702"
+msgid "36 Hour Forecast"
+msgstr "36小時預報"
+
+msgctxt "#31703"
+msgid "Pressure"
+msgstr "氣壓"
+
+msgctxt "#31704"
+msgid "Clouds"
+msgstr "雲"
+
+msgctxt "#31706"
+msgid "Maximum"
+msgstr "最高"
+
+msgctxt "#31709"
+msgid "Precipitation"
+msgstr "降雨量"
+
+msgctxt "#31717"
+msgid "Precip"
+msgstr "降雨"

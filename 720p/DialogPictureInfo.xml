@@ -31,6 +31,7 @@
 					<posy>0</posy>
 					<width>790</width>
 					<height>38</height>
+					<aligny>center</aligny>
 					<font>METF_TitleTextLarge</font>
 					<textcolor>SettingsTitle</textcolor>
 					<align>left</align>

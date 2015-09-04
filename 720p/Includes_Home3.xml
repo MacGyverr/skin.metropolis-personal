@@ -91,7 +91,7 @@
 				<font>METF_Heading</font>
 				<textcolor>Home2SkinName</textcolor>
 				<label>$LOCALIZE[31011]</label>
-				<!--	<label>special://skin/extras/weather/weather-$INFO[Window(Weather).Property(Current.FanartCode)].jpg</label>-->
+				<!--	<label>special://skin/extras/weather/$INFO[Window(Weather).Property(Current.FanartCode)].jpg</label>-->
 			</control>
 		</control>
 		
@@ -101,7 +101,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>544</height>
-			<texture>special://skin/extras/weather/weather-$INFO[Window(Weather).Property(Current.FanartCode)].jpg</texture>
+			<texture>special://skin/extras/weather/$INFO[Window(Weather).Property(Current.FanartCode)].jpg</texture>
 			<aspectratio>stretch</aspectratio>
 			<animation reversible="false" effect="zoom" center="auto" start="100" end="112" time="200" tween="sine" easing="inout">focus</animation>
 			<animation reversible="false" effect="zoom" center="auto" start="112" end="100" time="200" tween="sine" easing="inout">unfocus</animation>
@@ -275,7 +275,7 @@
 			<posy>554</posy>
 			<width>300</width>
 			<height>170</height>
-			<onup>9001</onup>
+			<onup>9000</onup>
 			<ondown>9001</ondown>
 			<onleft>9000</onleft>
 			<onright>9000</onright>

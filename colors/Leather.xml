@@ -9,13 +9,13 @@
 
 	<!-- Metropolis Leather Colors -->
 	<!-- Global Colors -->
-	<color name="BackgroundColor">F0909090</color>
+	<color name="BackgroundColor">90FFFFFF</color>
 	<color name="FanartDiffuse">26FFFFFF</color>
+	<color name="FanartDiffuseLight">86FFFFFF</color>			<!-- FanartDiffuse + 0x60 -->
 	<color name="FrameBackgroundDiffuse">dd000000</color>
 	<color name="Time">ddFFFFFF</color>
 	<color name="TimeAMPM">FFd0a664</color>
-	<!--<color name="Date">ddb4e58d</color> -->
-	<color name="Date">dda8e612</color>
+	<color name="Date">ddb4e58d</color>
 	<color name="Temp">FFd0a664</color>
 	<color name="GlobalHeading">eeb4e58d</color>
 	<color name="GlobalHeadingDetails">FFFFFFFF</color>
@@ -91,7 +91,7 @@
 	<!-- OSD -->
 	<color name="OSDBackgroundColor">ddFFFFFF</color>
 	<color name="OSDDialogBackgroundColor">a0e8d4b4</color>		<!-- FFd0a664 -->
-	<color name="OSDProgressBar">dda8e612</color>
+	<color name="OSDProgressBar">ddb4e58d</color>
 	<color name="OSDFinishTime">FFFFFFFF</color>
 	<color name="OSDPlayerStatusText">ddc89008</color>
 	<color name="OSDBookmarkNF">32FFFFFF</color>
@@ -100,7 +100,7 @@
 	<!-- Dialogs -->
 	<color name="DialogBackgroundColor">FFe8d4b4</color>		<!-- FFd0a664 -->
 	<color name="DialogDropdownColor">FFe8d4b4</color>
-	<color name="DialogProgressBar">dda8e612</color>
+	<color name="DialogProgressBar">ddb4e58d</color>
 	<color name="DialogTextFO">eeb4e58d</color>
 
 	<!-- Weather -->

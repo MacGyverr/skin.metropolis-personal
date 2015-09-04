@@ -67,20 +67,18 @@
 				<aligny>center</aligny>
 				<texturefocus>ButtonFo.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
+				<alttexturefocus>ButtonFo.png</alttexturefocus>
+				<alttexturenofocus>-</alttexturenofocus>
 				<pulseonselect>false</pulseonselect>
 			</control>
 			<control type="sliderex" id="13">
 				<description>Default Slider</description>
 				<include>SettingsLabel</include>
-				<posx>0</posx>
-				<posy>0</posy>
-				<height>40</height>
-				<font>METF_TitleTextMedium</font>
-				<textcolor>SettingsDetail</textcolor>
-				<focusedcolor>DialogTextFO</focusedcolor>
-				<texturefocus border="0,2,0,2">FocusLine.png</texturefocus>
-				<texturenofocus border="0,2,0,2"></texturenofocus>
-				<aligny>center</aligny>
+				<sliderwidth>300</sliderwidth>
+				<sliderheight>16</sliderheight>
+				<texturesliderbar>osdsliderback.png</texturesliderbar>
+				<textureslidernib>osdslidernib_2.png</textureslidernib>
+				<textureslidernibfocus>osdslidernib.png</textureslidernibfocus>
 			</control>
 			<control type="textbox" id="6">
 				<include>Animation_FadedByMenu</include>
@@ -96,6 +94,15 @@
 				<include condition="Skin.HasSetting(AutoScrollFast)">AutoScrollShortFast</include>
 				<textcolor>LowerText</textcolor>
 				<align>justify</align>
+			</control>
+			<control type="label" id="14">
+				<description>Default Label</description>
+				<height>38</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>METF_ContextValue</font>
+				<textcolor>SettingsDetail</textcolor>
+				<label>-</label>
 			</control>
 		</control>
 		<include>Global_ContextFilter</include>

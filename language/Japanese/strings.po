@@ -1,4 +1,4 @@
-# XBMC Media Center language file
+# Kodi Media Center language file
 # Addon Name: Metropolis
 # Addon id: skin.metropolis
 # Addon Provider: Amra, Stoli, jingai
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: XBMC Translation Team\n"
+"Last-Translator: Kodi Translation Team\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/xbmc-skins/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -48,6 +48,10 @@ msgctxt "#31275"
 msgid "Multi Image"
 msgstr "複数イメージ"
 
+msgctxt "#31277"
+msgid "Item"
+msgstr "アイテム"
+
 msgctxt "#31281"
 msgid "Items"
 msgstr "アイテム"
@@ -64,6 +68,10 @@ msgctxt "#31285"
 msgid "List"
 msgstr "リスト"
 
+msgctxt "#31286"
+msgid "Banner"
+msgstr "カバーフロー"
+
 msgctxt "#31289"
 msgid "Files"
 msgstr "ファイル"
@@ -71,6 +79,10 @@ msgstr "ファイル"
 msgctxt "#31334"
 msgid "Trailers"
 msgstr "予告編"
+
+msgctxt "#31413"
+msgid "Local subtitle available"
+msgstr "ローカルの字幕が利用可能"
 
 msgctxt "#31423"
 msgid "Author"
@@ -119,3 +131,23 @@ msgstr "グループの削除"
 msgctxt "#31610"
 msgid "Scheduled Time"
 msgstr "タイマー予約時間"
+
+msgctxt "#31702"
+msgid "36 Hour Forecast"
+msgstr "36時間予報"
+
+msgctxt "#31704"
+msgid "Clouds"
+msgstr "曇り"
+
+msgctxt "#31706"
+msgid "Maximum"
+msgstr "最大"
+
+msgctxt "#31709"
+msgid "Precipitation"
+msgstr "降雨量"
+
+msgctxt "#31717"
+msgid "Precip"
+msgstr "降雨量"

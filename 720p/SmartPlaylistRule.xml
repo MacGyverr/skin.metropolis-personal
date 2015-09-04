@@ -124,37 +124,6 @@
 				<onright>noop</onright>
 				<ondown>15</ondown>
 			</control>
-			
-			<!--  Navigation Arrows  -->
-			<!--
-			<control type="image">
-				<posx>407</posx>
-				<posy>150</posy>
-				<width>5</width>
-				<height>250</height>
-				<texture>VideoInfoLine_Vertical.png</texture>
-				<colordiffuse>WatchedOverlay</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>395</posx>
-				<posy>255</posy>
-				<width>30</width>
-				<height>30</height>
-				<texture>Arrow2Left.png</texture>
-				<colordiffuse>WatchedOverlay</colordiffuse>
-				<visible>![Control.HasFocus(18) | Control.HasFocus(19)]</visible>
-			</control>
-			<control type="image">
-				<posx>395</posx>
-				<posy>255</posy>
-				<width>30</width>
-				<height>30</height>
-				<texture>Arrow2Right.png</texture>
-				<colordiffuse>WatchedOverlay</colordiffuse>
-				<visible>Control.HasFocus(18) | Control.HasFocus(19)</visible>
-			</control>
-			-->
-			
 			<control type="button" id="19">
 				<description>Cancel</description>
 				<posx>0</posx>

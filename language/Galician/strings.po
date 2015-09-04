@@ -1,4 +1,4 @@
-# XBMC Media Center language file
+# Kodi Media Center language file
 # Addon Name: Metropolis
 # Addon id: skin.metropolis
 # Addon Provider: Amra, Stoli, jingai
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: XBMC Translation Team\n"
+"Last-Translator: Kodi Translation Team\n"
 "Language-Team: Galician (http://www.transifex.com/projects/p/xbmc-skins/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,11 +22,15 @@ msgstr "Ver opcións"
 
 msgctxt "#31002"
 msgid "Home Artwork"
-msgstr "Ilustración de Inicio"
+msgstr "Ilustración da Pantalla Principal"
 
 msgctxt "#31004"
 msgid "Debug"
 msgstr "Depurar"
+
+msgctxt "#31005"
+msgid "Enable auto scrolling for text that does not fit on-screen"
+msgstr "Activar autodesprazamento do texto que non colle na pantalla"
 
 msgctxt "#31006"
 msgid "Shorter delay before auto scrolling"
@@ -47,6 +51,18 @@ msgstr "N/A"
 msgctxt "#31011"
 msgid "Metropolis"
 msgstr "Metropolis"
+
+msgctxt "#31012"
+msgid "Increase Star Rating"
+msgstr "Aumentar a Valoración"
+
+msgctxt "#31021"
+msgid "Decrease Star Rating"
+msgstr "Diminuír a Valoración"
+
+msgctxt "#31024"
+msgid "Icon Home layout"
+msgstr "Disposición das Iconas da Pantalla Principal"
 
 msgctxt "#31033"
 msgid "Hide Background Fanart"
@@ -75,10 +91,6 @@ msgstr "Habilitar a Grella de Depuración"
 msgctxt "#31118"
 msgid "Filemanager"
 msgstr "Xestor de ficheiros"
-
-msgctxt "#31126"
-msgid "Download extra TV Show artwork"
-msgstr "Descargar ilustración adicional da serie de TV"
 
 msgctxt "#31133"
 msgid "Mute"
@@ -136,6 +148,10 @@ msgctxt "#31208"
 msgid "Last Updated:"
 msgstr "Última Actualización:"
 
+msgctxt "#31210"
+msgid "Default Home layout"
+msgstr "Disposición Predefinida da Pantalla Principal"
+
 msgctxt "#31219"
 msgid "Choose from a variety of advanced settings and customisation options to make the UI your own"
 msgstr "Escolla entre unha grande variedade de personalizacións para configurar ao seu gusto o Interface"
@@ -172,6 +188,10 @@ msgctxt "#31275"
 msgid "Multi Image"
 msgstr "Multi imaxe"
 
+msgctxt "#31277"
+msgid "Item"
+msgstr "elemento"
+
 msgctxt "#31278"
 msgid "Open Playlist"
 msgstr "Abrir Listaxe de Reprodución"
@@ -202,7 +222,7 @@ msgstr "Lista"
 
 msgctxt "#31286"
 msgid "Banner"
-msgstr "Cartaz"
+msgstr "Pancarta"
 
 msgctxt "#31289"
 msgid "Files"
@@ -228,9 +248,9 @@ msgctxt "#31319"
 msgid "Default Lyrics script"
 msgstr "Script Predefinido para as Letras"
 
-msgctxt "#31320"
-msgid "Default Subtitles script"
-msgstr "Script Predefinido para os Subtítulos"
+msgctxt "#31324"
+msgid "Home Options"
+msgstr "Opcións da Pantalla Principal"
 
 msgctxt "#31328"
 msgid "Show Random Items"
@@ -239,6 +259,10 @@ msgstr "Amosar Elementos Ó Chou"
 msgctxt "#31330"
 msgid "Scripts/Extras"
 msgstr "Scripts/Extras"
+
+msgctxt "#31331"
+msgid "Home Items"
+msgstr "Elemento da Pantalla Principal"
 
 msgctxt "#31334"
 msgid "Trailers"
@@ -253,8 +277,8 @@ msgid "View information for your computer on such items as your network, graphic
 msgstr "Ver a información do seu computador como a rede, gráficos, hardware e o espazo de almacenamento dispoñíbel"
 
 msgctxt "#31342"
-msgid "Create and modify multiple user profiles for XBMC so that each member of your household can have their own video or music library"
-msgstr "Cree e modifique multiples perfís de usuario no XBMC de forma que cada membro da súa familia poida ter a súa propia biblioteca de vídeo e música"
+msgid "Create and modify multiple user profiles for Kodi so that each member of your household can have their own video or music library"
+msgstr "Cree e modifique multiples perfís de usuario no Kodi de forma que cada membro da súa familia poida ter a súa propia biblioteca de vídeo e música"
 
 msgctxt "#31343"
 msgid "Action films usually include high energy, big-budget physical stunts and chases, possibly with rescues, battles, fights, escapes, destructive crises (floods, explosions, natural disasters, fires, etc.), non-stop motion, spectacular rhythm and pacing, and adventurous, often two-dimensional 'good-guy' heroes (or recently, heroines) battling 'bad guys' - all designed for pure audience escapism."
@@ -320,6 +344,10 @@ msgctxt "#31412"
 msgid "*Press UP to select a profile*"
 msgstr "*Premer ARRIBA para seleccionar un perfil*"
 
+msgctxt "#31413"
+msgid "Local subtitle available"
+msgstr "subtítulos locais dispoñíbeis"
+
 msgctxt "#31414"
 msgid "Gallery"
 msgstr "Galeria"
@@ -374,7 +402,7 @@ msgstr "Recente"
 
 msgctxt "#31439"
 msgid "Banner & Poster"
-msgstr "Cartaz e Póster"
+msgstr "Pancarta e Póster"
 
 msgctxt "#31440"
 msgid "View Types"
@@ -386,11 +414,15 @@ msgstr "Ocultar"
 
 msgctxt "#31442"
 msgid "Banner & Fanart"
-msgstr "Cartaz e Fanart"
+msgstr "Pancarta e Fanart"
 
 msgctxt "#31443"
 msgid "Pseudo TV"
 msgstr "Pseudo TV"
+
+msgctxt "#31444"
+msgid "Auto Login"
+msgstr "Inicio Automático de Sesión"
 
 msgctxt "#31445"
 msgid "Picture Settings"
@@ -440,6 +472,10 @@ msgctxt "#31460"
 msgid "Games"
 msgstr "Xogos"
 
+msgctxt "#31464"
+msgid "Show Plot in Fullscreen Info"
+msgstr "Amosar a Info. da Sinopse a pantalla completa"
+
 msgctxt "#31465"
 msgid "Clean Library"
 msgstr "Limpar Biblioteca"
@@ -451,6 +487,14 @@ msgstr "Servizos"
 msgctxt "#31469"
 msgid "Appearance"
 msgstr "Apariencia"
+
+msgctxt "#31471"
+msgid "Show Status"
+msgstr "Amosar Estado"
+
+msgctxt "#31472"
+msgid "Ended"
+msgstr "Rematado"
 
 msgctxt "#31600"
 msgid "Enable Live TV (PVR) support"
@@ -479,3 +523,59 @@ msgstr "Canles Agochadas"
 msgctxt "#31610"
 msgid "Scheduled Time"
 msgstr "Hora programada"
+
+msgctxt "#31700"
+msgid "7 Day Forecast"
+msgstr "Predición de 7 días"
+
+msgctxt "#31701"
+msgid "12 Hour Forecast"
+msgstr "Predición de 12 horas"
+
+msgctxt "#31702"
+msgid "36 Hour Forecast"
+msgstr "Predición de 36 horas"
+
+msgctxt "#31703"
+msgid "Pressure"
+msgstr "Presión"
+
+msgctxt "#31704"
+msgid "Clouds"
+msgstr "Nubes"
+
+msgctxt "#31705"
+msgid "Average"
+msgstr "Media"
+
+msgctxt "#31706"
+msgid "Maximum"
+msgstr "Máxima"
+
+msgctxt "#31707"
+msgid "Minimum"
+msgstr "Mínimo"
+
+msgctxt "#31708"
+msgid "Moon Phase"
+msgstr "Fase da lúa"
+
+msgctxt "#31709"
+msgid "Precipitation"
+msgstr "Precipitación"
+
+msgctxt "#31711"
+msgid "Show weather forecast on home screen"
+msgstr "Amosar a predición do tempo na pantalla principal"
+
+msgctxt "#31715"
+msgid "Icon"
+msgstr "Icona"
+
+msgctxt "#31716"
+msgid "Wallpaper"
+msgstr "Imaxe de fondo"
+
+msgctxt "#31717"
+msgid "Precip"
+msgstr "Precip"

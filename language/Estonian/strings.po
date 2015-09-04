@@ -1,4 +1,4 @@
-# XBMC Media Center language file
+# Kodi Media Center language file
 # Addon Name: Metropolis
 # Addon id: skin.metropolis
 # Addon Provider: Amra, Stoli, jingai
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: XBMC Translation Team\n"
+"Last-Translator: Kodi Translation Team\n"
 "Language-Team: Estonian (http://www.transifex.com/projects/p/xbmc-skins/language/et/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,6 +60,10 @@ msgctxt "#31275"
 msgid "Multi Image"
 msgstr "Mitu pilti"
 
+msgctxt "#31277"
+msgid "Item"
+msgstr "Ühik"
+
 msgctxt "#31281"
 msgid "Items"
 msgstr "Nimetused"
@@ -92,6 +96,14 @@ msgctxt "#31334"
 msgid "Trailers"
 msgstr "Treilerid"
 
+msgctxt "#31413"
+msgid "Local subtitle available"
+msgstr "Kohaliku subtiitri võimalus"
+
+msgctxt "#31414"
+msgid "Gallery"
+msgstr "Galerii"
+
 msgctxt "#31423"
 msgid "Author"
 msgstr "Autor"
@@ -116,6 +128,10 @@ msgctxt "#31446"
 msgid "Fullscreen"
 msgstr "Täisekraan"
 
+msgctxt "#31451"
+msgid "Recommended"
+msgstr "Soovitatud"
+
 msgctxt "#31457"
 msgid "Shortcuts"
 msgstr "Otseteed"
@@ -131,6 +147,14 @@ msgstr "Teenused"
 msgctxt "#31469"
 msgid "Appearance"
 msgstr "Välisilme"
+
+msgctxt "#31471"
+msgid "Show Status"
+msgstr "Näita staatust"
+
+msgctxt "#31472"
+msgid "Ended"
+msgstr "Lõppenud"
 
 msgctxt "#31601"
 msgid "Live TV"
@@ -151,3 +175,31 @@ msgstr "Kustuta grupp"
 msgctxt "#31610"
 msgid "Scheduled Time"
 msgstr "Plaanitud aeg"
+
+msgctxt "#31702"
+msgid "36 Hour Forecast"
+msgstr "36 tunni prognoos"
+
+msgctxt "#31703"
+msgid "Pressure"
+msgstr "Rõhk"
+
+msgctxt "#31704"
+msgid "Clouds"
+msgstr "pilvitus"
+
+msgctxt "#31706"
+msgid "Maximum"
+msgstr "Maksimaalne"
+
+msgctxt "#31709"
+msgid "Precipitation"
+msgstr "Sadememäär"
+
+msgctxt "#31715"
+msgid "Icon"
+msgstr "Ikoon"
+
+msgctxt "#31717"
+msgid "Precip"
+msgstr "Sademed"

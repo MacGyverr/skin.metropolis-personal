@@ -2,15 +2,15 @@
 <overrides>
 	<!-- Widgets -->
 	<!-- Recently Added -->
-	<widget label="Recently Added Movies (Build-in)">LibraryRecentlyAddedMovies</widget>
+	<widget label="Recently Added Movies (Built-in)">LibraryRecentlyAddedMovies</widget>
 	<widget label="Recently Added Movies">MoviesRecentlyAdded</widget>
-	<widget label="Recently Added TV Episodes (Build-in)">LibraryRecentlyAddedEpisodes</widget>
+	<widget label="Recently Added TV Episodes (Built-in)">LibraryRecentlyAddedEpisodes</widget>
 	<widget label="Recently Added TV Episodes">TVShowsRecentlyAdded</widget>
 	<widget label="Recently Added Videos">VideosRecentlyAdded</widget>	
-	<widget label="Recently Added Albums (Build-in)">LibraryRecentlyAddedAlbums</widget>
+	<widget label="Recently Added Albums (Built-in)">LibraryRecentlyAddedAlbums</widget>
 	<widget label="Recently Added Albums">MusicRecentlyAdded</widget>
-	<widget label="Recently Added Music Videos (Build-in)">LibraryRecentlyAddedMusicVideos</widget>
-	<widget label="Recently Played Albums (Build-in)">LibraryRecentlyPlayedAlbums</widget>
+	<widget label="Recently Added Music Videos (Built-in)">LibraryRecentlyAddedMusicVideos</widget>
+	<widget label="Recently Played Albums (Built-in)">LibraryRecentlyPlayedAlbums</widget>
 	
 	<!-- Recommended -->
 	<widget label="Recommended Movies">MoviesWatchlist</widget>
@@ -53,11 +53,9 @@
 	<widget labelID="tvshows" label="Trakt.tv (Trending TV Shows)">TrendingTVShows</widget>
 <!--	<widget labelID="tvshows" label="Trakt.tv (Airing TV Shows)">AiringShows</widget>
 	<widget labelID="tvshows" label="Trakt.tv (Premiere TV Shows)">PremiereShows</widget> -->
-	
+
 	<widget labelID="pictures" type="pictures" label="Random XKCD Comics">XKCD</widget>
 	<widget labelID="pictures" type="pictures" label="Random Cyanide and Happiness Comics">Cyanide</widget>
-	<widget labelID="pictures" type="pictures" label="DailyBabe">Dailybabe</widget>
-	<widget labelID="pictures" type="pictures" label="DailyBabes">Dailybabes</widget>
 	
 	<!-- Music addons -->
 	

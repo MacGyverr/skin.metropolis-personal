@@ -158,24 +158,14 @@
 				<posx>25</posx>
 				<posy>40</posy>
 				<control type="image">
-					<description>PVR TV Picture</description>
+					<description>PVR Display Picture</description>
 					<posx>22</posx>
 					<posy>20</posy>
 					<width>704</width>
 					<height>396</height>
 					<texture background="true" fallback="home_art/livetv.jpg">$INFO[Skin.String(CustomLiveTV)]</texture>
 					<aspectratio aligny="bottom">stretch</aspectratio>
-					<visible>Window.IsActive(tvchannels) + !Player.HasVideo</visible>
-				</control>
-				<control type="image">
-					<description>PVR Radio Picture</description>
-					<posx>22</posx>
-					<posy>20</posy>
-					<width>704</width>
-					<height>396</height>
-					<texture background="true">home_art/radio.jpg</texture>
-					<aspectratio aligny="bottom">stretch</aspectratio>
-					<visible>Window.IsActive(radiochannels) + !Player.HasVideo</visible>
+					<visible>!Player.HasVideo</visible>
 				</control>
 				<control type="videowindow">
 					<description>PVR Display Window</description>

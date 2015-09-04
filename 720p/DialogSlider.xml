@@ -24,6 +24,7 @@
 				<aligny>center</aligny>
 				<font>METF_Menu</font>
 				<textcolor>DialogTextFO</textcolor>
+				<focusedcolor>TextFO</focusedcolor>
 				<selectedcolor>TextNF</selectedcolor>
 				<disabledcolor>TextDisabled</disabledcolor>
 			</control>
@@ -38,6 +39,7 @@
 				<aligny>center</aligny>
 				<font>METF_DialogLarge</font>
 				<textcolor>TextNF</textcolor>
+				<focusedcolor>TextFO</focusedcolor>
 				<selectedcolor>TextNF</selectedcolor>
 				<disabledcolor>TextDisabled</disabledcolor>
 			</control>

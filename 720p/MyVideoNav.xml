@@ -1,45 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="25">
-	<onload condition="Skin.HasSetting(TvTunes) + !SubString(Window(Videos).Property(CinemaExperienceRunning),True)">RunScript(script.tvtunes,backend=True&amp;loop=False)</onload>
-	<onload condition="Skin.HasSetting(NextAired) + !SubString(Window(Videos).Property(CinemaExperienceRunning),True) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">RunScript(script.tv.show.next.aired,backend=True)</onload>
-	<views>55,905,54,58,59,559,53,57,551,550,504,509,511,508,510,513,52,56,512,501,514</views>
+	<onload condition="Skin.HasSetting(NextAired) + !SubString(Window(Videos).Property(CinemaExperienceRunning),True) + Container.Content(tvshows)">RunScript(script.tv.show.next.aired,backend=True)</onload>
+	<views>55,905,509,54,58,59,559,53,57,551,552,550,504,511,508,510,52,56,512,501,514</views>
 	<defaultcontrol always="true">55</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<include>Global_Background</include>
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<include>Animation_CommonFade</include>
-			<include>Animation_FadedByMenu</include>
-			<fadetime>200</fadetime>
-			<texture background="true" diffuse="diffuse_fanart.png">$INFO[ListItem.Art(fanart)]</texture>
-			<colordiffuse>FanartDiffuse</colordiffuse>
-			<animation effect="fade" start="100" end="60" time="300" condition="Window.IsVisible(movieinformation)">Conditional</animation>
-			<visible>!Skin.HasSetting(HideVideoFanart) + !IsEmpty(ListItem.path) + [Container.Content(movies) | Container.Content(sets) | Container.Content(musicvideos) | Container.Content(addons) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
-		</control>
+		<include>Global_Background_Fanart</include>
 		<include>Object_InfoLines</include>
-		<include>Viewtype_LowList</include>			<!-- 905 -->
 		<include>Viewtype_List</include>			<!-- 55 -->
-<!--		<include>Viewtype_InfoList</include>	-->		<!-- 552 -->
+		<include>Viewtype_LowList</include>			<!-- 905 -->
+		<include>Viewtype_ListFanart</include>			<!-- 509 -->
 		<include>Viewtype_Poster_Fixed</include>		<!-- 53 -->
 		<include>Viewtype_Poster_Wrap</include>			<!-- 57 -->
 		<include>Viewtype_PosterAndFanart</include>		<!-- 550 -->
-		<include>Viewtype_Poster_Large</include>		<!-- 551 -->
+		<include>Viewtype_Poster_Large_Wrap</include>		<!-- 551 -->
+		<include>Viewtype_Poster_Large_Fixed</include>		<!-- 552 -->
 		<include>Viewtype_Coverflow</include>			<!-- 512 -->
 		<include>Viewtype_Landscape</include>			<!-- 52 -->
 		<include>Viewtype_Fanart</include>			<!-- 504 -->
-		<include>Viewtype_FanartList</include>			<!-- 509 -->
-		<include>Viewtype_FanartBanner</include>		<!-- 508 -->
 		<include>Viewtype_Banner</include>			<!-- 511 -->
 		<include>Viewtype_BannerPoster</include>		<!-- 510 -->
-		<include>Viewtype_Banner_Fixed</include>			<!-- 513 -->
-		<include>Viewtype_Artwork_Check</include>			<!-- 514 -->
+		<include>Viewtype_BannerFanart</include>		<!-- 508 -->
 		<include>Viewtype_Gallery</include>			<!-- 54 -->
 		<include>Viewtype_Gallery_Fanart</include>		<!-- 59 -->
 		<include>Viewtype_Gallery_Square</include>		<!-- 58 -->
 		<include>Viewtype_Panel_Square</include>		<!-- 559 -->
 		<include>Viewtype_Logo</include>			<!-- 56 -->
 		<include>Viewtype_TallGenre</include>			<!-- 501 -->
+		<include>Viewtype_Artwork_Check</include>			<!-- 514 -->
 		<include>Global_ContextFilter</include>
 		<include condition="!Skin.HasSetting(Hide_MediaFlags)">MediaInfo</include>
 		<include condition="!Skin.HasSetting(Hide_ExtraMediaFlags)">MediaInfo2</include>
@@ -77,6 +66,106 @@
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<pulseonselect>false</pulseonselect>
+				</control>	
+				<control type="button" id="91">
+					<description>Banner Size is x1</description>
+					<width>340</width>
+					<height>40</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>METF_DialogLarge</font>
+					<label>$LOCALIZE[31286] $LOCALIZE[289] x2</label>
+					<textoffsetx>20</textoffsetx>
+					<textcolor>TextNF</textcolor>
+					<focusedcolor>DialogTextFO</focusedcolor>
+					<disabledcolor>TextDisabled</disabledcolor>
+					<texturefocus>ButtonFO2Wide.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<onclick>Skin.SetString(BannerX,2)</onclick>
+					<onclick>back</onclick>
+					<visible>Stringcompare(Skin.String(BannerX),1) | IsEmpty(Skin.String(BannerX))</visible>
+					<visible>Control.IsVisible(511)</visible>
+				</control>
+				<control type="button" id="92">
+					<description>Banner Size is x2</description>
+					<width>340</width>
+					<height>40</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>METF_DialogLarge</font>
+					<label>$LOCALIZE[31286] $LOCALIZE[289] x3</label>
+					<textoffsetx>20</textoffsetx>
+					<textcolor>TextNF</textcolor>
+					<focusedcolor>DialogTextFO</focusedcolor>
+					<disabledcolor>TextDisabled</disabledcolor>
+					<texturefocus>ButtonFO2Wide.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<onclick>Skin.SetString(BannerX,3)</onclick>
+					<onclick>back</onclick>
+					<visible>Stringcompare(Skin.String(BannerX),2)</visible>
+					<visible>Control.IsVisible(511)</visible>
+				</control>
+				<control type="button" id="93">
+					<description>Banner Size is x3</description>
+					<width>340</width>
+					<height>40</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>METF_DialogLarge</font>
+					<label>$LOCALIZE[31286] $LOCALIZE[289] x4</label>
+					<textoffsetx>20</textoffsetx>
+					<textcolor>TextNF</textcolor>
+					<focusedcolor>DialogTextFO</focusedcolor>
+					<disabledcolor>TextDisabled</disabledcolor>
+					<texturefocus>ButtonFO2Wide.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<onclick>Skin.SetString(BannerX,4)</onclick>
+					<onclick>back</onclick>
+					<visible>Stringcompare(Skin.String(BannerX),3)</visible>
+					<visible>Control.IsVisible(511)</visible>
+				</control>
+				<control type="button" id="94">
+					<description>Banner Size is x4</description>
+					<width>340</width>
+					<height>40</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>METF_DialogLarge</font>
+					<label>$LOCALIZE[31286] $LOCALIZE[289] x5</label>
+					<textoffsetx>20</textoffsetx>
+					<textcolor>TextNF</textcolor>
+					<focusedcolor>DialogTextFO</focusedcolor>
+					<disabledcolor>TextDisabled</disabledcolor>
+					<texturefocus>ButtonFO2Wide.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<onclick>Skin.SetString(BannerX,5)</onclick>
+					<onclick>back</onclick>
+					<visible>Stringcompare(Skin.String(BannerX),4)</visible>
+					<visible>Control.IsVisible(511)</visible>
+				</control>
+				<control type="button" id="95">
+					<description>Banner Size is x5</description>
+					<width>340</width>
+					<height>40</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>METF_DialogLarge</font>
+					<label>$LOCALIZE[31286] $LOCALIZE[289] x1</label>
+					<textoffsetx>20</textoffsetx>
+					<textcolor>TextNF</textcolor>
+					<focusedcolor>DialogTextFO</focusedcolor>
+					<disabledcolor>TextDisabled</disabledcolor>
+					<texturefocus>ButtonFO2Wide.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<onclick>Skin.SetString(BannerX,1)</onclick>
+					<onclick>back</onclick>
+					<visible>Stringcompare(Skin.String(BannerX),5)</visible>
+					<visible>Control.IsVisible(511)</visible>
 				</control>
 				<control type="button" id="3">
 					<description>Sort</description>
@@ -198,7 +287,7 @@
 					<width>340</width>
 					<align>left</align>
 					<label>20336</label>
-					<onclick>mastermode</onclick>
+					<onclick>MasterMode</onclick>
 					<selected>system.ismaster</selected>
 					<visible>system.haslocks</visible>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>

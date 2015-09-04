@@ -61,6 +61,7 @@
 			<control type="group">
 				<left>30</left>
 				<top>140</top>
+
 				<!-- 1st row -->
 				<control type="grouplist">
 					<itemgap>0</itemgap>
@@ -154,7 +155,8 @@
 						<include>KeyboardButton</include>
 					</control>
 				</control>
-					<!-- 2nd row -->
+
+				<!-- 2nd row -->
 				<control type="grouplist">
 					<orientation>horizontal</orientation>
 					<top>50</top>
@@ -249,7 +251,8 @@
 						<include>KeyboardButton</include>
 					</control>
 				</control>
-					<!-- 3rd row -->
+
+				<!-- 3rd row -->
 				<control type="grouplist">
 					<top>100</top>
 					<orientation>horizontal</orientation>
@@ -344,7 +347,8 @@
 						<include>KeyboardButton</include>
 					</control>
 				</control>
-					<!-- 4th row -->
+
+				<!-- 4th row -->
 				<control type="grouplist">
 					<top>150</top>
 					<itemgap>0</itemgap>
@@ -355,7 +359,7 @@
 						<height>50</height>
 						<onup>303</onup>
 						<ondown>300</ondown>
-						<label>$LOCALIZE[31712]</label>
+						<label>IP</label>
 						<texturenofocus border="3">keyboard/KeyboardKeyNF.png</texturenofocus>
 						<texturefocus border="5">keyboard/KeyboardKey.png</texturefocus>
 						<align>center</align>
@@ -453,7 +457,8 @@
 						<include>KeyboardButton</include>
 					</control>
 				</control>
-					<!-- 5th row -->
+
+				<!-- 5th row -->
 				<control type="grouplist">
 					<top>200</top>
 					<itemgap>0</itemgap>

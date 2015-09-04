@@ -7,7 +7,7 @@
 		<defaultID>31458</defaultID>
 		<icon>DefaultShortcut.png</icon>
 		<thumb />
-		<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
+		<visible>System.CanPowerDown</visible>
 	</shortcut>
 	<shortcut>
 		<action>CancelAlarm(ShutdownTimer)</action>
@@ -16,7 +16,7 @@
 		<defaultID>31459</defaultID>
 		<icon>DefaultShortcut.png</icon>
 		<thumb />
-		<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
+		<visible>System.CanPowerDown</visible>
 	</shortcut>
 	<shortcut>
 		<action>Dialog.Close(ShutdownMenu,yes)</action>
@@ -28,7 +28,7 @@
 		<visible>System.CanPowerDown</visible>
 	</shortcut>
 	<shortcut>
-		<action>Hibernate()</action>
+		<action>Hibernate</action>
 		<label>13010</label>
 		<label2>32054</label2>
 		<defaultID>13010</defaultID>
@@ -37,7 +37,7 @@
 		<thumb />
 	</shortcut>
 	<shortcut>
-		<action>Suspend()</action>
+		<action>Suspend</action>
 		<label>13011</label>
 		<label2>32054</label2>
 		<defaultID>13011</defaultID>
@@ -46,7 +46,7 @@
 		<thumb />
 	</shortcut>
 	<shortcut>
-		<action>Reset()</action>
+		<action>Reboot</action>
 		<label>13013</label>
 		<label2>32054</label2>
 		<defaultID>13013</defaultID>
@@ -55,12 +55,12 @@
 		<thumb />
 	</shortcut>
 	<shortcut>
-		<action>Powerdown()</action>
+		<action>Shutdown()</action>
 		<label>13005</label>
 		<label2>32054</label2>
 		<defaultID>13005</defaultID>
 		<icon>DefaultShortcut.png</icon>
-		<visible>System.CanPowerDown</visible>
+		<visible>System.CanReboot</visible>
 		<thumb />
 	</shortcut>
 	<shortcut>
@@ -69,7 +69,6 @@
 		<label2>32054</label2>
 		<defaultID>20126</defaultID>
 		<icon>DefaultShortcut.png</icon>
-		<visible>System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)</visible>
 		<thumb />
 	</shortcut>
 	<shortcut>
@@ -86,7 +85,6 @@
 		<label2>32054</label2>
 		<defaultID>13009</defaultID>
 		<icon>DefaultShortcut.png</icon>
-		<visible>System.ShowExitButton</visible>
 		<thumb />
 	</shortcut>
 </shortcuts>

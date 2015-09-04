@@ -86,7 +86,7 @@
 					<texture>ButtonFo.png</texture>
 				</control>
 				<control type="label">
-					<posx>00</posx>
+					<posx>0</posx>
 					<posy>0</posy>
 					<width>85</width>
 					<height>30</height>

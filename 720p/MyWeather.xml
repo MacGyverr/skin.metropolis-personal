@@ -4507,7 +4507,7 @@
 					<width>500</width>
 					<height>30</height>
 					<font>METF_WeatherOutlookWeekend</font>
-					<label fallback="Maps Loading...">$INFO[Container(53).ListItem.Label]</label>
+					<label>$INFO[Container(53).ListItem.Label]</label>
 					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
@@ -4520,14 +4520,6 @@
 					<height>24</height>
 					<texture>Arrow2Down.png</texture>
 					<colordiffuse>ArrowDiffuse</colordiffuse>
-				</control>
-				<control type="image">
-					<left>30</left>
-					<top>70</top>
-					<width>590</width>
-					<height>470</height>
-					<texture>DefaultThumb.png</texture>
-					<visible>IsEmpty(Window.Property(Map.1.Area))</visible>
 				</control>
 				<control type="list" id="53">
 					<left>30</left>

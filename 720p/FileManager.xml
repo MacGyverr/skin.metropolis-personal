@@ -47,6 +47,7 @@
 						<font>METF_ContextValue</font>
 						<align>left</align>
 						<aligny>center</aligny>
+						<focusedcolor>ButtonText</focusedcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
@@ -57,6 +58,7 @@
 						<font>METF_ContextValue</font>
 						<align>right</align>
 						<aligny>center</aligny>
+						<focusedcolor>ButtonText</focusedcolor>
 						<label>$INFO[ListItem.label2]</label>
 					</control>
 				</itemlayout>
@@ -77,6 +79,7 @@
 						<font>METF_ContextValue</font>
 						<align>left</align>
 						<aligny>center</aligny>
+						<focusedcolor>ButtonText</focusedcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
@@ -87,6 +90,7 @@
 						<font>METF_ContextValue</font>
 						<align>right</align>
 						<aligny>center</aligny>
+						<focusedcolor>ButtonText</focusedcolor>
 						<label>$INFO[ListItem.label2]</label>
 					</control>
 				</focusedlayout>
@@ -136,6 +140,7 @@
 						<font>METF_ContextValue</font>
 						<align>left</align>
 						<aligny>center</aligny>
+						<focusedcolor>ButtonText</focusedcolor>
 						<label>$INFO[ListItem.label]</label>
 					</control>
 					<control type="label">
@@ -146,6 +151,7 @@
 						<font>METF_ContextValue</font>
 						<align>right</align>
 						<aligny>center</aligny>
+						<focusedcolor>ButtonText</focusedcolor>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</itemlayout>
@@ -166,6 +172,7 @@
 						<font>METF_ContextValue</font>
 						<align>left</align>
 						<aligny>center</aligny>
+						<focusedcolor>ButtonText</focusedcolor>
 						<label>$INFO[ListItem.label]</label>
 					</control>
 					<control type="label">
@@ -176,6 +183,7 @@
 						<font>METF_ContextValue</font>
 						<align>right</align>
 						<aligny>center</aligny>
+						<focusedcolor>ButtonText</focusedcolor>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</focusedlayout>

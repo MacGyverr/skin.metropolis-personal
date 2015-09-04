@@ -19,7 +19,7 @@
 				<colordiffuse>OSDDialogBackgroundColor</colordiffuse>
 			</control>
 			<!-- Menu -->
-			<control type="label">
+			<control type="label" id="2">
 				<description>Settings Heading (Video)</description>
 				<posx>10</posx>
 				<posy>32</posy>
@@ -29,21 +29,8 @@
 				<aligny>center</aligny>
 				<font>METF_SettingsHeading</font>
 				<textcolor>DialogTextFO</textcolor>
-				<label>$LOCALIZE[3] - $LOCALIZE[5]</label>
-				<visible>Window.IsVisible(123)</visible>
-			</control>
-			<control type="label">
-				<description>Settings Heading (Audio)</description>
-				<posx>10</posx>
-				<posy>32</posy>
-				<width>640</width>
-				<height>40</height>
-				<align>center</align>
-				<aligny>center</aligny>
-				<font>METF_SettingsHeading</font>
-				<textcolor>DialogTextFO</textcolor>
-				<label>$LOCALIZE[292] - $LOCALIZE[5]</label>
-				<visible>Window.IsVisible(124)</visible>
+				<label>-</label>
+				<visible>Window.IsVisible(123) | Window.IsVisible(124)</visible>
 			</control>
 			<control type="grouplist" id="5">
 				<description>Control Area</description>
@@ -90,10 +77,12 @@
 				<radioheight>30</radioheight>
 				<texturefocus>ButtonFO2Wide.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
-				<textureradioonfocus>keyboard/RadiobuttonFO.png</textureradioonfocus>
-				<textureradioonnofocus>keyboard/RadiobuttonFO.png</textureradioonnofocus>
-				<textureradioofffocus>keyboard/RadiobuttonNF.png</textureradioofffocus>
-				<textureradiooffnofocus>keyboard/RadiobuttonNF.png</textureradiooffnofocus>
+				<!--
+				<textureradiofocus>keyboard/RadioButtonFO.png</textureradiofocus>
+				<textureradionofocus>keyboard/RadioButtonNF.png</textureradionofocus>
+				-->
+				<textureradiofocus>keyboard/RadiobuttonFO.png</textureradiofocus>
+				<textureradionofocus>keyboard/RadiobuttonNF.png</textureradionofocus>
 				<textoffsetx>20</textoffsetx>
 				<pulseonselect>false</pulseonselect>
 			</control>
@@ -149,6 +138,17 @@
 				<texturesliderbar>osd/slider_bg.png</texturesliderbar>
 				<textureslidernib border="2">osd/SliderNibNF.png</textureslidernib>
 				<textureslidernibfocus border="2">osd/SliderNibFO.png</textureslidernibfocus>
+			</control>
+			<control type="label" id="14">
+				<description>Default Label</description>
+				<left>0</left>
+				<top>0</top>
+				<height>40</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>METF_DialogLarge</font>
+				<textcolor>DialogTextFO</textcolor>
+				<label>-</label>
 			</control>
 		</control>
 		<include condition="Skin.HasSetting(DebugMode)">Debug</include>

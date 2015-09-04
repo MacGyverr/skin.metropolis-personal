@@ -141,13 +141,4 @@
 		<action>RunAddOn(script.tvguide)</action>
 		<visible>System.HasAddon(script.tvguide)</visible>
 	</shortcut>
-	<shortcut>
-		<defaultID>script.trailers</defaultID>
-		<label>$LOCALIZE[31334]</label>
-		<label2>Program</label2>
-		<icon>home_icons/trailers.png</icon>
-		<thumb>home_art/trailers.jpg</thumb>
-		<action>ActivateWindow(Videos,plugin://plugin.video.itunes_trailers,return)</action>
-		<visible>System.HasAddon(plugin.video.itunes_trailers)</visible>
-	</shortcut>
 </shortcuts>

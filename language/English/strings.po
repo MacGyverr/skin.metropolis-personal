@@ -4,12 +4,12 @@
 # Addon Provider: Amra, Stoli, jingai
 msgid ""
 msgstr ""
-"Project-Id-Version: Kodi Skins\n"
-"Report-Msgid-Bugs-To: alanwww1@kodi.tv\n"
+"Project-Id-Version: XBMC Skins\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kodi Translation Team\n"
-"Language-Team: English (http://www.transifex.com/projects/p/Kodi-skins/language/en/)\n"
+"Language-Team: English (http://www.transifex.com/projects/p/xbmc-skins/language/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -74,7 +74,11 @@ msgctxt "#31024"
 msgid "Icon Home layout"
 msgstr ""
 
-#empty strings from id 31025 to 31030
+msgctxt "#31025"
+msgid "Horizontal Text Home layout"
+msgstr ""
+
+#empty strings from id 31026 to 31030
 
 msgctxt "#31031"
 msgid "Hide Movie Watched Status"
@@ -144,7 +148,11 @@ msgctxt "#31126"
 msgid "Extra Artwork Downloader"
 msgstr ""
 
-#empty strings from id 31127 to 31132
+msgctxt "#31127"
+msgid "TvTunes Downloader"
+msgstr ""
+
+#empty strings from id 31128 to 31132
 
 msgctxt "#31133"
 msgid "Mute"
@@ -219,7 +227,7 @@ msgid "Adjust how Kodi handles video content. Includes stacking options for mult
 msgstr ""
 
 msgctxt "#31212"
-msgid "Manage your installed Add-ons. Includes browsing and installing from Kodi.org and Add-on modifications."
+msgid "Manage your installed Add-ons. Includes browsing and installing from Kodi.tv and Add-on modifications."
 msgstr ""
 
 msgctxt "#31213"
@@ -290,7 +298,11 @@ msgctxt "#31275"
 msgid "Multi Image"
 msgstr ""
 
-#empty strings from id 31276 to 31277
+#empty string with id 31276
+
+msgctxt "#31277"
+msgid "Item"
+msgstr ""
 
 msgctxt "#31278"
 msgid "Open Playlist"
@@ -368,9 +380,7 @@ msgctxt "#31319"
 msgid "Default Lyrics script"
 msgstr ""
 
-#empty string with id 31320
-
-#empty string with id 31321
+#empty strings from id 31320 to 31321
 
 msgctxt "#31322"
 msgid "Show Media Totals"
@@ -400,7 +410,11 @@ msgctxt "#31331"
 msgid "Home Items"
 msgstr ""
 
-#empty strings from id 31332 to 31333
+msgctxt "#31332"
+msgid "Enable Extra Fanart"
+msgstr ""
+
+#empty string with id 31333
 
 msgctxt "#31334"
 msgid "Trailers"
@@ -410,6 +424,10 @@ msgstr ""
 
 msgctxt "#31336"
 msgid "Enable Kiosk mode"
+msgstr ""
+
+msgctxt "#31337"
+msgid "Disable destructive Shutdown items"
 msgstr ""
 
 msgctxt "#31338"
@@ -642,7 +660,9 @@ msgctxt "#31398"
 msgid "Films that have no synchronized soundtrack and no spoken dialogue, until the dawn of the talkies in the late 1920s. Films without dialogue featured titles for dialogue segments, and often were accompanied by live music."
 msgstr ""
 
-#empty string with id 31399
+msgctxt "#31399"
+msgid "Lighter Background Fanart diffuse overlay"
+msgstr ""
 
 msgctxt "#31400"
 msgid "Hide Current Temperature and Weather Conditions"
@@ -698,7 +718,7 @@ msgstr ""
 
 msgctxt "#31413"
 msgid "Local subtitle available"
-msgstr "Local subtitle available"
+msgstr ""
 
 msgctxt "#31414"
 msgid "Gallery"
@@ -732,7 +752,9 @@ msgctxt "#31421"
 msgid "Video OSD: Show ClearArt/Logo"
 msgstr ""
 
-#empty string with id 31422
+msgctxt "#31422"
+msgid "Logo View: Show only one item at a time"
+msgstr ""
 
 msgctxt "#31423"
 msgid "Author"
@@ -818,7 +840,9 @@ msgctxt "#31443"
 msgid "Pseudo TV"
 msgstr ""
 
-#empty string with id 31444
+msgctxt "#31444"
+msgid "Auto Login"
+msgstr ""
 
 msgctxt "#31445"
 msgid "Picture Settings"
@@ -840,6 +864,9 @@ msgctxt "#31449"
 msgid "Show Recommended Items"
 msgstr ""
 
+msgctxt "#31450"
+msgid " - changing the options below requires a restart -"
+msgstr ""
 
 msgctxt "#31451"
 msgid "Recommended"
@@ -861,6 +888,9 @@ msgctxt "#31455"
 msgid "Visualization: Hide Clock and Temp in Info Overlay"
 msgstr ""
 
+msgctxt "#31456"
+msgid "- Override default link"
+msgstr ""
 
 msgctxt "#31457"
 msgid "Shortcuts"
@@ -938,18 +968,23 @@ msgctxt "#31475"
 msgid "Default OSD button"
 msgstr ""
 
-#empty strings from id 31476 to 31599
-#PVR Resources
-
-msgctxt "#31477"
+msgctxt "#31476"
 msgid "OSD: Fade away when paused"
 msgstr ""
 
-msgctxt "#31478"
-msgid "OSD: Set Fade Delay"
+msgctxt "#31477"
+msgid "- Fade delay"
 msgstr ""
 
-#empty strings from id 31478 to 31599
+msgctxt "#31478"
+msgid "Hide default submenu items"
+msgstr ""
+
+msgctxt "#31479"
+msgid "Poster Fixed Large"
+msgstr ""
+
+#empty strings from id 31479 to 31599
 #PVR Resources
 
 msgctxt "#31600"
@@ -1035,69 +1070,25 @@ msgid "Show weather forecast on home screen"
 msgstr ""
 
 msgctxt "#31712"
-msgid "IP"
+msgid "Crop Thumbnails in Music Video Gallery View"
 msgstr ""
 
 msgctxt "#31713"
-msgid "Horizontal Menu"
+msgid "Custom Home Shortcut"
 msgstr ""
 
 msgctxt "#31714"
-msgid "Customize Main Menu"
+msgid "Label and Shortcut"
 msgstr ""
 
 msgctxt "#31715"
-msgid "Reset Main Menu to Defaults"
+msgid "Icon"
 msgstr ""
 
 msgctxt "#31716"
-msgid "Hide All Sub-Menus"
+msgid "Wallpaper"
 msgstr ""
 
 msgctxt "#31717"
 msgid "Precip"
-msgstr ""
-
-msgctxt "#31718"
-msgid "Always show Scrollbar"
-msgstr ""
-
-msgctxt "#31719"
-msgid "Use Case Overlays"
-msgstr ""
-
-msgctxt "#31720"
-msgid "Display OSD Command Labels"
-msgstr ""
-
-msgctxt "#31721"
-msgid "Video Settings"
-msgstr ""
-
-msgctxt "#31722"
-msgid "Audio Settings"
-msgstr ""
-
-msgctxt "#31723"
-msgid "DVD Menu"
-msgstr ""
-
-msgctxt "#31724"
-msgid "Stop"
-msgstr ""
-
-msgctxt "#31725"
-msgid "Forward"
-msgstr ""
-
-msgctxt "#31726"
-msgid "Rewind"
-msgstr ""
-
-msgctxt "#31727"
-msgid "One Button OSD Subtitles"
-msgstr ""
-
-msgctxt "#31728"
-msgid "Use Cropped Icons in Music Video Gallery View"
 msgstr ""

@@ -1,4 +1,4 @@
-# XBMC Media Center language file
+# Kodi Media Center language file
 # Addon Name: Metropolis
 # Addon id: skin.metropolis
 # Addon Provider: Amra, Stoli, jingai
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: XBMC Translation Team\n"
+"Last-Translator: Kodi Translation Team\n"
 "Language-Team: Danish (http://www.transifex.com/projects/p/xbmc-skins/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,6 +39,10 @@ msgstr "Kortere forsinkelse før auto-scrolling"
 msgctxt "#31007"
 msgid "ON"
 msgstr "TIL"
+
+msgctxt "#31009"
+msgid "Browser"
+msgstr "Browser"
 
 msgctxt "#31010"
 msgid "N/A"
@@ -84,10 +88,6 @@ msgctxt "#31054"
 msgid "Logo"
 msgstr "Logo"
 
-msgctxt "#31056"
-msgid "Enable Cover Art overlay"
-msgstr "Aktiver Coverkunst "
-
 msgctxt "#31057"
 msgid "Enable Song Info text overlay"
 msgstr "Aktiver infotekst om Sang"
@@ -111,10 +111,6 @@ msgstr "Filhåndtering"
 msgctxt "#31125"
 msgid "Hide Video Root"
 msgstr "Skjul Video-Rod"
-
-msgctxt "#31126"
-msgid "Download extra TV Show artwork"
-msgstr "Hent ekstra fankunst til TV-serier"
 
 msgctxt "#31133"
 msgid "Mute"
@@ -177,36 +173,36 @@ msgid "Default Home layout"
 msgstr "Standard Hjemmelayout"
 
 msgctxt "#31211"
-msgid "Adjust how XBMC handles video content. Includes stacking options for multi-part files, library database options, and rendering and playback options"
-msgstr "Juster hvordan XBMC håndterer videoindhold. Herunder kombineringsindstillinger for filer i flere dele, indstillinger for databasen og indstillinger for rendering og afspilning."
+msgid "Adjust how Kodi handles video content. Includes stacking options for multi-part files, library database options, and rendering and playback options"
+msgstr "Juster hvordan Kodi håndterer videoindhold. Herunder kombineringsindstillinger for filer i flere dele, indstillinger for databasen og indstillinger for rendering og afspilning."
 
 msgctxt "#31212"
-msgid "Manage your installed Add-ons. Includes browsing and installing from XBMC.org and Add-on modifications."
-msgstr "Håndter dine installerede Add-ons. Herunder gennemsyn og installering fra XBMC.org og tilpasninger af Add-ons."
+msgid "Manage your installed Add-ons. Includes browsing and installing from Kodi.tv and Add-on modifications."
+msgstr "Håndter dine installerede Add-ons. Herunder gennemsyn og installering fra Kodi.tv og tilpasninger af Add-ons."
 
 msgctxt "#31213"
 msgid "Control core hardware and software functions. Includes autorun options, audio and video hardware setup, and parental master lock functions"
 msgstr "Kontroller centrale hardware- og softwarefunktioner. Herunder muligheder for autorun, video- og lydindstillinger og funktioner til forældrelås."
 
 msgctxt "#31214"
-msgid "Adjust how XBMC handles audio content. Includes browsing options for file and database library modes, together with audio hardware setup"
-msgstr "Juster hvordan XBMC håndterer lydindhold. Herunder valgmuligheder for udforskning i henholdsvis filvisning og dabasevisning samt indstillinger for lydhardware."
+msgid "Adjust how Kodi handles audio content. Includes browsing options for file and database library modes, together with audio hardware setup"
+msgstr "Juster hvordan Kodi håndterer lydindhold. Herunder valgmuligheder for udforskning i henholdsvis filvisning og dabasevisning samt indstillinger for lydhardware."
 
 msgctxt "#31215"
-msgid "Set up region information for XBMC's optional Weather displays"
-msgstr "Indstil lokalitetsinfo til XBMC's valgfrie visninger af Vejret"
+msgid "Set up region information for Kodi's optional Weather displays"
+msgstr "Indstil lokalitetsinfo til Kodi's valgfrie visninger af Vejret"
 
 msgctxt "#31216"
-msgid "Adjust the look and feel of XBMC. Includes skin, theme, sound and font selection, RSS feed control, and localisation settings"
-msgstr "Tilpas udseendet og fornemmelsen af XBMC. Herunder valg af skin. tema, lyd og skrifttyper, RSS-feed kontrol og lokaliserings-indstillinger "
+msgid "Adjust the look and feel of Kodi. Includes skin, theme, sound and font selection, RSS feed control, and localisation settings"
+msgstr "Tilpas udseendet og fornemmelsen af Kodi. Herunder valg af skin. tema, lyd og skrifttyper, RSS-feed kontrol og lokaliserings-indstillinger "
 
 msgctxt "#31217"
-msgid "Adjust how XBMC displays personal image collections. Includes screenshot grabbing, special effects and advanced display options"
-msgstr "Tilpas hvordan XBMC viser personlige billedsamlinger. Herunder screenshot's, specielle effekter og avancerede indstillinger for visning"
+msgid "Adjust how Kodi displays personal image collections. Includes screenshot grabbing, special effects and advanced display options"
+msgstr "Tilpas hvordan Kodi viser personlige billedsamlinger. Herunder screenshot's, specielle effekter og avancerede indstillinger for visning"
 
 msgctxt "#31218"
-msgid "Set up XBMC's network interface. Controls IP assignment, WWW and FTP server settings, SMB client setup, and UPnP configuration"
-msgstr "Opsæt XBMCs netværksinterface. Kontrollerer IP-tildeling, indstillinger for  WWW- og FTP-servere, opsætning af SMB-klient og konfiguration af UPnP"
+msgid "Set up Kodi's network interface. Controls IP assignment, WWW and FTP server settings, SMB client setup, and UPnP configuration"
+msgstr "Opsæt Kodis netværksinterface. Kontrollerer IP-tildeling, indstillinger for  WWW- og FTP-servere, opsætning af SMB-klient og konfiguration af UPnP"
 
 msgctxt "#31219"
 msgid "Choose from a variety of advanced settings and customisation options to make the UI your own"
@@ -243,6 +239,10 @@ msgstr "Favorit"
 msgctxt "#31275"
 msgid "Multi Image"
 msgstr "Flere Billeder"
+
+msgctxt "#31277"
+msgid "Item"
+msgstr "Emne"
 
 msgctxt "#31278"
 msgid "Open Playlist"
@@ -308,10 +308,6 @@ msgctxt "#31319"
 msgid "Default Lyrics script"
 msgstr "Standard add-on til Sangtekster"
 
-msgctxt "#31320"
-msgid "Default Subtitles script"
-msgstr "Standard add-on til Undertekster"
-
 msgctxt "#31322"
 msgid "Show Media Totals"
 msgstr "Vis Totale Medier"
@@ -348,13 +344,17 @@ msgctxt "#31337"
 msgid "Disable destructive Shutdown items"
 msgstr "Deaktiver destruktive nedlukningsemner"
 
+msgctxt "#31338"
+msgid "Use simple Media Filter"
+msgstr "Brug simpelt mediafilter."
+
 msgctxt "#31341"
 msgid "View information for your computer on such items as your network, graphics, hardware and storage space available"
 msgstr "Se informationer om din computer, såsom netværk, grafik, hardware og ledig lagerplads"
 
 msgctxt "#31342"
-msgid "Create and modify multiple user profiles for XBMC so that each member of your household can have their own video or music library"
-msgstr "Opret og rediger adskillige brugerprofiler til XBMC, så hvert medlem af din husholdning kan have sit eget video- eller musikbibliotek"
+msgid "Create and modify multiple user profiles for Kodi so that each member of your household can have their own video or music library"
+msgstr "Opret og rediger adskillige brugerprofiler til Kodi, så hvert medlem af din husholdning kan have sit eget video- eller musikbibliotek"
 
 msgctxt "#31343"
 msgid "Action films usually include high energy, big-budget physical stunts and chases, possibly with rescues, battles, fights, escapes, destructive crises (floods, explosions, natural disasters, fires, etc.), non-stop motion, spectacular rhythm and pacing, and adventurous, often two-dimensional 'good-guy' heroes (or recently, heroines) battling 'bad guys' - all designed for pure audience escapism."
@@ -392,6 +392,10 @@ msgctxt "#31404"
 msgid "Hide Rating and Studio Flags"
 msgstr "Skjul Bedømmelse og Studie-mærkater"
 
+msgctxt "#31405"
+msgid "Hide Movie Taglines"
+msgstr "Skjul Filmtaglines"
+
 msgctxt "#31406"
 msgid "Fanart Views: Classic Frame"
 msgstr "Fankunst-Visninger: Klassisk Ramme"
@@ -419,6 +423,10 @@ msgstr "*Tryk NED for at forlade"
 msgctxt "#31412"
 msgid "*Press UP to select a profile*"
 msgstr "*Tryk OP for at vælge en profil"
+
+msgctxt "#31413"
+msgid "Local subtitle available"
+msgstr "Lokal undertekst tilgængelig"
 
 msgctxt "#31414"
 msgid "Gallery"
@@ -480,9 +488,17 @@ msgctxt "#31429"
 msgid "Display Path in Video Info instead of Rating details"
 msgstr "Vis mappesti i Videoinfo i stedet for detajler om Bedømmelse"
 
+msgctxt "#31430"
+msgid "Poster Wrap Large"
+msgstr "Poster Wrap Stor"
+
 msgctxt "#31431"
 msgid "Click to reset Metropolis to defaults"
 msgstr "tryk for at nulstille Metropolis til standarder"
+
+msgctxt "#31432"
+msgid "Visualization Background: Ken Burns effect"
+msgstr "Visualiseringsbaggrund: Ken Burns effekt"
 
 msgctxt "#31433"
 msgid "Visualization Background: Fanart"
@@ -527,6 +543,10 @@ msgstr "Banner og Fankunst"
 msgctxt "#31443"
 msgid "Pseudo TV"
 msgstr "Pseudo TV"
+
+msgctxt "#31444"
+msgid "Auto Login"
+msgstr "Auto Login"
 
 msgctxt "#31445"
 msgid "Picture Settings"
@@ -624,6 +644,26 @@ msgctxt "#31470"
 msgid "Prefer ClearLogo to ClearArt"
 msgstr "Foretræk ClearLogo frem for ClearArt"
 
+msgctxt "#31471"
+msgid "Show Status"
+msgstr "Vis Status"
+
+msgctxt "#31472"
+msgid "Ended"
+msgstr "Slut"
+
+msgctxt "#31473"
+msgid "unmixed"
+msgstr "Ublandet"
+
+msgctxt "#31474"
+msgid "Use one button to toggle subtitles"
+msgstr "Brug en knap for at slå undertekster til og fra"
+
+msgctxt "#31475"
+msgid "Default OSD button"
+msgstr "Standard OSD knap"
+
 msgctxt "#31600"
 msgid "Enable Live TV (PVR) support"
 msgstr "Aktiver understøttelse af TV (PVR)"
@@ -651,3 +691,63 @@ msgstr "Skjulte Kanaler"
 msgctxt "#31610"
 msgid "Scheduled Time"
 msgstr "Planlagt Tid"
+
+msgctxt "#31700"
+msgid "7 Day Forecast"
+msgstr "7 dages vejrudsigt"
+
+msgctxt "#31701"
+msgid "12 Hour Forecast"
+msgstr "12 dages vejrudsigt"
+
+msgctxt "#31702"
+msgid "36 Hour Forecast"
+msgstr "36 timers vejrudsigt"
+
+msgctxt "#31703"
+msgid "Pressure"
+msgstr "Tryk"
+
+msgctxt "#31704"
+msgid "Clouds"
+msgstr "Skyer"
+
+msgctxt "#31705"
+msgid "Average"
+msgstr "Gennemsnit"
+
+msgctxt "#31706"
+msgid "Maximum"
+msgstr "Maximum"
+
+msgctxt "#31707"
+msgid "Minimum"
+msgstr "Minimum"
+
+msgctxt "#31708"
+msgid "Moon Phase"
+msgstr "Månefase"
+
+msgctxt "#31709"
+msgid "Precipitation"
+msgstr "Nedbør"
+
+msgctxt "#31710"
+msgid "Use extended weather"
+msgstr "Brug udvidet vejrudsigt"
+
+msgctxt "#31711"
+msgid "Show weather forecast on home screen"
+msgstr "Vis vejrudsigten på hovedskærmen"
+
+msgctxt "#31715"
+msgid "Icon"
+msgstr "Ikon"
+
+msgctxt "#31716"
+msgid "Wallpaper"
+msgstr "Baggrund"
+
+msgctxt "#31717"
+msgid "Precip"
+msgstr "Nedbør"

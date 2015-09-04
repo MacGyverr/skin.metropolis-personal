@@ -28,15 +28,13 @@
 				<ondown>5</ondown>
 				<textoffsetx>90</textoffsetx>
 				<height>38</height>
-				<width>400</width>
+				<width>380</width>
 				<align>right</align>
 				<aligny>center</aligny>
 				<radiowidth>80</radiowidth>
 				<radioheight>55</radioheight>
-				<textureradioonfocus>button_radioF.png</textureradioonfocus>
-				<textureradioonnofocus>button_radioF.png</textureradioonnofocus>
-				<textureradioofffocus>button_radioNF.png</textureradioofffocus>
-				<textureradiooffnofocus>button_radioNF.png</textureradiooffnofocus>
+				<textureradiofocus>button_radioF.png</textureradiofocus>
+				<textureradionofocus>button_radioNF.png</textureradionofocus>
 				<font>METF_ContextValue</font>
 				<textcolor>ButtonText</textcolor>
 				<disabledcolor>TextDisabled</disabledcolor>
@@ -45,16 +43,16 @@
 				<selectedcolor>TextFO</selectedcolor>
 				<texturenofocus>-</texturenofocus>
 				<pulseonselect>false</pulseonselect>
-				<label>20116</label>
+				<label>$LOCALIZE[20096]</label>
 			</control>
 			<control type="button" id="5">
-				<description>auto login</description>
-				<posx>00</posx>
+				<description>Auto Login</description>
+				<posx>0</posx>
 				<posy>276</posy>
 				<onright>2</onright>
 				<onup>4</onup>
 				<ondown>4</ondown>
-				<textoffsetx>55</textoffsetx>
+				<textoffsetx>75</textoffsetx>
 				<height>38</height>
 				<width>380</width>
 				<align>right</align>
@@ -65,7 +63,7 @@
 				<texturefocus>ButtonFo.png</texturefocus>
 				<selectedcolor>TextFO</selectedcolor>
 				<texturenofocus>-</texturenofocus>
-				<label>33084</label>
+				<label>$LOCALIZE[31444]</label>
 				<enable>!System.HasLoginScreen</enable>
 			</control>
 			<control type="image">
@@ -76,15 +74,15 @@
 			<include>Settings_Line</include>
 			</control>
 			<control type="label">
-				<description>auto login label</description>
-				<posx>326</posx>
+				<description>Auto Login label</description>
+				<posx>306</posx>
 				<posy>322</posy>
 				<height>38</height>
 				<width>380</width>
 				<align>right</align>
 				<font>METF_ContextValue</font>
 				<textcolor>SettingsTitle</textcolor>
-				<label>Current Selection: $INFO[System.ProfileAutoLogin]</label>
+				<label>$INFO[System.ProfileAutoLogin]</label>
 				<visible>!System.HasLoginScreen</visible>
 			</control>
 			<!--
@@ -127,6 +125,7 @@
 						<font>METF_ContextValue</font>
 						<align>left</align>
 						<aligny>center</aligny>
+						<focusedcolor>ButtonText</focusedcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
@@ -162,6 +161,7 @@
 						<font>METF_ContextValue</font>
 						<align>left</align>
 						<aligny>center</aligny>
+						<focusedcolor>ButtonText</focusedcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<animation effect="slide" end="0,20" condition="IsEmpty(ListItem.Label2)">Conditional</animation>
 					</control>
@@ -174,6 +174,7 @@
 						<font>METF_ContextValue</font>
 						<align>left</align>
 						<aligny>center</aligny>
+						<focusedcolor>ButtonText</focusedcolor>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</focusedlayout>

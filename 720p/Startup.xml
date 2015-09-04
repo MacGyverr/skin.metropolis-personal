@@ -27,10 +27,10 @@
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(SkinShortcuts-FullMenu)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetString(OSDFade,Complete)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetString(OSDFadeTime,5)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetString(DateFormat,YMD)</onload>
+	<onload condition="!Skin.HasSetting(defallt)">Skin.SetString(DateFormat,DOW)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetString(DefaultOSD,714)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(defallt)</onload>
-
+	
 	<controls>
 		<control type="button" id="10">
 			<description>Weather</description>

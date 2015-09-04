@@ -22,14 +22,14 @@
 			<posy>0</posy>
 			<width>400</width>
 			<height>730</height>
-			<texture>frames/Dialog_Glass2PanelMedium.png</texture>
+			<texture>frames/Menu_Glass2b.png</texture>
 			<colordiffuse>DialogBackgroundColor</colordiffuse>
 		</control>
 		<control type="grouplist" id="996">
 			<description>grouplist for context buttons</description>
-			<left>20</left>
+			<left>30</left>
 			<top>30</top>
-			<width>360</width>
+			<width>340</width>
 			<height max="670">auto</height>
 			<itemgap>2</itemgap>
 		</control>
@@ -37,9 +37,9 @@
 			<description>button template</description>
 			<onleft>Dialog.Close(contextmenu)</onleft>
 			<onright>Dialog.Close(contextmenu)</onright>
-			<posx>40</posx>
-			<posy>40</posy>
-			<width>360</width>
+			<left>-</left>
+			<top>-</top>
+			<width>340</width>
 			<height>35</height>
 			<font>METF_DialogLarge</font>
 			<align>center</align>

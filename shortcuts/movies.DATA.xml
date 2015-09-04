@@ -9,7 +9,7 @@
 		<thumb />
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</action>
+		<action>ActivateWindow(10025,special://skin/extras/HD_Movies.xsp,return)</action>
 		<label>HD</label>
 		<label2>342</label2>
 		<defaultID>135</defaultID>

@@ -1,4 +1,4 @@
-# XBMC Media Center language file
+# Kodi Media Center language file
 # Addon Name: Metropolis
 # Addon id: skin.metropolis
 # Addon Provider: Amra, Stoli, jingai
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: XBMC Translation Team\n"
+"Last-Translator: Kodi Translation Team\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/xbmc-skins/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,7 +26,7 @@ msgstr "Εικόνες Αρχ. Οθόνης"
 
 msgctxt "#31004"
 msgid "Debug"
-msgstr "Εντοπισμός σφαλμάτων"
+msgstr "Εντοπισμός Σφαλμάτων"
 
 msgctxt "#31005"
 msgid "Enable auto scrolling for text that does not fit on-screen"
@@ -64,6 +64,10 @@ msgctxt "#31024"
 msgid "Icon Home layout"
 msgstr "Διάταξη Εικονιδίων Αρχικής Οθόνης"
 
+msgctxt "#31025"
+msgid "Horizontal Text Home layout"
+msgstr "Διάταξη οριζόντιου κειμένου αρχικής οθόνης"
+
 msgctxt "#31031"
 msgid "Hide Movie Watched Status"
 msgstr "Απόκρυψη Κατάστασης Προβληθέντων Ταινιών"
@@ -88,10 +92,6 @@ msgctxt "#31054"
 msgid "Logo"
 msgstr "Λογότυπο"
 
-msgctxt "#31056"
-msgid "Enable Cover Art overlay"
-msgstr "Ενεργοποίηση επιφάνειας εικόνων Εξωφύλλου"
-
 msgctxt "#31057"
 msgid "Enable Song Info text overlay"
 msgstr "Ενεργοποίηση επιφάνειας πληροφοριών Τραγουδιού"
@@ -102,11 +102,11 @@ msgstr "Εμφάνιση Αντικειμένων που Προστέθηκαν 
 
 msgctxt "#31108"
 msgid "Enable Debug Mode"
-msgstr "Ενεργοποίηση Εντοπισμού Σφαλμάτων"
+msgstr "Εντοπισμός Σφαλμάτων"
 
 msgctxt "#31109"
 msgid "Enable Debug Grid"
-msgstr "Ενεργοποίηση Πλέγματος για Εντοπισμό Σφαλμάτων"
+msgstr "Πλέγμα Εντοπισμού Σφαλμάτων"
 
 msgctxt "#31118"
 msgid "Filemanager"
@@ -115,10 +115,6 @@ msgstr "Διαχειριστής Αρχείων"
 msgctxt "#31125"
 msgid "Hide Video Root"
 msgstr "Απόκρυψη Αρχικού Φακέλου Βίντεο"
-
-msgctxt "#31126"
-msgid "Download extra TV Show artwork"
-msgstr "Λήψη επιπλέον εικόνων Τηλ. Σειρών"
 
 msgctxt "#31133"
 msgid "Mute"
@@ -181,36 +177,36 @@ msgid "Default Home layout"
 msgstr "Προεπιλεγμένη διάταξη Αρχ. Οθόνης"
 
 msgctxt "#31211"
-msgid "Adjust how XBMC handles video content. Includes stacking options for multi-part files, library database options, and rendering and playback options"
-msgstr "Ρυθμίστε πως να χειρίζεται το XBMC το περιεχόμενο βίντεο. Περιλαμβάνονται επιλογές για στοίβαγμα ταινιών χωρισμένων σε πολλαπλά μέρη, επιλογές βάσης δεδομένων συλλογής, και επιλογές απόδοσης και αναπαραγωγής"
+msgid "Adjust how Kodi handles video content. Includes stacking options for multi-part files, library database options, and rendering and playback options"
+msgstr "Ρυθμίστε πως να χειρίζεται το Kodi το περιεχόμενο βίντεο. Περιλαμβάνονται επιλογές για στοίβαγμα ταινιών χωρισμένων σε πολλαπλά μέρη, επιλογές βάσης δεδομένων συλλογής, και επιλογές απόδοσης και αναπαραγωγής"
 
 msgctxt "#31212"
-msgid "Manage your installed Add-ons. Includes browsing and installing from XBMC.org and Add-on modifications."
-msgstr "Διαχείριση των εγκατεστημένων Πρόσθετων. Περιλαμβάνεται περιήγηση και εγκατάσταση από το XBMC.org, καθώς και τροποποιήσεις Πρόσθετων."
+msgid "Manage your installed Add-ons. Includes browsing and installing from Kodi.tv and Add-on modifications."
+msgstr "Διαχείριση των εγκατεστημένων Πρόσθετων. Περιλαμβάνεται περιήγηση και εγκατάσταση από το Kodi.tv, καθώς και τροποποιήσεις Πρόσθετων."
 
 msgctxt "#31213"
 msgid "Control core hardware and software functions. Includes autorun options, audio and video hardware setup, and parental master lock functions"
 msgstr "Έλεγχος του υλικού σας και των λειτουργιών του λογισμικού. Περιλαμβάνονται επιλογές αυτόματης εκτέλεσης, ρύθμιση της εγκατάστασης βίντεο και ήχου, και λειτουργίες γονικού κλειδώματος"
 
 msgctxt "#31214"
-msgid "Adjust how XBMC handles audio content. Includes browsing options for file and database library modes, together with audio hardware setup"
-msgstr "Ρύθμιση του τρόπου με τον οποίο το XBMC χειρίζεται το μουσικό περιεχόμενο. Περιλαμβάνονται επιλογές περιήγησης αρχείων και λειτουργίες βάσης δεδομένων συλλογής, μαζί με ρυθμίσεις της εγκατάστασης ήχου"
+msgid "Adjust how Kodi handles audio content. Includes browsing options for file and database library modes, together with audio hardware setup"
+msgstr "Ρύθμιση του τρόπου με τον οποίο το Kodi χειρίζεται το μουσικό περιεχόμενο. Περιλαμβάνονται επιλογές περιήγησης αρχείων και λειτουργίες βάσης δεδομένων συλλογής, μαζί με ρυθμίσεις της εγκατάστασης ήχου"
 
 msgctxt "#31215"
-msgid "Set up region information for XBMC's optional Weather displays"
+msgid "Set up region information for Kodi's optional Weather displays"
 msgstr "Ρύθμιση των πληροφοριών περιοχής για τις προαιρετικές προβολές του Καιρού"
 
 msgctxt "#31216"
-msgid "Adjust the look and feel of XBMC. Includes skin, theme, sound and font selection, RSS feed control, and localisation settings"
-msgstr "Ρύθμιση της εμφάνισης του XBMC. Περιλαμβάνεται το κέλυφος, το θέμα, ο ήχος και η επιλογή γραμματοσειράς, έλεγχος των ροών RSS, και ρυθμίσεις περιοχής"
+msgid "Adjust the look and feel of Kodi. Includes skin, theme, sound and font selection, RSS feed control, and localisation settings"
+msgstr "Ρύθμιση της εμφάνισης του Kodi. Περιλαμβάνεται το κέλυφος, το θέμα, ο ήχος και η επιλογή γραμματοσειράς, έλεγχος των ροών RSS, και ρυθμίσεις περιοχής"
 
 msgctxt "#31217"
-msgid "Adjust how XBMC displays personal image collections. Includes screenshot grabbing, special effects and advanced display options"
-msgstr "Ρύθμιση του τρόπου με τον οποίο το XBMC προβάλλει συλλογές φωτογραφιών. Περιλαμβάνεται η λήψη στιγμιότυπων, τα ειδικά εφέ και ρυθμίσεις προβολής για προχωρημένους"
+msgid "Adjust how Kodi displays personal image collections. Includes screenshot grabbing, special effects and advanced display options"
+msgstr "Ρύθμιση του τρόπου με τον οποίο το Kodi προβάλλει συλλογές φωτογραφιών. Περιλαμβάνεται η λήψη στιγμιότυπων, τα ειδικά εφέ και ρυθμίσεις προβολής για προχωρημένους"
 
 msgctxt "#31218"
-msgid "Set up XBMC's network interface. Controls IP assignment, WWW and FTP server settings, SMB client setup, and UPnP configuration"
-msgstr "Διαμόρφωση του περιβάλλοντος δικτύου του XBMC. Ρυθμίσεις της απόδοσης IP, των διακομιστών WWW και FTP, του πελάτη SMB, και του UPnP"
+msgid "Set up Kodi's network interface. Controls IP assignment, WWW and FTP server settings, SMB client setup, and UPnP configuration"
+msgstr "Διαμόρφωση του περιβάλλοντος δικτύου του Kodi. Ρυθμίσεις της απόδοσης IP, των διακομιστών WWW και FTP, του πελάτη SMB, και του UPnP"
 
 msgctxt "#31219"
 msgid "Choose from a variety of advanced settings and customisation options to make the UI your own"
@@ -247,6 +243,10 @@ msgstr "Αγαπημένο"
 msgctxt "#31275"
 msgid "Multi Image"
 msgstr "Πολλαπλές Εικόνες"
+
+msgctxt "#31277"
+msgid "Item"
+msgstr "Αντικείμενο"
 
 msgctxt "#31278"
 msgid "Open Playlist"
@@ -312,10 +312,6 @@ msgctxt "#31319"
 msgid "Default Lyrics script"
 msgstr "Προεπιλεγμένο script Στίχων"
 
-msgctxt "#31320"
-msgid "Default Subtitles script"
-msgstr "Προεπιλεγμένο script Υποτίτλων"
-
 msgctxt "#31322"
 msgid "Show Media Totals"
 msgstr "Εμφάνιση Συνόλων Πολυμέσων"
@@ -340,6 +336,10 @@ msgctxt "#31331"
 msgid "Home Items"
 msgstr "Αντικείμενα Αρχ. Οθόνης"
 
+msgctxt "#31332"
+msgid "Enable Extra Fanart"
+msgstr "Ενεργοποίηση Extra Fanart"
+
 msgctxt "#31334"
 msgid "Trailers"
 msgstr "Διαφημιστικά"
@@ -361,8 +361,8 @@ msgid "View information for your computer on such items as your network, graphic
 msgstr "Δείτε πληροφορίες για τον υπολογιστή σας σχετικά με το δίκτυο, τα γραφικά, το υλικό και το διαθέσιμο αποθηκευτικό χώρο"
 
 msgctxt "#31342"
-msgid "Create and modify multiple user profiles for XBMC so that each member of your household can have their own video or music library"
-msgstr "Δημιουργήστε και διαμορφώστε πολλαπλά προφίλ χρηστών XBMC ούτως ώστε κάθε μέλος της οικογένειας να έχει τη δική του συλλογή βίντεο ή μουσικής"
+msgid "Create and modify multiple user profiles for Kodi so that each member of your household can have their own video or music library"
+msgstr "Δημιουργήστε και διαμορφώστε πολλαπλά προφίλ χρηστών Kodi ούτως ώστε κάθε μέλος της οικογένειας να έχει τη δική του συλλογή βίντεο ή μουσικής"
 
 msgctxt "#31343"
 msgid "Action films usually include high energy, big-budget physical stunts and chases, possibly with rescues, battles, fights, escapes, destructive crises (floods, explosions, natural disasters, fires, etc.), non-stop motion, spectacular rhythm and pacing, and adventurous, often two-dimensional 'good-guy' heroes (or recently, heroines) battling 'bad guys' - all designed for pure audience escapism."
@@ -624,6 +624,10 @@ msgctxt "#31412"
 msgid "*Press UP to select a profile*"
 msgstr "*Πιέστε ΠΑΝΩ για επιλογή προφίλ*"
 
+msgctxt "#31413"
+msgid "Local subtitle available"
+msgstr "Υπάρχει διαθέσιμος υπότιτλος τοπικά"
+
 msgctxt "#31414"
 msgid "Gallery"
 msgstr "Πινακοθήκη"
@@ -740,6 +744,10 @@ msgctxt "#31443"
 msgid "Pseudo TV"
 msgstr "Pseudo TV"
 
+msgctxt "#31444"
+msgid "Auto Login"
+msgstr "Αυτόματη Σύνδεση"
+
 msgctxt "#31445"
 msgid "Picture Settings"
 msgstr "Ρυθμίσεις Εικόνων"
@@ -844,6 +852,26 @@ msgctxt "#31470"
 msgid "Prefer ClearLogo to ClearArt"
 msgstr "Προτίμηση Λογότυπων αντί ClearArt"
 
+msgctxt "#31471"
+msgid "Show Status"
+msgstr "Κατάσταση Σειράς"
+
+msgctxt "#31472"
+msgid "Ended"
+msgstr "Τελείωσε"
+
+msgctxt "#31473"
+msgid "unmixed"
+msgstr "χωρίς ανάμιξη"
+
+msgctxt "#31474"
+msgid "Use one button to toggle subtitles"
+msgstr "Χρήση ενός πλήκτρου για εναλλαγή υποτίτλων"
+
+msgctxt "#31475"
+msgid "Default OSD button"
+msgstr "Προεπιλεγμένο πλήκτρο OSD"
+
 msgctxt "#31600"
 msgid "Enable Live TV (PVR) support"
 msgstr "Ενεργοποίηση υποστήριξης Live TV (PVR)"
@@ -871,3 +899,75 @@ msgstr "Κρυφά Κανάλια"
 msgctxt "#31610"
 msgid "Scheduled Time"
 msgstr "Προγραμματισμένη Ώρα"
+
+msgctxt "#31700"
+msgid "7 Day Forecast"
+msgstr "Πρόγνωση 7 Ημερών"
+
+msgctxt "#31701"
+msgid "12 Hour Forecast"
+msgstr "12ωρη Πρόγνωση"
+
+msgctxt "#31702"
+msgid "36 Hour Forecast"
+msgstr "36ωρη Πρόγνωση"
+
+msgctxt "#31703"
+msgid "Pressure"
+msgstr "Πίεση"
+
+msgctxt "#31704"
+msgid "Clouds"
+msgstr "Νεφοσκεπής"
+
+msgctxt "#31705"
+msgid "Average"
+msgstr "Μέσο"
+
+msgctxt "#31706"
+msgid "Maximum"
+msgstr "Μέγ."
+
+msgctxt "#31707"
+msgid "Minimum"
+msgstr "Ελάχιστο"
+
+msgctxt "#31708"
+msgid "Moon Phase"
+msgstr "Φάση Σελήνης"
+
+msgctxt "#31709"
+msgid "Precipitation"
+msgstr "Υετός"
+
+msgctxt "#31710"
+msgid "Use extended weather"
+msgstr "Χρήση εκτεταμένου καιρού"
+
+msgctxt "#31711"
+msgid "Show weather forecast on home screen"
+msgstr "Εμφάνιση Πρόγνωσης στην Αρχ. Οθόνη"
+
+msgctxt "#31712"
+msgid "Crop Thumbnails in Music Video Gallery View"
+msgstr "Περικοπή Μικρογραφιών στη Συλλογή Μουσικών Βίντεο"
+
+msgctxt "#31713"
+msgid "Custom Home Shortcut"
+msgstr "Προσαρμοσμένη συντόμευση Αρχικής σελίδας"
+
+msgctxt "#31714"
+msgid "Label and Shortcut"
+msgstr "Ετικέτα και συντόμευση"
+
+msgctxt "#31715"
+msgid "Icon"
+msgstr "Εικονίδιο"
+
+msgctxt "#31716"
+msgid "Wallpaper"
+msgstr "Υπόβαθρο"
+
+msgctxt "#31717"
+msgid "Precip"
+msgstr "Βροχή"

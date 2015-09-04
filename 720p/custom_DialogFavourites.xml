@@ -73,6 +73,7 @@
 						<font>METF_ContextValue</font>
 						<align>left</align>
 						<aligny>center</aligny>
+						<focusedcolor>ButtonText</focusedcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
@@ -95,6 +96,7 @@
 						<font>METF_ContextValue</font>
 						<align>left</align>
 						<aligny>center</aligny>
+						<focusedcolor>ButtonText</focusedcolor>
 						<selectedcolor>ButtonText</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>

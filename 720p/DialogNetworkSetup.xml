@@ -80,6 +80,17 @@
 				<onright>9000</onright>
 				<ondown>16</ondown>
 			</control>
+			<control type="edit" id="16">
+				<description>Remote</description>
+				<posx>440</posx>
+				<posy>171</posy>
+				<include>SettingsLabel</include>
+				<label>-</label>
+				<onup>11</onup>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<ondown>13</ondown>
+			</control>
 			<control type="edit" id="13">
 				<description>Port</description>
 				<posx>440</posx>
@@ -112,17 +123,6 @@
 				<onleft>9000</onleft>
 				<onright>9000</onright>
 				<ondown>18</ondown>
-			</control>
-			<control type="edit" id="16">
-				<description>Remote</description>
-				<posx>440</posx>
-				<posy>171</posy>
-				<include>SettingsLabel</include>
-				<label>-</label>
-				<onup>11</onup>
-				<onleft>9000</onleft>
-				<onright>9000</onright>
-				<ondown>13</ondown>
 			</control>
 			<control type="group" id="9000">
 				<control type="button" id="19">

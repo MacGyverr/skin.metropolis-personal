@@ -11,15 +11,16 @@
 	<!-- Global Colors -->
 	<color name="BackgroundColor">ee909090</color>
 	<color name="FanartDiffuse">19FFFFFF</color>
+	<color name="FanartDiffuseLight">79FFFFFF</color>			<!-- FanartDiffuse + 0x60 -->
 	<color name="FrameBackgroundDiffuse">dd000000</color>
 	<color name="Time">ddc0c0c0</color>
 	<color name="TimeAMPM">cce47406</color>
 	<color name="Date">dde47406</color>
-	<color name="Temp">aaa8e612</color>
+	<color name="Temp">aac7fdc7</color>
 	<color name="GlobalHeading">ddc0c0c0</color>
 	<color name="GlobalHeadingDetails">FFFFFFFF</color>
 	<color name="HelpText">FFc89008</color>
-	<color name="HelpArrowDiffuse">FFa8e612</color>
+	<color name="HelpArrowDiffuse">FFb4e58d</color>
 	<color name="TextNF">eeFFFFFF</color>
 	<color name="TextFO">FFb4e58d</color>
 	<color name="TextDisabled">FFff5858</color>
@@ -57,7 +58,7 @@
 	<color name="MediaDetailsEpisodes">eeb4e58d</color>
 	<color name="WatchedOverlay">FFe47406</color>
 	<color name="BulletDiffuse">ddc0c0c0</color>
-	<color name="ArrowDiffuse">FFa8e612</color>
+	<color name="ArrowDiffuse">FFc89008</color>
 	<color name="BannerFrameNF">eeb4e58d</color>
 	<color name="GlassDiffuse">89FFFFFF</color>
 	<color name="FocusBar">aae47406</color>

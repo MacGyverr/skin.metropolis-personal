@@ -406,7 +406,7 @@
 				<label>$ADDON[script.skinshortcuts 32037]</label>
 			</control>
 		</control>
-		
+	
 		<include>Global_ContextFilter</include>
 		<include>Global_Weather</include>
 		<include>Global_Time</include>

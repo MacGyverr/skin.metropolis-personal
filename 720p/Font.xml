@@ -104,14 +104,14 @@
 			<size>32</size>
 		</font>
 		<font>
-			<name>METF_Heading</name>
-			<filename>MET_FontinSansSmallCaps.ttf</filename>
-			<size>25</size>
-		</font>
-		<font>
 			<name>METF_DialogDetails</name>
 			<filename>MET_FontinSansSmallCaps.ttf</filename>
 			<size>20</size>
+		</font>
+		<font>
+			<name>METF_Heading</name>
+			<filename>MET_FontinSansSmallCaps.ttf</filename>
+			<size>25</size>
 		</font>
 		<font>
 			<name>METF_HeadingDetails</name>
@@ -122,11 +122,6 @@
 			<name>METF_TitleText</name>
 			<filename>MET_FontinSansSmallCaps.ttf</filename>
 			<size>24</size>
-		</font>
-		<font>
-			<name>METF_TitleTextSmall</name>
-			<filename>MET_FontinSansSmallCaps.ttf</filename>
-			<size>22</size>
 		</font>
 		<font>
 			<name>METF_TitleTextMedium</name>
@@ -363,616 +358,248 @@
 			<size>19</size>
 		</font>
 	</fontset>
-	<fontset id="Kodi (DejaVu) (Most languages)">
-		<!-- This has the bizarre effect of using some   -->
-		<font>
-			<name>font13</name>
-			<filename>arial.ttf</filename>
-			<size>20</size>
-		</font>
-		<font>
-			<name>METF_HorizMenu</name>
-			<filename>arial.ttf</filename>
-			<size>41</size>
-		</font>
-		<font>
-			<name>METF_Button</name>
-			<filename>arial.ttf</filename>
-			<size>23</size>
-		</font>
-		<font>
-			<name>METF_HomeMenu</name>
-			<filename>arial.ttf</filename>
-			<size>27</size>
-		</font>
-		<font>
-			<name>METF_HomeMenuSmall</name>
-			<filename>arial.ttf</filename>
-			<size>23</size>
-		</font>
-		<font>
-			<name>METF_RecentlyAddedTitle</name>
-			<filename>arial.ttf</filename>
-			<size>24</size>
-		</font>
-		<font>
-			<name>METF_RecentlyAddedListText</name>
-			<filename>arial.ttf</filename>
-			<size>20</size>
-		</font>
-		<font>
-			<name>METF_HomeStatsTitle</name>
-			<filename>arial.ttf</filename>
-			<size>23</size>
-			<linespacing>0.8</linespacing>
-		</font>
-		<font>
-			<name>METF_HomeStatsText</name>
-			<filename>arial.ttf</filename>
-			<size>20</size>
-		</font>
-		<font>
-			<name>METF_HelpText</name>
-			<filename>arial.ttf</filename>
-			<size>20</size>
-		</font>
-		<font>
-			<name>METF_Temp</name>
-			<filename>arial.ttf</filename>
-			<size>28</size>
-		</font>
-		<font>
-			<name>METF_Date</name>
-			<filename>arial.ttf</filename>
-			<size>30</size>
-		</font>
-		<font>
-			<name>METF_Hours</name>
-			<filename>arial.ttf</filename>
-			<size>110</size>
-		</font>
-		<font>
-			<name>METF_Minutes</name>
-			<filename>arial.ttf</filename>
-			<size>48</size>
-		</font>
-		<font>
-			<name>METF_FontAMPM</name>
-			<filename>arial.ttf</filename>
-			<size>40</size>
-		</font>
-		<font>
-			<name>METF_RSS</name>
-			<filename>arial.ttf</filename>
-			<size>17</size>
-		</font>
-		<font>
-			<name>METF_Votes</name>
-			<filename>arial.ttf</filename>
-			<size>25</size>
-		</font>
-		<font>
-			<name>METF_Votes_Title</name>
-			<filename>arial.ttf</filename>
-			<size>12</size>
-		</font>
-		<font>
-			<name>METF_StarRating</name>
-			<filename>arial.ttf</filename>
-			<size>36</size>
-		</font>
-		<font>
-			<name>METF_IMDbRating</name>
-			<filename>arial.ttf</filename>
-			<size>32</size>
-		</font>
-		<font>
-			<name>METF_Heading</name>
-			<filename>arial.ttf</filename>
-			<size>25</size>
-		</font>
-		<font>
-			<name>METF_DialogDetails</name>
-			<filename>arial.ttf</filename>
-			<size>20</size>
-		</font>
-		<font>
-			<name>METF_HeadingDetails</name>
-			<filename>arial.ttf</filename>
-			<size>23</size>
-		</font>
-		<font>
-			<name>METF_TitleText</name>
-			<filename>arial.ttf</filename>
-			<size>24</size>
-		</font>
-		<font>
-			<name>METF_TitleTextSmall</name>
-			<filename>arial.ttf</filename>
-			<size>22</size>
-		</font>
-		<font>
-			<name>METF_TitleTextMedium</name>
-			<filename>arial.ttf</filename>
-			<size>26</size>
-		</font>
-		<font>
-			<name>METF_TitleTextLarge</name>
-			<filename>arial.ttf</filename>
-			<size>30</size>
-		</font>
-		<font>
-			<name>METF_SettingsHeading</name>
-			<filename>arial.ttf</filename>
-			<size>28</size>
-		</font>
-		<font>
-			<name>METF_MusicVizTitle</name>
-			<filename>arial.ttf</filename>
-			<size>48</size>
-		</font>
-		<font>
-			<name>METF_SettingsDetail</name>
-			<filename>arial.ttf</filename>
-			<size>22</size>
-		</font>
-		<font>
-			<name>METF_MediaDetails</name>
-			<filename>arial.ttf</filename>
-			<size>24</size>
-		</font>
-		<font>
-			<name>METF_MediaDetailsSmall</name>
-			<filename>arial.ttf</filename>
-			<size>21</size>
-		</font>
-		<font>
-			<name>METF_PlotText</name>
-			<filename>arial.ttf</filename>
-			<size>20</size>
-		</font>
-		<font>
-			<name>METF_PlotTextMedium</name>
-			<filename>arial.ttf</filename>
-			<size>19</size>
-		</font>
-		<font>
-			<name>METF_PlotTextSmall</name>
-			<filename>arial.ttf</filename>
-			<size>18</size>
-		</font>
-		<font>
-			<name>METF_PlotTextSpaced</name>
-			<filename>arial.ttf</filename>
-			<size>19</size>
-			<linespacing>1.12</linespacing>
-		</font>
-		<font>
-			<name>METF_InfoText</name>
-			<filename>arial.ttf</filename>
-			<size>19</size>
-		</font>
-		<font>
-			<name>METF_InfoTextLarger</name>
-			<filename>arial.ttf</filename>
-			<size>22</size>
-		</font>
-		<font>
-			<name>METF_MPAA</name>
-			<filename>arial.ttf</filename>
-			<size>18</size>
-		</font>
-		<font>
-			<name>METF_OSDTime</name>
-			<filename>arial.ttf</filename>
-			<size>22</size>
-		</font>
-		<font>
-			<name>METF_OSDPlayerStatus</name>
-			<filename>arial.ttf</filename>
-			<size>48</size>
-		</font>
-		<font>
-			<name>METF_DialogLargeBold</name>
-			<filename>arial.ttf</filename>
-			<size>23</size>
-		</font>
-		<font>
-			<name>METF_DialogLarge</name>
-			<filename>arial.ttf</filename>
-			<size>22</size>
-		</font>
-		<font>
-			<name>METF_DialogMediumBold</name>
-			<filename>arial.ttf</filename>
-			<size>20</size>
-		</font>
-		<font>
-			<name>METF_DialogMedium</name>
-			<filename>arial.ttf</filename>
-			<size>20</size>
-		</font>
-		<font>
-			<name>METF_DialogSmallBold</name>
-			<filename>arial.ttf</filename>
-			<size>17</size>
-		</font>
-		<font>
-			<name>METF_DialogSmall</name>
-			<filename>arial.ttf</filename>
-			<size>17</size>
-		</font>
-		<font>
-			<name>METF_DialogVerySmall</name>
-			<filename>arial.ttf</filename>
-			<size>14</size>
-		</font>
-		<font>
-			<name>METF_Menu</name>
-			<filename>arial.ttf</filename>
-			<!--
-			<style>bold</style>
-			-->
-			<size>23</size>
-		</font>
-		<font>
-			<name>METF_ContextValue</name>
-			<filename>arial.ttf</filename>
-			<size>20</size>
-		</font>
-		<font>
-			<name>METF_WeatherHigh</name>
-			<filename>arial.ttf</filename>
-			<size>62</size>
-		</font>
-		<font>
-			<name>METF_WeatherLow</name>
-			<filename>arial.ttf</filename>
-			<size>50</size>
-		</font>
-		<font>
-			<name>METF_WeatherDetails7Day</name>
-			<filename>arial.ttf</filename>
-			<size>16</size>
-		</font>
-		<font>
-			<name>METF_WeatherDetailsCurrent</name>
-			<filename>arial.ttf</filename>
-			<size>16</size>
-		</font>
-		<font>
-			<name>METF_WeatherDetailsSmaller</name>
-			<filename>arial.ttf</filename>
-			<size>17</size>
-		</font>
-		<font>
-			<name>METF_WeatherInfoTextSmall</name>
-			<filename>arial.ttf</filename>
-			<size>15</size>
-		</font>
-		<font>
-			<name>METF_WeatherOutlookSmall</name>
-			<filename>arial.ttf</filename>
-			<size>16</size>
-		</font>
-		<font>
-			<name>METF_WeatherOutlookWeekend</name>
-			<filename>arial.ttf</filename>
-			<size>24</size>
-		</font>
-		<font>
-			<name>METF_WeatherDetailsWeekend</name>
-			<filename>arial.ttf</filename>
-			<size>18</size>
-		</font>
-		<font>
-			<name>METF_WeatherDayName7Day</name>
-			<filename>arial.ttf</filename>
-			<size>26</size>
-		</font>
-		<font>
-			<name>METF_WeatherDayNameWeekend</name>
-			<filename>arial.ttf</filename>
-			<size>30</size>
-		</font>
-		<font>
-			<name>METF_WeatherDayDate12Hour</name>
-			<filename>arial.ttf</filename>
-			<size>30</size>
-		</font>
-		<font>
-			<name>METF_WeatherDayDate24Hour</name>
-			<filename>arial.ttf</filename>
-			<size>18</size>
-		</font>
-		<font>
-			<name>METF_WeatherDayDate36Hour</name>
-			<filename>arial.ttf</filename>
-			<size>15</size>
-		</font>
-		<font>
-			<name>METF_WeatherForecast36Hour</name>
-			<filename>arial.ttf</filename>
-			<size>17</size>
-		</font>
-		<font>
-			<name>METF_WeatherHighHome</name>
-			<filename>arial.ttf</filename>
-			<size>22</size>
-		</font>
-		<font>
-			<name>METF_WeatherHourlyHigh</name>
-			<filename>arial.ttf</filename>
-			<size>40</size>
-		</font>
-		<font>
-			<name>METF_WeatherLowHome</name>
-			<filename>arial.ttf</filename>
-			<size>20</size>
-		</font>
-		<font>
-			<name>METF_WeatherOutlookHome</name>
-			<filename>arial.ttf</filename>
-			<size>14</size>
-		</font>
-		<font>
-			<name>METF_Weather24HrTemp</name>
-			<filename>arial.ttf</filename>
-			<size>25</size>
-		</font>
-		<font>
-			<name>METF_PVRChannelList</name>
-			<filename>arial.ttf</filename>
-			<size>19</size>
-		</font>
-	</fontset>	
-	<fontset id="Zawgyi-One (Most script languages)">
+		<fontset id="Generic (ugly but works)">
 		<!-- Metropolis Fonts -->
 		<font>
 			<name>font13</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>20</size>
 		</font>
 		<font>
 			<name>METF_HorizMenu</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>41</size>
 		</font>
 		<font>
 			<name>METF_Button</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>23</size>
 		</font>
 		<font>
 			<name>METF_HomeMenu</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>27</size>
 		</font>
 		<font>
 			<name>METF_HomeMenuSmall</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>23</size>
 		</font>
 		<font>
 			<name>METF_RecentlyAddedTitle</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>24</size>
 		</font>
 		<font>
 			<name>METF_RecentlyAddedListText</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>20</size>
 		</font>
 		<font>
 			<name>METF_HomeStatsTitle</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>23</size>
 			<linespacing>0.8</linespacing>
 		</font>
 		<font>
 			<name>METF_HomeStatsText</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>20</size>
 		</font>
 		<font>
 			<name>METF_HelpText</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>20</size>
 		</font>
 		<font>
 			<name>METF_Temp</name>
-			<filename>ZawgyiOne.ttf</filename>
-			<size>28</size>
+			<filename>Arial.ttf</filename>
+			<size>26</size>
 		</font>
 		<font>
 			<name>METF_Date</name>
-			<filename>ZawgyiOne.ttf</filename>
-			<size>30</size>
+			<filename>Arial.ttf</filename>
+			<size>28</size>
 		</font>
 		<font>
 			<name>METF_Hours</name>
-			<filename>ZawgyiOne.ttf</filename>
-			<size>110</size>
+			<filename>Arial.ttf</filename>
+			<size>108</size>
 		</font>
 		<font>
 			<name>METF_Minutes</name>
-			<filename>ZawgyiOne.ttf</filename>
-			<size>48</size>
+			<filename>Arial.ttf</filename>
+			<size>46</size>
 		</font>
 		<font>
 			<name>METF_FontAMPM</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>40</size>
 		</font>
 		<font>
 			<name>METF_RSS</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>17</size>
 		</font>
 		<font>
 			<name>METF_Votes</name>
-			<filename>ZawgyiOne.ttf</filename>
-			<size>25</size>
+			<filename>Arial.ttf</filename>
+			<size>22</size>
 		</font>
 		<font>
 			<name>METF_Votes_Title</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>12</size>
 		</font>
 		<font>
 			<name>METF_StarRating</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>36</size>
 		</font>
 		<font>
 			<name>METF_IMDbRating</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>32</size>
 		</font>
 		<font>
-			<name>METF_Heading</name>
-			<filename>ZawgyiOne.ttf</filename>
-			<size>25</size>
-		</font>
-		<font>
 			<name>METF_DialogDetails</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>20</size>
 		</font>
 		<font>
+			<name>METF_Heading</name>
+			<filename>Arial.ttf</filename>
+			<size>25</size>
+		</font>
+		<font>
 			<name>METF_HeadingDetails</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>23</size>
 		</font>
 		<font>
 			<name>METF_TitleText</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>24</size>
 		</font>
 		<font>
-			<name>METF_TitleTextSmall</name>
-			<filename>ZawgyiOne.ttf</filename>
-			<size>22</size>
-		</font>
-		<font>
 			<name>METF_TitleTextMedium</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>26</size>
 		</font>
 		<font>
 			<name>METF_TitleTextLarge</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>30</size>
 		</font>
 		<font>
 			<name>METF_SettingsHeading</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>28</size>
 		</font>
 		<font>
 			<name>METF_MusicVizTitle</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>48</size>
 		</font>
 		<font>
 			<name>METF_SettingsDetail</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>22</size>
 		</font>
 		<font>
 			<name>METF_MediaDetails</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>24</size>
 		</font>
 		<font>
 			<name>METF_MediaDetailsSmall</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>21</size>
 		</font>
 		<font>
 			<name>METF_PlotText</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>20</size>
 		</font>
 		<font>
 			<name>METF_PlotTextMedium</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>19</size>
 		</font>
 		<font>
 			<name>METF_PlotTextSmall</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>18</size>
 		</font>
 		<font>
 			<name>METF_PlotTextSpaced</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>19</size>
 			<linespacing>1.12</linespacing>
 		</font>
 		<font>
 			<name>METF_InfoText</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>19</size>
 		</font>
 		<font>
 			<name>METF_InfoTextLarger</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>22</size>
 		</font>
 		<font>
 			<name>METF_MPAA</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>18</size>
 		</font>
 		<font>
 			<name>METF_OSDTime</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>22</size>
 		</font>
 		<font>
 			<name>METF_OSDPlayerStatus</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>48</size>
 		</font>
 		<font>
 			<name>METF_DialogLargeBold</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>23</size>
 		</font>
 		<font>
 			<name>METF_DialogLarge</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>22</size>
 		</font>
 		<font>
 			<name>METF_DialogMediumBold</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>20</size>
 		</font>
 		<font>
 			<name>METF_DialogMedium</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>20</size>
 		</font>
 		<font>
 			<name>METF_DialogSmallBold</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>17</size>
 		</font>
 		<font>
 			<name>METF_DialogSmall</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>17</size>
 		</font>
 		<font>
 			<name>METF_DialogVerySmall</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>14</size>
 		</font>
 		<font>
 			<name>METF_Menu</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<!--
 			<style>bold</style>
 			-->
@@ -980,113 +607,113 @@
 		</font>
 		<font>
 			<name>METF_ContextValue</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>20</size>
 		</font>
 		<font>
 			<name>METF_WeatherHigh</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>62</size>
 		</font>
 		<font>
 			<name>METF_WeatherLow</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>50</size>
 		</font>
 		<font>
 			<name>METF_WeatherDetails7Day</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>16</size>
 		</font>
 		<font>
 			<name>METF_WeatherDetailsCurrent</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>16</size>
 		</font>
 		<font>
 			<name>METF_WeatherDetailsSmaller</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>17</size>
 		</font>
 		<font>
 			<name>METF_WeatherInfoTextSmall</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>15</size>
 		</font>
 		<font>
 			<name>METF_WeatherOutlookSmall</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>16</size>
 		</font>
 		<font>
 			<name>METF_WeatherOutlookWeekend</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>24</size>
 		</font>
 		<font>
 			<name>METF_WeatherDetailsWeekend</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>18</size>
 		</font>
 		<font>
 			<name>METF_WeatherDayName7Day</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>26</size>
 		</font>
 		<font>
 			<name>METF_WeatherDayNameWeekend</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>30</size>
 		</font>
 		<font>
 			<name>METF_WeatherDayDate12Hour</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>30</size>
 		</font>
 		<font>
 			<name>METF_WeatherDayDate24Hour</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>18</size>
 		</font>
 		<font>
 			<name>METF_WeatherDayDate36Hour</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>15</size>
 		</font>
 		<font>
 			<name>METF_WeatherForecast36Hour</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>17</size>
 		</font>
 		<font>
 			<name>METF_WeatherHighHome</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>22</size>
 		</font>
 		<font>
 			<name>METF_WeatherHourlyHigh</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>40</size>
 		</font>
 		<font>
 			<name>METF_WeatherLowHome</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>20</size>
 		</font>
 		<font>
 			<name>METF_WeatherOutlookHome</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>14</size>
 		</font>
 		<font>
 			<name>METF_Weather24HrTemp</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>25</size>
 		</font>
 		<font>
 			<name>METF_PVRChannelList</name>
-			<filename>ZawgyiOne.ttf</filename>
+			<filename>Arial.ttf</filename>
 			<size>19</size>
 		</font>
-	</fontset>		
+	</fontset>
 </fonts>

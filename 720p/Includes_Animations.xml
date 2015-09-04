@@ -67,7 +67,7 @@
 		</animation>
 	</include>
 	<include name="Animation_FadedByMenu">
-		<animation type="Conditional" condition="Window.IsActive(yesnodialog) | Window.IsActive(contentsettings) | Window.IsActive(contextmenu) | Window.IsActive(shutdownmenu) | Window.IsActive(favourites) | Window.IsActive(okdialog) | Window.IsActive(selectdialog) | Window.IsActive(mediafilter) | Window.IsActive(addoninformation) | Window.IsActive(filestackingdialog) | Window.IsActive(profilesettings) | Window.IsActive(smartplaylisteditor) | Window.IsActive(smartplaylistrule) | Window.IsActive(virtualkeyboard) | Window.IsActive(numericinput) | ControlGroup(7000).HasFocus()">
+		<animation type="Conditional" condition="Window.IsActive(yesnodialog) | Window.IsActive(contentsettings) | Window.IsActive(contextmenu) | Window.IsActive(playercontrols) | Window.IsActive(shutdownmenu) | Window.IsActive(favourites) | Window.IsActive(okdialog) | Window.IsActive(selectdialog) | Window.IsActive(mediafilter) | Window.IsActive(addoninformation) | Window.IsActive(filestackingdialog) | Window.IsActive(profilesettings) | Window.IsActive(smartplaylisteditor) | Window.IsActive(smartplaylistrule) | Window.IsActive(virtualkeyboard) | Window.IsActive(numericinput) | ControlGroup(7000).HasFocus()">
 			<effect type="fade" time="200" start="100" end="10" />
 		</animation>
 		<animation type="Conditional" condition="Window.IsActive(addonsettings) | Window.IsActive(filebrowser) | Window.IsActive(mediasource) | Window.IsActive(peripherals) | Window.IsActive(peripheralsettings) | Window.IsActive(script-RSS_Editor-rssEditor.xml) | Window.IsActive(script-RSS_Editor-setEditor.xml) | Window.IsActive(custom_DialogFavourites.xml)">
@@ -79,39 +79,32 @@
 			<effect type="fade" time="300" start="100" end="0" />
 		</animation>
 	</include>
-	<!-- OSD_Fadeaway is added to drop away most of the pause screen after 15 seconds -->
 	<include name="Animation_FadeOSD5">
-	<!-- TODO: Fade timeout should be user-configurable, but Kodi doesn't allow info labels in IdleTime() -->
 		<animation type="Conditional" condition="System.IdleTime(5) + !Player.Caching + Player.Paused" reversible="true">
 			<effect type="fade" start="100" end="0" time="800"/>
 		</animation>
 	</include>
 	<include name="Animation_FadeOSD10">
-	<!-- TODO: Fade timeout should be user-configurable, but Kodi doesn't allow info labels in IdleTime() -->
 		<animation type="Conditional" condition="System.IdleTime(10) + !Player.Caching + Player.Paused" reversible="true">
 			<effect type="fade" start="100" end="0" time="800"/>
 		</animation>
 	</include>
 	<include name="Animation_FadeOSD15">
-	<!-- TODO: Fade timeout should be user-configurable, but Kodi doesn't allow info labels in IdleTime() -->
 		<animation type="Conditional" condition="System.IdleTime(15) + !Player.Caching + Player.Paused" reversible="true">
 			<effect type="fade" start="100" end="0" time="800"/>
 		</animation>
 	</include>
 	<include name="Animation_FadeOSD20">
-	<!-- TODO: Fade timeout should be user-configurable, but Kodi doesn't allow info labels in IdleTime() -->
 		<animation type="Conditional" condition="System.IdleTime(20) + !Player.Caching + Player.Paused" reversible="true">
 			<effect type="fade" start="100" end="0" time="800"/>
 		</animation>
 	</include>
 	<include name="Animation_FadeOSD25">
-	<!-- TODO: Fade timeout should be user-configurable, but Kodi doesn't allow info labels in IdleTime() -->
 		<animation type="Conditional" condition="System.IdleTime(25) + !Player.Caching + Player.Paused" reversible="true">
 			<effect type="fade" start="100" end="0" time="800"/>
 		</animation>
 	</include>
 	<include name="Animation_FadeOSD30">
-	<!-- TODO: Fade timeout should be user-configurable, but Kodi doesn't allow info labels in IdleTime() -->
 		<animation type="Conditional" condition="System.IdleTime(30) + !Player.Caching + Player.Paused" reversible="true">
 			<effect type="fade" start="100" end="0" time="800"/>
 		</animation>
@@ -227,6 +220,6 @@
 		<animation effect="rotate" end="360" center="auto" time="500" loop="true" reversible="false" condition="Player.Rewinding16x+Player.HasAudio">Conditional</animation>
 		<animation effect="rotate" end="360" center="auto" time="350" loop="true" reversible="false" condition="Player.Rewinding32x+Player.HasAudio">Conditional</animation>
 		<texture fallback="cd.png">$INFO[Player.FolderPath]/cdart.png</texture>
-		<aspectratio>keep</aspectratio>
+		<aspectratio align="bottom">keep</aspectratio>
 	</include>
 </includes>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="134">
 	<defaultcontrol always="true">450</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<include>Global_Background</include>		
 		<control type="group">
@@ -50,6 +51,7 @@
 						<font>METF_ContextValue</font>
 						<align>left</align>
 						<aligny>center</aligny>
+						<focusedcolor>ButtonText</focusedcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
@@ -72,6 +74,7 @@
 						<font>METF_ContextValue</font>
 						<align>left</align>
 						<aligny>center</aligny>
+						<focusedcolor>ButtonText</focusedcolor>
 						<selectedcolor>ButtonText</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
