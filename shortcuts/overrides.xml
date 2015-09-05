@@ -64,7 +64,7 @@
 	<widgetdefault labelID="pictures">PictureAddons</widgetdefault> -->
 	
 	<!-- Program addons  -->
-	<widget label="Program Addons">LibraryAddons</widget>
+	<widget labelID="programs" type="programs" label="Program Addons">LibraryAddons</widget>
 	
 	<!-- Favourites 
 	<widget label="Favourites">Favourites</widget>
@@ -80,8 +80,10 @@
 	<widgetdefault labelID="tvshows">TVShowsRecentlyAdded</widgetdefault>
 	<widgetdefault labelID="music">MusicRecentlyAdded</widgetdefault>
 	<widgetdefault labelID="weather">HomeForecast</widgetdefault>
-	<widgetdefault labelID="programs">LibraryAddons</widgetdefault>
+	<widgetdefault labelID="24001">LibraryAddons</widgetdefault>
+	<widgetdefault labelID="pictures">XKCD</widgetdefault>
 	<widgetdefault labelID="musicvideos">LibraryRecentlyAddedMusicVideos</widgetdefault>
+	<widgetdefault labelID="plugin.video.itunes_trailers">InTheatersMovies</widgetdefault>
 	
 	<!-- Playlists -->
 	<widgetPlaylists>True</widgetPlaylists>

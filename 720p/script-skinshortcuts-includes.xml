@@ -126,8 +126,8 @@
 			<visible>StringCompare(System.ProfileName,Master user)</visible>
 			<property name="submenuVisibility">pictures</property>
 			<property name="group">mainmenu</property>
-			<property name="widgetName">Random XKCD Comics</property>
 			<property name="widget">XKCD</property>
+			<property name="widgetName">Random XKCD Comics</property>
 			<property name="widgetType">pictures</property>
 			<property name="hasSubmenu">True</property>
 		</item>
@@ -157,8 +157,9 @@
 			<visible>StringCompare(System.ProfileName,Master user)</visible>
 			<property name="submenuVisibility">num-24001</property>
 			<property name="group">mainmenu</property>
-			<property name="widgetName">Program Addons</property>
 			<property name="widget">LibraryAddons</property>
+			<property name="widgetName">Program Addons</property>
+			<property name="widgetType">programs</property>
 			<property name="hasSubmenu">True</property>
 		</item>
 		<item id="11">
@@ -279,8 +280,8 @@
 			<visible>StringCompare(System.ProfileName,Master user)</visible>
 			<property name="submenuVisibility">plugin-video-itunes-trailers</property>
 			<property name="group">mainmenu</property>
-			<property name="widgetName">Rotten Tomatoes (Coming Soon)</property>
-			<property name="widget">ComingSoonMovies</property>
+			<property name="widget">InTheatersMovies</property>
+			<property name="widgetName">Rotten Tomatoes (In Theaters)</property>
 			<property name="hasSubmenu">False</property>
 		</item>
 		<item id="1">
@@ -408,6 +409,9 @@
 			<visible>StringCompare(System.ProfileName,test)</visible>
 			<property name="submenuVisibility">pictures</property>
 			<property name="group">mainmenu</property>
+			<property name="widget">XKCD</property>
+			<property name="widgetName">Random XKCD Comics</property>
+			<property name="widgetType">pictures</property>
 			<property name="hasSubmenu">True</property>
 		</item>
 		<item id="9">
@@ -436,6 +440,9 @@
 			<visible>StringCompare(System.ProfileName,test)</visible>
 			<property name="submenuVisibility">num-24001</property>
 			<property name="group">mainmenu</property>
+			<property name="widget">LibraryAddons</property>
+			<property name="widgetName">Program Addons</property>
+			<property name="widgetType">programs</property>
 			<property name="hasSubmenu">True</property>
 		</item>
 		<item id="11">
@@ -556,6 +563,8 @@
 			<visible>StringCompare(System.ProfileName,test)</visible>
 			<property name="submenuVisibility">plugin-video-itunes-trailers</property>
 			<property name="group">mainmenu</property>
+			<property name="widget">InTheatersMovies</property>
+			<property name="widgetName">Rotten Tomatoes (In Theaters)</property>
 			<property name="hasSubmenu">False</property>
 		</item>
 	</include>
@@ -712,7 +721,7 @@
 			<label2>$ADDON[script.skinshortcuts 32014]</label2>
 			<icon>DefaultRecentlyAddedMovies.png</icon>
 			<thumb />
-			<property name="labelID">31031</property>
+			<property name="labelID">recentmovies</property>
 			<property name="defaultID">31031</property>
 			<visible>Library.HasContent(Movies)</visible>
 			<onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
@@ -1878,7 +1887,7 @@
 			<label2>$ADDON[script.skinshortcuts 32014]</label2>
 			<icon>DefaultRecentlyAddedMovies.png</icon>
 			<thumb />
-			<property name="labelID">31031</property>
+			<property name="labelID">recentmovies</property>
 			<property name="defaultID">31031</property>
 			<visible>Library.HasContent(Movies)</visible>
 			<onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
@@ -3482,7 +3491,7 @@
 			<label2>$ADDON[script.skinshortcuts 32014]</label2>
 			<icon>DefaultRecentlyAddedMovies.png</icon>
 			<thumb />
-			<property name="labelID">31031</property>
+			<property name="labelID">recentmovies</property>
 			<property name="defaultID">31031</property>
 			<visible>Library.HasContent(Movies)</visible>
 			<onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
@@ -3585,7 +3594,7 @@
 			<label2>$ADDON[script.skinshortcuts 32014]</label2>
 			<icon>DefaultRecentlyAddedMovies.png</icon>
 			<thumb />
-			<property name="labelID">31031</property>
+			<property name="labelID">recentmovies</property>
 			<property name="defaultID">31031</property>
 			<visible>Library.HasContent(Movies)</visible>
 			<onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
@@ -3690,7 +3699,7 @@
 			<label2>$ADDON[script.skinshortcuts 32014]</label2>
 			<icon>DefaultRecentlyAddedMovies.png</icon>
 			<thumb />
-			<property name="labelID">31031</property>
+			<property name="labelID">recentmovies</property>
 			<property name="defaultID">31031</property>
 			<visible>Library.HasContent(Movies)</visible>
 			<onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
@@ -3801,7 +3810,7 @@
 			<label2>$ADDON[script.skinshortcuts 32014]</label2>
 			<icon>DefaultRecentlyAddedMovies.png</icon>
 			<thumb />
-			<property name="labelID">31031</property>
+			<property name="labelID">recentmovies</property>
 			<property name="defaultID">31031</property>
 			<visible>Library.HasContent(Movies)</visible>
 			<onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
