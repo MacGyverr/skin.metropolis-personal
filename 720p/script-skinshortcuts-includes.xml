@@ -30,8 +30,6 @@
 			<visible>StringCompare(System.ProfileName,Master user)</visible>
 			<property name="submenuVisibility">videos</property>
 			<property name="group">mainmenu</property>
-			<property name="widgetName">The MovieDB (Upcoming Movies)</property>
-			<property name="widget">UpcomingMovies</property>
 			<property name="hasSubmenu">True</property>
 		</item>
 		<item id="3">
@@ -266,6 +264,23 @@
 			<visible>StringCompare(System.ProfileName,Master user)</visible>
 			<property name="submenuVisibility">script-tvguide</property>
 			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
+		<item id="18">
+			<label>$LOCALIZE[31334]</label>
+			<label2>Program</label2>
+			<icon>home_icons/trailers.png</icon>
+			<thumb>home_art/trailers.jpg</thumb>
+			<property name="labelID">plugin.video.itunes_trailers</property>
+			<property name="defaultID">script.trailers</property>
+			<visible>System.HasAddon(plugin.video.itunes_trailers)</visible>
+			<onclick>ActivateWindow(Videos,plugin://plugin.video.itunes_trailers,return)</onclick>
+			<property name="path">ActivateWindow(Videos,plugin://plugin.video.itunes_trailers,return)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">plugin-video-itunes-trailers</property>
+			<property name="group">mainmenu</property>
+			<property name="widgetName">Rotten Tomatoes (Coming Soon)</property>
+			<property name="widget">ComingSoonMovies</property>
 			<property name="hasSubmenu">False</property>
 		</item>
 		<item id="1">
@@ -528,6 +543,21 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">False</property>
 		</item>
+		<item id="18">
+			<label>$LOCALIZE[31334]</label>
+			<label2>Program</label2>
+			<icon>home_icons/trailers.png</icon>
+			<thumb>home_art/trailers.jpg</thumb>
+			<property name="labelID">plugin.video.itunes_trailers</property>
+			<property name="defaultID">script.trailers</property>
+			<visible>System.HasAddon(plugin.video.itunes_trailers)</visible>
+			<onclick>ActivateWindow(Videos,plugin://plugin.video.itunes_trailers,return)</onclick>
+			<property name="path">ActivateWindow(Videos,plugin://plugin.video.itunes_trailers,return)</property>
+			<visible>StringCompare(System.ProfileName,test)</visible>
+			<property name="submenuVisibility">plugin-video-itunes-trailers</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
 	</include>
 	<include />
 	<include name="skinshortcuts-submenu">
@@ -698,8 +728,8 @@
 			<thumb />
 			<property name="labelID">hd</property>
 			<property name="defaultID">135</property>
-			<onclick>ActivateWindow(10025,special://skin/extras/HD_Movies.xsp,return)</onclick>
-			<property name="path">ActivateWindow(10025,special://skin/extras/HD_Movies.xsp,return)</property>
+			<onclick>ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</onclick>
+			<property name="path">ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</property>
 			<visible>StringCompare(System.ProfileName,Master user) + [StringCompare(Container(9000).ListItem.Property(submenuVisibility),movies)]</visible>
 			<property name="isSubmenu">True</property>
 			<property name="group">movies</property>
@@ -1864,8 +1894,8 @@
 			<thumb />
 			<property name="labelID">hd</property>
 			<property name="defaultID">135</property>
-			<onclick>ActivateWindow(10025,special://skin/extras/HD_Movies.xsp,return)</onclick>
-			<property name="path">ActivateWindow(10025,special://skin/extras/HD_Movies.xsp,return)</property>
+			<onclick>ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</onclick>
+			<property name="path">ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</property>
 			<visible>StringCompare(System.ProfileName,test) + [StringCompare(Container(9000).ListItem.Property(submenuVisibility),movies)]</visible>
 			<property name="isSubmenu">True</property>
 			<property name="group">movies</property>
@@ -3467,8 +3497,8 @@
 			<thumb />
 			<property name="labelID">hd</property>
 			<property name="defaultID">135</property>
-			<onclick>ActivateWindow(10025,special://skin/extras/HD_Movies.xsp,return)</onclick>
-			<property name="path">ActivateWindow(10025,special://skin/extras/HD_Movies.xsp,return)</property>
+			<onclick>ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</onclick>
+			<property name="path">ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</property>
 			<visible>StringCompare(System.ProfileName,Master user)</visible>
 			<property name="group">movies</property>
 		</item>
@@ -3570,8 +3600,8 @@
 			<thumb />
 			<property name="labelID">hd</property>
 			<property name="defaultID">135</property>
-			<onclick>ActivateWindow(10025,special://skin/extras/HD_Movies.xsp,return)</onclick>
-			<property name="path">ActivateWindow(10025,special://skin/extras/HD_Movies.xsp,return)</property>
+			<onclick>ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</onclick>
+			<property name="path">ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</property>
 			<visible>StringCompare(System.ProfileName,test)</visible>
 			<property name="group">movies</property>
 		</item>
@@ -3676,8 +3706,8 @@
 			<thumb />
 			<property name="labelID">hd</property>
 			<property name="defaultID">135</property>
-			<onclick>ActivateWindow(10025,special://skin/extras/HD_Movies.xsp,return)</onclick>
-			<property name="path">ActivateWindow(10025,special://skin/extras/HD_Movies.xsp,return)</property>
+			<onclick>ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</onclick>
+			<property name="path">ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</property>
 			<visible>StringCompare(System.ProfileName,Master user) + [StringCompare(Window(10000).Property(submenuVisibility),movies)]</visible>
 			<property name="isSubmenu">True</property>
 			<property name="group">movies</property>
@@ -3787,8 +3817,8 @@
 			<thumb />
 			<property name="labelID">hd</property>
 			<property name="defaultID">135</property>
-			<onclick>ActivateWindow(10025,special://skin/extras/HD_Movies.xsp,return)</onclick>
-			<property name="path">ActivateWindow(10025,special://skin/extras/HD_Movies.xsp,return)</property>
+			<onclick>ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</onclick>
+			<property name="path">ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</property>
 			<visible>StringCompare(System.ProfileName,test) + [StringCompare(Window(10000).Property(submenuVisibility),movies)]</visible>
 			<property name="isSubmenu">True</property>
 			<property name="group">movies</property>
@@ -7454,4 +7484,8 @@
 	<include name="skinshortcuts-group-alt-script-tvguide" />
 	<include name="skinshortcuts-group-script-tvguide-1" />
 	<include name="skinshortcuts-group-alt-script-tvguide-1" />
+	<include name="skinshortcuts-group-plugin-video-itunes-trailers" />
+	<include name="skinshortcuts-group-alt-plugin-video-itunes-trailers" />
+	<include name="skinshortcuts-group-plugin-video-itunes-trailers-1" />
+	<include name="skinshortcuts-group-alt-plugin-video-itunes-trailers-1" />
 </includes>
