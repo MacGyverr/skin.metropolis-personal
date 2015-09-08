@@ -144,12 +144,6 @@
 						<onclick>Skin.ToggleSetting(HideClock)</onclick>
 						<selected>Skin.HasSetting(HideClock)</selected>
 					</control>
-					<control type="radiobutton" id="105">
-						<include>SettingsLabel</include>
-						<label>$LOCALIZE[31447]</label>
-						<onclick>Skin.ToggleSetting(WeatherIcons2)</onclick>
-						<selected>Skin.HasSetting(WeatherIcons2)</selected>
-					</control>
 					<control type="radiobutton" id="106">
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31056]</label>
@@ -239,14 +233,14 @@
 						<selected>Skin.HasSetting(HomeStats)</selected>
 						<visible>!Skin.HasSetting(Home2) | !Skin.HasSetting(Home3)</visible>
 					</control>
-					<control type="radiobutton" id="205">
+		<!--			<control type="radiobutton" id="205">
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31034]</label>
 						<onclick>Skin.ToggleSetting(DynamicWeather)</onclick>
 						<selected>Skin.HasSetting(DynamicWeather)</selected>
 						<visible>!Skin.HasSetting(Home2)</visible>
 					</control>
-					<control type="radiobutton" id="206">
+		-->			<control type="radiobutton" id="206">
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31035]</label>
 						<onclick>Skin.ToggleSetting(HomeCleanLibrary)</onclick>
@@ -982,13 +976,262 @@
 					<scrolltime>0</scrolltime>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
-					<control type="image" id="702">
+					<control type="image" id="9100">
 						<include>Settings_Line</include>
-						<visible>System.HasAddon(script.artwork.downloader)</visible>
+					</control>	
+					<control type="radiobutton" id="729">
+						<include>SettingsLabel</include>
+						<label>Cycle Artwork in Video Info</label>
+						<onclick>Skin.ToggleSetting(CycleArt)</onclick>
+						<selected>Skin.HasSetting(CycleArt)</selected>
+					</control>						
+				
+					<control type="radiobutton" id="821">
+						<include>SettingsLabel</include>
+						<label>Media Case Overlays</label>
+						<onclick>Skin.ToggleSetting(CaseOveralys)</onclick>
+						<selected>Skin.HasSetting(CaseOveralys)</selected>
+					</control>
+
+					<control type="button" id="104">
+						<include>SettingsLabel</include>
+						<onfocus condition="IsEmpty(Skin.String(DateFormat))">Skin.SetString(DateFormat,YMD)</onfocus>
+						<label2>$INFO[Skin.String(DateFormat)]</label2>
+						<label>Date Format</label>
+						<onclick condition="Stringcompare(Skin.String(DateFormat),DOW) | IsEmpty(Skin.String(DateFormat))">Skin.SetString(DateFormat,YMD)</onclick>
+						<onclick condition="Stringcompare(Skin.String(DateFormat),YMD)">Skin.SetString(DateFormat,MDY)</onclick>
+						<onclick condition="Stringcompare(Skin.String(DateFormat),MDY)">Skin.SetString(DateFormat,DMY)</onclick>
+						<onclick condition="Stringcompare(Skin.String(DateFormat),DMY)">Skin.SetString(DateFormat,DOW)</onclick>
+						<visible>!Skin.HasSetting(HideClock)</visible>
+					</control>			
+					<control type="radiobutton" id="822">
+						<description>Display OSD Command Labels</description>
+						<include>SettingsLabel</include>
+						<label>Display OSD Command Labels</label>
+						<onclick>Skin.ToggleSetting(CommandLabels)</onclick>
+						<selected>Skin.HasSetting(CommandLabels)</selected>
+					</control>	
+					<control type="radiobutton" id="513">
+						<description>Always show Scrollbar</description>
+						<include>SettingsLabel</include>
+						<label>Always Display Scrollbar</label>
+						<onclick>Skin.ToggleSetting(Scrollbar)</onclick>
+						<selected>Skin.HasSetting(Scrollbar)</selected>
+					</control>
+					<control type="image" id="10204">
+						<include>Settings_Line</include>
+					</control>					
+					<control type="radiobutton" id="205">
+						<onfocus condition="[Skin.HasSetting(WeatherFanart1) + Skin.HasSetting(WeatherFanart2) + Skin.HasSetting(WeatherFanart3) + Skin.HasSetting(WeatherFanart4)]">Skin.SetBool(WeatherFanart1)</onfocus>
+						<include>SettingsLabel</include>
+						<label>$LOCALIZE[31034] (Install more in Addons)</label>
+						<onclick>Skin.ToggleSetting(DynamicWeather)</onclick>
+						<selected>Skin.HasSetting(DynamicWeather)</selected>
+						<visible>[System.HasAddon(resource.images.weatherfanart.prairie) | System.HasAddon(resource.images.weatherfanart.single) | System.HasAddon(resource.images.weatherfanart.multi) | System.HasAddon(resource.images.weatherfanart.faded)] + !Skin.HasSetting(Home2)</visible>
 					</control>
 					
+					<control type="radiobutton" id="10000">
+						<include>SettingsLabel</include>
+						<label> - Use WeatherFanart "Prairie"</label>
+						<onclick>Skin.SetBool(WeatherFanart1)</onclick>
+						<onclick>Skin.Reset(WeatherFanart2)</onclick>
+						<onclick>Skin.Reset(WeatherFanart3)</onclick>
+						<onclick>Skin.Reset(WeatherFanart4)</onclick>
+						<selected>Skin.HasSetting(WeatherFanart1)</selected>
+						<visible>System.HasAddon(resource.images.weatherfanart.prairie) + !Skin.HasSetting(Home2) + Skin.HasSetting(DynamicWeather)</visible>
+					</control>
+					<control type="radiobutton" id="10001">
+						<include>SettingsLabel</include>
+						<label> - Use WeatherFanart "Single"</label>
+						<onclick>Skin.SetBool(WeatherFanart2)</onclick>
+						<onclick>Skin.Reset(WeatherFanart1)</onclick>
+						<onclick>Skin.Reset(WeatherFanart3)</onclick>
+						<onclick>Skin.Reset(WeatherFanart4)</onclick>
+						<selected>Skin.HasSetting(WeatherFanart2)</selected>
+						<visible>System.HasAddon(resource.images.weatherfanart.single) + !Skin.HasSetting(Home2) + Skin.HasSetting(DynamicWeather)</visible>
+					</control>
+					<control type="radiobutton" id="10002">
+						<include>SettingsLabel</include>
+						<label> - Use WeatherFanart "Multi"</label>
+						<onclick>Skin.SetBool(WeatherFanart3)</onclick>
+						<onclick>Skin.Reset(WeatherFanart1)</onclick>
+						<onclick>Skin.Reset(WeatherFanart2)</onclick>
+						<onclick>Skin.Reset(WeatherFanart4)</onclick>
+						<selected>Skin.HasSetting(WeatherFanart3)</selected>
+						<visible>System.HasAddon(resource.images.weatherfanart.multi) + !Skin.HasSetting(Home2) + Skin.HasSetting(DynamicWeather)</visible>
+					</control>
+					<control type="radiobutton" id="10003">
+						<include>SettingsLabel</include>
+						<label> - Use WeatherFanart "Faded"</label>
+						<onclick>Skin.SetBool(WeatherFanart4)</onclick>
+						<onclick>Skin.Reset(WeatherFanart1)</onclick>
+						<onclick>Skin.Reset(WeatherFanart2)</onclick>
+						<onclick>Skin.Reset(WeatherFanart3)</onclick>
+						<selected>Skin.HasSetting(WeatherFanart4)</selected>
+						<visible>System.HasAddon(resource.images.weatherfanart.faded) + !Skin.HasSetting(Home2) + Skin.HasSetting(DynamicWeather)</visible>
+					</control>
 					
+					<control type="image" id="10004">
+						<include>Settings_Line</include>
+					</control>	
+				<!--
+					<control type="radiobutton" id="105">
+						<include>SettingsLabel</include>
+						<label>$LOCALIZE[31447]</label>
+						<onclick>Skin.ToggleSetting(WeatherIcons2)</onclick>
+						<selected>Skin.HasSetting(WeatherIcons2)</selected>
+					</control>
+-->
+					<control type="label" id="10099">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>775</width>
+						<height>30</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<include>SettingsLabel</include>
+						<label>Select a Weather Icon Set (Install more in Addons)</label>
+					</control>					
+					<control type="radiobutton" id="10100">
+						<include>SettingsLabel</include>
+						<label> - Use WeatherIcons "White"</label>
+						<onclick>Skin.SetBool(WeatherIcons1)</onclick>
+						<onclick>Skin.Reset(WeatherIcons2)</onclick>
+						<onclick>Skin.Reset(WeatherIcons3)</onclick>
+						<onclick>Skin.Reset(WeatherIcons4)</onclick>
+						<onclick>Skin.Reset(WeatherIcons5)</onclick>
+						<onclick>Skin.Reset(WeatherIcons6)</onclick>
+						<onclick>Skin.Reset(WeatherIcons7)</onclick>
+						<onclick>Skin.Reset(WeatherIcons8)</onclick>
+						<onclick>Skin.Reset(WeatherIcons9)</onclick>
+						<selected>Skin.HasSetting(WeatherIcons1)</selected>
+						<visible>System.HasAddon(resource.images.weathericons.white)</visible>
+					</control>
+					<control type="radiobutton" id="10101">
+						<include>SettingsLabel</include>
+						<label> - Use WeatherIcons "Transparent"</label>
+						<onclick>Skin.SetBool(WeatherIcons2)</onclick>
+						<onclick>Skin.Reset(WeatherIcons1)</onclick>
+						<onclick>Skin.Reset(WeatherIcons3)</onclick>
+						<onclick>Skin.Reset(WeatherIcons4)</onclick>
+						<onclick>Skin.Reset(WeatherIcons5)</onclick>
+						<onclick>Skin.Reset(WeatherIcons6)</onclick>
+						<onclick>Skin.Reset(WeatherIcons7)</onclick>
+						<onclick>Skin.Reset(WeatherIcons8)</onclick>
+						<onclick>Skin.Reset(WeatherIcons9)</onclick>
+						<selected>Skin.HasSetting(WeatherIcons2)</selected>
+						<visible>System.HasAddon(resource.images.weathericons.transparent)</visible>
+					</control>
+					<control type="radiobutton" id="10102">
+						<include>SettingsLabel</include>
+						<label> - Use WeatherIcons "Outline"</label>
+						<onclick>Skin.SetBool(WeatherIcons3)</onclick>
+						<onclick>Skin.Reset(WeatherIcons1)</onclick>
+						<onclick>Skin.Reset(WeatherIcons2)</onclick>
+						<onclick>Skin.Reset(WeatherIcons4)</onclick>
+						<onclick>Skin.Reset(WeatherIcons5)</onclick>
+						<onclick>Skin.Reset(WeatherIcons6)</onclick>
+						<onclick>Skin.Reset(WeatherIcons7)</onclick>
+						<onclick>Skin.Reset(WeatherIcons8)</onclick>
+						<onclick>Skin.Reset(WeatherIcons9)</onclick>
+						<selected>Skin.HasSetting(WeatherIcons3)</selected>
+						<visible>System.HasAddon(resource.images.weathericons.outline)</visible>
+					</control>
+					<control type="radiobutton" id="10103">
+						<include>SettingsLabel</include>
+						<label> - Use WeatherIcons "Grey"</label>
+						<onclick>Skin.SetBool(WeatherIcons4)</onclick>
+						<onclick>Skin.Reset(WeatherIcons1)</onclick>
+						<onclick>Skin.Reset(WeatherIcons2)</onclick>
+						<onclick>Skin.Reset(WeatherIcons3)</onclick>
+						<onclick>Skin.Reset(WeatherIcons5)</onclick>
+						<onclick>Skin.Reset(WeatherIcons6)</onclick>
+						<onclick>Skin.Reset(WeatherIcons7)</onclick>
+						<onclick>Skin.Reset(WeatherIcons8)</onclick>
+						<onclick>Skin.Reset(WeatherIcons9)</onclick>
+						<selected>Skin.HasSetting(WeatherIcons4)</selected>
+						<visible>System.HasAddon(resource.images.weathericons.grey)</visible>
+					</control>
+					<control type="radiobutton" id="10104">
+						<include>SettingsLabel</include>
+						<label> - Use WeatherIcons "Flat"</label>
+						<onclick>Skin.SetBool(WeatherIcons5)</onclick>
+						<onclick>Skin.Reset(WeatherIcons1)</onclick>
+						<onclick>Skin.Reset(WeatherIcons2)</onclick>
+						<onclick>Skin.Reset(WeatherIcons3)</onclick>
+						<onclick>Skin.Reset(WeatherIcons4)</onclick>
+						<onclick>Skin.Reset(WeatherIcons6)</onclick>
+						<onclick>Skin.Reset(WeatherIcons7)</onclick>
+						<onclick>Skin.Reset(WeatherIcons8)</onclick>
+						<onclick>Skin.Reset(WeatherIcons9)</onclick>
+						<selected>Skin.HasSetting(WeatherIcons5)</selected>
+						<visible>System.HasAddon(resource.images.weathericons.flat)</visible>
+					</control>
+					<control type="radiobutton" id="10105">
+						<include>SettingsLabel</include>
+						<label> - Use WeatherIcons "Coloured"</label>
+						<onclick>Skin.SetBool(WeatherIcons6)</onclick>
+						<onclick>Skin.Reset(WeatherIcons1)</onclick>
+						<onclick>Skin.Reset(WeatherIcons2)</onclick>
+						<onclick>Skin.Reset(WeatherIcons3)</onclick>
+						<onclick>Skin.Reset(WeatherIcons4)</onclick>
+						<onclick>Skin.Reset(WeatherIcons5)</onclick>
+						<onclick>Skin.Reset(WeatherIcons7)</onclick>
+						<onclick>Skin.Reset(WeatherIcons8)</onclick>
+						<onclick>Skin.Reset(WeatherIcons9)</onclick>
+						<selected>Skin.HasSetting(WeatherIcons6)</selected>
+						<visible>System.HasAddon(resource.images.weathericons.coloured)</visible>
+					</control>
+					<control type="radiobutton" id="10106">
+						<include>SettingsLabel</include>
+						<label> - Use WeatherIcons "Animated"</label>
+						<onclick>Skin.SetBool(WeatherIcons7)</onclick>
+						<onclick>Skin.Reset(WeatherIcons1)</onclick>
+						<onclick>Skin.Reset(WeatherIcons2)</onclick>
+						<onclick>Skin.Reset(WeatherIcons3)</onclick>
+						<onclick>Skin.Reset(WeatherIcons4)</onclick>
+						<onclick>Skin.Reset(WeatherIcons5)</onclick>
+						<onclick>Skin.Reset(WeatherIcons6)</onclick>
+						<onclick>Skin.Reset(WeatherIcons8)</onclick>
+						<onclick>Skin.Reset(WeatherIcons9)</onclick>
+						<selected>Skin.HasSetting(WeatherIcons7)</selected>
+						<visible>System.HasAddon(resource.images.weathericons.animated)</visible>
+					</control>
+					<control type="radiobutton" id="10107">
+						<include>SettingsLabel</include>
+						<label> - Use WeatherIcons "3d-White"</label>
+						<onclick>Skin.SetBool(WeatherIcons8)</onclick>
+						<onclick>Skin.Reset(WeatherIcons1)</onclick>
+						<onclick>Skin.Reset(WeatherIcons2)</onclick>
+						<onclick>Skin.Reset(WeatherIcons3)</onclick>
+						<onclick>Skin.Reset(WeatherIcons4)</onclick>
+						<onclick>Skin.Reset(WeatherIcons5)</onclick>
+						<onclick>Skin.Reset(WeatherIcons6)</onclick>
+						<onclick>Skin.Reset(WeatherIcons7)</onclick>
+						<onclick>Skin.Reset(WeatherIcons9)</onclick>
+						<selected>Skin.HasSetting(WeatherIcons8)</selected>
+						<visible>System.HasAddon(resource.images.weathericons.3d-white)</visible>
+					</control>
+					<control type="radiobutton" id="10108">
+						<include>SettingsLabel</include>
+						<label> - Use WeatherIcons "3d-Coloured"</label>
+						<onclick>Skin.SetBool(WeatherIcons9)</onclick>
+						<onclick>Skin.Reset(WeatherIcons1)</onclick>
+						<onclick>Skin.Reset(WeatherIcons2)</onclick>
+						<onclick>Skin.Reset(WeatherIcons3)</onclick>
+						<onclick>Skin.Reset(WeatherIcons4)</onclick>
+						<onclick>Skin.Reset(WeatherIcons5)</onclick>
+						<onclick>Skin.Reset(WeatherIcons6)</onclick>
+						<onclick>Skin.Reset(WeatherIcons7)</onclick>
+						<onclick>Skin.Reset(WeatherIcons8)</onclick>
+						<selected>Skin.HasSetting(WeatherIcons9)</selected>
+						<visible>System.HasAddon(resource.images.weathericons.3d-coloured)</visible>
+					</control>
 
+					<control type="image" id="10304">
+						<include>Settings_Line</include>
+					</control>	
+				
 					<control type="label" id="703">
 						<include>SettingsLabel</include>
 						<label>Extra Artwork Downloader</label>
@@ -1042,57 +1285,7 @@
 						<label> - Download [COLOR=DialogTextFO]logo.png[/COLOR] for all Movies</label>
 						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=movie,clearlogo)</onclick>
 						<visible>System.HasAddon(script.artwork.downloader)</visible>
-					</control>	
-					<control type="image" id="728">
-						<include>Settings_Line</include>
-						<visible>System.HasAddon(script.artwork.downloader)</visible>
-					</control>				
-					<control type="radiobutton" id="729">
-						<include>SettingsLabel</include>
-						<label>Cycle Artwork in Video Info</label>
-						<onclick>Skin.ToggleSetting(CycleArt)</onclick>
-						<selected>Skin.HasSetting(CycleArt)</selected>
 					</control>					
-					
-					
-					
-					
-					
-					
-				
-					<control type="radiobutton" id="821">
-						<include>SettingsLabel</include>
-						<label>Media Case Overlays</label>
-						<onclick>Skin.ToggleSetting(CaseOveralys)</onclick>
-						<selected>Skin.HasSetting(CaseOveralys)</selected>
-					</control>
-
-					<control type="button" id="104">
-						<include>SettingsLabel</include>
-						<onfocus condition="IsEmpty(Skin.String(DateFormat))">Skin.SetString(DateFormat,YMD)</onfocus>
-						<label2>$INFO[Skin.String(DateFormat)]</label2>
-						<label>Date Format</label>
-						<onclick condition="Stringcompare(Skin.String(DateFormat),DOW) | IsEmpty(Skin.String(DateFormat))">Skin.SetString(DateFormat,YMD)</onclick>
-						<onclick condition="Stringcompare(Skin.String(DateFormat),YMD)">Skin.SetString(DateFormat,MDY)</onclick>
-						<onclick condition="Stringcompare(Skin.String(DateFormat),MDY)">Skin.SetString(DateFormat,DMY)</onclick>
-						<onclick condition="Stringcompare(Skin.String(DateFormat),DMY)">Skin.SetString(DateFormat,DOW)</onclick>
-						<visible>!Skin.HasSetting(HideClock)</visible>
-					</control>			
-					<control type="radiobutton" id="822">
-						<description>Display OSD Command Labels</description>
-						<include>SettingsLabel</include>
-						<label>Display OSD Command Labels</label>
-						<onclick>Skin.ToggleSetting(CommandLabels)</onclick>
-						<selected>Skin.HasSetting(CommandLabels)</selected>
-					</control>	
-					<control type="radiobutton" id="513">
-						<description>Always show Scrollbar</description>
-						<include>SettingsLabel</include>
-						<label>Always Display Scrollbar</label>
-						<onclick>Skin.ToggleSetting(Scrollbar)</onclick>
-						<selected>Skin.HasSetting(Scrollbar)</selected>
-					</control>
-				
 				
 				</control>
 				

@@ -721,7 +721,7 @@
 			<label2>$ADDON[script.skinshortcuts 32014]</label2>
 			<icon>DefaultRecentlyAddedMovies.png</icon>
 			<thumb />
-			<property name="labelID">recentmovies</property>
+			<property name="labelID">31031</property>
 			<property name="defaultID">31031</property>
 			<visible>Library.HasContent(Movies)</visible>
 			<onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
@@ -1887,7 +1887,7 @@
 			<label2>$ADDON[script.skinshortcuts 32014]</label2>
 			<icon>DefaultRecentlyAddedMovies.png</icon>
 			<thumb />
-			<property name="labelID">recentmovies</property>
+			<property name="labelID">31031</property>
 			<property name="defaultID">31031</property>
 			<visible>Library.HasContent(Movies)</visible>
 			<onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
@@ -3491,7 +3491,7 @@
 			<label2>$ADDON[script.skinshortcuts 32014]</label2>
 			<icon>DefaultRecentlyAddedMovies.png</icon>
 			<thumb />
-			<property name="labelID">recentmovies</property>
+			<property name="labelID">31031</property>
 			<property name="defaultID">31031</property>
 			<visible>Library.HasContent(Movies)</visible>
 			<onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
@@ -3594,7 +3594,7 @@
 			<label2>$ADDON[script.skinshortcuts 32014]</label2>
 			<icon>DefaultRecentlyAddedMovies.png</icon>
 			<thumb />
-			<property name="labelID">recentmovies</property>
+			<property name="labelID">31031</property>
 			<property name="defaultID">31031</property>
 			<visible>Library.HasContent(Movies)</visible>
 			<onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
@@ -3699,7 +3699,7 @@
 			<label2>$ADDON[script.skinshortcuts 32014]</label2>
 			<icon>DefaultRecentlyAddedMovies.png</icon>
 			<thumb />
-			<property name="labelID">recentmovies</property>
+			<property name="labelID">31031</property>
 			<property name="defaultID">31031</property>
 			<visible>Library.HasContent(Movies)</visible>
 			<onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
@@ -3810,7 +3810,7 @@
 			<label2>$ADDON[script.skinshortcuts 32014]</label2>
 			<icon>DefaultRecentlyAddedMovies.png</icon>
 			<thumb />
-			<property name="labelID">recentmovies</property>
+			<property name="labelID">31031</property>
 			<property name="defaultID">31031</property>
 			<visible>Library.HasContent(Movies)</visible>
 			<onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>

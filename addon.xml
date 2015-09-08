@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon 
 	id="skin.metropolis-personal-master"
-	version="3.1.3.5"
-	name="Metropolis (MacGyver's Personal Mod for 15)"
+	version="3.1.3.6"
+	name="Metropolis (MacGyver's Personal Mod for Kodi 16 Jarvis)"
 	provider-name="Amra, Stoli, jingai">
 	<requires>
-		<import addon="xbmc.gui" version="5.9.0"/>
+		<import addon="xbmc.gui" version="5.10.0"/>
 		<import addon="service.skin.widgets" version="0.0.13"/>
 		<import addon="script.artwork.downloader" version="12.0.4"/>
 		<import addon="script.favourites" version="2.0.0"/>
@@ -13,6 +13,9 @@
 		<import addon="service.library.data.provider" version="0.0.7"/>
 		<import addon="script.extendedinfo" version="2.0.0"/>
 		<import addon="script.skinshortcuts" version="0.2.1"/>
+        <import addon="resource.images.studios.white" version="0.0.1"/>
+        <import addon="resource.images.weatherfanart.prairie" version="0.0.1"/>
+        <import addon="resource.images.weathericons.white" version="0.0.1"/>
 	</requires>
 	<extension
 		point="xbmc.gui.skin"

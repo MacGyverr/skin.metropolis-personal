@@ -23,8 +23,9 @@
 				<texture flipy="true">dialogs/DialogBG_Dropdown2.png</texture>
 				<colordiffuse>DialogDropdownColor</colordiffuse>
 			</control>
-			<!-- Default Icon -->
+			<!-- Default, Info, Error and Warning Icons-->
 			<control type="image" id="400">
+				<description>avatar</description>
 				<posx>25</posx>
 				<posy>20</posy>
 				<width>48</width>
@@ -56,34 +57,6 @@
 				<align>left</align>
 				<scrollout>false</scrollout>
 				<pauseatend>2000</pauseatend>
-			</control>
-			<!-- Info, Error and Warning Icons -->
-			<control type="image" id="403">
-				<posx>25</posx>
-				<posy>20</posy>
-				<width>48</width>
-				<height>48</height>
-				<aspectratio>keep</aspectratio>
-				<visible>false</visible>
-				<texture>DefaultIconInfo.png</texture>
-			</control>
-			<control type="image" id="404">
-				<posx>25</posx>
-				<posy>20</posy>
-				<width>48</width>
-				<height>48</height>
-				<aspectratio>keep</aspectratio>
-				<visible>false</visible>
-				<texture>DefaultIconWarning.png</texture>
-			</control>
-			<control type="image" id="405">
-				<posx>25</posx>
-				<posy>20</posy>
-				<width>48</width>
-				<height>48</height>
-				<aspectratio>keep</aspectratio>
-				<visible>false</visible>
-				<texture>DefaultIconError.png</texture>
 			</control>
 		</control>
 		<include condition="Skin.HasSetting(DebugMode)">Debug</include>

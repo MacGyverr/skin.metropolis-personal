@@ -1,7 +1,7 @@
 Metropolis (MacGyver's Personal Mod)
 ==========
 
-My personal version of the Metropolis skin for Kodi 15 (Isengard).
+My personal version of the Metropolis skin for Kodi 16 (Jarvis).
 This is my personal version of the Metropolis skin.  It has extra or future features not found in the official version.  Some of the extra features found here are pending for the next official release, so if you don't like messing with a hard to install, non-auto-updating skin, simply waiting a little longer for the official version might be right for you.
 Some of the things in this version are ugly (non-Metropolisian) in appearance and will never be in the official version, but if it does what you want, this may be the only place you're going to find it. 
 

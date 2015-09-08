@@ -431,18 +431,28 @@
 		</control>
 	</include>
 
+	<include name="Weather_Icon_Animation">
+		<timeperimage>25</timeperimage>
+		<fadetime>1</fadetime>
+		<randomize>false</randomize>
+		<aspectratio align="center">keep</aspectratio>
+		<loop>yes</loop>
+		<visible>true</visible>
+	</include>
+	
 	<include name="Global_Weather">
 		<control type="group">
 			<posx>12</posx>
 			<posy>40</posy>
 			<visible>Weather.IsFetched + [[!Window.IsActive(visualisation) + !Skin.HasSetting(HideClockTemp)] | [Window.IsActive(visualisation) + Player.ShowInfo + !Skin.HasSetting(HideVisClock) + !Window.IsVisible(120)]]</visible>
-			<control type="image">
+			<control type="multiimage">
+				<description>Weather Multi-image background</description>
 				<posx>1145</posx>
 				<posy>517</posy>
 				<width>30</width>
 				<height>30</height>
-				<texture>$VAR[Weather_Icons_Current]</texture>
-			</control>
+				<imagepath>$VAR[Weather_Icons_Current]</imagepath>
+			</control>	
 			<control type="label">
 				<description>Temperature</description>
 				<posx>1241</posx>

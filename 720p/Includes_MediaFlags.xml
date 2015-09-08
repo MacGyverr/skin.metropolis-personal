@@ -17,14 +17,14 @@
 				<control type="image">
 					<height>70</height>
 					<aspectratio aligny="center">keep</aspectratio>
-					<texture fallback="flags/default-studio.png">$INFO[ListItem.Studio,flags/Studios/,.png]</texture>
+					<texture fallback="flags/default-studio.png">resource://resource.images.studios.white/$INFO[ListItem.Studio,,.png]</texture>
 					<colordiffuse>MediaFlagDiffuse</colordiffuse>
 					<visible>!IsEmpty(ListItem.Studio) + !SubString(Container.FolderPath,advanced.launcher)</visible>
 				</control>
 				<control type="image">
 					<height>70</height>
 					<aspectratio aligny="center">keep</aspectratio>
-					<texture fallback="flags/default-studio.png">special://skin/extras/games/studios/$INFO[ListItem.Studio,,.png]</texture>
+					<texture fallback="flags/default-studio.png">resource://resource.images.studios.white/$INFO[ListItem.Studio,,.png]</texture>
 					<colordiffuse>MediaFlagDiffuse</colordiffuse>
 					<visible>!IsEmpty(ListItem.Studio) + SubString(Container.FolderPath,advanced.launcher)</visible>
 				</control>
