@@ -432,7 +432,7 @@
 	</include>
 
 	<include name="Weather_Icon_Animation">
-		<timeperimage>25</timeperimage>
+		<timeperimage>65</timeperimage>
 		<fadetime>1</fadetime>
 		<randomize>false</randomize>
 		<aspectratio align="center">keep</aspectratio>
