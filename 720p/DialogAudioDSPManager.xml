@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog">
+	<animation type="WindowOpen" reversible="false">
+		<effect type="slide" start="-1000,0" end="0,0" time="300" />
+		<effect type="fade" start="0" end="100" time="300" />
+	</animation>
+	<animation type="WindowClose" reversible="false">
+		<effect type="slide" start="0,0" end="-1000,0" delay="1200" time="300" />
+		<effect type="fade" start="100" end="0" delay="1200" time="300" />
+	</animation>
+	<zorder>1</zorder> 
+	<defaultcontrol>9000</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<coordinates>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<description>gradient</description>
+			<include>Dimensions_Fullscreen</include>
+			<texture background="true" fallback="background.png">$INFO[Skin.String(CustomBackground)]</texture>
+			<colordiffuse>BackgroundColor</colordiffuse>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>700</height>
+			<texture>frames/Menu_Glass2c.png</texture>
+			<colordiffuse>DialogBackgroundColor</colordiffuse>
+		</control>
+		<control type="group">
+			<left>20</left>
+			<top>20</top>
+			<width>1200</width>
+			<height>40</height>
+			<control type="label">
+				<description>window header label</description>
+				<left>0</left>
+				<top>40</top>
+				<width>1200</width>
+				<height>30</height>
+				<label>$LOCALIZE[15020]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>METF_TitleText</font>
+				<textcolor>GlobalHeading</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+		</control>
+		<control type="list" id="9000">
+			<description>processing mode selection list</description>
+			<left>60</left>
+			<top>90</top>
+			<width>1140</width>
+			<height>40</height>
+			<onup>9001</onup>
+			<ondown>200</ondown>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<orientation>horizontal</orientation>
+			<scrolltime tween="sine" easing="out">200</scrolltime>
+			<itemlayout width="228" height="40">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>228</width>
+					<height>40</height>
+					<texture border="5">ButtonNF.png</texture>
+				</control>
+				<control type="label">
+					<posx>5</posx>
+					<posy>0</posy>
+					<width>218</width>
+					<height>40</height>
+					<font>METF_DialogDetails</font>
+					<textcolor>SettingsDetail</textcolor>
+					<aligny>center</aligny>
+					<align>center</align>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>false</scroll>
+					<scrollspeed>0</scrollspeed>
+				</control>
+			</itemlayout>
+			<focusedlayout width="228" height="40">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>228</width>
+					<height>40</height>
+					<texture border="5">ButtonFO2Wide.png</texture>
+					<animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(9000)">conditional</animation>
+				</control>
+				<control type="label">
+					<posx>5</posx>
+					<posy>0</posy>
+					<width>218</width>
+					<height>40</height>
+					<font>METF_DialogDetails</font>
+					<textcolor>DialogTextFO</textcolor>
+					<aligny>center</aligny>
+					<align>center</align>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>false</scroll>
+					<scrollspeed>0</scrollspeed>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="91">
+					<label>1. $LOCALIZE[15057]</label>
+					<label2>$LOCALIZE[15114]</label2>
+					<visible>true</visible>
+					<onclick>noop</onclick>
+					<property name="currentMode">InputResampling</property>
+				</item>
+				<item id="92">
+					<label>2. $LOCALIZE[15058]</label>
+					<label2>$LOCALIZE[15113]</label2>
+					<visible>true</visible>
+					<onclick>noop</onclick>
+					<property name="currentMode">Preprocessing</property>
+				</item>
+				<item id="93">
+					<label>3. $LOCALIZE[15059]</label>
+					<label2>$LOCALIZE[15115]</label2>
+					<visible>true</visible>
+					<onclick>noop</onclick>
+					<property name="currentMode">Masterprocessing</property>
+				</item>
+				<item id="94">
+					<label>4. $LOCALIZE[15060]</label>
+					<label2>$LOCALIZE[15117]</label2>
+					<visible>true</visible>
+					<onclick>noop</onclick>
+					<property name="currentMode">Postprocessing</property>
+				</item>
+				<item id="95">
+					<label>5. $LOCALIZE[15061]</label>
+					<label2>$LOCALIZE[15116]</label2>
+					<visible>true</visible>
+					<onclick>noop</onclick>
+					<property name="currentMode">OutputResampling</property>
+				</item>
+			</content>
+		</control>
+		<control type="group">
+			<description>borders and mode description</description>
+			<left>45</left>
+			<top>135</top>
+			<width>1180</width>
+			<height>500</height>
+			<control type="label">
+				<description>current mode description label</description>
+				<left>0</left>
+				<top>0</top>
+				<width>1180</width>
+				<height>30</height>
+				<font>METF_ContextValue</font>
+				<textcolor>SettingsDetail</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<selectedcolor>DialogTextFO</selectedcolor>
+				<label>$INFO[Container(9000).ListItem.Label2]</label>
+				<scroll>true</scroll>
+			</control>
+			<control type="image">
+				<description>border</description>
+				<posx>0</posx>
+				<posy>15</posy>
+				<width>1180</width>
+				<height>460</height>
+				<texture border="5">frames/ClassicFrame_Fanart.png</texture>
+				<colordiffuse>DialogBackgroundColor</colordiffuse>
+			</control>
+		</control>
+		<control type="group" id="200">
+			<description>available- and active mode lists</description>
+			<left>65</left>
+			<top>170</top>
+			<width>1100</width>
+			<height>500</height>
+			<ondown>9001</ondown>
+			<onup>9000</onup>
+			<control type="group">
+				<description>available modes group</description>
+				<left>0</left>
+				<top>0</top>
+				<width>550</width>
+				<height>360</height>
+				<control type="label">
+					<description>available modes</description>
+					<left>25</left>
+					<top>4</top>
+					<width>550</width>
+					<height>30</height>
+					<label>$LOCALIZE[15050] ($INFO[Container(20).NumItems])</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>METF_Heading</font>
+					<textcolor>TextFO</textcolor>
+					<shadowcolor>Black</shadowcolor>
+				</control>
+				<control type="image">
+					<description>available modes list border</description>
+					<left>25</left>
+					<top>30</top>
+					<width>538</width>
+					<height>350</height>
+					<texture border="5">ButtonNF.png</texture>
+				</control>
+				<control type="scrollbar" id="60">
+					<description>scrollbar for available modes list</description>
+					<left>5</left>
+					<top>30</top>
+					<width>25</width>
+					<height>350</height>
+					<texturesliderbackground>-</texturesliderbackground>
+					<textureslidernib>ScrollBarV_Nib_Focus.png</textureslidernib>
+					<textureslidernibfocus>ScrollBarV_Nib_Focus.png</textureslidernibfocus>
+					<onleft>61</onleft>
+					<onright>20</onright>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+				</control>
+				<control type="list" id="20">
+					<description>available modes list</description>
+					<left>30</left>
+					<top>35</top>
+					<width>528</width>
+					<height>345</height>
+					<onup>9000</onup>
+					<ondown>9001</ondown>
+					<onleft>60</onleft>
+					<onright>21</onright>
+					<pagecontrol>60</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="46" width="528">
+						<control type="image">
+							<left>0</left>
+							<top>3</top>
+							<width>528</width>
+							<height>40</height>
+							<texture border="5">ButtonNF.png</texture>
+						</control>
+						<control type="image">
+							<left>15</left>
+							<top>8</top>
+							<width>30</width>
+							<height>30</height>
+							<texture>$INFO[ListItem.Property(Icon)]</texture>
+							<aspectratio aligny="center" align="left">keep</aspectratio>
+							<visible>!StringCompare(ListItem.Property(Icon),"")</visible>
+						</control>
+						<control type="image">
+							<left>15</left>
+							<top>8</top>
+							<width>30</width>
+							<height>30</height>
+							<texture>DefaultAudioDSP.png</texture>
+							<aspectratio aligny="center" align="left">keep</aspectratio>
+							<visible>StringCompare(ListItem.Property(Icon),"")</visible>
+						</control>
+						<control type="label">
+							<description>active addon name and mode name</description>
+							<left>80</left>
+							<top>3</top>
+							<width>435</width>
+							<height>40</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>METF_TitleText</font>
+							<textcolor>TextNF</textcolor>
+							<selectedcolor>TextFO</selectedcolor>
+							<scroll>false</scroll>
+							<label>$INFO[ListItem.Property(AddonName)]: $INFO[ListItem.Property(Name)]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="66" width="528">
+						<control type="image">
+							<left>0</left>
+							<top>3</top>
+							<width>528</width>
+							<height>60</height>
+							<texture border="5">ButtonFo.png</texture>
+							<animation effect="fade" start="100" end="30" time="0" condition="!Control.HasFocus(20)">conditional</animation>
+						</control>
+						<control type="image">
+							<left>5</left>
+							<top>8</top>
+							<width>50</width>
+							<height>50</height>
+							<texture>$INFO[ListItem.Property(Icon)]</texture>
+							<aspectratio aligny="center" align="left">keep</aspectratio>
+							<visible>!StringCompare(ListItem.Property(Icon),"")</visible>
+						</control>
+						<control type="image">
+							<left>5</left>
+							<top>8</top>
+							<height>50</height>
+							<width>50</width>
+							<texture>DefaultAudioDSP.png</texture>
+							<aspectratio aligny="center" align="left">keep</aspectratio>
+							<visible>StringCompare(ListItem.Property(Icon),"")</visible>
+						</control>
+						<control type="label">
+							<description>addon name and mode name on focus</description>
+							<left>80</left>
+							<top>3</top>
+							<width>435</width>
+							<height>40</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<scroll>true</scroll>
+							<font>METF_TitleText</font>
+							<textcolor>FocusBarText</textcolor>
+							<selectedcolor>DialogTextFO</selectedcolor>
+							<label>$INFO[ListItem.Property(AddonName)]: $INFO[ListItem.Property(Name)]</label>
+						</control>
+						<control type="label">
+							<description>ADSP-Mode description on focus</description>
+							<left>80</left>
+							<top>33</top>
+							<width>435</width>
+							<height>30</height>
+							<font>METF_DialogDetails</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>SettingsDetail</textcolor>
+							<scroll>false</scroll>
+							<selectedcolor>DialogTextFO</selectedcolor>
+							<label>$INFO[ListItem.Property(Description)]</label>
+							<visible>!Control.HasFocus(20)</visible>
+						</control>
+						<control type="label">
+							<description>ADSP-Mode description on focus</description>
+							<left>80</left>
+							<top>33</top>
+							<width>435</width>
+							<height>30</height>
+							<font>METF_DialogDetails</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>SettingsDetail</textcolor>
+							<scroll>true</scroll>
+							<scrollsuffix>&gt;   &lt;</scrollsuffix>
+							<selectedcolor>DialogTextFO</selectedcolor>
+							<label>$INFO[ListItem.Property(Description)]</label>
+							<visible>Control.HasFocus(20)</visible>
+						</control>
+					</focusedlayout>
+					<!-- fake ADSP-Mode content for testing
+					<content>
+						<item id="91">
+							<label>Label1-1</label>
+							<label2>Label1-2</label2>
+							<visible>true</visible>
+							<onclick>noop</onclick>
+							<property name="AddonName">AddonName1</property>
+							<property name="Description">Description1</property>
+							<property name="Number">Number1</property>
+							<property name="Name">Name1</property>
+						</item>
+						<item id="92">
+							<label>Label2-1</label>
+							<label2>Label2-2</label2>
+							<visible>true</visible>
+							<onclick>noop</onclick>
+							<property name="AddonName">AddonName2</property>
+							<property name="Description">Description2</property>
+							<property name="Number">Number2</property>
+							<property name="Name">Name2</property>
+						</item>
+						<item id="93">
+							<label>Label3-1</label>
+							<label2>Label3-2</label2>
+							<visible>true</visible>
+							<onclick>noop</onclick>
+							<property name="AddonName">AddonName3</property>
+							<property name="Description">Description3</property>
+							<property name="Number">Number3</property>
+							<property name="Name">Name3</property>
+						</item>
+						<item id="94">
+							<label>Label4-1</label>
+							<label2>Label4-2</label2>
+							<visible>true</visible>
+							<onclick>noop</onclick>
+							<property name="AddonName">AddonName4</property>
+							<property name="Description">Description4</property>
+							<property name="Number">Number4</property>
+							<property name="Name">Name4</property>
+						</item>
+						<item id="95">
+							<label>Label5-1</label>
+							<label2>Label5-2</label2>
+							<visible>true</visible>
+							<onclick>noop</onclick>
+							<property name="AddonName">AddonName5</property>
+							<property name="Description">Description5</property>
+							<property name="Number">Number5</property>
+							<property name="Name">Name5</property>
+						</item>
+					</content>				
+				-->
+				</control>
+			</control>
+			<control type="group">
+				<left>568</left>
+				<top>0</top>
+				<width>570</width>
+				<height>360</height>
+				<control type="label">
+					<description>active modes</description>
+					<left>10</left>
+					<top>4</top>
+					<width>550</width>
+					<height>30</height>
+					<label>$LOCALIZE[15051] ($INFO[Container(21).NumItems])</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>METF_Heading</font>
+					<textcolor>TextFO</textcolor>
+					<shadowcolor>Black</shadowcolor>
+				</control>
+				<control type="image">
+					<description>active modes list border</description>
+					<left>10</left>
+					<top>30</top>
+					<width>538</width>
+					<height>350</height>
+					<texture border="5">ButtonNF.png</texture>
+				</control>
+				<control type="scrollbar" id="61">
+					<description>scrollbar for active modes list</description>
+					<left>542</left>
+					<top>30</top>
+					<width>25</width>
+					<height>350</height>
+					<texturesliderbackground>-</texturesliderbackground>
+					<textureslidernib>ScrollBarV_Nib_Focus.png</textureslidernib>
+					<textureslidernibfocus>ScrollBarV_Nib_Focus.png</textureslidernibfocus>
+					<onleft>21</onleft>
+					<onright>60</onright>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+				</control>
+				<control type="list" id="21">
+					<description>active modes list</description>
+					<left>15</left>
+					<top>35</top>
+					<width>538</width>
+					<height>345</height>
+					<onup>9000</onup>
+					<ondown>9001</ondown>
+					<onleft>20</onleft>
+					<onright>61</onright>
+					<pagecontrol>61</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="46" width="528">
+						<control type="image">
+							<left>0</left>
+							<top>3</top>
+							<width>528</width>
+							<height>40</height>
+							<texture border="5">ButtonNF.png</texture>
+						</control>
+						<control type="image">
+							<left>15</left>
+							<top>8</top>
+							<width>30</width>
+							<height>30</height>
+							<texture>$INFO[ListItem.Property(Icon)]</texture>
+							<aspectratio aligny="center" align="left">keep</aspectratio>
+							<visible>!StringCompare(ListItem.Property(Icon),"")</visible>
+						</control>
+						<control type="image">
+							<left>15</left>
+							<top>8</top>
+							<width>30</width>
+							<height>30</height>
+							<texture>DefaultAudioDSP.png</texture>
+							<aspectratio aligny="center" align="left">keep</aspectratio>
+							<visible>StringCompare(ListItem.Property(Icon),"")</visible>
+						</control>
+						<control type="label">
+							<description>active addon name and mode name</description>
+							<left>80</left>
+							<top>3</top>
+							<width>435</width>
+							<height>40</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>METF_TitleText</font>
+							<textcolor>TextNF</textcolor>
+							<selectedcolor>TextFO</selectedcolor>
+							<scroll>false</scroll>
+							<label>$INFO[ListItem.Property(Number)].  $INFO[ListItem.Property(AddonName)]: $INFO[ListItem.Property(Name)]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="66" width="528">
+						<control type="image">
+							<left>0</left>
+							<top>3</top>
+							<width>528</width>
+							<height>60</height>
+							<texture border="5">ButtonFo.png</texture>
+							<animation effect="fade" start="100" end="30" time="0" condition="!Control.HasFocus(21)">conditional</animation>
+						</control>
+						<control type="image">
+							<left>5</left>
+							<top>8</top>
+							<width>50</width>
+							<height>50</height>
+							<texture>$INFO[ListItem.Property(Icon)]</texture>
+							<aspectratio aligny="center" align="left">keep</aspectratio>
+							<visible>!StringCompare(ListItem.Property(Icon),"")</visible>
+						</control>
+						<control type="image">
+							<left>5</left>
+							<top>8</top>
+							<height>50</height>
+							<width>50</width>
+							<texture>DefaultAudioDSP.png</texture>
+							<aspectratio aligny="center" align="left">keep</aspectratio>
+							<visible>StringCompare(ListItem.Property(Icon),"")</visible>
+						</control>
+						<control type="label">
+							<description>addon name and mode name on focus</description>
+							<left>80</left>
+							<top>3</top>
+							<width>435</width>
+							<height>40</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<scroll>true</scroll>
+							<font>METF_TitleText</font>
+							<textcolor>FocusBarText</textcolor>
+							<selectedcolor>DialogTextFO</selectedcolor>
+							<label>$INFO[ListItem.Property(Number)].  $INFO[ListItem.Property(AddonName)]: $INFO[ListItem.Property(Name)]</label>
+							<visible>true</visible>
+						</control>
+						<control type="label">
+							<description>ADSP-Mode description on focus</description>
+							<left>80</left>
+							<top>33</top>
+							<width>435</width>
+							<height>30</height>
+							<font>METF_DialogDetails</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>SettingsDetail</textcolor>
+							<scroll>false</scroll>
+							<selectedcolor>DialogTextFO</selectedcolor>
+							<label>$INFO[ListItem.Property(Description)]</label>
+							<visible>!Control.HasFocus(21)</visible>
+						</control>
+						<control type="label">
+							<description>ADSP-Mode description on focus</description>
+							<left>80</left>
+							<top>33</top>
+							<width>435</width>
+							<height>30</height>
+							<font>METF_DialogDetails</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>SettingsDetail</textcolor>
+							<scroll>true</scroll>
+							<scrollsuffix>&gt;   &lt;</scrollsuffix>
+							<selectedcolor>DialogTextFO</selectedcolor>
+							<label>$INFO[ListItem.Property(Description)]</label>
+							<visible>Control.HasFocus(21)</visible>
+						</control>
+					</focusedlayout>
+					<!-- fake ADSP-Mode content for testing
+					<content>
+						<item id="91">
+							<label>Label1-1</label>
+							<label2>Label1-2</label2>
+							<visible>true</visible>
+							<onclick>noop</onclick>
+							<property name="AddonName">AddonName1</property>
+							<property name="Description">Description1</property>
+							<property name="Number">Number1</property>
+							<property name="Name">Name1</property>
+						</item>
+						<item id="92">
+							<label>Label2-1</label>
+							<label2>Label2-2</label2>
+							<visible>true</visible>
+							<onclick>noop</onclick>
+							<property name="AddonName">AddonName2</property>
+							<property name="Description">Description2</property>
+							<property name="Number">Number2</property>
+							<property name="Name">Name2</property>
+						</item>
+						<item id="93">
+							<label>Label3-1</label>
+							<label2>Label3-2</label2>
+							<visible>true</visible>
+							<onclick>noop</onclick>
+							<property name="AddonName">AddonName3</property>
+							<property name="Description">Description3</property>
+							<property name="Number">Number3</property>
+							<property name="Name">Name3</property>
+						</item>
+						<item id="94">
+							<label>Label4-1</label>
+							<label2>Label4-2</label2>
+							<visible>true</visible>
+							<onclick>noop</onclick>
+							<property name="AddonName">AddonName4</property>
+							<property name="Description">Description4</property>
+							<property name="Number">Number4</property>
+							<property name="Name">Name4</property>
+						</item>
+						<item id="95">
+							<label>Label5-1</label>
+							<label2>Label5-2</label2>
+							<visible>true</visible>
+							<onclick>noop</onclick>
+							<property name="AddonName">AddonName5</property>
+							<property name="Description">Description5</property>
+							<property name="Number">Number5</property>
+							<property name="Name">Name5</property>
+						</item>
+					</content>				
+				-->
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9001">
+			<left>80</left>
+			<top>585</top>
+			<width>1090</width>
+			<control type="radiobutton" id="22">
+				<description>Default RadioButton</description>
+				<left>0</left>
+				<top>15</top>
+				<height>40</height>
+				<width>320</width>
+				<onup>200</onup>
+				<ondown>9000</ondown>
+				<onleft>24</onleft>
+				<onright>23</onright>
+				<textwidth>280</textwidth>
+				<textoffsetx>10</textoffsetx>
+				<font>METF_TitleText</font>
+				<textcolor>SettingsDetail</textcolor>
+				<focusedcolor>DialogTextFO</focusedcolor>
+				<texturefocus border="5">ButtonFo.png</texturefocus>
+				<texturenofocus border="5">ButtonNF.png</texturenofocus>
+				<textureradioondisabled>-</textureradioondisabled>
+				<textureradiooffdisabled>-</textureradiooffdisabled>
+				<label>15064</label>
+				<align>left</align>
+			</control>
+			<control type="button" id="23">
+				<description>Apply changes button</description>
+				<left>340</left>
+				<top>15</top>
+				<height>40</height>
+				<width>280</width>
+				<onup>200</onup>
+				<ondown>9000</ondown>
+				<onleft>22</onleft>
+				<onright>24</onright>
+				<textoffsetx>20</textoffsetx>
+				<font>METF_TitleText</font>
+				<textcolor>SettingsDetail</textcolor>
+				<focusedcolor>DialogTextFO</focusedcolor>
+				<disabledcolor>TextDisabled</disabledcolor>
+				<texturefocus border="5">ButtonNF.png</texturefocus>
+				<label>14070</label>
+				<align>center</align>
+			</control>
+			<control type="button" id="24">
+				<description>Clear active modes button</description>
+				<left>835</left>
+				<top>15</top>
+				<height>40</height>
+				<width>280</width>
+				<onup>200</onup>
+				<ondown>9000</ondown>
+				<onleft>23</onleft>
+				<onright>22</onright>
+				<textoffsetx>20</textoffsetx>
+				<font>METF_TitleText</font>
+				<textcolor>SettingsDetail</textcolor>
+				<focusedcolor>DialogTextFO</focusedcolor>
+				<disabledcolor>TextDisabled</disabledcolor>
+				<texturefocus border="5">ButtonFo.png</texturefocus>
+				<label>15066</label>
+				<align>center</align>
+			</control>
+		</control>
+	</controls>
+</window>
