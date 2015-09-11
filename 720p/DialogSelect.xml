@@ -41,6 +41,14 @@
 				<aligny>center</aligny>
 				<label>13406</label>
 			</control>
+			<control type="label" id="4">
+				<description>Visualisation Preset Spinner</description>
+				<left>20</left>
+				<top>120</top>
+				<width>550</width>
+				<align>center</align>
+				<font>METF_ContextValue</font>
+			</control>
 			<control type="list" id="3">
 				<posx>440</posx>
 				<posy>215</posy>

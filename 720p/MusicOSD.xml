@@ -287,14 +287,6 @@
 					<texturefocus>osd/osd_button_video_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_video_nf.png</texturenofocus>
 				</control>
-				<control type="button" id="13">
-					<description>Visualisation Preset List</description>
-					<height>52</height>
-					<width>52</width>
-					<texturefocus>osd/osd_button_vis_fo.png</texturefocus>
-					<texturenofocus>osd/osd_button_vis_nf.png</texturenofocus>
-					<onclick>ActivateWindow(visualisationpresetlist)</onclick>
-				</control>
 				<control type="button" id="14">
 					<description>Visualisation Settings</description>
 					<height>52</height>
