@@ -159,6 +159,11 @@
 				<include>SettingsLabelLeft</include>
 				<label>$LOCALIZE[19165]</label>
 			</control>
+			<control type="button" id="8">
+				<description>Play recording</description>
+				<include>SettingsLabelLeft</include>
+				<label>19687</label>
+			</control>
 			<control type="button" id="6">
 				<description>Record Button</description>
 				<include>SettingsLabelLeft</include>
