@@ -50,7 +50,8 @@
 				<onclick>ReplaceWindow(music)</onclick>
 			</control>
 		</control>
-		
+
+			
 		<control type="grouplist">
 			<width>400</width>
 			<height>730</height>
@@ -87,10 +88,9 @@
 				<texturenofocus border="1">ButtonFO2Wide.png</texturenofocus>
 				<visible>ControlGroup(7000).HasFocus(27)</visible>
 			</control>
-			
 			<control type="button" id="7041">
-				<description>shuffle, non-focus, on</description>
-				<label>$LOCALIZE[191]: $LOCALIZE[31007]</label>
+				<description>shuffle, non-focus</description>
+				<label>$LOCALIZE[191] $LOCALIZE[559]</label>
 				<width>340</width>
 				<height>38</height>
 				<font>METF_DialogLarge</font>
@@ -100,26 +100,11 @@
 				<textoffsetx>20</textoffsetx>
 				<focusedcolor>DialogTextFO</focusedcolor>
 				<texturefocus border="1">ButtonFO2Wide.png</texturefocus>
-				<visible>!ControlGroup(7000).HasFocus(20) + SubString(Control.GetLabel(20),*)</visible>
+				<visible>!ControlGroup(7000).HasFocus(20)</visible>
 			</control>
 			<control type="button" id="7041">
-				<description>shuffle, non-focus, off</description>
-				<label>$LOCALIZE[191]: $LOCALIZE[351]</label>
-				<width>340</width>
-				<height>38</height>
-				<font>METF_DialogLarge</font>
-				<align>left</align>
-				<aligny>center</aligny>
-				<textcolor>TextNF</textcolor>
-				<textoffsetx>20</textoffsetx>
-				<focusedcolor>DialogTextFO</focusedcolor>
-				<texturefocus border="1">ButtonFO2Wide.png</texturefocus>
-				<visible>!ControlGroup(7000).HasFocus(20) + !SubString(Control.GetLabel(20),*)</visible>
-			</control>
-			
-			<control type="button" id="7041">
-				<description>shuffle, focus, on</description>
-				<label>$LOCALIZE[191]: $LOCALIZE[31007]</label>
+				<description>shuffle, focus</description>
+				<label>$LOCALIZE[191] $LOCALIZE[559]</label>
 				<width>340</width>
 				<height>38</height>
 				<font>METF_DialogLarge</font>
@@ -130,24 +115,8 @@
 				<focusedcolor>DialogTextFO</focusedcolor>
 				<texturefocus border="1">ButtonFO2Wide.png</texturefocus>
 				<texturenofocus border="1">ButtonFO2Wide.png</texturenofocus>
-				<visible>ControlGroup(7000).HasFocus(20) + SubString(Control.GetLabel(20),*)</visible>
+				<visible>ControlGroup(7000).HasFocus(20)</visible>
 			</control>
-			<control type="button" id="7041">
-				<description>shuffle, focus, off</description>
-				<label>$LOCALIZE[191]: $LOCALIZE[351]</label>
-				<width>340</width>
-				<height>38</height>
-				<font>METF_DialogLarge</font>
-				<align>left</align>
-				<aligny>center</aligny>
-				<textcolor>DialogTextFO</textcolor>
-				<textoffsetx>20</textoffsetx>
-				<focusedcolor>DialogTextFO</focusedcolor>
-				<texturefocus border="1">ButtonFO2Wide.png</texturefocus>
-				<texturenofocus border="1">ButtonFO2Wide.png</texturenofocus>
-				<visible>ControlGroup(7000).HasFocus(20) + !SubString(Control.GetLabel(20),*)</visible>
-			</control>
-			
 			<control type="button" id="7043">
 				<description>repeat</description>
 				<label>$LOCALIZE[179] $INFO[Control.GetLabel(26)]</label>
@@ -177,7 +146,6 @@
 				<texturenofocus border="1">ButtonFO2Wide.png</texturenofocus>
 				<visible>ControlGroup(7000).HasFocus(26)</visible>
 			</control>
-			
 			<control type="button" id="7044">
 				<description>save</description>
 				<label>$LOCALIZE[190] $LOCALIZE[559]</label>
@@ -236,32 +204,25 @@
 				<texturenofocus border="1">ButtonFO2Wide.png</texturenofocus>
 				<visible>ControlGroup(7000).HasFocus(22)</visible>
 			</control>
-			
-	<!--  Fake focused -->
-	
-<!--			
-
-			<control type="label" id="7200">
-				<label>$INFO[Container.ViewMode]</label>
-			</control>
-			<control type="label" id="201">
-				<description>shuffle</description>
-				<label>$LOCALIZE[31007]</label>
-				<visible>SubString(Control.GetLabel(20),*)</visible>
-			</control>
-			<control type="label" id="202">
-				<description>shuffle</description>
-				<label>$LOCALIZE[351]</label>
-				<visible>!SubString(Control.GetLabel(20),*)</visible>
-			</control>			
--->			
-			
-			
-			
-			
-			
-			
 		</control>
+		<control type="image">
+			<description>shuffle button</description>
+			<posx>775</posx>
+			<posy>258</posy>
+			<width>28</width>
+			<height>28</height>
+			<texture>keyboard/RadioButtonFO.png</texture>
+			<visible>ControlGroup(7000).HasFocus + SubString(Control.GetLabel(20),*)</visible>
+		</control>		
+		<control type="image">
+			<description>shuffle button</description>
+			<posx>775</posx>
+			<posy>258</posy>
+			<width>28</width>
+			<height>28</height>
+			<texture>keyboard/RadioButtonNF.png</texture>
+			<visible>ControlGroup(7000).HasFocus + !SubString(Control.GetLabel(20),*)</visible>
+		</control>	
 		<include>Global_Heading</include>
 		<include>Global_Weather</include>
 		<include>Global_Time</include>
