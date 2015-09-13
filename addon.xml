@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <addon 
-	id="skin.metropolis-personal-master"
+	id="skin.metropolis-personal-helix"
 	version="993.0.12"
-	name="Metropolis (MacGyver's Personal Mod)"
+	name="Metropolis (MacGyver's Personal Mod) for Kodi 14"
 	provider-name="Amra, Stoli, jingai">
 	<requires>
 		<import addon="xbmc.gui" version="5.3.0"/>
