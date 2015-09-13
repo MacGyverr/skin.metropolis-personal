@@ -179,6 +179,7 @@
 			<preloaditems>0</preloaditems>
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByMenu</include>
+			
 			<itemlayout width="300" height="60">
 <!--				<control type="image">
 					<posx>-110</posx>
@@ -284,6 +285,7 @@
 			<onleft>9000</onleft>
 			<onright>9000</onright>
 			<orientation>vertical</orientation>
+			<include>Animation_VisibleSlideDownFadeOut</include>
 			<visible allowhiddenfocus="true">Control.HasFocus(9001) | ![Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8003) | Control.HasFocus(8004)] + [Control.HasFocus(9000) + !Skin.HasSetting(HomeCleanLibrary)] + !StringCompare(Container(9000).ListItem.Property(Widget),HomeForecast)</visible>
 			<defaultcontrol always="true">1</defaultcontrol>
 			<scrolltime tween="sine" easing="out">240</scrolltime>

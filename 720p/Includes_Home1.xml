@@ -121,7 +121,7 @@
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByMenu</include>
 			<visible>!Skin.HasSetting(HideHelpText)</visible>
-			<visible>[Control.HasFocus(9000) | !Control.HasFocus(9001)] + !StringCompare(Container(9000).ListItem.Property(hasSubmenu),True) + [Control.HasFocus(9000) + !Skin.HasSetting(HomeCleanLibrary)]</visible>
+			<visible>!Control.HasFocus(9001) + [Control.HasFocus(9000) + SubString(Container(9000).ListItem.Property(hasSubmenu),True)] | [Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8003) | Control.HasFocus(8004)]</visible>
 			<control type="image">
 				<posx>190</posx>
 				<posy>475</posy>
@@ -151,7 +151,7 @@
 			<animation effect="slide" start="180,0" end="0,0" tween="back" easing="out" time="300">Visible</animation>
 			<animation effect="slide" start="0,0" end="180,0" tween="quadratic" easing="in" time="300">Hidden</animation>
 			<visible>!Skin.HasSetting(HideHelpText)</visible>
-			<visible>Control.HasFocus(9001) + !StringCompare(Container(9000).ListItem.Property(hasSubmenu),True)</visible>
+			<visible>Control.HasFocus(9001) + !StringCompare(Container(9000).ListItem.Property(hasSubmenu),True) | [Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8003) | Control.HasFocus(8004)]</visible>
 			<control type="image">
 				<posx>1060</posx>
 				<posy>475</posy>
@@ -260,7 +260,7 @@
 			<animation effect="slide" start="0,0" end="180,0" tween="quadratic" easing="in" time="300">Hidden</animation>
 		<include>Animation_OpenCloseFade</include>
 		<include>Animation_FadedByMenu</include>
-		<visible allowhiddenfocus="true">[Control.HasFocus(9000) + !Skin.HasSetting(HomeStats) + !Skin.HasSetting(HomeCleanLibrary)] | Control.HasFocus(9001)</visible>
+		<visible allowhiddenfocus="true">[Control.HasFocus(9000) + !Skin.HasSetting(HomeStats) + !Skin.HasSetting(HomeCleanLibrary)] | Control.HasFocus(9001) | [[Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8003) | Control.HasFocus(8004)] + !Skin.HasSetting(HomeStats) + !Skin.HasSetting(HomeCleanLibrary)]</visible>
 		<itemlayout width="450" height="32">
 				<control type="label">
 					<top>0</top>

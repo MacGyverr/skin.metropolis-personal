@@ -4,7 +4,7 @@
 	<!-- Submenu title for all home views -->
 	
 	<include name="RecentlyAddedArrow1">
-		<posx>238</posx>
+		<posx>460</posx>
 		<posy>510</posy>
 		<width>30</width>
 		<height>30</height>
@@ -29,7 +29,7 @@
 	</include>
 	
 	<include name="RecentlyAddedTitle1">
-		<posx>270</posx>
+		<posx>505</posx>
 		<posy>513</posy>
 		<width>570</width>
 		<height>25</height>
@@ -69,7 +69,7 @@
 			<animation effect="fade" start="0" end="100" time="0" condition="Control.HasFocus(9001) + ![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">WindowClose</animation>
 			<animation effect="slide" start="180,0" end="0,0" tween="back" easing="out" time="300">Visible</animation>
 			<animation effect="slide" start="0,0" end="180,0" tween="quadratic" easing="in" time="300">Hidden</animation>
-			<visible>Skin.HasSetting(HomeStats) + [[!Control.HasFocus(9001) + ![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]] | [[Skin.HasSetting(Home2) | Skin.HasSetting(Home3)] + ![Player.HasAudio + Skin.HasSetting(MusicSongInfoOverlay)]]]</visible>
+			<visible>[[Player.HasAudio + ![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]] | !Player.HasAudio] + Skin.HasSetting(HomeStats) + [[!Control.HasFocus(9001) + ![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]] | [[Skin.HasSetting(Home2) | Skin.HasSetting(Home3)] + ![Player.HasAudio + Skin.HasSetting(MusicSongInfoOverlay)]]]</visible>
 			<control type="grouplist">
 				<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">HomeStatsPosition1</include>
 				<include condition="Skin.HasSetting(Home2)">HomeStatsPosition2</include>
@@ -308,7 +308,7 @@
 					<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">RecentlyAddedArrow1</include>
 					<include condition="Skin.HasSetting(Home2)">RecentlyAddedArrow2</include>
 					<include condition="Skin.HasSetting(Home3)">RecentlyAddedArrow3</include>
-					<visible>!IsEmpty(Container(9000).ListItem.Property(widget)) + !StringCompare(Container(9000).ListItem.Property(Widget),HomeForecast) + ![[StringCompare(Container(9000).ListItem.Property(Widget),PVR) + !PVR.IsRecording] + [StringCompare(Container(9000).ListItem.Property(Widget),PVR) + !PVR.HasNonRecordingTimer]]</visible>
+					<visible>![[Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8003) | Control.HasFocus(8004)] + ![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]] + ![Control.HasFocus(9001) + ![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]] + !IsEmpty(Container(9000).ListItem.Property(widget)) + !StringCompare(Container(9000).ListItem.Property(Widget),HomeForecast) + ![[StringCompare(Container(9000).ListItem.Property(Widget),PVR) + !PVR.IsRecording] + [StringCompare(Container(9000).ListItem.Property(Widget),PVR) + !PVR.HasNonRecordingTimer]]</visible>
 				</control>
 				
 				<!-- Widget titles for all home views -->
@@ -318,13 +318,19 @@
 					<include condition="Skin.HasSetting(Home3)">RecentlyAddedTitle3</include>
 					<label>[B]$INFO[Container(9000).ListItem.Property(widgetName)][/B]</label>
 					<shadowcolor>ff000000</shadowcolor>
-					<visible>!IsEmpty(Container(9000).ListItem.Property(widget)) + !StringCompare(Container(9000).ListItem.Property(Widget),HomeForecast) + ![[StringCompare(Container(9000).ListItem.Property(Widget),PVR) + !PVR.IsRecording] + [StringCompare(Container(9000).ListItem.Property(Widget),PVR) + !PVR.HasNonRecordingTimer]]</visible>
+					<visible>![Control.HasFocus(9001) + ![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]] + !IsEmpty(Container(9000).ListItem.Property(widget)) + !StringCompare(Container(9000).ListItem.Property(Widget),HomeForecast) + ![[StringCompare(Container(9000).ListItem.Property(Widget),PVR) + !PVR.IsRecording] + [StringCompare(Container(9000).ListItem.Property(Widget),PVR) + !PVR.HasNonRecordingTimer]]</visible>
 				</control>
 			</control>
 			
 			<control type="group" id="9002">
-				<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(9002).HasFocus()">conditional</animation>
-				<animation effect="fade" start="0" end="100" delay="200" time="200" condition="ControlGroup(9002).HasFocus()">conditional</animation>
+		<animation type="Conditional" condition="ControlGroup(9002).HasFocus()" reversible="false">
+			<effect type="slide" start="0,400" end="0,0" tween="quadratic" easing="out" time="200" />
+			<effect type="fade" start="0" end="100" time="100" />
+		</animation>
+		<animation type="Conditional" condition="!ControlGroup(9002).HasFocus()" reversible="false">
+			<effect type="slide" start="0,0" end="0,400" tween="quadratic" easing="in" time="200" />
+			<effect type="fade" start="100" end="0" time="100" />
+		</animation>
 				<!-- Widget Thumbnails -->
 
 				<!-- script.extendedinfo/service.library.data.provider Widget Thumbnail-->
@@ -571,6 +577,7 @@
 			
 			<!-- 7 Day Forecast -->
 			<control type="grouplist">
+				<include>Animation_VisibleSlideDownFadeOut</include>
 				<visible>Control.HasFocus(9000) + StringCompare(Container(9000).ListItem.Property(Widget),HomeForecast)</visible>
 				<top>WeatherHomeTop</top>
 				<!-- <left>WeatherHomeLeft</left> -->

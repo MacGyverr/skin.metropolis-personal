@@ -143,6 +143,34 @@
 			<effect type="fade" start="100" end="0" time="400" />
 		</animation>
 	</include>
+	<include name="Animation_SlideLeftFadeOut">
+		<animation type="Visible" reversible="false">
+			<effect type="slide" start="-220,0" end="0,0" tween="quadratic" easing="out" time="200" />
+			<effect type="fade" start="0" end="100" time="100" />
+		</animation>
+		<animation type="Hidden" reversible="false">
+			<effect type="slide" start="0,0" end="-220,0" tween="quadratic" easing="in" time="200" />
+			<effect type="fade" start="100" end="0" time="100" />
+		</animation>
+		<animation type="WindowOpen" reversible="false">
+			<effect type="slide" start="-220,0" end="0,0" tween="quadratic" easing="out" time="200" />
+			<effect type="fade" start="0" end="100" time="100" />
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<effect type="slide" start="0,0" end="-220,0" tween="quadratic" easing="in" time="200" />
+			<effect type="fade" start="100" end="0" time="100" />
+		</animation>
+	</include>
+	<include name="Animation_VisibleSlideDownFadeOut">
+		<animation type="Visible" reversible="false">
+			<effect type="slide" start="0,400" end="0,0" tween="quadratic" easing="out" time="200" />
+			<effect type="fade" start="0" end="100" time="100" />
+		</animation>
+		<animation type="Hidden" reversible="false">
+			<effect type="slide" start="0,0" end="0,400" tween="quadratic" easing="in" time="200" />
+			<effect type="fade" start="100" end="0" time="100" />
+		</animation>
+	</include>
 	<!-- Info dialog animations -->
 	<include name="Animation_HiddenByInfo">
 		<animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(songinformation)">Conditional</animation>
