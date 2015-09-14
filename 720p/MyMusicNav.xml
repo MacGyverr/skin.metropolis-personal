@@ -83,23 +83,6 @@
 					<aligny>center</aligny>
 					<pulseonselect>false</pulseonselect>
 				</control>
-				<control type="radiobutton" id="99">
-					<description>Library button</description>
-					<width>340</width>
-					<height>40</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>METF_DialogLarge</font>
-					<textoffsetx>20</textoffsetx>
-					<textcolor>TextNF</textcolor>
-					<focusedcolor>DialogTextFO</focusedcolor>
-					<disabledcolor>TextDisabled</disabledcolor>
-					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<label>$LOCALIZE[29800]</label>
-					<onclick>ReplaceWindow(MusicFiles)</onclick>
-					<selected>Window.IsVisible(MusicLibrary)</selected>
-				</control>
 				<control type="edit" id="19">
 					<description>Filter</description>
 					<width>340</width>
