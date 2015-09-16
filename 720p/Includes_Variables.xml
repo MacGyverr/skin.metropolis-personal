@@ -118,8 +118,7 @@
 		<value condition="!IsEmpty(Skin.String(CustomWeather)) + !Skin.HasSetting(DynamicWeather)">$INFO[Skin.String(CustomWeather)]</value>
 		<value condition="Skin.HasSetting(DynamicWeather) + Skin.HasSetting(WeatherFanart1)">resource://resource.images.weatherfanart.prairie/$INFO[Window(Weather).Property(Current.FanartCode)]/weather-$INFO[Window(Weather).Property(Current.FanartCode)].jpg</value>
 		<value condition="Skin.HasSetting(DynamicWeather) + Skin.HasSetting(WeatherFanart2)">resource://resource.images.weatherfanart.single/$INFO[Window(Weather).Property(Current.FanartCode)].jpg</value>
-<!-- kodi is broken		<value condition="Skin.HasSetting(DynamicWeather) + Skin.HasSetting(WeatherFanart3)">resource://resource.images.weatherfanart.multi/$INFO[Window(Weather).Property(Current.FanartCode)]/</value>  -->
-		<value condition="Skin.HasSetting(DynamicWeather) + Skin.HasSetting(WeatherFanart3)">special://home/addons/resource.images.weatherfanart.multi/resources/$INFO[Window(Weather).Property(Current.FanartCode)]/</value>
+		<value condition="Skin.HasSetting(DynamicWeather) + Skin.HasSetting(WeatherFanart3)">resource://resource.images.weatherfanart.multi/$INFO[Window(Weather).Property(Current.FanartCode)]/</value>
 		<value condition="Skin.HasSetting(DynamicWeather) + Skin.HasSetting(WeatherFanart4)">resource://resource.images.weatherfanart.faded/$INFO[Window(Weather).Property(Current.FanartCode)].jpg</value>
 		<value>home_art/weather.jpg</value>
 	</variable>
@@ -131,7 +130,7 @@
 		<value condition="Skin.HasSetting(WeatherIcons4)">resource://resource.images.weathericons.grey</value>
 		<value condition="Skin.HasSetting(WeatherIcons5)">resource://resource.images.weathericons.flat</value>
 		<value condition="Skin.HasSetting(WeatherIcons6)">resource://resource.images.weathericons.coloured</value>
-		<value condition="Skin.HasSetting(WeatherIcons7)">special://home/addons/resource.images.weathericons.animated/resources/</value>
+		<value condition="Skin.HasSetting(WeatherIcons7)">resource://resource.images.weathericons.animated/</value>
 		<value condition="Skin.HasSetting(WeatherIcons8)">resource://resource.images.weathericons.3d-white</value>
 		<value condition="Skin.HasSetting(WeatherIcons9)">resource://resource.images.weathericons.3d-coloured</value>
 		<value>resource://resource.images.weathericons.white</value>

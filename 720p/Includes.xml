@@ -451,6 +451,7 @@
 				<posy>517</posy>
 				<width>30</width>
 				<height>30</height>
+				<include>Weather_Icon_Animation</include>
 				<imagepath>$VAR[Weather_Icons_Current]</imagepath>
 			</control>	
 			<control type="label">
