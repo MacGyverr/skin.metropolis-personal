@@ -11,7 +11,7 @@
 		<import addon="script.favourites" version="2.0.0"/>
 		<import addon="script.tv.show.next.aired" version="3.0.0"/>
 		<import addon="service.library.data.provider" version="0.0.7"/>
-		<import addon="script.extendedinfo" version="2.0.0"/>
+		<import addon="script.extendedinfo" version="3.0.0"/>
 		<import addon="script.skinshortcuts" version="0.2.1"/>
         <import addon="resource.images.studios.white" version="0.0.5"/>
         <import addon="resource.images.weatherfanart.prairie" version="0.0.4"/>
