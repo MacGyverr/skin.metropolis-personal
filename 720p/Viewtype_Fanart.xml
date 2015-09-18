@@ -80,7 +80,7 @@
 							<posy>26</posy>
 							<width>285</width>
 							<height>373</height>
-							<texture fallback="flags/Overlays/default.png">$INFO[ListItem.VideoResolution,flags/Overlays/,.png]</texture>
+							<texture fallback="flags/Overlays/default.png">$VAR[MediaOverlay]</texture>
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" center="auto" start="72" end="100" time="250" tween="sine" easing="inout" delay="150" />
 							</animation>

@@ -6,6 +6,14 @@
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 
+	<variable name="MediaOverlay">
+		<value condition="IsEmpty(ListItem.VideoResolution)">flags/Overlays/default.png</value>
+		<value condition="[ListItem.IsStereoscopic | substring(listitem.filename,.3d)] + [substring(ListItem.VideoResolution,720) | substring(ListItem.VideoResolution,1080) | substring(ListItem.VideoResolution,4K)]">flags/Overlays/bluray3d.png</value>
+		<value condition="ListItem.IsStereoscopic | [substring(listitem.filename,.3d) + ![substring(ListItem.VideoResolution,720) | substring(ListItem.VideoResolution,1080) | substring(ListItem.VideoResolution,4K)]]">flags/Overlays/other3d.png</value>
+		<value condition="substring(listitem.filename,hddvd) | substring(listitem.filename,hd-dvd) | substring(listitem.filename,.evo,Right)">flags/Overlays/hddvd.png</value>
+		<value>$INFO[ListItem.VideoResolution,flags/Overlays/,.png]</value>
+	</variable>
+
 	<variable name="NextAiredFanart">
 		<value condition="Control.HasFocus(200)">$INFO[Container(200).ListItem.Property(Fanart)]</value>
 		<value condition="Control.HasFocus(201)">$INFO[Container(201).ListItem.Property(Fanart)]</value>

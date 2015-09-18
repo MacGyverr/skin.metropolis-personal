@@ -84,7 +84,7 @@
 							<posy>1</posy>
 							<width>151</width>
 							<height>209</height>
-							<texture fallback="flags/Overlays/default.png">$INFO[ListItem.VideoResolution,flags/Overlays/,.png]</texture>
+							<texture fallback="flags/Overlays/default.png">$VAR[MediaOverlay]</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 						</control>	
 					</control>	
@@ -243,7 +243,7 @@
 							<posy>1</posy>
 							<width>151</width>
 							<height>209</height>
-							<texture fallback="flags/Overlays/default.png">$INFO[ListItem.VideoResolution,flags/Overlays/,.png]</texture>
+							<texture fallback="flags/Overlays/default.png">$VAR[MediaOverlay]</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<!-- Top Left Corner -->
 							<animation effect="zoom" reversible="false" time="400" tween="back" easing="out" end="00,00,250,340" condition="[Container(54).Row(0) + Container(54).Column(0)]">Conditional</animation>

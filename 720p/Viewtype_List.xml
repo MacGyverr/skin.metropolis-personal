@@ -520,7 +520,7 @@
 							<posy>-20</posy>
 							<width>380</width>
 							<height>500</height>
-							<texture fallback="flags/Overlays/default.png">$INFO[ListItem.VideoResolution,flags/Overlays/,.png]</texture>
+							<texture fallback="flags/Overlays/default.png">$VAR[MediaOverlay]</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 						</control>	
 					</control>	

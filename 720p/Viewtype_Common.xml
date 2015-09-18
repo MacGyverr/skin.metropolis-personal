@@ -17,7 +17,7 @@
 		<include>Animation_OpenCloseFade</include>
 		<include>Animation_FadedByMenu</include>
 		<include>Animation_HiddenByInfo</include>
-		<visible>Window.IsActive(videolibrary) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+		<visible>[Window.IsActive(videolibrary) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)]]</visible>
 		<itemlayout width="195" height="245">
 			<control type="image">
 				<posx>16</posx>
@@ -64,7 +64,7 @@
 					<posy>95</posy>
 					<width>210</width>
 					<height>283</height>
-					<texture fallback="flags/Overlays/default.png">$INFO[ListItem.VideoResolution,flags/Overlays/,.png]</texture>
+					<texture fallback="flags/Overlays/default.png">$VAR[MediaOverlay]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 				</control>	
 			</control>	
@@ -146,7 +146,7 @@
 					<posy>34</posy>
 					<width>307</width>
 					<height>413</height>
-					<texture fallback="flags/Overlays/default.png">$INFO[ListItem.VideoResolution,flags/Overlays/,.png]</texture>
+					<texture fallback="flags/Overlays/default.png">$VAR[MediaOverlay]</texture>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="auto" start="72" end="100" time="250" tween="sine" easing="inout" delay="150" />
 					</animation>
@@ -478,7 +478,7 @@
 								<posy>0</posy>
 								<width>313</width>
 								<height>415</height>
-								<texture fallback="flags/Overlays/default.png">$INFO[ListItem.VideoResolution,flags/Overlays/,.png]</texture>
+								<texture fallback="flags/Overlays/default.png">$VAR[MediaOverlay]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>	
 						</control>	
@@ -558,7 +558,7 @@
 								<posy>0</posy>
 								<width>373</width>
 								<height>505</height>
-								<texture fallback="flags/Overlays/default.png">$INFO[ListItem.VideoResolution,flags/Overlays/,.png]</texture>
+								<texture fallback="flags/Overlays/default.png">$VAR[MediaOverlay]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>	
 						</control>	
