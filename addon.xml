@@ -14,7 +14,7 @@
 		<import addon="script.extendedinfo" version="2.0.0"/>
 		<import addon="script.skinshortcuts" version="0.2.1"/>
         <import addon="resource.images.studios.white" version="0.0.5"/>
-        <import addon="resource.images.weatherfanart.prairie" version="0.0.3"/>
+        <import addon="resource.images.weatherfanart.prairie" version="0.0.4"/>
         <import addon="resource.images.weathericons.white" version="0.0.4"/>
 	</requires>
 	<extension
