@@ -390,7 +390,7 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus border="5">ButtonFo.png</texturefocus>
 				<texturenofocus border="5">ButtonNf.png</texturenofocus>
-				<label>$ADDON[script.skinshortcuts 32028]</label>
+				<label>Undo Changes</label>
 			</control>
 		<!-- Reset all -->
 			<control type="button" id="999">
@@ -535,7 +535,7 @@
 			<include>Animation_CommonFadeNoHide</include>
 			<control type="label">
 				<include>SettingsDetailVars</include>
-				<label>Resets all menu items back to Metropolis default.  This will remove any new items addded, add removed any ones, and undo all changes made by the user. Cannot be undone!</label>
+				<label>Resets all menu items back to Metropolis default.  This will remove any new items added, and re-add any removed items, this will undo all changes made by the user. Cannot be undone!</label>
 			</control>
 		</control>
 	
