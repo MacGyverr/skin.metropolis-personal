@@ -406,6 +406,138 @@
 				<label>$ADDON[script.skinshortcuts 32037]</label>
 			</control>
 		</control>
+		
+		<!-- Control Info labels -->
+		<control type="group">
+			<posx>40</posx>
+			<posy>498</posy>
+			<visible>Control.HasFocus(302)</visible>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>Removes the current menu item, this cannot be undone specifically, however you can restore all the menus and start over if needed.  You may also manually recreate the menu item later if you choose.</label>
+			</control>
+		</control>		
+		<control type="group">
+			<posx>40</posx>
+			<posy>498</posy>
+			<visible>Control.HasFocus(303)</visible>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>Moves the menu item upwards in vertical views (or left in horizontal views).  In horizontal views the 3rd menu item is in the center.</label>
+			</control>
+		</control>		
+		<control type="group">
+			<posx>40</posx>
+			<posy>498</posy>
+			<visible>Control.HasFocus(304)</visible>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>Moves the menu item downwards in vertical views (or right in horizontal views).  In horizontal views the 3rd menu item is in the center.</label>
+			</control>
+		</control>
+		<control type="group">
+			<posx>40</posx>
+			<posy>498</posy>
+			<visible>Control.HasFocus(401)</visible>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>Sets the action taken by selecting the menu item.  This control uses various built-in preset choices that you can simply select.  You can manually enter more complex commands below in "Custom action" if needed.</label>
+			</control>
+		</control>
+		<control type="group">
+			<posx>40</posx>
+			<posy>498</posy>
+			<visible>Control.HasFocus(306)</visible>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>Sets the background image of the selected menu item.  This control uses the paths configured under "Files" in your sources.</label>
+			</control>
+		</control>
+		<control type="group">
+			<posx>40</posx>
+			<posy>498</posy>
+			<visible>Control.HasFocus(305)</visible>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>Sets the label of the selected menu item.  This is usually set automatically when selecting the shortcut but it can be manually modified if you wish.</label>
+			</control>
+		</control>
+		<control type="group">
+			<posx>40</posx>
+			<posy>498</posy>
+			<visible>Control.HasFocus(309)</visible>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>Allows you to set a Widget menu above the current menu item.  Widgets are built-in info scripts that perform various tasks or display useful menus. Some widgets have been set by default but can be changed or removed.</label>
+			</control>
+		</control>
+		<control type="group">
+			<posx>40</posx>
+			<posy>498</posy>
+			<visible>Control.HasFocus(307)</visible>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>Allows you to set a custom action for the current menu item.  This is used to override or edit the action taken by the menu item.  If an shortcut exists already above, the command will populate the edit window. You will use the keyboard to manually edit the field.</label>
+			</control>
+		</control>
+		<control type="group">
+			<posx>40</posx>
+			<posy>498</posy>
+			<visible>Control.HasFocus(405)</visible>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>Allows you to create a custom submenu for the current menu item.  Submenus can be populated with custom commands, shortcuts, and/or favorites.  The submenu editor will look and operate almost exactly like the main menu editor.</label>
+			</control>
+		</control>
+		<control type="group">
+			<posx>40</posx>
+			<posy>498</posy>
+			<visible>Control.HasFocus(10)</visible>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>Apply changes. (You can go Back or Exit to ignore any current changes)</label>
+			</control>
+		</control>
+		<control type="group">
+			<posx>40</posx>
+			<posy>498</posy>
+			<visible>Control.HasFocus(301)</visible>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>Creates a new menu/submenu item at the bottom of the current list.</label>
+			</control>
+		</control>
+		<control type="group">
+			<posx>40</posx>
+			<posy>498</posy>
+			<visible>Control.HasFocus(308)</visible>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>Sets the screen back to the current saved menu settings and undoes any changes that have not been saved during this session.</label>
+			</control>
+		</control>
+		<control type="group">
+			<posx>40</posx>
+			<posy>498</posy>
+			<visible>Control.HasFocus(999)</visible>
+			<include>Animation_CommonFadeNoHide</include>
+			<control type="label">
+				<include>SettingsDetailVars</include>
+				<label>Resets all menu items back to Metropolis default.  This will remove any new items addded, add removed any ones, and undo all changes made by the user. Cannot be undone!</label>
+			</control>
+		</control>
 	
 		<include>Global_ContextFilter</include>
 		<include>Global_Weather</include>
