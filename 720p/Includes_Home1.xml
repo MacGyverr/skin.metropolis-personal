@@ -57,18 +57,6 @@
 				<texture>frames/ClassicFrame_Background.png</texture>
 				<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
 			</control>
-			
-			<control type="image">
-				<posx>240</posx>
-				<posy>50</posy>
-				<width>800</width>
-				<height>450</height>
-				<texture>$VAR[Weather_Fanart]</texture>
-				<aspectratio>stretch</aspectratio>
-				<animation reversible="false" effect="zoom" center="auto" start="100" end="112" time="200" tween="sine" easing="inout">focus</animation>
-				<animation reversible="false" effect="zoom" center="auto" start="112" end="100" time="200" tween="sine" easing="inout">unfocus</animation>
-				<visible allowhiddenfocus="true">!Window.IsActive(videooverlay) + !Skin.HasSetting(WeatherFanart3) + StringCompare(Container(9000).ListItem.Property(submenuVisibility),weather) + !Skin.HasSetting(NoWeather) + Skin.HasSetting(DynamicWeather) + !Skin.HasSetting(Home2)</visible>
-			</control>
 			<control type="multiimage">
 				<description>Weather Multi-image background</description>
 				<posx>240</posx>
@@ -82,7 +70,7 @@
 				<randomize>true</randomize>
 				<loop>yes</loop>
 				<aspectratio>stretch</aspectratio>
-				<visible allowhiddenfocus="true">!Window.IsActive(videooverlay) + Skin.HasSetting(WeatherFanart3) + StringCompare(Container(9000).ListItem.Property(submenuVisibility),weather) + !Skin.HasSetting(NoWeather) + Skin.HasSetting(DynamicWeather) + !Skin.HasSetting(Home2)</visible>
+				<visible allowhiddenfocus="true">!Window.IsActive(videooverlay) + StringCompare(Container(9000).ListItem.Property(submenuVisibility),weather) + !Skin.HasSetting(NoWeather)</visible>
 			</control>	
 			<control type="multiimage">
 				<posx>240</posx>
@@ -97,7 +85,6 @@
 				<visible>!Window.IsActive(videooverlay)</visible>
 				<visible allowhiddenfocus="true">![StringCompare(Container(9000).ListItem.Property(submenuVisibility),weather) + !Skin.HasSetting(NoWeather) + Skin.HasSetting(DynamicWeather) + !Skin.HasSetting(Home2)]</visible>
 			</control>	
-			
 			<control type="videowindow">
 				<posx>240</posx>
 				<posy>50</posy>

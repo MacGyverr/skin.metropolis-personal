@@ -109,10 +109,11 @@
 			<randomize>true</randomize>
 			<loop>yes</loop>
 			<aspectratio>stretch</aspectratio>
-			<visible allowhiddenfocus="true">StringCompare(Container(9000).ListItem.Property(submenuVisibility),weather) + !Skin.HasSetting(NoWeather) + Skin.HasSetting(DynamicWeather) + !Skin.HasSetting(Home2)</visible>
+			<visible allowhiddenfocus="true">!Window.IsActive(videooverlay) + StringCompare(Container(9000).ListItem.Property(submenuVisibility),weather) + !Skin.HasSetting(NoWeather)</visible>
 		</control>
 		
 		<control type="image">
+			<description>Everything but weather Multi-image background</description>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>

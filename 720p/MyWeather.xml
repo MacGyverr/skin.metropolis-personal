@@ -4790,6 +4790,24 @@
 					<texturedownfocus>ArrowDownFo.png</texturedownfocus>
 					<reverse>yes</reverse>
 				</control>
+				<control type="button" id="999">
+					<description>Select weather icons</description>
+					<width>340</width>
+					<height>40</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>METF_DialogLarge</font>
+					<label>Select Icon Pack</label>
+					<textoffsetx>20</textoffsetx>
+					<textcolor>TextNF</textcolor>
+					<focusedcolor>DialogTextFO</focusedcolor>
+					<disabledcolor>TextDisabled</disabledcolor>
+					<texturefocus>ButtonFO2Wide.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<onclick>RunScript(script.image.resource.select,property=weathericons&amp;type=resource.images.weathericons)</onclick>
+					<visible>System.HasAddon(script.image.resource.select)</visible>
+				</control>	
 				<include>Nav_NowPlaying</include>
 			</control>
 			
@@ -4797,7 +4815,7 @@
 				<description>Location Label</description>
 				<visible>!Skin.HasSetting(UseExtendedWeather)</visible>
 				<posx>482</posx>
-				<posy>202</posy>
+				<posy>242</posy>
 				<width>250</width>
 				<height>40</height>
 				<align>left</align>
