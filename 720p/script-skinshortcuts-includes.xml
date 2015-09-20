@@ -240,7 +240,7 @@
 		<item id="16">
 			<label>Live Radio</label>
 			<label2>Common Shortcut</label2>
-			<icon>DefaultShortcut.png</icon>
+			<icon>home_icons/radio.png</icon>
 			<thumb>home_art/radio.jpg</thumb>
 			<property name="labelID">liveradio</property>
 			<property name="defaultID">radio</property>
@@ -255,7 +255,7 @@
 		<item id="17">
 			<label>TV Guide</label>
 			<label2>Program</label2>
-			<icon>DefaultShortcut.png</icon>
+			<icon>home_icons/tvguide.png</icon>
 			<thumb>home_art/tvguide.jpg</thumb>
 			<property name="labelID">script.tvguide</property>
 			<property name="defaultID">script.tvguide</property>
@@ -523,7 +523,7 @@
 		<item id="16">
 			<label>Live Radio</label>
 			<label2>Common Shortcut</label2>
-			<icon>DefaultShortcut.png</icon>
+			<icon>home_icons/radio.png</icon>
 			<thumb>home_art/radio.jpg</thumb>
 			<property name="labelID">liveradio</property>
 			<property name="defaultID">radio</property>
@@ -538,7 +538,7 @@
 		<item id="17">
 			<label>TV Guide</label>
 			<label2>Program</label2>
-			<icon>DefaultShortcut.png</icon>
+			<icon>home_icons/tvguide.png</icon>
 			<thumb>home_art/tvguide.jpg</thumb>
 			<property name="labelID">script.tvguide</property>
 			<property name="defaultID">script.tvguide</property>
