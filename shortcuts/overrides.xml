@@ -38,7 +38,7 @@
 	<widget labelID="movies" label="Rotten Tomatoes (Top 10 Rentals)">Top10Rentals</widget>
 	<widget labelID="movies" label="Rotten Tomatoes (Current DVD Releases)">CurrentDVDs</widget>
 	<widget labelID="movies" label="Rotten Tomatoes (New DVD Releases)">NewDVDs</widget>
-<!--	<widget labelID="movies" label="Rotten Tomatoes (Upcoming DVD Releases)">UpcomingDVDs</widget>  -->
+	<widget labelID="movies" label="Rotten Tomatoes (Upcoming DVD Releases)">UpcomingDVDs</widget> 
 
 	<widget labelID="movies" label="The MovieDB (In Cinemas)">InCinemasMovies</widget>
 	<widget labelID="movies" label="The MovieDB (Upcoming Movies)">UpcomingMovies</widget>
@@ -51,8 +51,8 @@
 	
 	<widget labelID="movies" label="Trakt.tv (Trending Movies)">TrendingMovies</widget>
 	<widget labelID="tvshows" label="Trakt.tv (Trending TV Shows)">TrendingTVShows</widget>
-<!--	<widget labelID="tvshows" label="Trakt.tv (Airing TV Shows)">AiringShows</widget>
-	<widget labelID="tvshows" label="Trakt.tv (Premiere TV Shows)">PremiereShows</widget> -->
+	<widget labelID="tvshows" label="Trakt.tv (Airing TV Shows)">AiringShows</widget>
+	<widget labelID="tvshows" label="Trakt.tv (Premiere TV Shows)">PremiereShows</widget> 
 
 	<widget labelID="pictures" type="pictures" label="Random XKCD Comics">XKCD</widget>
 	<widget labelID="pictures" type="pictures" label="Random Cyanide and Happiness Comics">Cyanide</widget>
@@ -66,10 +66,8 @@
 	<!-- Program addons  -->
 	<widget labelID="programs" type="programs" label="Program Addons">LibraryAddons</widget>
 	
-	<!-- Favourites 
-	<widget label="Favourites">Favourites</widget>
+	<!-- Favourites -->
 	<widget label="Favourites">LibraryFavourites</widget>
-	<widgetdefault labelID="1036">Favourites</widgetdefault> -->
 	
 	<!-- PVR -->
 	<widget label="PVR Status">PVR</widget>
