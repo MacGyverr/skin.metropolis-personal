@@ -93,7 +93,7 @@
 		<label>$LOCALIZE[137]</label>
 		<label2>Needs GlobalSearch Script</label2>
 		<defaultID>script.globalsearch</defaultID>
-		<icon>DefaultMusicSearch.png</icon>
+		<icon>home_icons/search.png</icon>
 		<thumb />
 		<action>RunScript(script.globalsearch)</action>
 		<visible>System.HasAddon(script.globalsearch)</visible>

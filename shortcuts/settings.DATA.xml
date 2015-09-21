@@ -1,6 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <shortcuts>
 	<shortcut>
+		<action>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</action>
+		<label>Customize Main Menu</label>
+		<label2>32034</label2>
+		<defaultID>10017</defaultID>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+	</shortcut>
+	<shortcut>
 		<action>ActivateWindow(SkinSettings)</action>
 		<label>31011</label>
 		<label2>32034</label2>
