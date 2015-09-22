@@ -353,21 +353,6 @@
 			<onup>405</onup>
 			<ondown>401</ondown>
 			<orientation>horizontal</orientation>
-		<!-- OK Button -->
-			<control type="button" id="10">
-				<width>240</width>
-				<height>38</height>
-				<label>Apply</label>
-				<align>center</align>
-				<font>METF_TitleTextMedium</font>
-				<textcolor>white</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<texturefocus border="5">ButtonFo.png</texturefocus>
-				<texturenofocus border="5">ButtonNf.png</texturenofocus>
-			<!--	<onback condition="StringCompare(Window.Property(groupname),mainmenu)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0)</onback> -->
-				<onclick condition="StringCompare(Window.Property(groupname),mainmenu)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0)</onclick>
-				<onclick>Close</onclick>
-			</control>
 		<!-- Add item -->
 			<control type="button" id="301">
 				<width>240</width>
@@ -380,6 +365,21 @@
 				<texturenofocus border="5">ButtonNf.png</texturenofocus>
 				<label>Add New Menu</label>
 			</control>
+		<!-- OK Button -->
+			<control type="button" id="10">
+				<width>240</width>
+				<height>38</height>
+				<label>Ok</label>
+				<align>center</align>
+				<font>METF_TitleTextMedium</font>
+				<textcolor>white</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus border="5">ButtonFo.png</texturefocus>
+				<texturenofocus border="5">ButtonNf.png</texturenofocus>
+			<!--	<onback condition="StringCompare(Window.Property(groupname),mainmenu)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0)</onback> -->
+				<onclick condition="StringCompare(Window.Property(groupname),mainmenu)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0)</onclick>
+				<onclick>Close</onclick>
+			</control>
 		<!-- Reset -->
 			<control type="button" id="308">
 				<width>240</width>
@@ -390,7 +390,7 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus border="5">ButtonFo.png</texturefocus>
 				<texturenofocus border="5">ButtonNf.png</texturenofocus>
-				<label>Undo Changes</label>
+				<label>Reset All Menus</label>
 			</control>
 		<!-- Reset all 
 			<control type="button" id="999">
@@ -505,7 +505,7 @@
 			<include>Animation_CommonFadeNoHide</include>
 			<control type="label">
 				<include>SettingsDetailVars</include>
-				<label>Apply changes. (You can go Back or Exit to ignore any current changes)</label>
+				<label>Simply closes this window.  Any and all changes made while in this window where already permanent and instantaneous.  The new menu will build when exiting no matter what.</label>
 			</control>
 		</control>
 		<control type="group">
@@ -525,7 +525,7 @@
 			<include>Animation_CommonFadeNoHide</include>
 			<control type="label">
 				<include>SettingsDetailVars</include>
-				<label>Sets the screen back to the current saved menu settings and undoes any changes that have not been saved during this session.</label>
+				<label>Resets all menu items back to Metropolis default.  This will remove any new items added, and re-add any removed items, this will undo all changes made by the user. Cannot be undone!</label>
 			</control>
 		</control>
 		<control type="group">

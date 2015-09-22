@@ -1377,20 +1377,6 @@
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="1">
-			<label>Customize Main Menu</label>
-			<label2>$ADDON[script.skinshortcuts 32034]</label2>
-			<icon>DefaultShortcut.png</icon>
-			<thumb />
-			<property name="labelID">customizemainmenu</property>
-			<property name="defaultID">10017</property>
-			<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
-			<property name="path">RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</property>
-			<property name="list">RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</property>
-			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),settings)</visible>
-			<property name="group">settings</property>
-			<property name="isSubmenu">True</property>
-		</item>
-		<item id="2">
 			<label>$LOCALIZE[31011]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultFolder.png</icon>
@@ -1404,7 +1390,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="3">
+		<item id="2">
 			<label>$LOCALIZE[13000]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -1418,7 +1404,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="4">
+		<item id="3">
 			<label>$LOCALIZE[31468]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -1432,7 +1418,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="5">
+		<item id="4">
 			<label>$LOCALIZE[31469]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -1446,7 +1432,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="6">
+		<item id="5">
 			<label>$LOCALIZE[7]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultFolder.png</icon>
@@ -1460,7 +1446,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="7">
+		<item id="6">
 			<label>$LOCALIZE[13200]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -1474,7 +1460,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="8">
+		<item id="7">
 			<label>$LOCALIZE[10007]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -2642,20 +2628,6 @@
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="1">
-			<label>Customize Main Menu</label>
-			<label2>$ADDON[script.skinshortcuts 32034]</label2>
-			<icon>DefaultShortcut.png</icon>
-			<thumb />
-			<property name="labelID">customizemainmenu</property>
-			<property name="defaultID">10017</property>
-			<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
-			<property name="path">RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</property>
-			<property name="list">RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</property>
-			<visible>[StringCompare(System.ProfileName,test)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),settings)</visible>
-			<property name="group">settings</property>
-			<property name="isSubmenu">True</property>
-		</item>
-		<item id="2">
 			<label>$LOCALIZE[31011]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultFolder.png</icon>
@@ -2669,7 +2641,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="3">
+		<item id="2">
 			<label>$LOCALIZE[13000]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -2683,7 +2655,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="4">
+		<item id="3">
 			<label>$LOCALIZE[31468]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -2697,7 +2669,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="5">
+		<item id="4">
 			<label>$LOCALIZE[31469]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -2711,7 +2683,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="6">
+		<item id="5">
 			<label>$LOCALIZE[7]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultFolder.png</icon>
@@ -2725,7 +2697,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="7">
+		<item id="6">
 			<label>$LOCALIZE[13200]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -2739,7 +2711,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="8">
+		<item id="7">
 			<label>$LOCALIZE[10007]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -6257,20 +6229,6 @@
 	</include>
 	<include name="skinshortcuts-group-settings">
 		<item id="1">
-			<label>Customize Main Menu</label>
-			<label2>$ADDON[script.skinshortcuts 32034]</label2>
-			<icon>DefaultShortcut.png</icon>
-			<thumb />
-			<property name="labelID">customizemainmenu</property>
-			<property name="defaultID">10017</property>
-			<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
-			<property name="path">RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</property>
-			<property name="list">RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</property>
-			<visible>StringCompare(System.ProfileName,Master user)</visible>
-			<property name="group">settings</property>
-			<property name="isSubmenu">True</property>
-		</item>
-		<item id="2">
 			<label>$LOCALIZE[31011]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultFolder.png</icon>
@@ -6284,7 +6242,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="3">
+		<item id="2">
 			<label>$LOCALIZE[13000]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -6298,7 +6256,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="4">
+		<item id="3">
 			<label>$LOCALIZE[31468]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -6312,7 +6270,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="5">
+		<item id="4">
 			<label>$LOCALIZE[31469]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -6326,7 +6284,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="6">
+		<item id="5">
 			<label>$LOCALIZE[7]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultFolder.png</icon>
@@ -6340,7 +6298,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="7">
+		<item id="6">
 			<label>$LOCALIZE[13200]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -6354,7 +6312,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="8">
+		<item id="7">
 			<label>$LOCALIZE[10007]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -6369,20 +6327,6 @@
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="1">
-			<label>Customize Main Menu</label>
-			<label2>$ADDON[script.skinshortcuts 32034]</label2>
-			<icon>DefaultShortcut.png</icon>
-			<thumb />
-			<property name="labelID">customizemainmenu</property>
-			<property name="defaultID">10017</property>
-			<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
-			<property name="path">RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</property>
-			<property name="list">RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</property>
-			<visible>StringCompare(System.ProfileName,test)</visible>
-			<property name="group">settings</property>
-			<property name="isSubmenu">True</property>
-		</item>
-		<item id="2">
 			<label>$LOCALIZE[31011]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultFolder.png</icon>
@@ -6396,7 +6340,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="3">
+		<item id="2">
 			<label>$LOCALIZE[13000]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -6410,7 +6354,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="4">
+		<item id="3">
 			<label>$LOCALIZE[31468]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -6424,7 +6368,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="5">
+		<item id="4">
 			<label>$LOCALIZE[31469]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -6438,7 +6382,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="6">
+		<item id="5">
 			<label>$LOCALIZE[7]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultFolder.png</icon>
@@ -6452,7 +6396,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="7">
+		<item id="6">
 			<label>$LOCALIZE[13200]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -6466,7 +6410,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="8">
+		<item id="7">
 			<label>$LOCALIZE[10007]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -6483,20 +6427,6 @@
 	</include>
 	<include name="skinshortcuts-group-alt-settings">
 		<item id="1">
-			<label>Customize Main Menu</label>
-			<label2>$ADDON[script.skinshortcuts 32034]</label2>
-			<icon>DefaultShortcut.png</icon>
-			<thumb />
-			<property name="labelID">customizemainmenu</property>
-			<property name="defaultID">10017</property>
-			<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
-			<property name="path">RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</property>
-			<property name="list">RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</property>
-			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),settings)</visible>
-			<property name="group">settings</property>
-			<property name="isSubmenu">True</property>
-		</item>
-		<item id="2">
 			<label>$LOCALIZE[31011]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultFolder.png</icon>
@@ -6510,7 +6440,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="3">
+		<item id="2">
 			<label>$LOCALIZE[13000]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -6524,7 +6454,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="4">
+		<item id="3">
 			<label>$LOCALIZE[31468]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -6538,7 +6468,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="5">
+		<item id="4">
 			<label>$LOCALIZE[31469]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -6552,7 +6482,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="6">
+		<item id="5">
 			<label>$LOCALIZE[7]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultFolder.png</icon>
@@ -6566,7 +6496,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="7">
+		<item id="6">
 			<label>$LOCALIZE[13200]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -6580,7 +6510,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="8">
+		<item id="7">
 			<label>$LOCALIZE[10007]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -6595,20 +6525,6 @@
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="1">
-			<label>Customize Main Menu</label>
-			<label2>$ADDON[script.skinshortcuts 32034]</label2>
-			<icon>DefaultShortcut.png</icon>
-			<thumb />
-			<property name="labelID">customizemainmenu</property>
-			<property name="defaultID">10017</property>
-			<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
-			<property name="path">RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</property>
-			<property name="list">RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</property>
-			<visible>[StringCompare(System.ProfileName,test)] + StringCompare(Window(10000).Property(submenuVisibility),settings)</visible>
-			<property name="group">settings</property>
-			<property name="isSubmenu">True</property>
-		</item>
-		<item id="2">
 			<label>$LOCALIZE[31011]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultFolder.png</icon>
@@ -6622,7 +6538,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="3">
+		<item id="2">
 			<label>$LOCALIZE[13000]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -6636,7 +6552,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="4">
+		<item id="3">
 			<label>$LOCALIZE[31468]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -6650,7 +6566,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="5">
+		<item id="4">
 			<label>$LOCALIZE[31469]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -6664,7 +6580,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="6">
+		<item id="5">
 			<label>$LOCALIZE[7]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultFolder.png</icon>
@@ -6678,7 +6594,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="7">
+		<item id="6">
 			<label>$LOCALIZE[13200]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
@@ -6692,7 +6608,7 @@
 			<property name="group">settings</property>
 			<property name="isSubmenu">True</property>
 		</item>
-		<item id="8">
+		<item id="7">
 			<label>$LOCALIZE[10007]</label>
 			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>DefaultShortcut.png</icon>
