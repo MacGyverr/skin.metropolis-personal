@@ -355,22 +355,22 @@
 			<orientation>horizontal</orientation>
 		<!-- OK Button -->
 			<control type="button" id="10">
-				<width>90</width>
+				<width>240</width>
 				<height>38</height>
-				<label>186</label>
+				<label>Apply</label>
 				<align>center</align>
 				<font>METF_TitleTextMedium</font>
 				<textcolor>white</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus border="5">ButtonFo.png</texturefocus>
 				<texturenofocus border="5">ButtonNf.png</texturenofocus>
-				<onback condition="StringCompare(Window.Property(groupname),mainmenu)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0)</onback>
+			<!--	<onback condition="StringCompare(Window.Property(groupname),mainmenu)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0)</onback> -->
 				<onclick condition="StringCompare(Window.Property(groupname),mainmenu)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0)</onclick>
 				<onclick>Close</onclick>
 			</control>
 		<!-- Add item -->
 			<control type="button" id="301">
-				<width>95</width>
+				<width>240</width>
 				<height>38</height>
 				<align>center</align>
 				<font>METF_TitleTextMedium</font>
@@ -378,7 +378,7 @@
 				<focusedcolor>white</focusedcolor>
 				<texturefocus border="5">ButtonFo.png</texturefocus>
 				<texturenofocus border="5">ButtonNf.png</texturenofocus>
-				<label>$ADDON[script.skinshortcuts 32000]</label>
+				<label>Add New Menu</label>
 			</control>
 		<!-- Reset -->
 			<control type="button" id="308">
@@ -392,7 +392,7 @@
 				<texturenofocus border="5">ButtonNf.png</texturenofocus>
 				<label>Undo Changes</label>
 			</control>
-		<!-- Reset all -->
+		<!-- Reset all 
 			<control type="button" id="999">
 				<width>275</width>
 				<height>38</height>
@@ -404,7 +404,7 @@
 				<texturenofocus border="5">ButtonNf.png</texturenofocus>
 				<onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
 				<label>$ADDON[script.skinshortcuts 32037]</label>
-			</control>
+			</control>  -->
 		</control>
 		
 		<!-- Control Info labels -->

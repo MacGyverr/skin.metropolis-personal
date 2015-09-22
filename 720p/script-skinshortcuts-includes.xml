@@ -3137,8 +3137,6 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include />
-	<include name="skinshortcuts-submenu-1" />
 	<include name="skinshortcuts-group-weather">
 		<item id="1">
 			<label>$LOCALIZE[10004]</label>
@@ -3199,8 +3197,6 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-weather-1" />
-	<include name="skinshortcuts-group-alt-weather-1" />
 	<include name="skinshortcuts-group-videos">
 		<item id="1">
 			<label>$LOCALIZE[15100]</label>
@@ -3721,8 +3717,6 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-videos-1" />
-	<include name="skinshortcuts-group-alt-videos-1" />
 	<include name="skinshortcuts-group-dvd">
 		<item id="1">
 			<label>$ADDON[script.skinshortcuts 32033]</label>
@@ -3783,8 +3777,6 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-dvd-1" />
-	<include name="skinshortcuts-group-alt-dvd-1" />
 	<include name="skinshortcuts-group-movies">
 		<item id="1">
 			<label>Recent movies</label>
@@ -4265,8 +4257,6 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-movies-1" />
-	<include name="skinshortcuts-group-alt-movies-1" />
 	<include name="skinshortcuts-group-tvshows">
 		<item id="1">
 			<label>$LOCALIZE[135]</label>
@@ -4739,8 +4729,6 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-tvshows-1" />
-	<include name="skinshortcuts-group-alt-tvshows-1" />
 	<include name="skinshortcuts-group-music">
 		<item id="1">
 			<label>$LOCALIZE[15100]</label>
@@ -5505,8 +5493,6 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-music-1" />
-	<include name="skinshortcuts-group-alt-music-1" />
 	<include name="skinshortcuts-group-musicvideos">
 		<item id="1">
 			<label>$LOCALIZE[556]</label>
@@ -5923,8 +5909,6 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-musicvideos-1" />
-	<include name="skinshortcuts-group-alt-musicvideos-1" />
 	<include name="skinshortcuts-group-pictures">
 		<item id="1">
 			<label>$LOCALIZE[1039]</label>
@@ -6041,12 +6025,8 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-pictures-1" />
-	<include name="skinshortcuts-group-alt-pictures-1" />
 	<include name="skinshortcuts-group-1036" />
 	<include name="skinshortcuts-group-alt-1036" />
-	<include name="skinshortcuts-group-1036-1" />
-	<include name="skinshortcuts-group-alt-1036-1" />
 	<include name="skinshortcuts-group-24001">
 		<item id="1">
 			<label>$LOCALIZE[1212]</label>
@@ -6275,8 +6255,6 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-24001-1" />
-	<include name="skinshortcuts-group-alt-24001-1" />
 	<include name="skinshortcuts-group-settings">
 		<item id="1">
 			<label>Customize Main Menu</label>
@@ -6729,8 +6707,6 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-settings-1" />
-	<include name="skinshortcuts-group-alt-settings-1" />
 	<include name="skinshortcuts-group-script-globalsearch">
 		<item id="1">
 			<label>Movies</label>
@@ -7071,8 +7047,6 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-script-globalsearch-1" />
-	<include name="skinshortcuts-group-alt-script-globalsearch-1" />
 	<include name="skinshortcuts-group-13005">
 		<item id="1">
 			<label>$LOCALIZE[31458]</label>
@@ -7673,12 +7647,8 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-13005-1" />
-	<include name="skinshortcuts-group-alt-13005-1" />
 	<include name="skinshortcuts-group-20126" />
 	<include name="skinshortcuts-group-alt-20126" />
-	<include name="skinshortcuts-group-20126-1" />
-	<include name="skinshortcuts-group-alt-20126-1" />
 	<include name="skinshortcuts-group-livetv">
 		<item id="1">
 			<label>$LOCALIZE[19023]</label>
@@ -7983,8 +7953,6 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-livetv-1" />
-	<include name="skinshortcuts-group-alt-livetv-1" />
 	<include name="skinshortcuts-group-liveradio">
 		<item id="1">
 			<label>$LOCALIZE[19024]</label>
@@ -8289,14 +8257,8 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-liveradio-1" />
-	<include name="skinshortcuts-group-alt-liveradio-1" />
 	<include name="skinshortcuts-group-script-tvguide" />
 	<include name="skinshortcuts-group-alt-script-tvguide" />
-	<include name="skinshortcuts-group-script-tvguide-1" />
-	<include name="skinshortcuts-group-alt-script-tvguide-1" />
 	<include name="skinshortcuts-group-plugin-video-itunes-trailers" />
 	<include name="skinshortcuts-group-alt-plugin-video-itunes-trailers" />
-	<include name="skinshortcuts-group-plugin-video-itunes-trailers-1" />
-	<include name="skinshortcuts-group-alt-plugin-video-itunes-trailers-1" />
 </includes>
