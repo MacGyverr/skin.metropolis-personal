@@ -7,17 +7,17 @@
 	<widget label="Recently Added Albums (Built-in)">LibraryRecentlyAddedAlbums</widget>
 	<widget label="Recently Added Music Videos (Built-in)">LibraryRecentlyAddedMusicVideos</widget>
 	<widget label="Recently Played Albums (Built-in)">LibraryRecentlyPlayedAlbums</widget>
-	<widget label="Recently Added Movies">LDPRecentlyAddedMovies</widget>
-	<widget label="Recommended Movies">LDPRecommendedMovies</widget>
-	<widget label="Random Movies">LDPRandomMovies</widget>
-	<widget label="Recently Added Episodes">LDPRecentlyAddedEpisodes</widget>
-	<widget label="Recommended Episodes">LDPRecommendedEpisodes</widget>
-	<widget label="Random Episodes">LDPRandomEpisodes</widget>
-	<widget label="Recently Added Videos">LDPRecentlyAddedVideos</widget>
-	<widget label="Recently Added Albums">LDPRecentlyAddedAlbums</widget>
-	<widget label="Recommended Albums">LDPRecommendedAlbums</widget>
-	<widget label="Random Albums">LDPRandomAlbums</widget>
-	<widget label="Random Songs">LDPRandomSongs</widget>
+	<widget label="Recently Added Movies" condition="System.HasAddon(service.library.data.provider)">LDPRecentlyAddedMovies</widget>
+	<widget label="Recommended Movies" condition="System.HasAddon(service.library.data.provider)">LDPRecommendedMovies</widget>
+	<widget label="Random Movies" condition="System.HasAddon(service.library.data.provider)">LDPRandomMovies</widget>
+	<widget label="Recently Added Episodes" condition="System.HasAddon(service.library.data.provider)">LDPRecentlyAddedEpisodes</widget>
+	<widget label="Recommended Episodes" condition="System.HasAddon(service.library.data.provider)">LDPRecommendedEpisodes</widget>
+	<widget label="Random Episodes" condition="System.HasAddon(service.library.data.provider)">LDPRandomEpisodes</widget>
+	<widget label="Recently Added Videos" condition="System.HasAddon(service.library.data.provider)">LDPRecentlyAddedVideos</widget>
+	<widget label="Recently Added Albums" condition="System.HasAddon(service.library.data.provider)">LDPRecentlyAddedAlbums</widget>
+	<widget label="Recommended Albums" condition="System.HasAddon(service.library.data.provider)">LDPRecommendedAlbums</widget>
+	<widget label="Random Albums" condition="System.HasAddon(service.library.data.provider)">LDPRandomAlbums</widget>
+	<widget label="Random Songs" condition="System.HasAddon(service.library.data.provider)">LDPRandomSongs</widget>
 	<!-- XXX: localized strings that don't seem to work everywhere -->
 	<!--<widget label="$LOCALIZE[20386] ($LOCALIZE[31479])">LibraryRecentlyAddedMovies</widget>
 	<widget label="$LOCALIZE[20387] ($LOCALIZE[31479])">LibraryRecentlyAddedEpisodes</widget>
@@ -37,28 +37,28 @@
 	<widget label="$ADDON[service.library.data.provider 32015]">LDPRandomSongs</widget>-->
 
 	<!-- Extended Info Script -->
-	<widget labelID="movies" label="Rotten Tomatoes (In Theaters)">InTheatersMovies</widget>
-	<widget labelID="movies" label="Rotten Tomatoes (Coming Soon)">ComingSoonMovies</widget>
-	<widget labelID="movies" label="Rotten Tomatoes (Opening)">Opening</widget>
-	<widget labelID="movies" label="Rotten Tomatoes (Box Office)">BoxOffice</widget>
-	<widget labelID="movies" label="Rotten Tomatoes (Top 10 Rentals)">Top10Rentals</widget>
-	<widget labelID="movies" label="Rotten Tomatoes (Current DVD Releases)">CurrentDVDs</widget>
-	<widget labelID="movies" label="Rotten Tomatoes (New DVD Releases)">NewDVDs</widget>
-	<widget labelID="movies" label="Rotten Tomatoes (Upcoming DVD Releases)">UpcomingDVDs</widget>
-	<widget labelID="movies" label="The MovieDB (In Cinemas)">InCinemasMovies</widget>
-	<widget labelID="movies" label="The MovieDB (Upcoming Movies)">UpcomingMovies</widget>
-	<widget labelID="movies" label="The MovieDB (Popular Movies)">PopularMovies</widget>
-	<widget labelID="movies" label="The MovieDB (Top Rated Movies)">TopRatedMovies</widget>
-	<widget labelID="movies" label="The MovieDB (Popular TV Shows)">PopularTVShows</widget>
-	<widget labelID="movies" label="The MovieDB (Top Rated TV Shows)">TopRatedTVShows</widget>
-	<widget labelID="movies" label="The MovieDB (On Air TV Shows)">OnAirTVShows</widget>
-	<widget labelID="movies" label="The MovieDB (Airing Today TV Shows)">AiringTodayTVShows</widget>
-	<widget labelID="movies" label="Trakt.tv (Trending Movies)">TrendingMovies</widget>
-	<widget labelID="tvshows" label="Trakt.tv (Trending TV Shows)">TrendingTVShows</widget>
-	<widget labelID="tvshows" label="Trakt.tv (Airing TV Shows)">AiringShows</widget>
-	<widget labelID="tvshows" label="Trakt.tv (Premiere TV Shows)">PremiereShows</widget>
-	<widget labelID="pictures" type="pictures" label="Random XKCD Comics">XKCD</widget>
-	<widget labelID="pictures" type="pictures" label="Random Cyanide and Happiness Comics">Cyanide</widget>
+	<widget labelID="movies" label="Rotten Tomatoes (In Theaters)" condition="System.HasAddon(script.extendedinfo)">InTheatersMovies</widget>
+	<widget labelID="movies" label="Rotten Tomatoes (Coming Soon)" condition="System.HasAddon(script.extendedinfo)">ComingSoonMovies</widget>
+	<widget labelID="movies" label="Rotten Tomatoes (Opening)" condition="System.HasAddon(script.extendedinfo)">Opening</widget>
+	<widget labelID="movies" label="Rotten Tomatoes (Box Office)" condition="System.HasAddon(script.extendedinfo)">BoxOffice</widget>
+	<widget labelID="movies" label="Rotten Tomatoes (Top 10 Rentals)" condition="System.HasAddon(script.extendedinfo)">Top10Rentals</widget>
+	<widget labelID="movies" label="Rotten Tomatoes (Current DVD Releases)" condition="System.HasAddon(script.extendedinfo)">CurrentDVDs</widget>
+	<widget labelID="movies" label="Rotten Tomatoes (New DVD Releases)" condition="System.HasAddon(script.extendedinfo)">NewDVDs</widget>
+	<widget labelID="movies" label="Rotten Tomatoes (Upcoming DVD Releases)" condition="System.HasAddon(script.extendedinfo)">UpcomingDVDs</widget>
+	<widget labelID="movies" label="The MovieDB (In Cinemas)" condition="System.HasAddon(script.extendedinfo)">InCinemasMovies</widget>
+	<widget labelID="movies" label="The MovieDB (Upcoming Movies)" condition="System.HasAddon(script.extendedinfo)">UpcomingMovies</widget>
+	<widget labelID="movies" label="The MovieDB (Popular Movies)" condition="System.HasAddon(script.extendedinfo)">PopularMovies</widget>
+	<widget labelID="movies" label="The MovieDB (Top Rated Movies)" condition="System.HasAddon(script.extendedinfo)">TopRatedMovies</widget>
+	<widget labelID="movies" label="The MovieDB (Popular TV Shows)" condition="System.HasAddon(script.extendedinfo)">PopularTVShows</widget>
+	<widget labelID="movies" label="The MovieDB (Top Rated TV Shows)" condition="System.HasAddon(script.extendedinfo)">TopRatedTVShows</widget>
+	<widget labelID="movies" label="The MovieDB (On Air TV Shows)" condition="System.HasAddon(script.extendedinfo)">OnAirTVShows</widget>
+	<widget labelID="movies" label="The MovieDB (Airing Today TV Shows)" condition="System.HasAddon(script.extendedinfo)">AiringTodayTVShows</widget>
+	<widget labelID="movies" label="Trakt.tv (Trending Movies)" condition="System.HasAddon(script.extendedinfo)">TrendingMovies</widget>
+	<widget labelID="tvshows" label="Trakt.tv (Trending TV Shows)" condition="System.HasAddon(script.extendedinfo)">TrendingTVShows</widget>
+	<widget labelID="tvshows" label="Trakt.tv (Airing TV Shows)" condition="System.HasAddon(script.extendedinfo)">AiringShows</widget>
+	<widget labelID="tvshows" label="Trakt.tv (Premiere TV Shows)" condition="System.HasAddon(script.extendedinfo)">PremiereShows</widget>
+	<widget labelID="pictures" type="pictures" label="Random XKCD Comics" condition="System.HasAddon(script.extendedinfo)">XKCD</widget>
+	<widget labelID="pictures" type="pictures" label="Random Cyanide and Happiness Comics" condition="System.HasAddon(script.extendedinfo)">Cyanide</widget>
 	<!-- XXX: localized strings that don't seem to work everywhere -->
 	<!--<widget labelID="movies" label="Rotton Tomatoes ($ADDON[script.extendedinfo 32042])">InTheatersMovies</widget>
 	<widget labelID="movies" label="Rotton Tomatoes ($ADDON[script.extendedinfo 32043])">ComingSoonMovies</widget>
