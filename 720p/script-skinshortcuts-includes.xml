@@ -3,9 +3,8 @@
 	<include name="skinshortcuts-mainmenu">
 		<item id="1">
 			<label>$LOCALIZE[341]</label>
-			<label2>Common Shortcut</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>home_icons/playdisc.png</icon>
-			<thumb />
 			<property name="labelID">341</property>
 			<property name="defaultID">dvd</property>
 			<property name="background">home\dvd\</property>
@@ -21,9 +20,8 @@
 		</item>
 		<item id="2">
 			<label>$LOCALIZE[342]</label>
-			<label2>Common Shortcut</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>home_icons/movies.png</icon>
-			<thumb />
 			<property name="labelID">movies</property>
 			<property name="defaultID">movies</property>
 			<property name="widget">LibraryRecentlyAddedMovies</property>
@@ -41,9 +39,8 @@
 		</item>
 		<item id="3">
 			<label>$LOCALIZE[20343]</label>
-			<label2>Common Shortcut</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>home_icons/tvshows.png</icon>
-			<thumb />
 			<property name="labelID">tvshows</property>
 			<property name="defaultID">tvshows</property>
 			<property name="widget">LibraryRecentlyAddedEpisodes</property>
@@ -61,9 +58,8 @@
 		</item>
 		<item id="4">
 			<label>$LOCALIZE[3]</label>
-			<label2>Common Shortcut</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>home_icons/videos.png</icon>
-			<thumb />
 			<property name="labelID">3</property>
 			<property name="defaultID">videos</property>
 			<property name="background">home\videos\</property>
@@ -80,7 +76,6 @@
 			<label>$LOCALIZE[31334]</label>
 			<label2>Program</label2>
 			<icon>home_icons/trailers.png</icon>
-			<thumb />
 			<property name="labelID">plugin.video.itunes_trailers</property>
 			<property name="defaultID">trailers</property>
 			<property name="widget">InTheatersMovies</property>
@@ -98,9 +93,8 @@
 		</item>
 		<item id="6">
 			<label>$LOCALIZE[31601]</label>
-			<label2>Common Shortcut</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>home_icons/livetv.png</icon>
-			<thumb />
 			<property name="labelID">31601</property>
 			<property name="defaultID">livetv</property>
 			<property name="widget">PVR</property>
@@ -118,9 +112,8 @@
 		</item>
 		<item id="7">
 			<label>$LOCALIZE[2]</label>
-			<label2>Common Shortcut</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>home_icons/music.png</icon>
-			<thumb />
 			<property name="labelID">2</property>
 			<property name="defaultID">music</property>
 			<property name="widget">LDPRecentlyAddedAlbums</property>
@@ -137,9 +130,8 @@
 		</item>
 		<item id="8">
 			<label>$LOCALIZE[20389]</label>
-			<label2>Common Shortcut</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>home_icons/musicvideos.png</icon>
-			<thumb />
 			<property name="labelID">musicvideos</property>
 			<property name="defaultID">musicvideos</property>
 			<property name="widget">LibraryRecentlyAddedMusicVideos</property>
@@ -157,9 +149,8 @@
 		</item>
 		<item id="9">
 			<label>$LOCALIZE[31602]</label>
-			<label2>Common Shortcut</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>home_icons/radio.png</icon>
-			<thumb />
 			<property name="labelID">31602</property>
 			<property name="defaultID">radio</property>
 			<property name="background">home\radio\</property>
@@ -175,9 +166,8 @@
 		</item>
 		<item id="10">
 			<label>$LOCALIZE[1]</label>
-			<label2>Common Shortcut</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>home_icons/pictures.png</icon>
-			<thumb />
 			<property name="labelID">1</property>
 			<property name="defaultID">pictures</property>
 			<property name="widget">XKCD</property>
@@ -195,9 +185,8 @@
 		</item>
 		<item id="11">
 			<label>$LOCALIZE[24001]</label>
-			<label2>Common Shortcut</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>home_icons/programs.png</icon>
-			<thumb />
 			<property name="labelID">24001</property>
 			<property name="defaultID">programs</property>
 			<property name="widget">LibraryAddons</property>
@@ -215,9 +204,8 @@
 		</item>
 		<item id="12">
 			<label>$LOCALIZE[8]</label>
-			<label2>Common Shortcut</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>home_icons/weather.png</icon>
-			<thumb />
 			<property name="labelID">8</property>
 			<property name="defaultID">weather</property>
 			<property name="widget">WeatherForecast</property>
@@ -235,9 +223,8 @@
 		</item>
 		<item id="13">
 			<label>$LOCALIZE[1036]</label>
-			<label2>Common Shortcut</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>home_icons/favourites.png</icon>
-			<thumb />
 			<property name="labelID">1036</property>
 			<property name="defaultID">favourites</property>
 			<property name="background">home\favourites\</property>
@@ -252,9 +239,8 @@
 		</item>
 		<item id="14">
 			<label>$LOCALIZE[5]</label>
-			<label2>Common Shortcut</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>home_icons/settings.png</icon>
-			<thumb />
 			<property name="labelID">5</property>
 			<property name="defaultID">settings</property>
 			<property name="background">home\settings\</property>
@@ -269,9 +255,8 @@
 		</item>
 		<item id="15">
 			<label>$LOCALIZE[20126]</label>
-			<label2>Common Shortcut</label2>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
 			<icon>home_icons/logoff.png</icon>
-			<thumb />
 			<property name="labelID">20126</property>
 			<property name="defaultID">logoff</property>
 			<property name="background">home\logoff\</property>
@@ -289,7 +274,6 @@
 			<label>$LOCALIZE[13005]</label>
 			<label2>Kodi Command</label2>
 			<icon>home_icons/shutdown.png</icon>
-			<thumb />
 			<property name="labelID">13005</property>
 			<property name="defaultID">shutdown</property>
 			<property name="background">home\shutdown\</property>
@@ -306,7 +290,6 @@
 			<label>$LOCALIZE[137]</label>
 			<label2>Needs GlobalSearch Script</label2>
 			<icon>home_icons/search.png</icon>
-			<thumb />
 			<property name="labelID">script.globalsearch</property>
 			<property name="defaultID">script.globalsearch</property>
 			<property name="background">home\search\</property>
@@ -324,7 +307,6 @@
 			<label>TV Guide</label>
 			<label2>Program</label2>
 			<icon>home_icons/tvguide.png</icon>
-			<thumb />
 			<property name="labelID">script.tvguide</property>
 			<property name="defaultID">script.tvguide</property>
 			<property name="background">home\TV Guide\</property>
@@ -453,8 +435,8 @@
 			<icon>home_icons/music.png</icon>
 			<property name="labelID">2</property>
 			<property name="defaultID">music</property>
-			<property name="widget">LibraryRecentlyAddedAlbums</property>
-			<property name="widgetName">Recently Added Albums (Built-in)</property>
+			<property name="widget">LDPRecentlyAddedAlbums</property>
+			<property name="widgetName">Recently Added Albums</property>
 			<property name="background">home\music\</property>
 			<property name="backgroundName">$LOCALIZE[2]</property>
 			<onclick>ActivateWindow(MusicFiles)</onclick>
