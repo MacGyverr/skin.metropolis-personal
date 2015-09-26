@@ -1015,21 +1015,18 @@
 						<label>Always Display Scrollbar</label>
 						<onclick>Skin.ToggleSetting(Scrollbar)</onclick>
 						<selected>Skin.HasSetting(Scrollbar)</selected>
+					</control>			
+					<control type="radiobutton" id="205">
+						<include>SettingsLabel</include>
+						<label>Use Horizontal Widgets</label>
+						<onclick>Skin.ToggleSetting(HorizontalWidgets)</onclick>
+						<selected>Skin.HasSetting(HorizontalWidgets)</selected>
 					</control>
 					<control type="image" id="10204">
 						<include>Settings_Line</include>
-					</control>					
-	<!--				<control type="radiobutton" id="205">
-						<onfocus condition="[Skin.HasSetting(WeatherFanart1) + Skin.HasSetting(WeatherFanart2) + Skin.HasSetting(WeatherFanart3) + Skin.HasSetting(WeatherFanart4)]">Skin.SetBool(WeatherFanart1)</onfocus>
-						<include>SettingsLabel</include>
-						<label>$LOCALIZE[31034] (Install more in Addons)</label>
-						<onclick>Skin.ToggleSetting(DynamicWeather)</onclick>
-						<selected>Skin.HasSetting(DynamicWeather)</selected>
-						<visible>[System.HasAddon(resource.images.weatherfanart.prairie) | System.HasAddon(resource.images.weatherfanart.single) | System.HasAddon(resource.images.weatherfanart.multi) | System.HasAddon(resource.images.weatherfanart.faded)] + !Skin.HasSetting(Home2)</visible>
-					</control>
-
+					</control>		
 				
-					<control type="radiobutton" id="105">
+	<!--				<control type="radiobutton" id="105">
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31447]</label>
 						<onclick>Skin.ToggleSetting(WeatherIcons2)</onclick>

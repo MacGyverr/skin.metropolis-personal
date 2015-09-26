@@ -256,7 +256,7 @@
 					<height>32</height>
 					<align>left</align>
 					<label>$INFO[ListItem.Label]</label>
-					<font>METF_HomeMenu</font>
+					<font>METF_HomeMenuSmall</font>
 					<textcolor>HomeMenuText</textcolor>	
 				</control>
 			</itemlayout>
@@ -279,7 +279,7 @@
 					<height>32</height>
 					<align>left</align>
 					<label>$INFO[ListItem.Label]</label>
-					<font>METF_HomeMenu</font>
+					<font>METF_HomeMenuSmall</font>
 					<textcolor>HomeMenuText</textcolor>
 					<visible allowhiddenfocus="true">!Control.HasFocus(9001)</visible>
 				</control>
@@ -290,7 +290,7 @@
 					<height>32</height>
 					<align>left</align>
 					<label>$INFO[ListItem.Label]</label>
-					<font>METF_HomeMenu</font>
+					<font>METF_HomeMenuSmall</font>
 					<textcolor>FocusBarText</textcolor>
 					<visible allowhiddenfocus="true">Control.HasFocus(9001)</visible>
 				</control>

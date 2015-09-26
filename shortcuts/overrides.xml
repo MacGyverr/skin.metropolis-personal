@@ -130,7 +130,7 @@
 	<!-- Default widgets -->
 	<widgetdefault labelID="movies">LibraryRecentlyAddedMovies</widgetdefault>
 	<widgetdefault labelID="tvshows">LibraryRecentlyAddedEpisodes</widgetdefault>
-	<widgetdefault labelID="music">LibraryRecentlyAddedAlbums</widgetdefault>
+	<widgetdefault labelID="music">LDPRecentlyAddedAlbums</widgetdefault>
 	<widgetdefault labelID="weather">WeatherForecast</widgetdefault>
 	<widgetdefault labelID="24001">LibraryAddons</widgetdefault>
 	<widgetdefault labelID="pictures">XKCD</widgetdefault>

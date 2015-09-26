@@ -327,7 +327,7 @@
 					<width>28</width>
 					<height>28</height>
 					<texture>keyboard/RadioButtonFO.png</texture>
-					<visible>Skin.HasSetting(Enable_ExtraFanart)</visible>
+					<visible>StringCompare($ESCINFO[Container(211).ListItem.Property(widget)])</visible>
 				</control>		
 				<control type="image" id="1102">
 					<description>Orientation button</description>
@@ -336,7 +336,7 @@
 					<width>28</width>
 					<height>28</height>
 					<texture>keyboard/RadioButtonNF.png</texture>
-					<visible>!Skin.HasSetting(Enable_ExtraFanart)</visible>
+					<visible>StringCompare($ESCINFO[Container(211).ListItem.Property(widget)])</visible>
 				</control>	-->
 				<!-- Custom action -->
 				<control type="button" id="307">

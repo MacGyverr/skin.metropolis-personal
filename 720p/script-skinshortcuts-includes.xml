@@ -123,8 +123,8 @@
 			<thumb />
 			<property name="labelID">2</property>
 			<property name="defaultID">music</property>
-			<property name="widget">LibraryRecentlyAddedAlbums</property>
-			<property name="widgetName">Recently Added Albums (Built-in)</property>
+			<property name="widget">LDPRecentlyAddedAlbums</property>
+			<property name="widgetName">Recently Added Albums</property>
 			<property name="background">home\music\</property>
 			<property name="backgroundName">$LOCALIZE[2]</property>
 			<onclick>ActivateWindow(MusicFiles)</onclick>
@@ -242,10 +242,6 @@
 			<property name="defaultID">favourites</property>
 			<property name="background">home\favourites\</property>
 			<property name="backgroundName">$LOCALIZE[1036]</property>
-			<property name="widget">Playlist</property>
-			<property name="widgetName">v test</property>
-			<property name="widgetPlaylist">special://profile/playlists/video/v test.xsp</property>
-			<property name="widgetPath">special://profile/playlists/video/v test.xsp</property>
 			<onclick>ActivateWindow(favourites)</onclick>
 			<property name="path">ActivateWindow(favourites)</property>
 			<property name="list">favourites</property>
