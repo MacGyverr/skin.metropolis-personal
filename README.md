@@ -30,6 +30,7 @@ Ability to display or hide the sub-menus as needed.
 Different animations for menus and sub-menus.
 Different horizontal backgrounds.
 Ability to add/delete/change sub-menus.
+A special view for checking all artwork images at once "Artwork Checker".
 
 
 There is no support offered.  Do not bother the official Metropolis Devs with issues you have with my version!

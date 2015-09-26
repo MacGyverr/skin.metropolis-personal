@@ -5,7 +5,7 @@
 			<visible>Control.IsVisible(552)</visible>
 			<!-- Browser -->
 			<control type="fixedlist" id="552">
-				<viewtype label="31479">bigwrap</viewtype>
+				<viewtype label="Poster Fixed Large">bigwrap</viewtype>
 				<onleft>552</onleft>
 				<onright>552</onright>
 				<visible>!Skin.HasSetting(NoViewPosterLargeFixed)</visible>
