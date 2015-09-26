@@ -13,7 +13,7 @@
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(MusicSongInfoOverlay)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(Home3)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(HomeStats)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(HomeForecast)</onload>
+	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(WeatherForecast)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(DynamicWeather)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(Show_PlotOutline)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(Scrollbar)</onload>

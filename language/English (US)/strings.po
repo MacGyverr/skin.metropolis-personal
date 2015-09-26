@@ -904,10 +904,6 @@ msgctxt "#31478"
 msgid "Hide default submenu items"
 msgstr "Hide default submenu items"
 
-msgctxt "#31479"
-msgid "Poster Fixed Large"
-msgstr ""
-
 msgctxt "#31600"
 msgid "Enable Live TV (PVR) support"
 msgstr "Enable Live TV (PVR) support"

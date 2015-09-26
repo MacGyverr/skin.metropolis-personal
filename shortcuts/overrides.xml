@@ -1,36 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<overrides>
-	<!-- Widgets -->
-	<!-- Recently Added -->
+<overrides>	<!-- Widgets -->
+
+	<!-- Recently Added, Recommended, and Random -->
 	<widget label="Recently Added Movies (Built-in)">LibraryRecentlyAddedMovies</widget>
-	<widget label="Recently Added Movies">MoviesRecentlyAdded</widget>
-	<widget label="Recently Added TV Episodes (Built-in)">LibraryRecentlyAddedEpisodes</widget>
-	<widget label="Recently Added TV Episodes">TVShowsRecentlyAdded</widget>
-	<widget label="Recently Added Videos">VideosRecentlyAdded</widget>	
+	<widget label="Recently Added Episodes (Built-in)">LibraryRecentlyAddedEpisodes</widget>
 	<widget label="Recently Added Albums (Built-in)">LibraryRecentlyAddedAlbums</widget>
-	<widget label="Recently Added Albums">MusicRecentlyAdded</widget>
 	<widget label="Recently Added Music Videos (Built-in)">LibraryRecentlyAddedMusicVideos</widget>
 	<widget label="Recently Played Albums (Built-in)">LibraryRecentlyPlayedAlbums</widget>
-	
-	<!-- Recommended -->
-	<widget label="Recommended Movies">MoviesWatchlist</widget>
-	<widget label="Recommended TV Episodes">TVShowsWatchlist</widget>
-	<widget label="Recommended Albums">MusicWatchlist</widget>
-	
-	<!-- Random -->
-	<widget label="Random Movies">MoviesRandomItems</widget>
-	<widget label="Random TV Episodes">TVShowsRandomItems</widget>
-	<widget label="Random Album">MusicRandomItems</widget>
-	<widget label="Random Songs">SongsRandomItems</widget>
+	<widget label="Recently Added Movies">LDPRecentlyAddedMovies</widget>
+	<widget label="Recommended Movies">LDPRecommendedMovies</widget>
+	<widget label="Random Movies">LDPRandomMovies</widget>
+	<widget label="Recently Added Episodes">LDPRecentlyAddedEpisodes</widget>
+	<widget label="Recommended Episodes">LDPRecommendedEpisodes</widget>
+	<widget label="Random Episodes">LDPRandomEpisodes</widget>
+	<widget label="Recently Added Videos">LDPRecentlyAddedVideos</widget>
+	<widget label="Recently Added Albums">LDPRecentlyAddedAlbums</widget>
+	<widget label="Recommended Albums">LDPRecommendedAlbums</widget>
+	<widget label="Random Albums">LDPRandomAlbums</widget>
+	<widget label="Random Songs">LDPRandomSongs</widget>
+	<!-- XXX: localized strings that don't seem to work everywhere -->
+	<!--<widget label="$LOCALIZE[20386] ($LOCALIZE[31479])">LibraryRecentlyAddedMovies</widget>
+	<widget label="$LOCALIZE[20387] ($LOCALIZE[31479])">LibraryRecentlyAddedEpisodes</widget>
+	<widget label="$LOCALIZE[359] ($LOCALIZE[31479])">LibraryRecentlyAddedAlbums</widget>
+	<widget label="$LOCALIZE[20390] ($LOCALIZE[31479])">LibraryRecentlyAddedMusicVideos</widget>
+	<widget label="$LOCALIZE[517] ($LOCALIZE[31479])">LibraryRecentlyPlayedAlbums</widget>
+	<widget label="$ADDON[service.library.data.provider 32005]">LDPRecentlyAddedMovies</widget>
+	<widget label="$ADDON[service.library.data.provider 32006]">LDPRecommendedMovies</widget>
+	<widget label="$ADDON[service.library.data.provider 32004]">LDPRandomMovies</widget>
+	<widget label="$ADDON[service.library.data.provider 32008]">LDPRecentlyAddedEpisodes</widget>
+	<widget label="$ADDON[service.library.data.provider 32010]">LDPRecommendedEpisodes</widget>
+	<widget label="$ADDON[service.library.data.provider 32007]">LDPRandomEpisodes</widget>
+	<widget label="$ADDON[service.library.data.provider 32019]">LDPRecentlyAddedVideos</widget>
+	<widget label="$ADDON[service.library.data.provider 32017]">LDPRecentlyAddedAlbums</widget>
+	<widget label="$ADDON[service.library.data.provider 32018]">LDPRecommendedAlbums</widget>
+	<widget label="$ADDON[service.library.data.provider 32016]">LDPRandomAlbums</widget>
+	<widget label="$ADDON[service.library.data.provider 32015]">LDPRandomSongs</widget>-->
 
-	<!-- Weather -->
-	<widget label="Weather Forecast">HomeForecast</widget>
-
-	<!-- Video addons 
-	<widget label="Video addons">VideoAddons</widget>
-	<widgetdefault labelID="videos">VideoAddons</widgetdefault> -->
-	
-	<!-- Extended Info Script Widgets -->
+	<!-- Extended Info Script -->
 	<widget labelID="movies" label="Rotten Tomatoes (In Theaters)">InTheatersMovies</widget>
 	<widget labelID="movies" label="Rotten Tomatoes (Coming Soon)">ComingSoonMovies</widget>
 	<widget labelID="movies" label="Rotten Tomatoes (Opening)">Opening</widget>
@@ -38,8 +44,7 @@
 	<widget labelID="movies" label="Rotten Tomatoes (Top 10 Rentals)">Top10Rentals</widget>
 	<widget labelID="movies" label="Rotten Tomatoes (Current DVD Releases)">CurrentDVDs</widget>
 	<widget labelID="movies" label="Rotten Tomatoes (New DVD Releases)">NewDVDs</widget>
-	<widget labelID="movies" label="Rotten Tomatoes (Upcoming DVD Releases)">UpcomingDVDs</widget> 
-
+	<widget labelID="movies" label="Rotten Tomatoes (Upcoming DVD Releases)">UpcomingDVDs</widget>
 	<widget labelID="movies" label="The MovieDB (In Cinemas)">InCinemasMovies</widget>
 	<widget labelID="movies" label="The MovieDB (Upcoming Movies)">UpcomingMovies</widget>
 	<widget labelID="movies" label="The MovieDB (Popular Movies)">PopularMovies</widget>
@@ -48,14 +53,73 @@
 	<widget labelID="movies" label="The MovieDB (Top Rated TV Shows)">TopRatedTVShows</widget>
 	<widget labelID="movies" label="The MovieDB (On Air TV Shows)">OnAirTVShows</widget>
 	<widget labelID="movies" label="The MovieDB (Airing Today TV Shows)">AiringTodayTVShows</widget>
-	
 	<widget labelID="movies" label="Trakt.tv (Trending Movies)">TrendingMovies</widget>
 	<widget labelID="tvshows" label="Trakt.tv (Trending TV Shows)">TrendingTVShows</widget>
 	<widget labelID="tvshows" label="Trakt.tv (Airing TV Shows)">AiringShows</widget>
-	<widget labelID="tvshows" label="Trakt.tv (Premiere TV Shows)">PremiereShows</widget> 
-
+	<widget labelID="tvshows" label="Trakt.tv (Premiere TV Shows)">PremiereShows</widget>
 	<widget labelID="pictures" type="pictures" label="Random XKCD Comics">XKCD</widget>
 	<widget labelID="pictures" type="pictures" label="Random Cyanide and Happiness Comics">Cyanide</widget>
+	<!-- XXX: localized strings that don't seem to work everywhere -->
+	<!--<widget labelID="movies" label="Rotton Tomatoes ($ADDON[script.extendedinfo 32042])">InTheatersMovies</widget>
+	<widget labelID="movies" label="Rotton Tomatoes ($ADDON[script.extendedinfo 32043])">ComingSoonMovies</widget>
+	<widget labelID="movies" label="Rotton Tomatoes ($ADDON[script.extendedinfo 32048])">Opening</widget>
+	<widget labelID="movies" label="Rotton Tomatoes ($ADDON[script.extendedinfo 32055])">BoxOffice</widget>
+	<widget labelID="movies" label="Rotton Tomatoes ($ADDON[script.extendedinfo 32056])">Top10Rentals</widget>
+	<widget labelID="movies" label="Rotton Tomatoes ($ADDON[script.extendedinfo 32049])">CurrentDVDs</widget>
+	<widget labelID="movies" label="Rotton Tomatoes ($ADDON[script.extendedinfo 32053])">NewDVDs</widget>
+	<widget labelID="movies" label="Rotton Tomatoes ($ADDON[script.extendedinfo 32054])">UpcomingDVDs</widget>
+	<widget labelID="movies" label="The MovieDB ($ADDON[script.extendedinfo 32042])">InCinemasMovies</widget>
+	<widget labelID="movies" label="The MovieDB ($ADDON[script.extendedinfo 32043])">UpcomingMovies</widget>
+	<widget labelID="movies" label="The MovieDB ($ADDON[script.extendedinfo 32044])">PopularMovies</widget>
+	<widget labelID="movies" label="The MovieDB ($ADDON[script.extendedinfo 32046])">TopRatedMovies</widget>
+	<widget labelID="movies" label="The MovieDB ($ADDON[script.extendedinfo 32041])">PopularTVShows</widget>
+	<widget labelID="movies" label="The MovieDB ($ADDON[script.extendedinfo 32040])">TopRatedTVShows</widget>
+	<widget labelID="movies" label="The MovieDB ($ADDON[script.extendedinfo 32039])">OnAirTVShows</widget>
+	<widget labelID="movies" label="The MovieDB ($ADDON[script.extendedinfo 32038])">AiringTodayTVShows</widget>
+	<widget labelID="movies" label="Trakt.tv ($ADDON[script.extendedinfo 32047])">TrendingMovies</widget>
+	<widget labelID="tvshows" label="Trakt.tv ($ADDON[script.extendedinfo 32032])">TrendingTVShows</widget>
+	<widget labelID="tvshows" label="Trakt.tv ($ADDON[script.extendedinfo 32028])">AiringShows</widget>
+	<widget labelID="tvshows" label="Trakt.tv ($ADDON[script.extendedinfo 32029])">PremiereShows</widget>
+	<widget labelID="pictures" type="pictures" label="XKCD">XKCD</widget>
+	<widget labelID="pictures" type="pictures" label="Cyanide and Happiness">Cyanide</widget>-->
+
+	<!-- Unfledged Smart-ish Widgets -->
+	<widget labelID="movies" label="Smart-ish (Movies)" condition="System.HasAddon(service.smartish.widgets)">SmartishMovies</widget>
+	<widget labelID="tvshows" label="Smart-ish (Episodes)" condition="System.HasAddon(service.smartish.widgets)">SmartishEpisodes</widget>		
+	<widget labelID="music" label="Smart-ish (Albums)" condition="System.HasAddon(service.smartish.widgets)">SmartishAlbums</widget>		
+	<widget labelID="livetv" label="Smart-ish (PVR)" condition="System.HasAddon(service.smartish.widgets)">SmartishPVR</widget>		
+
+	<!-- Video  
+	<widget label="Video addons">VideoAddons</widget>
+	<widgetdefault labelID="videos">VideoAddons</widgetdefault> -->
+
+	<!-- PVR -->
+	<widget label="PVR Status">PVR</widget>
+	<!-- XXX: localized strings that don't seem to work everywhere -->
+	<!--<widget label="$LOCALIZE[31611]">PVR</widget>-->
+
+	<!-- Music -->
+
+	<!-- Pictures 
+	<widget label="Pictures addons">PictureAddons</widget>
+	<widgetdefault labelID="pictures">PictureAddons</widgetdefault> -->
+
+	<!-- Programs -->
+	<widget labelID="programs" type="programs" label="Program Addons">LibraryAddons</widget>
+	<!-- XXX: localized strings that don't seem to work everywhere -->
+	<!--<widget label="$LOCALIZE[1043]">LibraryAddons</widget>-->
+
+	<!-- Favourites -->
+	<widget labelID="movies" label="SuperFavorites" condition="System.HasAddon(plugin.program.super.favourites)">SuperFavorites</widget>
+	<widget labelID="playlist" type="playlist"  label="Favourites">LibraryFavourites</widget>
+	<!-- XXX: localized strings that don't seem to work everywhere -->
+	<!--<widget label="$LOCALIZE[1036]">LibraryFavourites</widget>-->
+
+	<!-- Weather -->
+	<widget label="Weather Forecast">WeatherForecast</widget>
+	<!-- XXX: localized strings that don't seem to work everywhere -->
+	<!--<widget label="$LOCALIZE[10508]">WeatherForecast</widget>-->
+
 	
 	<!-- Music addons -->
 	
@@ -63,25 +127,16 @@
 	<widget label="Pictures addons">PictureAddons</widget>
 	<widgetdefault labelID="pictures">PictureAddons</widgetdefault> -->
 	
-	<!-- Program addons  -->
-	<widget labelID="programs" type="programs" label="Program Addons">LibraryAddons</widget>
-	
-	<!-- Favourites -->
-	<widget label="Favourites">LibraryFavourites</widget>
-	
-	<!-- PVR -->
-	<widget label="PVR Status">PVR</widget>
-	<widgetdefault labelID="livetv">PVR</widgetdefault> 
-	
 	<!-- Default widgets -->
-	<widgetdefault labelID="movies">MoviesRecentlyAdded</widgetdefault>
-	<widgetdefault labelID="tvshows">TVShowsRecentlyAdded</widgetdefault>
-	<widgetdefault labelID="music">MusicRecentlyAdded</widgetdefault>
-	<widgetdefault labelID="weather">HomeForecast</widgetdefault>
+	<widgetdefault labelID="movies">LibraryRecentlyAddedMovies</widgetdefault>
+	<widgetdefault labelID="tvshows">LibraryRecentlyAddedEpisodes</widgetdefault>
+	<widgetdefault labelID="music">LibraryRecentlyAddedAlbums</widgetdefault>
+	<widgetdefault labelID="weather">WeatherForecast</widgetdefault>
 	<widgetdefault labelID="24001">LibraryAddons</widgetdefault>
 	<widgetdefault labelID="pictures">XKCD</widgetdefault>
 	<widgetdefault labelID="musicvideos">LibraryRecentlyAddedMusicVideos</widgetdefault>
 	<widgetdefault labelID="plugin.video.itunes_trailers">InTheatersMovies</widgetdefault>
+	<widgetdefault labelID="livetv">PVR</widgetdefault> 
 	
 	<!-- Playlists -->
 	<widgetPlaylists>True</widgetPlaylists>
@@ -91,5 +146,71 @@
 	<forcesettings>False</forcesettings>
 	
 	<!-- Backgrounds -->
-	<backgroundBrowse default="special://skin/extras">True</backgroundBrowse>
+<!-- Backgrounds (actual images specified in HomeBackground variables -->
+	<background label="341">home\dvd\</background>
+	<backgrounddefault defaultID="dvd">home\dvd\</backgrounddefault>
+	<background label="342">home\movies\</background>
+	<backgrounddefault defaultID="movies">home\movies\</backgrounddefault>
+	<background label="20343">home\tvshows\</background>
+	<backgrounddefault defaultID="tvshows">home\tvshows\</backgrounddefault>
+	<background label="3">home\videos\</background>
+	<backgrounddefault defaultID="videos">home\videos\</backgrounddefault>
+	<background label="31334">home\trailers\</background>
+	<backgrounddefault defaultID="trailers">home\trailers\</backgrounddefault>
+	<background label="31601">home\livetv\</background>
+	<backgrounddefault defaultID="livetv">home\livetv\</backgrounddefault>
+	<background label="2">home\music\</background>
+	<backgrounddefault defaultID="music">home\music\</backgrounddefault>
+	<background label="20389">home\musicvideos\</background>
+	<backgrounddefault defaultID="musicvideos">home\musicvideos\</backgrounddefault>
+	<background label="31602">home\radio\</background>
+	<backgrounddefault defaultID="radio">home\radio\</backgrounddefault>
+	<background label="1">home\pictures\</background>
+	<backgrounddefault defaultID="pictures">home\pictures\</backgrounddefault>
+	<background label="24001">home\programs\</background>
+	<backgrounddefault defaultID="programs">home\programs\</backgrounddefault>
+	<background label="8">home\weather\</background>
+	<backgrounddefault defaultID="weather">home\weather\</backgrounddefault>
+	<background label="1036">home\favourites\</background>
+	<backgrounddefault defaultID="favourites">home\favourites\</backgrounddefault>
+	<background label="5">home\settings\</background>
+	<backgrounddefault defaultID="settings">home\settings\</backgrounddefault>
+	<background label="20126">home\logoff\</background>
+	<backgrounddefault defaultID="logoff">home\logoff\</backgrounddefault>
+	<background label="13005">home\shutdown\</background>
+	<backgrounddefault defaultID="shutdown">home\shutdown\</backgrounddefault>
+	<background label="137">home\search\</background>
+	<backgrounddefault defaultID="script.globalsearch">home\search\</backgrounddefault>
+	<background label="TV Guide">home\TV Guide\</background>
+	<backgrounddefault defaultID="script.tvguide">home\TV Guide\</backgrounddefault>
+	<backgroundBrowse>True</backgroundBrowse>
+	<backgroundBrowseDefault>special://skin/media/home_art</backgroundBrowseDefault>
+
+	<!-- Thumbnails (Home2 icons, also specified in shortcuts/mainmenu.DATA.xml) -->
+	<thumbnail label="341">home_icons/playdisc.png</thumbnail>
+	<thumbnail label="342">home_icons/movies.png</thumbnail>
+	<thumbnail label="20343">home_icons/tvshows.png</thumbnail>
+	<thumbnail label="3">home_icons/videos.png</thumbnail>
+	<thumbnail label="31334">home_icons/trailers.png</thumbnail>
+	<thumbnail label="31601">home_icons/livetv.png</thumbnail>
+	<thumbnail label="2">home_icons/music.png</thumbnail>
+	<thumbnail label="20389">home_icons/musicvideos.png</thumbnail>
+	<thumbnail label="31602">home_icons/radio.png</thumbnail>
+	<thumbnail label="1">home_icons/pictures.png</thumbnail>
+	<thumbnail label="24001">home_icons/programs.png</thumbnail>
+	<thumbnail label="8">home_icons/weather.png</thumbnail>
+	<thumbnail label="1036">home_icons/favourites.png</thumbnail>
+	<thumbnail label="5">home_icons/settings.png</thumbnail>
+	<thumbnail label="20126">home_icons/logoff.png</thumbnail>
+	<thumbnail label="13005">home_icons/shutdown.png</thumbnail>
+	<thumbnail label="137">home_icons/search.png</thumbnail>
+	<thumbnail label="TV Guide">home_icons/tvguide.png</thumbnail>
+	<thumbnailBrowseDefault>special://skin/media/home_icons</thumbnailBrowseDefault>	
+	
+	
+	
+	
+	
+	
+	
 </overrides>

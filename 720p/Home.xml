@@ -2,6 +2,7 @@
 <window id="0">
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0)</onload>
+	<onload condition="System.HasAddon(enable.smartish.widgets)">Skin.SetBool(enable.smartish.widgets)</onload>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<include>Global_Background</include>

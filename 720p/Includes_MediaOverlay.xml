@@ -10,7 +10,7 @@
 				<animation effect="slide" start="0,0" end="204,0" time="600" tween="cubic" easing="out" condition="Skin.HasSetting(MediaOverlay)">Conditional</animation>
 				<include>Animation_SlideLeftFadeOut</include>
 				<visible>Player.HasAudio + Skin.HasSetting(MusicSongInfoOverlay)</visible>
-				<visible>![Control.IsVisible(9901) | Control.IsVisible(9902)] + [!Control.HasFocus(9001) | ![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]] + ![Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8003) | Control.HasFocus(8004)] + [[Control.HasFocus(9000) + Skin.HasSetting(HomeCleanLibrary)] | [!SubString(Container(9000).ListItem.Property(hasSubmenu),True) | ![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]]] + !StringCompare(Container(9000).ListItem.Property(Widget),HomeForecast)</visible>
+				<visible>![Control.IsVisible(9901) | Control.IsVisible(9902) | Control.IsVisible(9900) | Container.Content(Addons) | Window.IsActive(Settings) | Window.IsActive(videossettings) | Window.IsActive(picturessettings) | Window.IsActive(appearancesettings) | Window.IsActive(servicesettings) | Window.IsActive(systemsettings) | Window.IsActive(musicsettings) | Window.IsActive(weathersettings) | Window.IsActive(profiles) | Window.IsActive(56)] + [!Control.HasFocus(9001) | ![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]] + ![Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8003) | Control.HasFocus(8004)] + [[Control.HasFocus(9000) + Skin.HasSetting(HomeCleanLibrary)] | [!SubString(Container(9000).ListItem.Property(hasSubmenu),True) | ![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]]] + !StringCompare(Container(9000).ListItem.Property(Widget),WeatherForecast)</visible>
 				<control type="grouplist">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -87,13 +87,23 @@
 					<visible>Player.HasAudio</visible>
 				</control>
 				<control type="image">
-					<description>cover image</description>
+					<description>cd cover image</description>
 					<width>150</width>
 					<height>150</height>
 					<texture background="true">$INFO[MusicPlayer.Cover]</texture>
-					<aspectratio aligny="bottom">scale</aspectratio>
-					<bordertexture border="8">thumb_border.png</bordertexture>
-					<bordersize>6</bordersize>
+					<aspectratio aligny="bottom">stretch</aspectratio>
+			<!--		<bordertexture border="8">thumb_border.png</bordertexture>
+			-->		<bordersize>6</bordersize>
+					<visible>Player.HasAudio + Skin.HasSetting(CaseOveralys)</visible>
+				</control>
+				<control type="image">
+					<description>cover image</description>
+					<posx>-55</posx>
+					<posy>-30</posy>
+					<width>246</width>
+					<height>213</height>
+					<texture background="true">flags/Overlays/cdcover.png</texture>
+					<aspectratio>stretch</aspectratio>
 					<visible>Player.HasAudio</visible>
 				</control>
 				<control type="videowindow" id="1">

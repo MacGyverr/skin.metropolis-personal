@@ -70,7 +70,7 @@
 				<randomize>true</randomize>
 				<loop>yes</loop>
 				<aspectratio>stretch</aspectratio>
-				<visible allowhiddenfocus="true">!Window.IsActive(videooverlay) + StringCompare(Container(9000).ListItem.Property(submenuVisibility),weather) + !Skin.HasSetting(NoWeather)</visible>
+			<visible allowhiddenfocus="true">!Window.IsActive(videooverlay) + StringCompare(Container(9000).ListItem.Property(labelID),weather) + Skin.HasSetting(DynamicWeather) + !Skin.HasSetting(NoWeather)</visible>
 			</control>	
 			<control type="multiimage">
 				<posx>240</posx>
@@ -80,10 +80,10 @@
 				<timeperimage>15000</timeperimage>
 				<randomize>true</randomize>
 				<fadetime>500</fadetime>
-				<imagepath background="true">$INFO[Container(9000).ListItem.Icon]</imagepath>
+				<imagepath background="true">$VAR[HomeBackground]</imagepath>
 				<aspectratio>stretch</aspectratio>
 				<visible>!Window.IsActive(videooverlay)</visible>
-				<visible allowhiddenfocus="true">![StringCompare(Container(9000).ListItem.Property(submenuVisibility),weather) + !Skin.HasSetting(NoWeather) + Skin.HasSetting(DynamicWeather) + !Skin.HasSetting(Home2)]</visible>
+			<visible allowhiddenfocus="true">!StringCompare(Container(9000).ListItem.Property(labelID),weather) | !Skin.HasSetting(DynamicWeather)</visible>
 			</control>	
 			<control type="videowindow">
 				<posx>240</posx>

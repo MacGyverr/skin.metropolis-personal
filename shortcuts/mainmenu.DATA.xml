@@ -1,153 +1,140 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <shortcuts>
 	<shortcut>
-		<label>$LOCALIZE[12600]</label>
-		<label2>Common Shortcut</label2>
-		<defaultID>weather</defaultID>
-		<icon>home_icons/weather.png</icon>
-		<thumb>home_art/weather.jpg</thumb>
-		<action>ActivateWindow(Weather)</action>
-	</shortcut>
-	<shortcut>
-		<label>$LOCALIZE[10006]</label>
-		<label2>Common Shortcut</label2>
-		<defaultID>videos</defaultID>
-		<icon>home_icons/videos.png</icon>
-		<thumb>home_art/videos.jpg</thumb>
-		<action>ActivateWindow(Videos,Files,return)</action>
-	</shortcut>
-	<shortcut>
-		<label>$LOCALIZE[32032]</label>
-		<label2>Common Shortcut</label2>
+		<label>$LOCALIZE[341]</label>
+		<label2>32034</label2>
 		<defaultID>dvd</defaultID>
 		<icon>home_icons/playdisc.png</icon>
-		<thumb>home_art/playdisc.jpg</thumb>
 		<action>PlayDVD()</action>
 		<visible>System.HasMediadvd</visible>
 	</shortcut>
 	<shortcut>
 		<label>$LOCALIZE[342]</label>
-		<label2>Common Shortcut</label2>
+		<label2>32034</label2>
 		<defaultID>movies</defaultID>
 		<icon>home_icons/movies.png</icon>
-		<thumb>home_art/movies.jpg</thumb>
 		<action>ActivateWindow(Videos,MovieTitles,return)</action>
+		<visible>Library.HasContent(Movies)</visible>
 	</shortcut>
 	<shortcut>
 		<label>$LOCALIZE[20343]</label>
-		<label2>Common Shortcut</label2>
+		<label2>32034</label2>
 		<defaultID>tvshows</defaultID>
 		<icon>home_icons/tvshows.png</icon>
-		<thumb>home_art/tvshows.jpg</thumb>
 		<action>ActivateWindow(Videos,TVShowTitles,return)</action>
+		<visible>Library.HasContent(TVShows)</visible>
 	</shortcut>
 	<shortcut>
-		<label>$LOCALIZE[10005]</label>
-		<label2>Common Shortcut</label2>
+		<label>$LOCALIZE[3]</label>
+		<label2>32034</label2>
+		<defaultID>videos</defaultID>
+		<icon>home_icons/videos.png</icon>
+		<action>ActivateWindow(Videos,Files,return)</action>
+	</shortcut>
+	<shortcut>
+		<label>$LOCALIZE[31334]</label>
+		<label2>Program</label2>
+		<defaultID>trailers</defaultID>
+		<icon>home_icons/trailers.png</icon>
+		<action>ActivateWindow(Videos,plugin://plugin.video.itunes_trailers,return)</action>
+		<visible>System.HasAddon(plugin.video.itunes_trailers)</visible>
+	</shortcut>
+	<shortcut>
+		<label>$LOCALIZE[31601]</label>
+		<label2>32034</label2>
+		<defaultID>livetv</defaultID>
+		<icon>home_icons/livetv.png</icon>
+		<action>ActivateWindow(TVChannels)</action>
+		<visible>PVR.HasTVChannels + System.GetBool(pvrmanager.enabled)</visible>
+	</shortcut>
+	<shortcut>
+		<label>$LOCALIZE[2]</label>
+		<label2>32034</label2>
 		<defaultID>music</defaultID>
 		<icon>home_icons/music.png</icon>
-		<thumb>home_art/music.jpg</thumb>
 		<action>ActivateWindow(MusicFiles)</action>
 	</shortcut>
 	<shortcut>
 		<label>$LOCALIZE[20389]</label>
-		<label2>Common Shortcut</label2>
+		<label2>32034</label2>
 		<defaultID>musicvideos</defaultID>
 		<icon>home_icons/musicvideos.png</icon>
-		<thumb>home_art/musicvideos.jpg</thumb>
 		<action>ActivateWindow(Videos,MusicVideoTitles,return)</action>
+		<visible>Library.HasContent(MusicVideos)</visible>
 	</shortcut>
 	<shortcut>
-		<label>$LOCALIZE[10002]</label>
-		<label2>Common Shortcut</label2>
+		<label>$LOCALIZE[31602]</label>
+		<label2>32034</label2>
+		<defaultID>radio</defaultID>
+		<icon>home_icons/radio.png</icon>
+		<action>ActivateWindow(RadioChannels)</action>
+		<visible>PVR.HasRadioChannels + System.GetBool(pvrmanager.enabled)</visible>
+	</shortcut>
+	<shortcut>
+		<label>$LOCALIZE[1]</label>
+		<label2>32034</label2>
 		<defaultID>pictures</defaultID>
 		<icon>home_icons/pictures.png</icon>
-		<thumb>home_art/pictures.jpg</thumb>
 		<action>ActivateWindow(Pictures)</action>
 	</shortcut>
 	<shortcut>
-		<label>$LOCALIZE[1036]</label>
-		<label2>Common Shortcut</label2>
-		<defaultID>1036</defaultID>
-		<icon>home_icons/favourites.png</icon>
-		<thumb>home_art/favourites.jpg</thumb>
-		<action>ActivateWindow(favourites)</action>
-	</shortcut>
-	<shortcut>
 		<label>$LOCALIZE[24001]</label>
-		<label2>Common Shortcut</label2>
+		<label2>32034</label2>
 		<defaultID>programs</defaultID>
 		<icon>home_icons/programs.png</icon>
-		<thumb>home_art/programs.jpg</thumb>
 		<action>ActivateWindow(Programs,Addons,return)</action>
 	</shortcut>
 	<shortcut>
-		<label>$LOCALIZE[10004]</label>
-		<label2>Common Shortcut</label2>
+		<label>$LOCALIZE[8]</label>
+		<label2>32034</label2>
+		<defaultID>weather</defaultID>
+		<icon>home_icons/weather.png</icon>
+		<action>ActivateWindow(Weather)</action>
+		<visible>!IsEmpty(Weather.Plugin)</visible>
+	</shortcut>
+	<shortcut>
+		<label>$LOCALIZE[1036]</label>
+		<label2>32034</label2>
+		<defaultID>favourites</defaultID>
+		<icon>home_icons/favourites.png</icon>
+		<action>ActivateWindow(favourites)</action>
+	</shortcut>
+	<shortcut>
+		<label>$LOCALIZE[5]</label>
+		<label2>32034</label2>
 		<defaultID>settings</defaultID>
 		<icon>home_icons/settings.png</icon>
-		<thumb>home_art/settings.jpg</thumb>
 		<action>ActivateWindow(Settings)</action>
+	</shortcut>
+	<shortcut>
+		<label>$LOCALIZE[20126]</label>
+		<label2>32034</label2>
+		<defaultID>logoff</defaultID>
+		<icon>home_icons/logoff.png</icon>
+		<action>System.LogOff</action>
+		<visible>[System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)] + System.Loggedon</visible>
+	</shortcut>	
+	<shortcut>
+		<label>$LOCALIZE[13005]</label>
+		<label2>Kodi Command</label2>
+		<defaultID>shutdown</defaultID>
+		<icon>home_icons/shutdown.png</icon>
+		<action>ShutDown</action>
 	</shortcut>
 	<shortcut>
 		<label>$LOCALIZE[137]</label>
 		<label2>Needs GlobalSearch Script</label2>
 		<defaultID>script.globalsearch</defaultID>
 		<icon>home_icons/search.png</icon>
-		<thumb />
 		<action>RunScript(script.globalsearch)</action>
 		<visible>System.HasAddon(script.globalsearch)</visible>
 	</shortcut>
 	<shortcut>
-		<label>$LOCALIZE[13005]</label>
-		<label2>Kodi Command</label2>
-		<defaultID>shutdown</defaultID>
-		<icon>home_icons/shutdown.png</icon>
-		<thumb>home_art/shutdown.jpg</thumb>
-		<action>ShutDown</action>
-	</shortcut>
-	<shortcut>
-		<label>$LOCALIZE[20126]</label>
-		<label2>Common Shortcut</label2>
-		<defaultID>logoff</defaultID>
-		<icon>home_icons/logoff.png</icon>
-		<thumb>home_art/logoff.jpg</thumb>
-		<action>System.LogOff</action>
-	</shortcut>	
-	<shortcut>
-		<label>Live TV</label>
-		<label2>Common Shortcut</label2>
-		<defaultID>livetv</defaultID>
-		<icon>home_icons/livetv.png</icon>
-		<thumb>home_art/livetv.jpg</thumb>
-		<action>ActivateWindow(TVChannels)</action>
-		<visible>System.GetBool(pvrmanager.enabled)</visible>
-	</shortcut>
-	<shortcut>
-		<label>Live Radio</label>
-		<label2>Common Shortcut</label2>
-		<defaultID>radio</defaultID>
-		<icon>home_icons/radio.png</icon>
-		<thumb>home_art/radio.jpg</thumb>
-		<action>ActivateWindow(RadioChannels)</action>
-		<visible>System.GetBool(pvrmanager.enabled)</visible>
-	</shortcut>
-	<shortcut>
-		<defaultID>script.tvguide</defaultID>
 		<label>TV Guide</label>
 		<label2>Program</label2>
+		<defaultID>script.tvguide</defaultID>
 		<icon>home_icons/tvguide.png</icon>
-		<thumb>home_art/tvguide.jpg</thumb>
 		<action>RunAddOn(script.tvguide)</action>
 		<visible>System.HasAddon(script.tvguide)</visible>
-	</shortcut>
-	<shortcut>
-		<defaultID>script.trailers</defaultID>
-		<label>$LOCALIZE[31334]</label>
-		<label2>Program</label2>
-		<icon>home_icons/trailers.png</icon>
-		<thumb>home_art/trailers.jpg</thumb>
-		<action>ActivateWindow(Videos,plugin://plugin.video.itunes_trailers,return)</action>
-		<visible>System.HasAddon(plugin.video.itunes_trailers)</visible>
 	</shortcut>
 </shortcuts>

@@ -308,7 +308,7 @@
 					<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">RecentlyAddedArrow1</include>
 					<include condition="Skin.HasSetting(Home2)">RecentlyAddedArrow2</include>
 					<include condition="Skin.HasSetting(Home3)">RecentlyAddedArrow3</include>
-					<visible>![[Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8003) | Control.HasFocus(8004)] + ![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]] + ![Control.HasFocus(9001) + ![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]] + !IsEmpty(Container(9000).ListItem.Property(widget)) + !StringCompare(Container(9000).ListItem.Property(Widget),HomeForecast) + ![[StringCompare(Container(9000).ListItem.Property(Widget),PVR) + !PVR.IsRecording] + [StringCompare(Container(9000).ListItem.Property(Widget),PVR) + !PVR.HasNonRecordingTimer]]</visible>
+					<visible>![[Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8003) | Control.HasFocus(8004)] + ![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]] + ![Control.HasFocus(9001) + ![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]] + !IsEmpty(Container(9000).ListItem.Property(widget)) + !StringCompare(Container(9000).ListItem.Property(Widget),WeatherForecast) + ![[StringCompare(Container(9000).ListItem.Property(Widget),PVR) + !PVR.IsRecording] + [StringCompare(Container(9000).ListItem.Property(Widget),PVR) + !PVR.HasNonRecordingTimer]]</visible>
 				</control>
 				
 				<!-- Widget titles for all home views -->
@@ -318,7 +318,7 @@
 					<include condition="Skin.HasSetting(Home3)">RecentlyAddedTitle3</include>
 					<label>[B]$INFO[Container(9000).ListItem.Property(widgetName)][/B]</label>
 					<shadowcolor>ff000000</shadowcolor>
-					<visible>![Control.HasFocus(9001) + ![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]] + !IsEmpty(Container(9000).ListItem.Property(widget)) + !StringCompare(Container(9000).ListItem.Property(Widget),HomeForecast) + ![[StringCompare(Container(9000).ListItem.Property(Widget),PVR) + !PVR.IsRecording] + [StringCompare(Container(9000).ListItem.Property(Widget),PVR) + !PVR.HasNonRecordingTimer]]</visible>
+					<visible>![Control.HasFocus(9001) + ![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]] + !IsEmpty(Container(9000).ListItem.Property(widget)) + !StringCompare(Container(9000).ListItem.Property(Widget),WeatherForecast) + ![[StringCompare(Container(9000).ListItem.Property(Widget),PVR) + !PVR.IsRecording] + [StringCompare(Container(9000).ListItem.Property(Widget),PVR) + !PVR.HasNonRecordingTimer]]</visible>
 				</control>
 			</control>
 			
@@ -331,61 +331,12 @@
 			<effect type="slide" start="0,0" end="0,400" tween="quadratic" easing="in" time="200" />
 			<effect type="fade" start="100" end="0" time="100" />
 		</animation>
-				<!-- Widget Thumbnails -->
 
-				<!-- script.extendedinfo/service.library.data.provider Widget Thumbnail-->
-				<control type="group">
-					<control type="image">
-						<include>Animation_CommonFade</include>
-						<include>Animation_FadedByMenu</include>
-						<posx>265</posx>
-						<posy>560</posy>
-						<width>250</width>
-						<height>140</height>
-						<aspectratio align="right" aligny="center">keep</aspectratio>
-						<bordertexture border="6">frames/thumb_border.png</bordertexture>
-						<bordersize>6</bordersize>
-						<texture diffuse="frames/EpisodeMatte.png">$INFO[Container(8000).ListItem.Icon]</texture>
-						<visible>!IsEmpty(Container(9000).ListItem.Property(widget)) + !StringCompare(Container(9000).ListItem.Property(Widget),HomeForecast) + !StringCompare(Container(9000).ListItem.Property(Widget),PVR) + !StringCompare(Container(9000).ListItem.Property(Widget),Playlist)</visible>
-					</control>
-				</control>
-				
-				<!-- Playlist Widget Thumbnails-->
-				<control type="group">
-					<!-- Fanart/CD Cover/Missing Thumbnail-->
-					<control type="image">
-						<include>Animation_CommonFade</include>
-						<include>Animation_FadedByMenu</include>
-						<posx>265</posx>
-						<posy>560</posy>
-						<width>250</width>
-						<height>140</height>
-						<aspectratio align="right" aligny="center">keep</aspectratio>
-						<bordertexture border="6">frames/thumb_border.png</bordertexture>
-						<bordersize>6</bordersize>
-						<texture diffuse="frames/EpisodeMatte.png" fallback="DefaultThumb.png">$INFO[Container(8001).ListItem.Icon]</texture>
-						<visible>Control.HasFocus(8001) + [IsEmpty(Container(8001).ListItem.Icon) | !IsEmpty(Container(8001).ListItem.TVShowTitle) | !IsEmpty(Container(8001).ListItem.Album)] + StringCompare(Container(9000).ListItem.Property(Widget),Playlist)</visible>
-					</control>
-					<!-- Poster Thumbnail-->
-					<control type="image">
-						<include>Animation_CommonFade</include>
-						<include>Animation_FadedByMenu</include>
-						<posx>415</posx>
-						<posy>560</posy>
-						<width>100</width>
-						<height>140</height>
-						<aspectratio align="right" aligny="center">keep</aspectratio>
-						<bordertexture border="6">frames/thumb_border.png</bordertexture>
-						<bordersize>6</bordersize>
-						<texture diffuse="frames/EpisodeMatte.png" fallback="DefaultThumb.png">$INFO[Container(8001).ListItem.Icon]</texture>
-						<visible>Control.HasFocus(8001) + !IsEmpty(Container(8001).ListItem.Icon) + IsEmpty(Container(8001).ListItem.TVShowTitle) + IsEmpty(Container(8001).ListItem.Album) + StringCompare(Container(9000).ListItem.Property(Widget),Playlist)</visible>
-					</control>
-				</control>
-				
+			<!-- Widgets -->
 				<!-- Widget Menus -->
-				<!-- script.extendedinfo/service.library.data.provider Widget Menus-->
 				<control type="group">
-					<control type="button" id="7999">
+					<visible>!IsEmpty(Container(9000).ListItem.Property(widget)) | [![Skin.HasSetting(Home2) | Skin.HasSetting(Home3) | Skin.HasSetting(HideUnfocusedWidgets)] + !Control.HasFocus(9001) + !IsEmpty(Container(9000).ListItem.Property(widget))]</visible>
+					<control type="button" id="8001">
 						<description>Fake button for picture-based widgets</description>
 						<onup>Control.Move(8000,-1)</onup>
 						<ondown>Control.Move(8000,1)</ondown>
@@ -394,39 +345,29 @@
 						<onclick condition="IsEmpty(Container(8000).ListItem.PicturePath)">ShowPicture($INFO[Container(8000).ListItem.Thumb])</onclick>
 						<visible>StringCompare(Container(9000).ListItem.Property(widgetType),pictures)</visible>
 					</control>
-					<visible>!IsEmpty(Container(9000).ListItem.Property(widget)) + !StringCompare(Container(9000).ListItem.Property(Widget),HomeForecast) + !StringCompare(Container(9000).ListItem.Property(Widget),PVR) + !StringCompare(Container(9000).ListItem.Property(Widget),Playlist)</visible>
+					<control type="image">
+						<include>Animation_CommonFadeNoHide</include>
+						<include>Animation_FadedByMenu</include>
+						<description>Vertical Widget list Icon</description>
+						<posx>265</posx>
+						<posy>560</posy>
+						<width>250</width>
+						<height>140</height>
+						<aspectratio align="right" aligny="center">keep</aspectratio>
+						<bordertexture border="6">frames/thumb_border.png</bordertexture>
+						<bordersize>6</bordersize>
+						<texture diffuse="frames/EpisodeMatte.png">$INFO[Container(8000).ListItem.Icon]</texture>
+						<visible>[![Skin.HasSetting(Home2) | Skin.HasSetting(Home3) | Skin.HasSetting(HideUnfocusedWidgets)] + !Control.HasFocus(9001) + !IsEmpty(Container(9000).ListItem.Property(widget))] | [Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8003)]</visible>
+					</control>
 					<control type="list" id="8000">
-						<include>Global_Widget</include>
+						<description>Widget Lists</description>
+						<include>Global_VerticalListWidget</include>
 						<content target="$VAR[GlobalWidgetType]">$VAR[GlobalWidgetContent]</content>
 					</control>
 				</control>
 
-				<!-- Playlist Widget -->
-				<control type="group">
-					<visible>StringCompare(Container(9000).ListItem.Property(Widget),Playlist)</visible>
-					<control type="label">
-						<posx>533</posx>
-						<posy>617</posy>
-						<width>500</width>
-						<height>27</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<scrollout>false</scrollout>
-						<pauseatend>600</pauseatend>
-						<scrollspeed>20</scrollspeed>
-						<font>METF_RecentlyAddedListText</font>
-						<textcolor>RecentlyAddedNF</textcolor>
-						<label>Playlist Loading...</label>
-						<visible>Control.HasFocus(8001) + IsEmpty(Container(8001).ListItem.Label)</visible>
-					</control>
-					<control type="list" id="8001">
-						<include>Playlist_Widget</include>
-						<content>$INFO[Container(9000).ListItem.Property(widgetPlaylist)]</content>
-					</control>		
-				</control>
-				
 				<!-- PVR Widget button -->
-				<control type="button" id="8004">
+				<control type="button" id="8002">
 					<left>1</left>
 					<top>1</top>
 					<width>1</width>
@@ -434,18 +375,34 @@
 					<label>-</label>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
-					<onup>8004</onup>
-					<ondown>8004</ondown>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
 					<onclick>ActivateWindow(TVTimers)</onclick>
-					<visible>StringCompare(Container(9000).ListItem.Property(Widget),PVR) + [PVR.IsRecording | PVR.HasNonRecordingTimer]</visible>
+					<visible>!IsEmpty(Container(9000).ListItem.Property(widget)) + StringCompare(Container(9000).ListItem.Property(Widget),PVR) + [PVR.IsRecording | PVR.HasNonRecordingTimer]</visible>
+				</control>
+
+				<!-- Weather Widget button -->
+				<control type="button" id="8003">
+					<left>1</left>
+					<top>1</top>
+					<width>1</width>
+					<height>1</height>
+					<label>-</label>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<onclick>ActivateWindow(Weather)</onclick>
+					<visible>!IsEmpty(Container(9000).ListItem.Property(widget)) + StringCompare(Container(9000).ListItem.Property(Widget),WeatherForecast)</visible>
 				</control>
 			</control>
+
 
 			<!-- PVR Widget -->
 			<control type="group">
 				<left>470</left>
 				<top>554</top>
-				<visible>Control.HasFocus(8004) + [StringCompare(Container(9000).ListItem.Property(Widget),PVR) + [PVR.IsRecording | PVR.HasNonRecordingTimer]]</visible>
+				<visible>Control.HasFocus(8002) + [StringCompare(Container(9000).ListItem.Property(Widget),PVR) + [PVR.IsRecording | PVR.HasNonRecordingTimer]]</visible>
 				<animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(Favourites)">conditional</animation>
 				<control type="group">
 					<animation effect="slide" start="0,0" end="0,80" time="0" condition="PVR.IsRecording">conditional</animation>
@@ -578,7 +535,7 @@
 			<!-- 7 Day Forecast -->
 			<control type="grouplist">
 				<include>Animation_VisibleSlideDownFadeOut</include>
-				<visible>Control.HasFocus(9000) + StringCompare(Container(9000).ListItem.Property(Widget),HomeForecast)</visible>
+				<visible>Control.HasFocus(9000) + StringCompare(Container(9000).ListItem.Property(Widget),WeatherForecast)</visible>
 				<top>WeatherHomeTop</top>
 				<!-- <left>WeatherHomeLeft</left> -->
 				<left>0</left>
@@ -951,10 +908,9 @@
 			
 		</control>
 	</include>
-
-	<!-- Widget list elements -->
-	<include name="Global_Widget">
-		<include>Animation_CommonFade</include>
+	<!-- Vertical List Widget elements -->
+	<include name="Global_VerticalListWidget">
+		<include>Animation_CommonFadeNoHide</include>
 		<include>Animation_FadedByMenu</include>
 		<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
 		<animation effect="fade" start="0" end="100" time="200" delay="100" >Visible</animation>
@@ -987,6 +943,7 @@
 				<font>METF_RecentlyAddedListText</font>
 				<textcolor>RecentlyAddedNF</textcolor>
 				<label>$VAR[GlobalWidgetLabel]</label>
+				<visible>[![Skin.HasSetting(Home2) | Skin.HasSetting(Home3) | Skin.HasSetting(HideUnfocusedWidgets)] + !Control.HasFocus(9001) + !IsEmpty(Container(9000).ListItem.Property(widget))] | [Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8003)]</visible>
 			</control>
 		</itemlayout>
 		<focusedlayout width="510" height="27">
@@ -999,7 +956,7 @@
 				<aligny>center</aligny>
 				<texture>FocusLine.png</texture>
 				<colordiffuse>FocusBar</colordiffuse>
-				<visible>[Control.HasFocus(8000) | Control.HasFocus(7999)] </visible>
+				<visible>[Control.HasFocus(8000) | Control.HasFocus(8001)]</visible>
 			</control>
 			<control type="label">
 				<posx>10</posx>
@@ -1014,64 +971,65 @@
 				<font>METF_RecentlyAddedListText</font>
 				<textcolor>FocusBarText</textcolor>
 				<label>$VAR[GlobalWidgetLabel]</label>
+				<visible>[![Skin.HasSetting(Home2) | Skin.HasSetting(Home3) | Skin.HasSetting(HideUnfocusedWidgets)] + !Control.HasFocus(9001) + !IsEmpty(Container(9000).ListItem.Property(widget))] | [Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8003)]</visible>
 			</control>
 		</focusedlayout>
 	</include>
-	
-	<include name="Playlist_Widget">
+	<include name="Global_Widget_H">
 		<include>Animation_CommonFade</include>
 		<include>Animation_FadedByMenu</include>
-		<visible allowhiddenfocus="true">StringCompare(Container(9000).ListItem.Property(Widget),Playlist)</visible>
-		<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+<!--		<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
 		<animation effect="fade" start="0" end="100" time="200" delay="100" >Visible</animation>
-		<animation effect="slide" start="0,0" end="0,54" time="0" condition="StringCompare(Container(8001).NumItems,1)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,44" time="0" condition="StringCompare(Container(8001).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,28" time="0" condition="StringCompare(Container(8001).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="0,14" time="0" condition="StringCompare(Container(8001).NumItems,4)">conditional</animation>
-		<posx>522</posx>
+		<animation effect="slide" start="0,0" end="0,54" time="0" condition="StringCompare(Container(8000).NumItems,1)">conditional</animation>
+		<animation effect="slide" start="0,0" end="0,44" time="0" condition="StringCompare(Container(8000).NumItems,2)">conditional</animation>
+		<animation effect="slide" start="0,0" end="0,28" time="0" condition="StringCompare(Container(8000).NumItems,3)">conditional</animation>
+		<animation effect="slide" start="0,0" end="0,14" time="0" condition="StringCompare(Container(8000).NumItems,4)">conditional</animation>
+-->		<posx>322</posx>
 		<posy>563</posy>
-		<width>510</width>
-		<height>135</height>
-		<onup>8000</onup>
-		<ondown>8000</ondown>
-		<onleft>9000</onleft>
-		<onright>9000</onright>
+		<width>650</width>
+		<height>130</height>
+		<onup>9000</onup>
+		<ondown>9000</ondown>
+		<onleft>8000</onleft>
+		<onright>8000</onright>
 		<viewtype>list</viewtype>
-		<orientation>vertical</orientation>
+		<orientation>horizontal</orientation>
 		<scrolltime>200</scrolltime>
-		<itemlayout width="510" height="27">
-			<control type="label">
-				<posx>10</posx>
-				<posy>-2</posy>
-				<width>500</width>
-				<height>27</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<scrollout>false</scrollout>
-				<pauseatend>600</pauseatend>
-				<scrollspeed>20</scrollspeed>
-				<font>METF_RecentlyAddedListText</font>
-				<textcolor>RecentlyAddedNF</textcolor>
-				<label>$INFO[ListItem.Label]</label>
-			</control>
-		</itemlayout>
-		<focusedlayout width="510" height="27">
-			<!-- Focus Bar -->
+		<itemlayout width="130" height="130">
 			<control type="image">
+				<include>Animation_CommonFade</include>
+				<include>Animation_FadedByMenu</include>
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>510</width>
-				<height>27</height>
-				<aligny>center</aligny>
-				<texture>FocusLine.png</texture>
-				<colordiffuse>FocusBar</colordiffuse>
-				<visible>Control.HasFocus(8001)</visible>
+				<width>130</width>
+				<height>130</height>
+				<aspectratio align="right" aligny="center">keep</aspectratio>
+				<bordertexture border="6">frames/thumb_border.png</bordertexture>
+				<bordersize>6</bordersize>
+				<texture diffuse="frames/EpisodeMatte.png" fallback="DefaultThumb.png">$INFO[Container(8000).ListItem.Thumb]</texture>
+				<visible>[Control.HasFocus(8000) | Control.HasFocus(7999)] </visible>
+			</control>
+		</itemlayout>
+		<focusedlayout width="130" height="130">
+			<!-- Focus Bar -->
+			<control type="image">
+				<include>Animation_CommonFade</include>
+				<include>Animation_FadedByMenu</include>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>130</width>
+				<height>130</height>
+				<aspectratio align="right" aligny="center">keep</aspectratio>
+				<bordertexture border="6">frames/thumb_border.png</bordertexture>
+				<bordersize>6</bordersize>
+				<texture diffuse="frames/EpisodeMatte.png" fallback="DefaultThumb.png">$INFO[Container(8000).ListItem.Icon]</texture>
+				<visible>[Control.HasFocus(8000) | Control.HasFocus(7999)] </visible>
 			</control>
 			<control type="label">
 				<posx>10</posx>
 				<posy>-2</posy>
-				<width>500</width>
-				<height>27</height>
+				<width>130</width>
+				<height>130</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<scrollout>false</scrollout>
@@ -1079,9 +1037,8 @@
 				<scrollspeed>20</scrollspeed>
 				<font>METF_RecentlyAddedListText</font>
 				<textcolor>FocusBarText</textcolor>
-				<label>$INFO[ListItem.Label]</label>
+				<label>$VAR[GlobalWidgetLabel]</label>
 			</control>
 		</focusedlayout>
-	</include>	
-
+	</include>
 </includes>
