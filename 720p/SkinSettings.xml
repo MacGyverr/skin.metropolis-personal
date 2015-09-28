@@ -240,12 +240,7 @@
 						<selected>Skin.HasSetting(DynamicWeather)</selected>
 						<visible>!Skin.HasSetting(Home2)</visible>
 					</control>
-		-->			<control type="radiobutton" id="206">
-						<include>SettingsLabel</include>
-						<label>$LOCALIZE[31035]</label>
-						<onclick>Skin.ToggleSetting(HomeCleanLibrary)</onclick>
-						<selected>Skin.HasSetting(HomeCleanLibrary)</selected>
-					</control>
+		-->	
 					<control type="image" id="209">
 						<include>Settings_Line</include>
 					</control>
@@ -1020,6 +1015,12 @@
 						<label>Use Horizontal Widgets</label>
 						<onclick>Skin.ToggleSetting(HorizontalWidgets)</onclick>
 						<selected>Skin.HasSetting(HorizontalWidgets)</selected>
+					</control>
+					<control type="radiobutton" id="206">
+						<include>SettingsLabel</include>
+						<label>$LOCALIZE[31035]</label>
+						<onclick>Skin.ToggleSetting(HomeCleanLibrary)</onclick>
+						<selected>Skin.HasSetting(HomeCleanLibrary)</selected>
 					</control>
 					<control type="image" id="10204">
 						<include>Settings_Line</include>
