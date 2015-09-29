@@ -233,14 +233,6 @@
 						<selected>Skin.HasSetting(HomeStats)</selected>
 						<visible>!Skin.HasSetting(Home2) | !Skin.HasSetting(Home3)</visible>
 					</control>
-		<!--			<control type="radiobutton" id="205">
-						<include>SettingsLabel</include>
-						<label>$LOCALIZE[31034]</label>
-						<onclick>Skin.ToggleSetting(DynamicWeather)</onclick>
-						<selected>Skin.HasSetting(DynamicWeather)</selected>
-						<visible>!Skin.HasSetting(Home2)</visible>
-					</control>
-		-->	
 					<control type="image" id="209">
 						<include>Settings_Line</include>
 					</control>
@@ -1045,14 +1037,14 @@
 					<label>Select Weather Fanart Package</label>
 					<include>SettingsLabel</include>
 					<onclick>RunScript(script.image.resource.select,property=weatherfanart&amp;type=resource.images.weatherfanart)</onclick>
-					<visible>System.HasAddon(script.image.resource.select) + Skin.HasSetting(DynamicWeather)</visible>
+					<visible>System.HasAddon(script.image.resource.select)</visible>
 				</control>
 				<control type="button" id="10005">
 					<description>Select weather icons</description>
 					<label>Select Weather Icon Package</label>
 					<include>SettingsLabel</include>
 					<onclick>RunScript(script.image.resource.select,property=weathericons&amp;type=resource.images.weathericons)</onclick>
-					<visible>System.HasAddon(script.image.resource.select) + Skin.HasSetting(DynamicWeather)</visible>
+					<visible>System.HasAddon(script.image.resource.select)</visible>
 				</control>	
 
 					<control type="image" id="10304">

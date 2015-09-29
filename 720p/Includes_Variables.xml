@@ -50,12 +50,6 @@
 		<value>.jpg</value>
 	</variable>	
 	
-	<variable name="Weather_Fanart">
-		<value condition="!IsEmpty(Skin.String(CustomWeather)) + !Skin.HasSetting(DynamicWeather)">$INFO[Skin.String(CustomWeather)]</value>
-		<value condition="Skin.HasSetting(DynamicWeather) + System.HasAddon(script.image.resource.select) + !IsEmpty(Skin.String(weatherfanart.path))">$INFO[Skin.String(weatherfanart.path)]/$INFO[Window(Weather).Property(Current.FanartCode)]$VAR[Weather_Fanart_Animated]</value>
-		<value>home_art/weather.jpg</value>
-	</variable>
-	
 	<variable name="ListItemTitle">
 		<value condition="Container.Content(albums) | Container.Content(songs)">$INFO[ListItem.Label]$INFO[ListItem.Label2, - ]</value>
 		<value condition="SubString(Container.FolderPath,plugin)">$INFO[ListItem.Season,,x]$INFO[ListItem.Episode,,. ]$INFO[ListItem.Label]</value>

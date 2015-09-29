@@ -14,7 +14,6 @@
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(Home3)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(HomeStats)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(WeatherForecast)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(DynamicWeather)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(Show_PlotOutline)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(Scrollbar)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(NextAired)</onload>
@@ -29,8 +28,8 @@
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetString(OSDFadeTime,5)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetString(DateFormat,DOW)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetString(DefaultOSD,714)</onload>
+	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(HomeStretchBackgrounds)</onload>
 	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(defallt)</onload>
-	
 	<controls>
 		<control type="button" id="10">
 			<description>Weather</description>
