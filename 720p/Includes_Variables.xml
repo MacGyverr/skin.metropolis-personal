@@ -12,7 +12,8 @@
 		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\radio\)">home_art/radio.jpg</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\pictures\)">home_art/pictures.jpg</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\programs\)">home_art/programs.jpg</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\weather\)">home_art/weather.jpg</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\weather\) + IsEmpty(Skin.String(weatherfanart.path))">home_art/weather.jpg</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\weather\) + !IsEmpty(Skin.String(weatherfanart.path)) + System.HasAddon(script.image.resource.select)">$INFO[Skin.String(weatherfanart.path)]/$INFO[Window(Weather).Property(Current.FanartCode)]$VAR[Weather_Fanart_Animated]</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\favourites\)">home_art/favourites.jpg</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\settings\)">home_art/settings.jpg</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\logoff\)">home_art/logoff.jpg</value>
@@ -33,7 +34,8 @@
 		<value condition="StringCompare(Container(211).ListItem.Property(background),home\radio\)">home_art/radio.jpg</value>
 		<value condition="StringCompare(Container(211).ListItem.Property(background),home\pictures\)">home_art/pictures.jpg</value>
 		<value condition="StringCompare(Container(211).ListItem.Property(background),home\programs\)">home_art/programs.jpg</value>
-		<value condition="StringCompare(Container(211).ListItem.Property(background),home\weather\)">home_art/weather.jpg</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(background),home\weather\) + IsEmpty(Skin.String(weatherfanart.path))">home_art/weather.jpg</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(background),home\weather\) + !IsEmpty(Skin.String(weatherfanart.path)) + System.HasAddon(script.image.resource.select)">$INFO[Skin.String(weatherfanart.path)]/$INFO[Window(Weather).Property(Current.FanartCode)]$VAR[Weather_Fanart_Animated]</value>
 		<value condition="StringCompare(Container(211).ListItem.Property(background),home\favourites\)">home_art/favourites.jpg</value>
 		<value condition="StringCompare(Container(211).ListItem.Property(background),home\settings\)">home_art/settings.jpg</value>
 		<value condition="StringCompare(Container(211).ListItem.Property(background),home\logoff\)">home_art/logoff.jpg</value>
@@ -102,7 +104,7 @@
 		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyAddedEpisodes)">videodb://recentlyaddedepisodes/</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyAddedMusicVideos)">videodb://recentlyaddedmusicvideos/</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyAddedAlbums)">musicdb://recentlyaddedalbums/</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyPlayedAlbums )">musicdb://recentlyplayedalbums/ </value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyPlayedAlbums)">musicdb://recentlyplayedalbums/ </value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryAddons)">addons://sources/executable/</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryFavourites)">favourites://</value>		<!-- built-in library content -->
 
@@ -177,11 +179,11 @@
 		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LDPRandomSongs)">$INFO[ListItem.Artist] - $INFO[ListItem.Title]</value>
 		
 		<!-- fixing the service.library.data.provider content labels-->
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyAddedMovies">$INFO[ListItem.Title] ($INFO[ListItem.Year])</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyAddedEpisodes">$INFO[ListItem.TVshowTitle] - $INFO[ListItem.Season]x$INFO[ListItem.Episode] - $INFO[ListItem.Title]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyAddedAlbums">$INFO[ListItem.Artist] - $INFO[ListItem.Title]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyAddedMusicVideos">$INFO[ListItem.Label]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyPlayedAlbums">$INFO[ListItem.Artist] - $INFO[ListItem.Title]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyAddedMovies)">$INFO[ListItem.Title] ($INFO[ListItem.Year])</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyAddedEpisodes)">$INFO[ListItem.TVshowTitle] - $INFO[ListItem.Season]x$INFO[ListItem.Episode] - $INFO[ListItem.Title]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyAddedAlbums)">$INFO[ListItem.Artist] - $INFO[ListItem.Title]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyAddedMusicVideos)">$INFO[ListItem.Label]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyPlayedAlbums)">$INFO[ListItem.Artist] - $INFO[ListItem.Title]</value>
 		
 		<!-- fixing the playlists content labels-->
 		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),Playlist) + IsEmpty(Container(8000).ListItem.TVshowTitle)">$INFO[ListItem.Title] ($INFO[ListItem.Year])</value>

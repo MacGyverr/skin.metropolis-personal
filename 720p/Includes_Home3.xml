@@ -94,39 +94,44 @@
 				<!--	<label>special://skin/extras/weather/$INFO[Window(Weather).Property(Current.FanartCode)].jpg</label>-->
 			</control>
 		</control>
-		
-		<!-- Main menu background -->	
+
+		<!-- Main menu background -->
 		<control type="multiimage">
-			<description>Weather Multi-image background</description>
+			<description>Multi-image background</description>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
-			<height>544</height>
-			<imagepath>$VAR[Weather_Fanart]</imagepath>
-			<timeperimage>5000</timeperimage>
-			<fadetime>2000</fadetime>
-			<pauseatend>10000</pauseatend>
-			<randomize>true</randomize>
-			<loop>yes</loop>
-			<aspectratio>stretch</aspectratio>
-			<visible allowhiddenfocus="true">!Window.IsActive(videooverlay) + StringCompare(Container(9000).ListItem.Property(labelID),weather) + Skin.HasSetting(DynamicWeather) + !Skin.HasSetting(NoWeather)</visible>
-		</control>
-		
-		<control type="multiimage">
-			<description>Everything but weather Multi-image background</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>723</height>
+			<include condition="Skin.HasSetting(HomeStretchBackgrounds)">Stretch_Fullscreen</include>
+			<include condition="!Skin.HasSetting(HomeStretchBackgrounds)">Scale_Fullscreen</include>
 			<timeperimage>15000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>500</fadetime>
-			<aspectratio>stretch</aspectratio>
-			<imagepath background="true" diffuse="diffuse_fanart.png">$VAR[HomeBackground]</imagepath>
+			<imagepath>$VAR[HomeBackground]</imagepath>
 			<animation reversible="false" effect="zoom" center="auto" start="100" end="112" time="200" tween="sine" easing="inout">focus</animation>
 			<animation reversible="false" effect="zoom" center="auto" start="112" end="100" time="200" tween="sine" easing="inout">unfocus</animation>
-			<visible allowhiddenfocus="true">!StringCompare(Container(9000).ListItem.Property(labelID),weather) | !Skin.HasSetting(DynamicWeather)</visible>
-		</control>
+			<visible allowhiddenfocus="true">!Window.IsActive(videooverlay)</visible>
+		</control>		
+
+		<!-- Plot box -->
+		<control type="image">
+			<description>create a plot box out of the background</description>
+			<posx>0</posx>
+			<posy>544</posy>
+			<width>1280</width>
+			<height>176</height>
+			<texture>background.png</texture>
+			<aspectratio aligny="bottom">scale</aspectratio>
+		</control>	
+		<control type="image">
+			<description>now covering with diffused color is not see-through</description>
+			<posx>0</posx>
+			<posy>544</posy>
+			<width>1280</width>
+			<height>176</height>
+			<texture>background.png</texture>
+			<aspectratio aligny="bottom">scale</aspectratio>
+			<colordiffuse>BackgroundColor</colordiffuse>
+		</control>	
 		
 		<!-- Ken Burns Effect (just a lark) -->
 <!--				
@@ -138,10 +143,9 @@
 			<animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="!Skin.HasSetting(animation_bg)">Conditional</animation>
 			<animation effect="slide" start="-10,-10" end="20,20" time="7000" tween="cubic" easing="inout" pulse="true" condition="!Skin.HasSetting(animation_bg)">Conditional</animation>
 			<animation effect="rotate" center="360,640" start="-2" end="2" time="11000" tween="cubic" easing="inout" pulse="true" condition="!Skin.HasSetting(animation_bg)">Conditional</animation>
-			<texture>$INFO[Container(9000).ListItem.Thumb]</texture>
+			<texture>$VAR[HomeBackground]</texture>
 		</control> 				
 -->				
-				
 		<!-- Sub-menus and upper-menus -->
 		<include>HomeDeck</include>
 

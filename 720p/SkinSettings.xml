@@ -1022,10 +1022,16 @@
 						<onclick>Skin.ToggleSetting(HomeCleanLibrary)</onclick>
 						<selected>Skin.HasSetting(HomeCleanLibrary)</selected>
 					</control>
+				 	<control type="radiobutton" id="10004">
+ 						<include>SettingsLabel</include>
+						<label>Stretch Backgrounds</label>
+						<onclick>Skin.ToggleSetting(HomeStretchBackgrounds)</onclick>
+						<selected>Skin.HasSetting(HomeStretchBackgrounds)</selected>
+						<visible>!Skin.HasSetting(Home2)</visible>
+					</control>
 					<control type="image" id="10204">
 						<include>Settings_Line</include>
 					</control>		
-				
 	<!--				<control type="radiobutton" id="105">
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31447]</label>

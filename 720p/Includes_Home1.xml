@@ -58,21 +58,7 @@
 				<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
 			</control>
 			<control type="multiimage">
-				<description>Weather Multi-image background</description>
-				<posx>240</posx>
-				<posy>50</posy>
-				<width>800</width>
-				<height>450</height>
-				<imagepath>$VAR[Weather_Fanart]</imagepath>
-				<timeperimage>5000</timeperimage>
-				<fadetime>2000</fadetime>
-				<pauseatend>10000</pauseatend>
-				<randomize>true</randomize>
-				<loop>yes</loop>
-				<aspectratio>stretch</aspectratio>
-			<visible allowhiddenfocus="true">!Window.IsActive(videooverlay) + StringCompare(Container(9000).ListItem.Property(labelID),weather) + Skin.HasSetting(DynamicWeather) + !Skin.HasSetting(NoWeather)</visible>
-			</control>	
-			<control type="multiimage">
+				<description>Multi-image background</description>
 				<posx>240</posx>
 				<posy>50</posy>
 				<width>800</width>
@@ -83,7 +69,6 @@
 				<imagepath background="true">$VAR[HomeBackground]</imagepath>
 				<aspectratio>stretch</aspectratio>
 				<visible>!Window.IsActive(videooverlay)</visible>
-			<visible allowhiddenfocus="true">!StringCompare(Container(9000).ListItem.Property(labelID),weather) | !Skin.HasSetting(DynamicWeather)</visible>
 			</control>	
 			<control type="videowindow">
 				<posx>240</posx>
