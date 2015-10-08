@@ -32,4 +32,12 @@
 		<icon>DefaultAddonPicture.png</icon>
 		<thumb />
 	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(Games,Addons,return)</action>
+		<label>GAmes</label>
+		<label2>32020</label2>
+		<defaultID>1214</defaultID>
+		<icon>DefaultAddonPicture.png</icon>
+		<thumb />
+	</shortcut>
 </shortcuts>

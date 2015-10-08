@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>1000</defaultcontrol>
+	<coordinates>
+		<left>900</left>
+		<top>50</top>
+	</coordinates>
+	<controls>
+		<control type="image" id="999">
+			<description>background image</description>
+			<left>0</left>
+			<top>0</top>
+			<width>340</width>
+			<height>420</height>
+			<texture border="20">frames\Dialog_Glass2PanelMedium.png</texture>
+			<colordiffuse>DialogDropdownColor</colordiffuse>
+		</control>
+		<control type="grouplist" id="996">
+			<description>grouplist for context buttons</description>
+			<left>20</left>
+			<top>30</top>
+			<width>300</width>
+			<height max="350">auto</height>
+			<itemgap>2</itemgap>
+		</control>
+		<control type="button" id="1000">
+			<description>button template</description>
+			<left>-</left>
+			<top>-</top>
+			<width>300</width>
+			<height>38</height>
+			<align>center</align>
+			<font>METF_HomeMenuSmall</font>
+			<textcolor>SubmenuText</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus border="5">pstvButtonFocus.png</texturefocus>
+		</control>
+	</controls>
+</window>

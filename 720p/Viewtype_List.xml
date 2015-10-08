@@ -602,6 +602,16 @@
 					<texture fallback="DefaultMusicGenre.jpg">musicgenres/$INFO[ListItem.Label].jpg</texture>
 					<visible>[Window.IsActive(musiclibrary) | [Window.IsActive(videolibrary) + SubString(Container.FolderPath,videodb://musicvideos/)]] + Container.Content(genres)</visible>
 				</control>
+				<control type="image">
+					<posx>37</posx>
+					<posy>45</posy>
+					<width>300</width>
+					<height>440</height>
+					<fadetime>100</fadetime>
+					<aspectratio align="right" aligny="center">keep</aspectratio>
+					<texture fallback="DefaultMusicGenre.jpg">$INFO[ListItem.FileNameAndPath].png</texture>
+					<visible>Window.IsActive(games)</visible>
+				</control>
 			</control>
 			<!-- Info Details -->
 			<control type="group">
