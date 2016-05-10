@@ -518,14 +518,48 @@
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>!IsEmpty(ListItem.Title)</visible>
 					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>-10</posy>
-						<width>335</width>
-						<height>490</height>
-						<texture>frames/ClassicFrame_PosterMedium.png</texture>
-						<visible>!IsEmpty(ListItem.Title)</visible>
+					<control type="group">	
+						<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(CaseOveralys)</visible>	
+						<control type="image">
+							<posx>17</posx>
+							<posy>15</posy>
+							<width>300</width>
+							<height>440</height>
+							<fadetime>100</fadetime>
+							<texture background="true" fallback="DefaultThumb.png">$VAR[PosterThumb]</texture>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<visible>!IsEmpty(ListItem.Title)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>-10</posy>
+							<width>335</width>
+							<height>490</height>
+							<texture>frames/ClassicFrame_PosterMedium.png</texture>
+							<visible>!IsEmpty(ListItem.Title)</visible>
+						</control>
 					</control>
+					<!-- Media Type Case Overlays -->	
+					<control type="group">	
+						<visible>!IsEmpty(ListItem.Title) + Skin.HasSetting(CaseOveralys)</visible>	
+						<control type="image">
+							<posx>20</posx>
+							<posy>25</posy>
+							<width>298</width>
+							<height>428</height>
+							<fadetime>100</fadetime>
+							<texture background="true" fallback="DefaultThumb.png">$VAR[PosterThumb]</texture>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+						</control>			
+						<control type="image">
+							<posx>-40</posx>
+							<posy>-20</posy>
+							<width>380</width>
+							<height>500</height>
+							<texture fallback="flags/Overlays/default.png">$VAR[MediaOverlay]</texture>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+						</control>	
+					</control>	
 				</control>
 				<!-- Episode Posters -->
 				<control type="group">

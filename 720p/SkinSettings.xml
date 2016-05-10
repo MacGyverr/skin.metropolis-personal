@@ -105,6 +105,11 @@
 						<label>$LOCALIZE[31004]</label>
 						<onclick>noop</onclick>
 					</item>
+					<item id="10">
+						<description>Personal Extras</description>
+						<label>Personal Extras</label>
+						<onclick>noop</onclick>
+					</item>
 				</content>
 			</control>
 			<control type="group" id="9010">
@@ -712,23 +717,7 @@
 						<onclick condition="!System.HasAddon(script.artistslideshow)">RunPlugin(plugin://script.artistslideshow)</onclick>
 						<selected>Skin.HasSetting(EnableArtistSlideshow)</selected>
 						<visible>!System.HasAddon(script.artistslideshow)</visible>
-					</control>
-					<control type="button" id="719">
-						<description>Select weather fanart</description>
-						<label>Select Weather Fanart Package</label>
-						<include>SettingsLabel</include>
-						<onclick>RunScript(script.image.resource.select,property=weatherfanart&amp;type=resource.images.weatherfanart)</onclick>
-						<onclick condition="!System.HasAddon(script.image.resource.select)">RunPlugin(plugin://script.image.resource.select)</onclick>
-						<visible>System.HasAddon(script.image.resource.select) + Skin.HasSetting(DynamicWeather)</visible>
-					</control>
-					<control type="button" id="720">
-						<description>Select weather icons</description>
-						<label>Select Weather Icon Package</label>
-						<include>SettingsLabel</include>
-						<onclick>RunScript(script.image.resource.select,property=weathericons&amp;type=resource.images.weathericons)</onclick>
-						<onclick condition="!System.HasAddon(script.image.resource.select)">RunPlugin(plugin://script.image.resource.select)</onclick>
-						<visible>System.HasAddon(script.image.resource.select) + Skin.HasSetting(DynamicWeather)</visible>
-					</control>						
+					</control>					
 					
 				</control>
 				<!-- Video Settings -->
@@ -937,7 +926,6 @@
 						</control>
 					</control>
 				</control>
-
 				<!-- Music Settings -->
 				<control type="grouplist" id="9009">
 					<visible>Container(9000).Hasfocus(8)</visible>
@@ -1080,6 +1068,171 @@
 						<onclick>ReloadSkin()</onclick>
 					</control>
 				</control>
+				
+
+				<!-- Personal Extras -->
+				<control type="grouplist" id="9099">
+					<visible>Container(9000).Hasfocus(10)</visible>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>840</width>
+					<height>418</height>
+					<itemgap>0</itemgap>
+					<scrolltime>0</scrolltime>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+<!--					<control type="radiobutton" id="729">
+						<include>SettingsLabel</include>
+						<label>Cycle Artwork in Video Info</label>
+						<onclick>Skin.ToggleSetting(CycleArt)</onclick>
+						<selected>Skin.HasSetting(CycleArt)</selected>
+					</control>						
+-->				
+					<control type="radiobutton" id="821">
+						<include>SettingsLabel</include>
+						<label>Media Case Overlays</label>
+						<onclick>Skin.ToggleSetting(CaseOveralys)</onclick>
+						<selected>Skin.HasSetting(CaseOveralys)</selected>
+					</control>
+
+<!--					<control type="button" id="104">
+						<include>SettingsLabel</include>
+						<onfocus condition="IsEmpty(Skin.String(DateFormat))">Skin.SetString(DateFormat,YMD)</onfocus>
+						<label2>$INFO[Skin.String(DateFormat)]</label2>
+						<label>Date Format</label>
+						<onclick condition="Stringcompare(Skin.String(DateFormat),DOW) | IsEmpty(Skin.String(DateFormat))">Skin.SetString(DateFormat,YMD)</onclick>
+						<onclick condition="Stringcompare(Skin.String(DateFormat),YMD)">Skin.SetString(DateFormat,MDY)</onclick>
+						<onclick condition="Stringcompare(Skin.String(DateFormat),MDY)">Skin.SetString(DateFormat,DMY)</onclick>
+						<onclick condition="Stringcompare(Skin.String(DateFormat),DMY)">Skin.SetString(DateFormat,DOW)</onclick>
+						<visible>!Skin.HasSetting(HideClock)</visible>
+					</control>			
+					<control type="radiobutton" id="822">
+						<description>Display OSD Command Labels</description>
+						<include>SettingsLabel</include>
+						<label>Display OSD Command Labels</label>
+						<onclick>Skin.ToggleSetting(CommandLabels)</onclick>
+						<selected>Skin.HasSetting(CommandLabels)</selected>
+					</control>	
+					<control type="radiobutton" id="513">
+						<description>Always show Scrollbar</description>
+						<include>SettingsLabel</include>
+						<label>Always Display Scrollbar</label>
+						<onclick>Skin.ToggleSetting(Scrollbar)</onclick>
+						<selected>Skin.HasSetting(Scrollbar)</selected>
+					</control>			
+					<control type="radiobutton" id="205">
+						<include>SettingsLabel</include>
+						<label>Use Horizontal Widgets</label>
+						<onclick>Skin.ToggleSetting(HorizontalWidgets)</onclick>
+						<selected>Skin.HasSetting(HorizontalWidgets)</selected>
+					</control>
+					<control type="radiobutton" id="206">
+						<include>SettingsLabel</include>
+						<label>$LOCALIZE[31035]</label>
+						<onclick>Skin.ToggleSetting(HomeCleanLibrary)</onclick>
+						<selected>Skin.HasSetting(HomeCleanLibrary)</selected>
+					</control>
+				 	<control type="radiobutton" id="10004">
+ 						<include>SettingsLabel</include>
+						<label>Stretch Backgrounds</label>
+						<onclick>Skin.ToggleSetting(HomeStretchBackgrounds)</onclick>
+						<selected>Skin.HasSetting(HomeStretchBackgrounds)</selected>
+						<visible>!Skin.HasSetting(Home2)</visible>
+					</control>
+					<control type="image" id="10204">
+						<include>Settings_Line</include>
+					</control>		
+					<control type="radiobutton" id="105">
+						<include>SettingsLabel</include>
+						<label>$LOCALIZE[31447]</label>
+						<onclick>Skin.ToggleSetting(WeatherIcons2)</onclick>
+						<selected>Skin.HasSetting(WeatherIcons2)</selected>
+					</control>
+-->
+
+					<control type="button" id="10006">
+						<description>Select weather fanart</description>
+						<label>Select Weather Fanart Package</label>
+						<include>SettingsLabel</include>
+						<onclick>RunScript(script.image.resource.select,property=weatherfanart&amp;type=resource.images.weatherfanart)</onclick>
+						<onclick condition="!System.HasAddon(script.image.resource.select)">RunPlugin(plugin://script.image.resource.select)</onclick>
+						<visible>System.HasAddon(script.image.resource.select)</visible>
+					</control>
+					<control type="button" id="10005">
+						<description>Select weather icons</description>
+						<label>Select Weather Icon Package</label>
+						<include>SettingsLabel</include>
+						<onclick>RunScript(script.image.resource.select,property=weathericons&amp;type=resource.images.weathericons)</onclick>
+						<onclick condition="!System.HasAddon(script.image.resource.select)">RunPlugin(plugin://script.image.resource.select)</onclick>
+						<visible>System.HasAddon(script.image.resource.select)</visible>
+					</control>	
+
+					<control type="image" id="10304">
+						<include>Settings_Line</include>
+					</control>	
+				
+					<control type="label" id="703">
+						<include>SettingsLabel</include>
+						<label>Extra Artwork Downloader</label>
+			<!--		<onclick>RunScript(script.artwork.downloader, mode=custom, mediatype=tvshow, seasonposter, landscape, clearart, clearlogo, characterart)</onclick>
+			-->			<visible>System.HasAddon(script.artwork.downloader)</visible>
+					</control>
+					<control type="button" id="725">
+						<include>SettingsLabel</include>
+						<label> - Download [COLOR=DialogTextFO]All Artwork[/COLOR] for all TV Shows</label>
+						<onclick>RunScript(script.artwork.downloader, mode=custom, mediatype=tvshow, seasonposter, landscape, clearart, clearlogo, characterart)</onclick>
+						<visible>System.HasAddon(script.artwork.downloader)</visible>
+					</control>
+					<control type="button" id="720">
+						<include>SettingsLabel</include>
+						<label> - Download [COLOR=DialogTextFO]logo.png[/COLOR] for all TV Shows</label>
+						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,clearlogo)</onclick>
+						<visible>System.HasAddon(script.artwork.downloader)</visible>
+					</control>
+					<control type="button" id="721">
+						<include>SettingsLabel</include>
+						<label> - Download [COLOR=DialogTextFO]clearart.png[/COLOR] for all TV Shows</label>
+						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,clearart)</onclick>
+						<visible>System.HasAddon(script.artwork.downloader)</visible>
+					</control>
+					<control type="button" id="722">
+						<include>SettingsLabel</include>
+						<label> - Download [COLOR=DialogTextFO]landscape.jpg[/COLOR] for all TV Shows</label>
+						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,landscape)</onclick>
+						<visible>System.HasAddon(script.artwork.downloader)</visible>
+					</control>
+					<control type="button" id="723">
+						<include>SettingsLabel</include>
+						<label> - Download [COLOR=DialogTextFO]banner.jpg[/COLOR] for all TV Shows</label>
+						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,banner)</onclick>
+						<visible>System.HasAddon(script.artwork.downloader)</visible>
+					</control>
+					<control type="button" id="724">
+						<include>SettingsLabel</include>
+						<label> - Download [COLOR=DialogTextFO]poster.jpg[/COLOR] for all TV Shows</label>
+						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,poster)</onclick>
+						<visible>System.HasAddon(script.artwork.downloader)</visible>
+					</control>
+					<control type="button" id="726">
+						<include>SettingsLabel</include>
+						<label> - Download [COLOR=DialogTextFO]disc.png[/COLOR] for all Movies</label>
+						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=movie,discart)</onclick>
+						<visible>System.HasAddon(script.artwork.downloader)</visible>
+					</control>
+					<control type="button" id="727">
+						<include>SettingsLabel</include>
+						<label> - Download [COLOR=DialogTextFO]logo.png[/COLOR] for all Movies</label>
+						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=movie,clearlogo)</onclick>
+						<visible>System.HasAddon(script.artwork.downloader)</visible>
+					</control>					
+				
+				</control>				
+				
+				
+				
+				
+				
+				
 			</control>
 			<control type="image">
 				<include>Animation_CommonFadeNoHide</include>
