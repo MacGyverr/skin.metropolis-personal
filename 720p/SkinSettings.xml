@@ -147,7 +147,7 @@
 						<selected>Skin.HasSetting(ShowDate)</selected>
 						<visible>!Skin.HasSetting(HideClock)</visible>
 					</control>
-					<control type="radiobutton" id="105">
+<!--					<control type="radiobutton" id="105">
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31447]</label>
 						<onclick condition="System.HasAddon(resource.images.weathericons.3d-coloured)">Skin.SetString(WeatherIcons,resource://resource.images.weathericons.3d-coloured)</onclick>
@@ -162,7 +162,7 @@
 						<selected>SubString(Skin.String(WeatherIcons),resource://resource.images.weathericons.3d-coloured)</selected>
 						<visible>SubString(Skin.String(WeatherIcons),resource://resource.images.weathericons.3d-coloured)</visible>
 					</control>
-					<control type="radiobutton" id="107">
+-->					<control type="radiobutton" id="107">
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31056]</label>
 						<onclick>Skin.ToggleSetting(MediaOverlay)</onclick>
@@ -713,6 +713,23 @@
 						<selected>Skin.HasSetting(EnableArtistSlideshow)</selected>
 						<visible>!System.HasAddon(script.artistslideshow)</visible>
 					</control>
+					<control type="button" id="719">
+						<description>Select weather fanart</description>
+						<label>Select Weather Fanart Package</label>
+						<include>SettingsLabel</include>
+						<onclick>RunScript(script.image.resource.select,property=weatherfanart&amp;type=resource.images.weatherfanart)</onclick>
+						<onclick condition="!System.HasAddon(script.image.resource.select)">RunPlugin(plugin://script.image.resource.select)</onclick>
+						<visible>System.HasAddon(script.image.resource.select) + Skin.HasSetting(DynamicWeather)</visible>
+					</control>
+					<control type="button" id="720">
+						<description>Select weather icons</description>
+						<label>Select Weather Icon Package</label>
+						<include>SettingsLabel</include>
+						<onclick>RunScript(script.image.resource.select,property=weathericons&amp;type=resource.images.weathericons)</onclick>
+						<onclick condition="!System.HasAddon(script.image.resource.select)">RunPlugin(plugin://script.image.resource.select)</onclick>
+						<visible>System.HasAddon(script.image.resource.select) + Skin.HasSetting(DynamicWeather)</visible>
+					</control>						
+					
 				</control>
 				<!-- Video Settings -->
 				<control type="grouplist" id="9011">
