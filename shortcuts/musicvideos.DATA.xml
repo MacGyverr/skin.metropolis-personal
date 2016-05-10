@@ -1,59 +1,57 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <shortcuts>
 	<shortcut>
-		<action>ActivateWindow(Videos,MusicVideoTitles,Return)</action>
-		<label>556</label>
-		<label2>32019</label2>
-		<defaultID>556</defaultID>
-		<icon>DefaultFolder.png</icon>
-		<thumb />
+		<label>31438</label>
+		<label2>32018</label2>
+		<icon>DefaultRecentlyAddedMusicVideos.png</icon>
+		<action>ActivateWindow(Videos,videodb://recentlyaddedmusicvideos/,Return)</action>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(Videos,MusicVideoGenres,return)</action>
 		<label>135</label>
-		<label2>32019</label2>
-		<defaultID>135</defaultID>
-		<icon>DefaultFolder.png</icon>
-		<thumb />
+		<label2>32018</label2>
+		<icon>DefaultMusicGenres.png</icon>
+		<action>ActivateWindow(Videos,videodb://musicvideos/genres/,return)</action>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(Videos,MusicVideoYears,return)</action>
 		<label>652</label>
-		<label2>32019</label2>
-		<defaultID>652</defaultID>
-		<icon>DefaultFolder.png</icon>
-		<thumb />
+		<label2>32018</label2>
+		<icon>DefaultMusicYears.png</icon>
+		<action>ActivateWindow(Videos,videodb://musicvideos/years/,return)</action>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(Videos,MusicVideoArtists,return)</action>
 		<label>133</label>
-		<label2>32019</label2>
-		<defaultID>133</defaultID>
-		<icon>DefaultFolder.png</icon>
-		<thumb />
+		<label2>32018</label2>
+		<icon>DefaultMusicArtists.png</icon>
+		<action>ActivateWindow(Videos,videodb://musicvideos/artists/,return)</action>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(Videos,MusicVideoAlbums,return)</action>
 		<label>132</label>
-		<label2>32019</label2>
-		<defaultID>132</defaultID>
-		<icon>DefaultFolder.png</icon>
-		<thumb />
+		<label2>32018</label2>
+		<icon>DefaultMusicAlbums.png</icon>
+		<action>ActivateWindow(Videos,videodb://musicvideos/albums/,return)</action>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(Videos,Files)</action>
+		<label>134</label>
+		<label2>32018</label2>
+		<icon>DefaultMusicSongs.png</icon>
+		<action>ActivateWindow(Videos,videodb://musicvideos/titles/,Return)</action>
+	</shortcut>
+	<shortcut>
 		<label>31289</label>
-		<label2>32019</label2>
-		<defaultID>31289</defaultID>
+		<label2>32018</label2>
 		<icon>DefaultFolder.png</icon>
-		<thumb />
+		<action>ActivateWindow(Videos,videodb://musicvideos/files/,return)</action>
 	</shortcut>
 	<shortcut>
-		<action>UpdateLibrary(video)</action>
+		<label>31465</label>
+		<label2>32034</label2>
+		<icon>DefaultShortcut.png</icon>
+		<action>CleanLibrary(video)</action>
+	</shortcut>
+	<shortcut>
 		<label>653</label>
-		<label2>32019</label2>
-		<defaultID>653</defaultID>
-		<icon>DefaultFolder.png</icon>
-		<thumb />
+		<label2>32034</label2>
+		<icon>DefaultShortcut.png</icon>
+		<action>UpdateLibrary(video)</action>
 	</shortcut>
 </shortcuts>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="11">
 	<defaultcontrol always="true">8</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<control type="videowindow" id="20">
 			<description>videowindow</description>
@@ -65,6 +64,5 @@
 			<label>-</label>
 		</control>
 		<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>
-		<include condition="Skin.HasSetting(DebugMode)">Debug</include>
 	</controls>
 </window>

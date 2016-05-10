@@ -34,43 +34,10 @@
 	<include file="Viewtype_PosterAndFanart.xml" />		<!-- 550 -->
 	<include file="Viewtype_Poster_Fixed.xml" />		<!-- 53  -->
 	<include file="Viewtype_Poster_Wrap.xml" />		<!-- 57  -->
-	<include file="Viewtype_Poster_Large_Wrap.xml" />		<!-- 551 -->
-	<include file="Viewtype_Poster_Large_Fixed.xml" />		<!-- 552 -->
+	<include file="Viewtype_Poster_Large_Fixed.xml" />	<!-- 552 -->
+	<include file="Viewtype_Poster_Large_Wrap.xml" />	<!-- 551 -->
 	<include file="Viewtype_TallGenre.xml" />		<!-- 501 -->
-	<include file="Viewtype_Artwork_Check.xml" />		<!-- 514 -->
-	
-	<!-- Banner dimensions -->
-	<include name="BannerX1H">
-		<height>90</height>
-	</include>	
-	<include name="BannerX1Y">
-		<posy>370</posy>	
-	</include>	
-	<include name="BannerX2H">
-		<height>180</height>
-	</include>	
-	<include name="BannerX2Y">
-		<posy>280</posy>	
-	</include>
-	<include name="BannerX3H">
-		<height>270</height>
-	</include>	
-	<include name="BannerX3Y">
-		<posy>190</posy>	
-	</include>	
-	<include name="BannerX4H">
-		<height>360</height>
-	</include>	
-	<include name="BannerX4Y">
-		<posy>100</posy>	
-	</include>	
-	<include name="BannerX5H">
-		<height>450</height>
-	</include>	
-	<include name="BannerX5Y">
-		<posy>10</posy>	
-	</include>	
-	
+
 	<!-- Global dimensions -->
 	<include name="Dimensions_Fullscreen">
 		<posx>0</posx>
@@ -86,18 +53,6 @@
 			<colordiffuse>BackgroundColor</colordiffuse>
 		</control>
 	</include>
-		
-	<!-- Stretch_Fullscreen -->
-	<include name="Stretch_Fullscreen">
-		<height>544</height>
-		<aspectratio>stretch</aspectratio>
-	</include>
-	<!-- Scale_Fullscreen -->
-	<include name="Scale_Fullscreen">
-		<height>720</height>
-			<aspectratio align="center" aligny="center">scale</aspectratio>
-	</include>
-	
 	<include name="Global_Background_Fanart_Common">
 		<include>Dimensions_Fullscreen</include>
 		<include>Animation_CommonFade</include>
@@ -176,29 +131,8 @@
 			<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
 		</control>
 	</include>
-		
-	<!-- VideoInfo Dialog Artwork description label -->
-	<include name="ArtworkLabel">
-		<left>720</left>
-		<top>53</top>
-		<width>150</width>
-		<height>42</height>
-		<align>right</align>
-		<aligny>center</aligny>
-		<font>METF_PlotText</font>
-		<textcolor>MediaDetailsYear</textcolor>
-		<scroll>false</scroll>
-	</include>
-		
-	<!-- VideoInfo Dialog Artwork placement -->
-	<include name="ArtworkPlacement">
-		<posx>918</posx>
-		<posy>79</posy>
-		<width>324</width>
-		<height>182</height>
-	</include>	
-	
-	<!--  Navigation Menu Background Panel -->
+
+	<!-- Navigation Menu Background Panel -->
 	<include name="NavMenuBackground">
 		<control type="image">
 			<description>background image</description>
@@ -220,21 +154,6 @@
 		<onleft>7000</onleft>
 	</include>
 
-	<!-- OSD label control values -->
-	<include name="OSD-label">	
-		<include>Animation_OpenCloseFade</include>
-		<include>Animation_FadedByMenu</include>
-		<posx>440</posx>
-		<posy>10</posy>
-		<width>400</width>
-		<height>30</height>
-		<align>center</align>
-		<aligny>center</aligny>
-		<font>METF_Heading</font>
-		<textcolor>OSDFinishTime</textcolor>
-		<visible>Skin.HasSetting(CommandLabels)</visible>
-	</include>
-	
 	<!-- Heading info for various screens -->
 	<include name="Global_HeadingSectionVars">
 		<width>750</width>
@@ -272,108 +191,44 @@
 			<include>Animation_FadedByMenu</include>
 			<include>Animation_HiddenByInfo</include>
 
-			<!-- Left side title -->
+			<!-- Left side title $VAR[LeftSideTitle]-->
 			<control type="label">
-				<label>$LOCALIZE[342]</label>
+				<label>$VAR[LeftSideTitle]</label>
 				<include>Global_HeadingSectionVars</include>
-				<visible>Container.Content(movies) + !SubString(Container.FolderPath,plugin)</visible>
-			</control>
+			</control>	
+ 
+			<!-- Center details -->
 			<control type="label">
-				<label>$LOCALIZE[20343]</label>
-				<include>Global_HeadingSectionVars</include>
-				<visible>Container.Content(tvshows) + !SubString(Container.FolderPath,plugin)</visible>
-			</control>
-			<control type="label">
-				<label>$LOCALIZE[20389]</label>
-				<include>Global_HeadingSectionVars</include>
-				<visible>Container.Content(musicvideos) + !SubString(Container.FolderPath,plugin)</visible>
-			</control>
-			<control type="label">
-				<label>$LOCALIZE[20343]: $INFO[ListItem.TVShowTitle]</label>
-				<include>Global_HeadingSectionVars</include>
-				<visible>[Container.Content(episodes) | Container.Content(seasons)] + !SubString(Container.FolderPath,plugin)</visible>
-			</control>
-			<control type="label">
-				<label>$LOCALIZE[3]</label>
-				<include>Global_HeadingSectionVars</include>
-				<visible>[[Window.IsActive(videofiles) | Window.IsActive(videolibrary)] + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies) | Container.Content(musicvideos)]] + !SubString(Container.FolderPath,addons) + !SubString(Container.FolderPath,plugin) + !Window.IsActive(favourites)</visible>
-			</control>
-			<control type="label">
-				<label>$LOCALIZE[157] $LOCALIZE[559]</label>
-				<include>Global_HeadingSectionVars</include>
-				<visible>Window.IsActive(videoplaylist)</visible>
-			</control>
-			<control type="label">
-				<label>$LOCALIZE[2]</label>
-				<include>Global_HeadingSectionVars</include>
-				<visible>[Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)] + !SubString(Container.FolderPath,addons) + !SubString(Container.FolderPath,plugin)</visible>
-			</control>
-			<control type="label">
-				<label>$LOCALIZE[2] $LOCALIZE[559]</label>
-				<include>Global_HeadingSectionVars</include>
-				<visible>Window.IsActive(musicplaylist)</visible>
-			</control>
-			<control type="label">
-				<label>$LOCALIZE[1213]</label>
-				<include>Global_HeadingSectionVars</include>
-				<visible>Window.IsActive(pictures) + !SubString(Container.FolderPath,addons) + !SubString(Container.FolderPath,plugin)</visible>
-			</control>
-			<control type="label">
-				<label>$LOCALIZE[1037]</label>
-				<include>Global_HeadingSectionVars</include>
-				<visible>[Window.IsActive(videofiles) | Window.IsActive(videolibrary)] + [SubString(Container.FolderPath,addons) | SubString(Container.FolderPath,plugin)]</visible>
-			</control>
-			<control type="label">
-				<label>$LOCALIZE[1038]</label>
-				<include>Global_HeadingSectionVars</include>
-				<visible>[Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)] + [SubString(Container.FolderPath,addons) | SubString(Container.FolderPath,plugin)]</visible>
-			</control>
-			<control type="label">
-				<label>$LOCALIZE[1039]</label>
-				<include>Global_HeadingSectionVars</include>
-				<visible>Window.IsActive(pictures) + [SubString(Container.FolderPath,addons) | SubString(Container.FolderPath,plugin)]</visible>
-			</control>
-			<control type="label">
-				<label>$LOCALIZE[24001]</label>
-				<include>Global_HeadingSectionVars</include>
-				<visible>Window.IsActive(programs) | Window.IsActive(AddonBrowser)</visible>
-			</control>
-			<control type="label">
-				<label>$LOCALIZE[130]</label>
-				<include>Global_HeadingSectionVars</include>
-				<visible>Window.IsActive(systeminfo)</visible>
-			</control>
-			<control type="label">
-				<label>$LOCALIZE[20096]</label>
-				<include>Global_HeadingSectionVars</include>
-				<visible>Window.IsActive(LoginScreen)</visible>
+				<label>$LOCALIZE[31208] $INFO[Window.Property(Updated)]</label>
+				<include>Global_HeadingLevelVars</include>
+				<visible>Window.IsActive(AddonBrowser)</visible>
 			</control>
 
 			<!-- Right side details -->
 			<control type="label">
 				<label>$INFO[Container.NumItems,, $LOCALIZE[31277]]</label>
 				<include>Global_HeadingDetailVars</include>
-				<visible>!IntegerGreaterThan(Container.NumItems,1) + ![Container.Content(episodes) | Window.IsActive(systeminfo)]</visible>
+				<visible>!IntegerGreaterThan(Container.NumItems,1) + ![Container.Content(episodes) | Window.IsActive(systeminfo)] + [![Control.HasFocus(998) | Container.Scrolling] + IntegerGreaterThan(Container.NumPages,1)]</visible>
 			</control>
 			<control type="label">
 				<label>$INFO[Container.NumItems,, $LOCALIZE[31281]]</label>
 				<include>Global_HeadingDetailVars</include>
-				<visible>IntegerGreaterThan(Container.NumItems,1) + ![Container.Content(episodes) | Window.IsActive(systeminfo)]</visible>
+				<visible>IntegerGreaterThan(Container.NumItems,1) + ![Container.Content(episodes) | Window.IsActive(systeminfo)] + [![Control.HasFocus(998) | Container.Scrolling] + IntegerGreaterThan(Container.NumPages,1)]</visible>
 			</control>
 			<control type="label">
 				<label>$INFO[ListItem.Season,$LOCALIZE[20373] , - ]$INFO[Container.NumItems,, $LOCALIZE[20359]]</label>
 				<include>Global_HeadingDetailVars</include>
-				<visible>!IntegerGreaterThan(Container.NumItems,1) + Container.Content(episodes)</visible>
+				<visible>!IntegerGreaterThan(Container.NumItems,1) + Container.Content(episodes) + [![Control.HasFocus(998) | Container.Scrolling] + IntegerGreaterThan(Container.NumPages,1)]</visible>
 			</control>
 			<control type="label">
 				<label>$INFO[ListItem.Season,$LOCALIZE[20373] , - ]$INFO[Container.NumItems,, $LOCALIZE[20360]]</label>
 				<include>Global_HeadingDetailVars</include>
-				<visible>IntegerGreaterThan(Container.NumItems,1) + Container.Content(episodes)</visible>
+				<visible>IntegerGreaterThan(Container.NumItems,1) + Container.Content(episodes) + [![Control.HasFocus(998) | Container.Scrolling] + IntegerGreaterThan(Container.NumPages,1)]</visible>
 			</control>
 			<control type="label">
 				<label>$INFO[ListItem.Artist,, - ]$INFO[ListItem.Album,, - ]$INFO[Container.NumItems,, $LOCALIZE[31281]]</label>
 				<include>Global_HeadingDetailVars</include>
-				<visible>!substring(ListItem.Label,*) + Window.IsActive(musiclibrary) + Control.IsVisible(50)</visible>
+				<visible>!substring(ListItem.Label,*) + Window.IsActive(music) + Control.IsVisible(50) + [![Control.HasFocus(998) | Container.Scrolling] + IntegerGreaterThan(Container.NumPages,1)]</visible>
 			</control>
 			<control type="label" id="52">
 				<description>Build Version</description>
@@ -381,36 +236,11 @@
 				<include>Global_HeadingDetailVars</include>
 				<visible>Window.IsActive(systeminfo)</visible>
 			</control>
-		</control>
-	</include>
-	<!-- Next Aired Date -->
-	<include name="Global_NextAired">
-		<width>1920</width>
-		<height>30</height>
-		<font>METF_Heading</font>
-		<textcolor>GlobalHeading</textcolor>
-		<align>center</align>
-		<aligny>center</aligny>
-		<include>Animation_HiddenByInfo</include>
-	</include>
-	<include name="NextAiredInfo">
-		<control type="group">
-			<include>Global_NextAired</include>
-			<posx>0</posx>
-			<posy>-7</posy>
-			<animation effect="fade" start="0" end="100" time="0" delay="300">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
 			<control type="label">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>1280</width>
-				<height>60</height>
-				<align>center</align>
-				<aligny>center</aligny>
-				<font>METF_InfoText</font>
-				<label>[COLOR=GlobalHeading]$LOCALIZE[31427]:[/COLOR] $INFO[Window(Home).Property(NextAired.NextTitle),,[CR]]$INFO[Window(Home).Property(NextAired.AirTime),, - ]$INFO[Window(Home).Property(NextAired.NextDate)]</label>
+				<label>$LOCALIZE[31022] $INFO[Container.CurrentPage] $LOCALIZE[20163] $INFO[Container.NumPages]</label>
+				<include>Global_HeadingDetailVars</include>
+				<visible>[Control.HasFocus(998) | Container.Scrolling] + IntegerGreaterThan(Container.NumPages,1) + Container.Content(movies)</visible>
 			</control>
-			<visible>Container.Content(TVShows) + !IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
 		</control>
 	</include>
 	<!-- SortLetter popup when scrolling through lists quickly -->
@@ -443,29 +273,18 @@
 		</control>
 	</include>
 
-	<include name="Weather_Icon_Animation">
-		<timeperimage>65</timeperimage>
-		<fadetime>1</fadetime>
-		<randomize>false</randomize>
-		<aspectratio align="center">keep</aspectratio>
-		<loop>yes</loop>
-		<visible>true</visible>
-	</include>
-	
 	<include name="Global_Weather">
 		<control type="group">
 			<posx>12</posx>
 			<posy>40</posy>
 			<visible>Weather.IsFetched + [[!Window.IsActive(visualisation) + !Skin.HasSetting(HideClockTemp)] | [Window.IsActive(visualisation) + Player.ShowInfo + !Skin.HasSetting(HideVisClock) + !Window.IsVisible(120)]]</visible>
-			<control type="multiimage">
-				<description>Weather Multi-image background</description>
+			<control type="image">
 				<posx>1145</posx>
 				<posy>517</posy>
 				<width>30</width>
 				<height>30</height>
-				<include>Weather_Icon_Animation</include>
-				<imagepath>$VAR[Weather_Icons_Current]</imagepath>
-			</control>	
+				<texture>$VAR[Weather_Icons_Current]</texture>
+			</control>
 			<control type="label">
 				<description>Temperature</description>
 				<posx>1241</posx>
@@ -489,18 +308,6 @@
 		<align>right</align>
 		<aligny>center</aligny>
 		<textcolor>Date</textcolor>
-	</include>
-	<include name="DateLabelDMY">	
-		<label>$INFO[System.Date(dd.mm.yyyy)]</label>
-	</include>
-	<include name="DateLabelMDY">	
-		<label>$INFO[System.Date(mm.dd.yyyy)]</label>
-	</include>
-	<include name="DateLabelYMD">	
-		<label>$INFO[System.Date(yyyy.mm.dd)]</label>
-	</include>
-	<include name="DateLabelDOW">	
-		<label>$INFO[System.Date(DDD)]</label>
 	</include>
 	<include name="Global_Time">
 		<control type="group">
@@ -545,19 +352,14 @@
 			<control type="label">
 				<description>Date</description>
 				<include>Global_TimeWeekdayDetails</include>
-				<include condition="Stringcompare(Skin.String(DateFormat),DMY)">DateLabelDMY</include>
-				<include condition="Stringcompare(Skin.String(DateFormat),MDY)">DateLabelMDY</include>
-				<include condition="Stringcompare(Skin.String(DateFormat),YMD)">DateLabelYMD</include>
-				<include condition="Stringcompare(Skin.String(DateFormat),DOW) | IsEmpty(Skin.String(DateFormat))">DateLabelDOW</include>
+				<label>$INFO[System.Date(yyyy.mm.dd)]</label>
+				<visible>Skin.HasSetting(ShowDate)</visible>
 			</control>
-			<control type="button">
-				<description>Close Button for moderate touch support</description>
-				<posx>1000</posx>
-				<posy>560</posy>
-				<width>300</width>
-				<height>300</height>
-				<font>-</font>
-				<onclick>back</onclick>
+			<control type="label">
+				<description>Day of Week</description>
+				<include>Global_TimeWeekdayDetails</include>
+				<label>$INFO[System.Date(DDD)]</label>
+				<visible>!Skin.HasSetting(ShowDate)</visible>
 			</control>
 		</control>
 	</include>
@@ -582,9 +384,9 @@
 		<height>18</height>
 	</include>
 	<include name="MediaFlagsVarsSquareHalfBottom">
-		<posx>14</posx>
+		<posx>9</posx>
 		<posy>26</posy>
-		<width>44</width>
+		<width>52</width>
 		<height>18</height>
 	</include>
 	<!-- XXX: Used currently in PseudoTV 2.1.0 - delete once removed -->
@@ -612,7 +414,7 @@
 		<posx>300</posx>
 		<posy>565</posy>
 		<control type="textbox">
-			<include>Animation_FadedByMenu</include>
+			<include>Animation_FadedByMenuExceptions</include>
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_HiddenByInfo</include>
 			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
@@ -627,7 +429,7 @@
 			<visible>Control.IsVisible(9902) | Control.IsVisible(9905) | Control.IsVisible(9906)</visible>
 		</control>
 		<control type="textbox">
-			<include>Animation_FadedByMenu</include>
+			<include>Animation_FadedByMenuExceptions</include>
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_HiddenByInfo</include>
 			<width>750</width>
@@ -741,7 +543,21 @@
 
 	<include name="ViewDetailsBullet">
 		<width>8</width>
-		<height>32</height>
+		<height>36</height>
+		<texture>Dot.png</texture>
+		<aspectratio align="center" aligny="center">keep</aspectratio>
+		<colordiffuse>BulletDiffuse</colordiffuse>
+	</include>
+	<include name="ViewDetailsBulletSmall">
+		<width>8</width>
+		<height>28</height>
+		<texture>Dot.png</texture>
+		<aspectratio align="center" aligny="center">keep</aspectratio>
+		<colordiffuse>BulletDiffuse</colordiffuse>
+	</include>
+	<include name="ViewDetailsBulletSmallest">
+		<width>8</width>
+		<height>24</height>
 		<texture>Dot.png</texture>
 		<aspectratio align="center" aligny="center">keep</aspectratio>
 		<colordiffuse>BulletDiffuse</colordiffuse>
@@ -794,7 +610,7 @@
 					</control>
 					<!-- Bullet -->
 					<control type="image">
-						<include>ViewDetailsBullet</include>
+						<include>ViewDetailsBulletSmallest</include>
 						<visible>!IsEmpty(ListItem.PictureFocalLen) + ![IsEmpty(ListItem.PictureAperture) + IsEmpty(ListItem.PictureFocusDist)]</visible>
 					</control>
 					<control type="label">
@@ -808,7 +624,7 @@
 					</control>
 					<!-- Bullet -->
 					<control type="image">
-						<include>ViewDetailsBullet</include>
+						<include>ViewDetailsBulletSmallest</include>
 						<visible>![IsEmpty(ListItem.PictureFocalLen) + IsEmpty(ListItem.PictureAperture)] + !IsEmpty(ListItem.PictureFocusDist)</visible>
 					</control>
 					<control type="label">
@@ -1127,7 +943,7 @@
 			<posy>0</posy>
 			<include>Animation_CommonFade</include>
 			<include>Animation_FadedByMenu</include>
-			<visible>Window.IsActive(movieinformation) | Window.IsActive(musicinformation)</visible>
+			<visible>Window.IsActive(movieinformation) | Window.IsActive(musicinformation) | Window.IsActive(songinformation)</visible>
 			<control type="image">
 				<posx>27</posx>
 				<posy>55</posy>
@@ -1214,31 +1030,876 @@
 		<aligny>center</aligny>
 	</include>
 
+	
 	<!-- Debug objects -->
-	<include name="Object_DebugGrid">
+	<include name="Object_DebugGrid">			
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture>debuggrid.png</texture>
-		</control>
+			<visible>!Skin.HasSetting(DebugInfo)</visible>
+		</control>	
+		<include condition="Skin.HasSetting(DebugInfo)">Object_DebugInfo</include>
 	</include>
-	<include name="Debug">
+	
+	<!-- Debug objects -->
+	<include name="Object_DebugLabel">
+		<width>550</width>
+		<height>7</height>
+		<align>left</align>
+		<font>METF_DialogVerySmall</font>
+		<textcolor>MediaDetailsInfo</textcolor>
+	</include>
+	
+	<!-- Debug objects -->
+	<include name="Object_DebugInfo">			
 		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>20</height>
-			<texture border="2">black.png</texture>
+			<include>Dimensions_Fullscreen</include>
+			<texture>black-back.png</texture>
 		</control>
-		<control type="label">
-			<posx>4</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>18</height>
-			<aligny>center</aligny>
-			<font>METF_DialogSmall</font>
-			<textcolor>FFFFFFFF</textcolor>
-			<label>$INFO[Window.Property(xmlfile)] / $INFO[System.Screenresolution] / $LOCALIZE[158] - $INFO[System.FreeMemory]$INFO[System.CurrentWindow / ]$INFO[System.CurrentControl, / ]</label>
+		<control type="grouplist">
+			<posx>30</posx>
+			<posy>10</posy>
+			<control type="button">
+				<label>ListItem.SortLetter [COLOR=white] [COLOR=white] $INFO[ListItem.SortLetter][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Year [COLOR=white] [COLOR=white] $INFO[ListItem.Year][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Premiered [COLOR=white] $INFO[ListItem.Premiered][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Genre [COLOR=white] $INFO[ListItem.Genre][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Director [COLOR=white] $INFO[ListItem.Director][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Country [COLOR=white] $INFO[ListItem.Country][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Episode [COLOR=white] $INFO[ListItem.Episode][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Season [COLOR=white] $INFO[ListItem.Season][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.TVShowTitle [COLOR=white] $INFO[ListItem.TVShowTitle][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Top250 [COLOR=white] $INFO[ListItem.Top250][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Trailer [COLOR=white] $INFO[ListItem.Trailer][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Writer [COLOR=white] $INFO[ListItem.Writer][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.FileExtension [COLOR=white] $INFO[ListItem.FileExtension][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>		
+			<control type="button">
+				<label>ListItem.IMDBNumber [COLOR=white] $INFO[ListItem.IMDBNumber][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>	
+			<control type="button">
+				<label>ListItem.FolderName [COLOR=white] $INFO[ListItem.FolderName][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Date [COLOR=white] $INFO[ListItem.Date][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.DateAdded [COLOR=white] $INFO[ListItem.DateAdded][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Size [COLOR=white] $INFO[ListItem.Size][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Rating [COLOR=white] $INFO[ListItem.Rating][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Set [COLOR=white] $INFO[ListItem.Set][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.SetId [COLOR=white] $INFO[ListItem.SetId][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.UserRating [COLOR=white] $INFO[ListItem.UserRating][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Votes [COLOR=white] $INFO[ListItem.Votes][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.RatingAndVotes [COLOR=white] $INFO[ListItem.RatingAndVotes][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.ProgramCount [COLOR=white] $INFO[ListItem.ProgramCount][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Duration [COLOR=white] $INFO[ListItem.Duration][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.DBTYPE [COLOR=white] $INFO[ListItem.DBTYPE][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.DBID [COLOR=white] $INFO[ListItem.DBID][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Cast [COLOR=white] $INFO[ListItem.Cast][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.CastAndRole [COLOR=white] $INFO[ListItem.CastAndRole][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Studio [COLOR=white] $INFO[ListItem.Studio][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.IsSelected [COLOR=white] $INFO[ListItem.IsSelected][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.IsPlaying [COLOR=white] $INFO[ListItem.IsPlaying][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.IsResumable [COLOR=white] $INFO[ListItem.IsResumable][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.IsFolder [COLOR=white] $INFO[ListItem.IsFolder][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.IsCollection [COLOR=white] $INFO[ListItem.IsCollection][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.IsRecording [COLOR=white] $INFO[ListItem.IsRecording][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.HasTimer [COLOR=white] $INFO[ListItem.HasTimer][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.HasTimerSchedule [COLOR=white] $INFO[ListItem.HasTimerSchedule][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.TimerHasError [COLOR=white] $INFO[ListItem.TimerHasError][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.TimerHasConflict [COLOR=white] $INFO[ListItem.TimerHasConflict][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.TimerIsActive [COLOR=white] $INFO[ListItem.TimerIsActive][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Comment [COLOR=white] $INFO[ListItem.Comment][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>	
+			<control type="button">
+				<label>ListItem.FolderPath [COLOR=white] $INFO[ListItem.FolderPath][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.FileNameAndPath [COLOR=white] $INFO[ListItem.FileNameAndPath][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>		
+			<control type="button">
+				<label>ListItem.FileName [COLOR=white] $INFO[ListItem.FileName][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Path [COLOR=white] $INFO[ListItem.Path][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Mpaa [COLOR=white] $INFO[ListItem.Mpaa][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PlotOutline [COLOR=white] $INFO[ListItem.PlotOutline][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Plot [COLOR=white] $INFO[ListItem.Plot][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>	
+			<control type="button">
+				<label>ListItem.Label [COLOR=white] $INFO[ListItem.Label][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Label2 [COLOR=white] $INFO[ListItem.Label2][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Title [COLOR=white] $INFO[ListItem.Title][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.OriginalTitle [COLOR=white] $INFO[ListItem.OriginalTitle][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Tagline [COLOR=white] $INFO[ListItem.Tagline][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>Container.FolderPath [COLOR=white] $INFO[Container.FolderPath][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+		</control>	
+		
+		<control type="grouplist">
+			<visible>Container.Content(picture)</visible>
+			<posx>330</posx>
+			<posy>10</posy>	
+			<control type="button">
+				<label>ListItem.PictureAperture [COLOR=white] $INFO[ListItem.PictureAperture][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureAuthor [COLOR=white] $INFO[ListItem.PictureAuthor][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureByline [COLOR=white] $INFO[ListItem.PictureByline][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureBylineTitle [COLOR=white] $INFO[ListItem.PictureBylineTitle][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureCamMake [COLOR=white] $INFO[ListItem.PictureCamMake][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureCamModel [COLOR=white] $INFO[ListItem.PictureCamModel][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureCaption [COLOR=white] $INFO[ListItem.PictureCaption][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureCategory [COLOR=white] $INFO[ListItem.PictureCategory][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureCCDWidth [COLOR=white] $INFO[ListItem.PictureCCDWidth][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureCity [COLOR=white] $INFO[ListItem.PictureCity][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureColour [COLOR=white] $INFO[ListItem.PictureColour][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureComment [COLOR=white] $INFO[ListItem.PictureComment][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureCopyrightNotice [COLOR=white] $INFO[ListItem.PictureCopyrightNotice][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureCountry [COLOR=white] $INFO[ListItem.PictureCountry][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureCountryCode [COLOR=white] $INFO[ListItem.PictureCountryCode][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureCredit [COLOR=white] $INFO[ListItem.PictureCredit][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureDate [COLOR=white] $INFO[ListItem.PictureDate][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureDatetime [COLOR=white] $INFO[ListItem.PictureDatetime][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureDesc [COLOR=white] $INFO[ListItem.PictureDesc][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureDigitalZoom [COLOR=white] $INFO[ListItem.PictureDigitalZoom][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureExpMode [COLOR=white] $INFO[ListItem.PictureExpMode][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureExposure [COLOR=white] $INFO[ListItem.PictureExposure][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureExposureBias [COLOR=white] $INFO[ListItem.PictureExposureBias][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureExpTime [COLOR=white] $INFO[ListItem.PictureExpTime][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureFlashUsed [COLOR=white] $INFO[ListItem.PictureFlashUsed][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureFocalLen [COLOR=white] $INFO[ListItem.PictureFocalLen][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureFocusDist [COLOR=white] $INFO[ListItem.PictureFocusDist][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureGPSLat [COLOR=white] $INFO[ListItem.PictureGPSLat][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureGPSLon [COLOR=white] $INFO[ListItem.PictureGPSLon][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureGPSAlt [COLOR=white] $INFO[ListItem.PictureGPSAlt][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureHeadline [COLOR=white] $INFO[ListItem.PictureHeadline][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureImageType [COLOR=white] $INFO[ListItem.PictureImageType][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureIPTCDate [COLOR=white] $INFO[ListItem.PictureIPTCDate][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureIPTCTime [COLOR=white] $INFO[ListItem.PictureIPTCTime][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureISO [COLOR=white] $INFO[ListItem.PictureISO][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureKeywords [COLOR=white] $INFO[ListItem.PictureKeywords][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureLightSource [COLOR=white] $INFO[ListItem.PictureLightSource][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureLongDate [COLOR=white] $INFO[ListItem.PictureLongDate][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureLongDatetime [COLOR=white] $INFO[ListItem.PictureLongDatetime][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureMeteringMode [COLOR=white] $INFO[ListItem.PictureMeteringMode][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureObjectName [COLOR=white] $INFO[ListItem.PictureObjectName][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureOrientation [COLOR=white] $INFO[ListItem.PictureOrientation][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PicturePath [COLOR=white] $INFO[ListItem.PicturePath][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureProcess [COLOR=white] $INFO[ListItem.PictureProcess][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureReferenceService [COLOR=white] $INFO[ListItem.PictureReferenceService][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureResolution [COLOR=white] $INFO[ListItem.PictureResolution][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureSource [COLOR=white] $INFO[ListItem.PictureSource][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureSpecialInstructions [COLOR=white] $INFO[ListItem.PictureSpecialInstructions][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureState [COLOR=white] $INFO[ListItem.PictureState][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureSublocation [COLOR=white] $INFO[ListItem.PictureSublocation][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureSupplementalCategories [COLOR=white] $INFO[ListItem.PictureSupplementalCategories][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureTransmissionReference [COLOR=white] $INFO[ListItem.PictureTransmissionReference][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureUrgency [COLOR=white] $INFO[ListItem.PictureUrgency][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PictureWhiteBalance [COLOR=white] $INFO[ListItem.PictureWhiteBalance][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
 		</control>
+
+		<control type="grouplist">
+			<posx>530</posx>
+			<posy>10</posy>		
+			<control type="button">
+				<label>ListItem.EpisodeName [COLOR=white] $INFO[ListItem.EpisodeName][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PercentPlayed [COLOR=white] $INFO[ListItem.PercentPlayed][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.LastPlayed [COLOR=white] $INFO[ListItem.LastPlayed][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.PlayCount [COLOR=white] $INFO[ListItem.PlayCount][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.StartTime [COLOR=white] $INFO[ListItem.StartTime][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.EndTime [COLOR=white] $INFO[ListItem.EndTime][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.StartDate [COLOR=white] $INFO[ListItem.StartDate][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.ChannelNumber [COLOR=white] $INFO[ListItem.ChannelNumber][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.ChannelName [COLOR=white] $INFO[ListItem.ChannelName][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.VideoCodec [COLOR=white] $INFO[ListItem.VideoCodec][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.VideoResolution [COLOR=white] $INFO[ListItem.VideoResolution][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.VideoAspect [COLOR=white] $INFO[ListItem.VideoAspect][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.AudioCodec [COLOR=white] $INFO[ListItem.AudioCodec][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.AudioChannels [COLOR=white] $INFO[ListItem.AudioChannels][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.AudioLanguage [COLOR=white] $INFO[ListItem.AudioLanguage][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.SubtitleLanguage [COLOR=white] $INFO[ListItem.SubtitleLanguage][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.StartTime [COLOR=white] $INFO[ListItem.StartTime][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.EndTime [COLOR=white] $INFO[ListItem.EndTime][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.StartDate [COLOR=white] $INFO[ListItem.StartDate][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.EndDate [COLOR=white] $INFO[ListItem.EndDate][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.NextTitle [COLOR=white] $INFO[ListItem.NextTitle][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.NextGenre [COLOR=white] $INFO[ListItem.NextGenre][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.NextPlot [COLOR=white] $INFO[ListItem.NextPlot][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.NextPlotOutline [COLOR=white] $INFO[ListItem.NextPlotOutline][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.NextStartTime [COLOR=white] $INFO[ListItem.NextStartTime][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.NextEndTime [COLOR=white] $INFO[ListItem.NextEndTime][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.NextStartDate [COLOR=white] $INFO[ListItem.NextStartDate][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.NextEndDate [COLOR=white] $INFO[ListItem.NextEndDate][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.ChannelName [COLOR=white] $INFO[ListItem.ChannelName][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.ChannelNumber [COLOR=white] $INFO[ListItem.ChannelNumber][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.ChannelGroup [COLOR=white] $INFO[ListItem.ChannelGroup][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.SubChannelNumber [COLOR=white] $INFO[ListItem.SubChannelNumber][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.ChannelNumberLabel [COLOR=white] $INFO[ListItem.ChannelNumberLabel][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Progress [COLOR=white] $INFO[ListItem.Progress][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.StereoscopicMode [COLOR=white] $INFO[ListItem.StereoscopicMode][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.TrackNumber [COLOR=white] $INFO[ListItem.TrackNumber][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Artist [COLOR=white] $INFO[ListItem.Artist][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.AlbumArtist [COLOR=white] $INFO[ListItem.AlbumArtist][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Album [COLOR=white] $INFO[ListItem.Album][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>				
+			<control type="button">
+				<label>ListItem.DiscNumber [COLOR=white] $INFO[ListItem.DiscNumber][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>	
+		</control>
+
+		<control type="grouplist">
+			<posx>850</posx>
+			<posy>10</posy>		
+			<control type="button">
+				<label>ListItem.Property(Artist_Born) [COLOR=white] $INFO[ListItem.Property(Artist_Born)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Artist_Died) [COLOR=white] $INFO[ListItem.Property(Artist_Died)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Artist_Formed) [COLOR=white] $INFO[ListItem.Property(Artist_Formed)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Artist_Disbanded) [COLOR=white] $INFO[ListItem.Property(Artist_Disbanded)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Artist_YearsActive) [COLOR=white] $INFO[ListItem.Property(Artist_YearsActive)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Artist_Instrument) [COLOR=white] $INFO[ListItem.Property(Artist_Instrument)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Artist_Description) [COLOR=white] $INFO[ListItem.Property(Artist_Description)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Artist_Mood) [COLOR=white] $INFO[ListItem.Property(Artist_Mood)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Artist_Style) [COLOR=white] $INFO[ListItem.Property(Artist_Style)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Artist_Genre) [COLOR=white] $INFO[ListItem.Property(Artist_Genre)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Album_Mood) [COLOR=white] $INFO[ListItem.Property(Album_Mood)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Album_Style) [COLOR=white] $INFO[ListItem.Property(Album_Style)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Album_Theme) [COLOR=white] $INFO[ListItem.Property(Album_Theme)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Album_Type) [COLOR=white] $INFO[ListItem.Property(Album_Type)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Album_Label) [COLOR=white] $INFO[ListItem.Property(Album_Label)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Album_Description) [COLOR=white] $INFO[ListItem.Property(Album_Description)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(AudioCodec.[n]) [COLOR=white] $INFO[ListItem.Property(AudioCodec.[n])][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(AudioChannels.[n]) [COLOR=white] $INFO[ListItem.Property(AudioChannels.[n])][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(AudioLanguage.[n]) [COLOR=white] $INFO[ListItem.Property(AudioLanguage.[n])][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(SubtitleLanguage.[n]) [COLOR=white] $INFO[ListItem.Property(SubtitleLanguage.[n])][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Addon.Name) [COLOR=white] $INFO[ListItem.Property(Addon.Name)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Addon.Version) [COLOR=white] $INFO[ListItem.Property(Addon.Version)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Addon.Summary) [COLOR=white] $INFO[ListItem.Property(Addon.Summary)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Addon.Description) [COLOR=white] $INFO[ListItem.Property(Addon.Description)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Addon.Type) [COLOR=white] $INFO[ListItem.Property(Addon.Type)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Addon.Creator) [COLOR=white] $INFO[ListItem.Property(Addon.Creator)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Addon.Disclaimer) [COLOR=white] $INFO[ListItem.Property(Addon.Disclaimer)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Addon.Changelog) [COLOR=white] $INFO[ListItem.Property(Addon.Changelog)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Addon.ID) [COLOR=white] $INFO[ListItem.Property(Addon.ID)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Addon.Status) [COLOR=white] $INFO[ListItem.Property(Addon.Status)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Addon.Broken) [COLOR=white] $INFO[ListItem.Property(Addon.Broken)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(Addon.Path) [COLOR=white] $INFO[ListItem.Property(Addon.Path)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(TotalSeasons) [COLOR=white] $INFO[ListItem.Property(TotalSeasons)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(TotalEpisodes) [COLOR=white] $INFO[ListItem.Property(TotalEpisodes)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(WatchedEpisodes) [COLOR=white] $INFO[ListItem.Property(WatchedEpisodes)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(UnWatchedEpisodes) [COLOR=white] $INFO[ListItem.Property(UnWatchedEpisodes)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>ListItem.Property(NumEpisodes) [COLOR=white] $INFO[ListItem.Property(NumEpisodes)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>Container.Content [COLOR=white] $INFO[Container.Content][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>Container.Property(addoncategory) [COLOR=white] $INFO[Container.Property(addoncategory)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>Container.Property(reponame) [COLOR=white] $INFO[Container.Property(reponame)][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>Container.FolderName [COLOR=white] $INFO[Container.FolderName][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>Container.Viewmode [COLOR=white] $INFO[Container.Viewmode][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>Container.SortMethod [COLOR=white] $INFO[Container.SortMethod][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>Container.SortOrder [COLOR=white] $INFO[Container.SortOrder][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>Container.PluginName [COLOR=white] $INFO[Container.PluginName][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>Container.PluginCategory [COLOR=white] $INFO[Container.PluginCategory][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>Container.ShowPlot [COLOR=white] $INFO[Container.ShowPlot][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>Container.ShowTitle [COLOR=white] $INFO[Container.ShowTitle][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>Container.NumPages [COLOR=white] $INFO[Container.NumPages][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>Container.NumItems [COLOR=white] $INFO[Container.NumItems][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>Container.CurrentPage [COLOR=white] $INFO[Container.CurrentPage][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>Container.CurrentItem [COLOR=white] $INFO[Container.CurrentItem][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>System.ProfileName [COLOR=white] $INFO[System.ProfileName][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>System.DVDLabel [COLOR=white] $INFO[System.DVDLabel][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>System.CurrentControl [COLOR=white] $INFO[System.CurrentControl][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+			<control type="button">
+				<label>System.CurrentWindow [COLOR=white] $INFO[System.CurrentWindow][/COLOR]</label>
+				<include>Object_DebugLabel</include>
+			</control>
+		</control>		
 	</include>
 
 	<!-- Settings Headings -->
@@ -1344,18 +2005,49 @@
 		<wrapmultiline>true</wrapmultiline>
 	</include>
 	<include name="SettingsLabelLeft">
-		<height>38</height>
 		<width>380</width>
+		<height>38</height>
 		<align>right</align>
 		<aligny>center</aligny>
 		<textoffsetx>20</textoffsetx>
+		<radiowidth>55</radiowidth>
+		<radioheight>55</radioheight>
+		<textureradiofocus>button_radioF.png</textureradiofocus>
+		<textureradionofocus>button_radioNF.png</textureradionofocus>
+		<textureup>ArrowUpNF.png</textureup>
+		<texturedown>ArrowDownNF.png</texturedown>
+		<textureupfocus>ArrowUpFo.png</textureupfocus>
+		<texturedownfocus>ArrowDownFo.png</texturedownfocus>
 		<font>METF_TitleTextMedium</font>
 		<textcolor>SettingsDetail</textcolor>
-		<disabledcolor>TextDisabled</disabledcolor>
 		<focusedcolor>DialogTextFO</focusedcolor>
-		<texturefocus>ButtonFo.png</texturefocus>
 		<selectedcolor>TextFO</selectedcolor>
+		<texturefocus>ButtonFo.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
+		<disabledcolor>TextDisabled</disabledcolor>
+		<pulseonselect>false</pulseonselect>
+	</include>
+	<include name="SettingsLabelLeftIcon">
+		<width>380</width>
+		<height>38</height>
+		<align>right</align>
+		<aligny>center</aligny>
+		<textoffsetx>58</textoffsetx>
+		<radiowidth>55</radiowidth>
+		<radioheight>55</radioheight>
+		<textureradiofocus>button_radioF.png</textureradiofocus>
+		<textureradionofocus>button_radioNF.png</textureradionofocus>
+		<textureup>ArrowUpNF.png</textureup>
+		<texturedown>ArrowDownNF.png</texturedown>
+		<textureupfocus>ArrowUpFo.png</textureupfocus>
+		<texturedownfocus>ArrowDownFo.png</texturedownfocus>
+		<font>METF_TitleTextMedium</font>
+		<textcolor>SettingsDetail</textcolor>
+		<focusedcolor>DialogTextFO</focusedcolor>
+		<selectedcolor>TextFO</selectedcolor>
+		<texturefocus>ButtonFo.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<disabledcolor>TextDisabled</disabledcolor>
 		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="SettingsLabel">
@@ -1442,7 +2134,7 @@
 		       <pulseonselect>false</pulseonselect>
 		       <onclick>right</onclick>
 		       <onclick>$VAR[GoPlaylist]</onclick>
-		       <visible>[Window.IsActive(videolibrary) + !StringCompare(Playlist.Length(video),0)] | [[Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)] + !StringCompare(Playlist.Length(music),0)]</visible>
+		       <visible>[Window.IsActive(videolibrary) + !StringCompare(Playlist.Length(video),0)] | [[Window.IsActive(music)] + !StringCompare(Playlist.Length(music),0)]</visible>
 		       <visible>!Window.IsVisible(MusicPlaylist) + !Window.IsVisible(VideoPlaylist)</visible>
 	       </control>
 	       <control type="button" id="611">
@@ -2002,7 +2694,7 @@
 			<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(60) | Container.Scrolling">Conditional</animation>
 		</control>
 	</include>
-	<include name="ScrollBar_Vertical">		
+	<include name="ScrollBar_Vertical">
 		<!-- Scroll Bar -->
 		<control type="scrollbar" id="61">
 			<include>Animation_OpenCloseFade</include>

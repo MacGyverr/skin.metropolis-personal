@@ -39,15 +39,21 @@
 		<texturefocus border="5">keyboard/ButtonFO.png</texturefocus>
 		<textureradiofocus>keyboard/RadioButtonFO.png</textureradiofocus>
 		<textureradionofocus>keyboard/RadioButtonNF.png</textureradionofocus>
+		<textureradioondisabled colordiffuse="40FFFFFF">keyboard/RadioButtonFO.png</textureradioondisabled>
+		<textureradiooffdisabled colordiffuse="40FFFFFF">keyboard/RadioButtonNF.png</textureradiooffdisabled>
 		<textoffsetx>20</textoffsetx>
 		<pulseonselect>false</pulseonselect>
 	</default>
 	
 	<default type="spincontrolex">
 		<pulseonselect>false</pulseonselect>
+		<textureupdisabled colordiffuse="40FFFFFF">subtitles/scroll-up.png</textureupdisabled>
+		<texturedowndisabled colordiffuse="40FFFFFF">subtitles/scroll-down.png</texturedowndisabled>
 	</default>
 	<default type="spincontrol">
 		<pulseonselect>false</pulseonselect>
+		<textureupdisabled colordiffuse="40FFFFFF">subtitles/scroll-up.png</textureupdisabled>
+		<texturedowndisabled colordiffuse="40FFFFFF">subtitles/scroll-down.png</texturedowndisabled>
 	</default>
 	
 	<default type="progress">

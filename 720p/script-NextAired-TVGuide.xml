@@ -7,7 +7,6 @@
 	<onload>ClearProperty(TVGuide.FridayList,Home)</onload>
 	<onload>ClearProperty(TVGuide.SaturdayList,Home)</onload>
 	<onload>ClearProperty(TVGuide.SundayList,Home)</onload>
-	<allowoverlay>no</allowoverlay>
 	<controls>
 		<control type="group">
 			<animation effect="fade" time="250">WindowOpen</animation>

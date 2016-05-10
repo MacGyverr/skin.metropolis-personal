@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="136">
 	<defaultcontrol always="true">22</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<control type="group">
 			<posy>-80</posy>
@@ -22,6 +21,7 @@
 				<aligny>center</aligny>
 				<label>-</label>
 			</control>
+
 			<control type="button" id="21">
 				<description>Cancel</description>
 				<posx>0</posx>
@@ -297,7 +297,6 @@
 				<alttexturefocus>ButtonFo.png</alttexturefocus>
 			</control>
 			<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>
-			<include condition="Skin.HasSetting(DebugMode)">Debug</include>
 		</control>
 	</controls>
 </window>

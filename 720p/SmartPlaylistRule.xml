@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="137">
 	<defaultcontrol always="true">15</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<control type="group">
 			<include>Animation_OpenCloseFade</include>
@@ -147,7 +146,6 @@
 				<ondown>19</ondown>
 			</control>
 			<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>
-			<include condition="Skin.HasSetting(DebugMode)">Debug</include>
 		</control>
 	</controls>
 </window>

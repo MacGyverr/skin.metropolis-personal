@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>10</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
 	<coordinates>
 		<system>1</system>
 		<posx>0</posx>
@@ -201,6 +200,5 @@
 			</control>
 		</control>
 		<include>Global_MediaOverlay</include>
-		<include condition="Skin.HasSetting(DebugMode)">Debug</include>
 	</controls>
 </window>

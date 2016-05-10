@@ -7,6 +7,5 @@
 		<include>OSD_Player_Time</include>
 		<include>MediaInfo2</include>
 		<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>
-		<include condition="Skin.HasSetting(DebugMode)">Debug</include>
 	</controls>
 </window>

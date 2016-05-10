@@ -1,67 +1,64 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <shortcuts>
 	<shortcut>
-		<action>ActivateWindow(Videos,TvShowGenres,return)</action>
+		<label>31438</label>
+		<label2>32014</label2>
+		<icon>DefaultShortcut.png</icon>
+		<action>ActivateWindow(Videos,videodb://recentlyaddedepisodes/,return)</action>
+	</shortcut>
+	<shortcut>
+		<label>31428</label>
+		<label2>32034</label2>
+		<icon>DefaultAddonTvInfo.png</icon>
+		<action>RunAddOn(script.tv.show.next.aired)</action>
+		<visible>System.HasAddon(script.tv.show.next.aired)</visible>
+	</shortcut>
+	<shortcut>
 		<label>135</label>
 		<label2>20343</label2>
-		<defaultID>135</defaultID>
 		<icon>DefaultGenre.png</icon>
-		<thumb />
+		<action>ActivateWindow(Videos,videodb://tvshows/genres/,return)</action>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(Videos,TvShowYears,return)</action>
-		<label>562</label>
+		<label>652</label>
 		<label2>20343</label2>
-		<defaultID>562</defaultID>
 		<icon>DefaultYear.png</icon>
-		<thumb />
+		<action>ActivateWindow(Videos,videodb://tvshows/years/,return)</action>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(Videos,TvShowActors,return)</action>
 		<label>344</label>
 		<label2>20343</label2>
-		<defaultID>344</defaultID>
 		<icon>DefaultActor.png</icon>
-		<thumb />
+		<action>ActivateWindow(Videos,videodb://tvshows/actors/,return)</action>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(Videos,TVShowStudios,return)</action>
 		<label>20388</label>
 		<label2>20343</label2>
-		<defaultID>344</defaultID>
-		<icon>DefaultActor.png</icon>
-		<thumb />
+		<icon>DefaultStudio.png</icon>
+		<action>ActivateWindow(Videos,videodb://tvshows/studios/,return)</action>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(Videos,TvShowTags,return)</action>
 		<label>20459</label>
 		<label2>20343</label2>
-		<defaultID>344</defaultID>
-		<icon>DefaultActor.png</icon>
-		<thumb />
+		<icon>DefaultSets.png</icon>
+		<action>ActivateWindow(Videos,videodb://tvshows/tags/,return)</action>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(Videos,Files,return)</action>
 		<label>31289</label>
-		<label2>20343</label2>
-		<defaultID>344</defaultID>
-		<icon>DefaultActor.png</icon>
-		<thumb />
+		<label2>32034</label2>
+		<icon>DefaultFolder.png</icon>
+		<action>ActivateWindow(Videos,videodb://tvshows/files/,return)</action>
 	</shortcut>
 	<shortcut>
-		<action>CleanLibrary(video)</action>
 		<label>31465</label>
-		<label2>20343</label2>
-		<defaultID>344</defaultID>
-		<icon>DefaultActor.png</icon>
-		<thumb />
+		<label2>32034</label2>
+		<icon>DefaultShortcut.png</icon>
+		<action>CleanLibrary(video)</action>
 	</shortcut>
 	<shortcut>
-		<action>UpdateLibrary(video)</action>
 		<label>653</label>
-		<label2>20343</label2>
-		<defaultID>344</defaultID>
-		<icon>DefaultActor.png</icon>
-		<thumb />
+		<label2>32034</label2>
+		<icon>DefaultShortcut.png</icon>
+		<action>UpdateLibrary(video)</action>
 	</shortcut>
 </shortcuts>

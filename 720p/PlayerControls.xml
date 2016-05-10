@@ -302,6 +302,7 @@
 
 		<!-- Video -->
 		<control type="group">
+			<visible>Player.HasVideo</visible>
 			<control type="image">
 				<description>Cover image</description>
 				<posx>20</posx>
@@ -428,6 +429,5 @@
 				<shadowcolor>black</shadowcolor>
 			</control>
 		</control>
-		<include condition="Skin.HasSetting(DebugMode)">Debug</include>
 	</controls>
 </window>

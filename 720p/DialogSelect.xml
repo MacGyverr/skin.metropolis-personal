@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window type="dialog">
+<window>
 	<defaultcontrol always="true">3</defaultcontrol>
+	<animation type="WindowOpen" reversible="false">
+		<effect type="zoom" start="80" end="100" center="auto" easing="out" tween="back" time="300" />
+		<effect type="fade" start="0" end="100" time="300" />
+	</animation>
+	<animation type="WindowClose" reversible="false">
+		<effect type="zoom" start="100" end="80" center="auto" easing="in" tween="back" time="300" />
+		<effect type="fade" start="100" end="0" time="300" />
+	</animation>
 	<controls>
-		<include>Animation_OpenCloseFade</include>
+			<!--  Menu Background Panel -->
 		<include>Global_Background</include>
 		<control type="group">
-			<posy>-65</posy>
-			<include>Animation_CommonFade</include>
-			<visible>!Window.IsActive(okdialog)</visible>
+			<posx>0</posx>
+			<posy>-55</posy>
 			<control type="label" id="2">
 				<description>Heading</description>
 				<posx>360</posx>
@@ -40,20 +47,13 @@
 				<aligny>center</aligny>
 				<label>13406</label>
 			</control>
-			<control type="label" id="4">
-				<description>Visualisation Preset Spinner</description>
-				<left>20</left>
-				<top>120</top>
-				<width>550</width>
-				<align>center</align>
-				<font>METF_ContextValue</font>
-			</control>
+			
 			<control type="list" id="3">
 				<posx>440</posx>
 				<posy>215</posy>
 				<width>840</width>
 				<height>380</height>
-				<onleft>5</onleft>
+				<onleft>7</onleft>
 				<onright>60</onright>
 				<onup>3</onup>
 				<ondown>3</ondown>
@@ -96,12 +96,13 @@
 					</control>
 				</focusedlayout>
 			</control>
+			
 			<control type="list" id="6">
 				<posx>450</posx>
 				<posy>206</posy>
 				<width>840</width>
 				<height>388</height>
-				<onleft>5</onleft>
+				<onleft>7</onleft>
 				<onright>61</onright>
 				<onup>6</onup>
 				<ondown>6</ondown>
@@ -170,7 +171,7 @@
 						<posx>195</posx>
 						<posy>72</posy>
 						<width>615</width>
-						<height>76</height>
+						<height>78</height>
 						<textcolor>SettingsDetail</textcolor>
 						<font>METF_ContextValue</font>
 						<align>left</align>
@@ -214,15 +215,41 @@
 		</control>
 
 		<control type="button" id="5">
-			<include>Animation_CommonFade</include>
 			<description>Default Button</description>
 			<posx>0</posx>
-			<posy>196</posy>
-			<include>SettingsLabelLeft</include>
-			<onleft>3</onleft>
+			<posy>200</posy>
+			<width>370</width>
+			<height>50</height>
+			<textoffsetx>20</textoffsetx>
+			<font>METF_TitleTextMedium</font>
+			<textcolor>SettingsDetail</textcolor>
+			<focusedcolor>DialogTextFO</focusedcolor>
+			<align>right</align>
+			<aligny>center</aligny>
+			<texturefocus>ButtonFo.png</texturefocus>
+			<onleft>noop</onleft>
 			<onright>3</onright>
-			<onup>3</onup>
-			<ondown>3</ondown>
+			<onup>7</onup>
+			<ondown>7</ondown>
+		</control>
+		<control type="button" id="7">
+			<description>Cancel button</description>
+			<posx>0</posx>
+			<posy>250</posy>
+			<width>370</width>
+			<height>50</height>
+			<textoffsetx>20</textoffsetx>
+			<font>METF_TitleTextMedium</font>
+			<textcolor>SettingsDetail</textcolor>
+			<focusedcolor>DialogTextFO</focusedcolor>
+			<align>right</align>
+			<aligny>center</aligny>
+			<texturefocus>ButtonFo.png</texturefocus>
+			<onleft>noop</onleft>
+			<onright>3</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<label>-</label>
 		</control>
 		<include>Global_ContextFilter</include>
 		<include>Global_Weather</include>
@@ -230,6 +257,5 @@
 		<include>Global_MediaOverlay</include>
 		<include>Setting_Heading</include>
 		<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>
-		<include condition="Skin.HasSetting(DebugMode)">Debug</include>
 	</controls>
 </window>

@@ -27,65 +27,36 @@
 				<visible>!Skin.HasSetting(NoViewFanart)</visible>
 				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
 				<itemlayout width="260" height="420">
-					<control type="group">	
-						<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(CaseOveralys)</visible>	
-						<control type="image">
-							<posx>28</posx>
-							<posy>60</posy>
-							<width>204</width>
-							<height>300</height>
-							<texture background="true" fallback="DefaultThumb.png">$VAR[PosterThumb]</texture>
-							<fadetime>200</fadetime>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<visible>!IsEmpty(ListItem.Title)</visible>
-						</control>
-						<control type="image">
-							<posx>28</posx>
-							<posy>60</posy>
-							<width>204</width>
-							<height>300</height>
-							<texture>frames/ClassicFrameGlass_Vertical.png</texture>
-							<fadetime>200</fadetime>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<colordiffuse>GlassDiffuse</colordiffuse>
-							<visible>!IsEmpty(ListItem.Title)</visible>
-						</control>
-						<control type="image">
-							<posx>8</posx>
-							<posy>37</posy>
-							<width>247</width>
-							<height>346</height>
-							<texture>frames/ClassicFrame_PosterSmall.png</texture>
-							<fadetime>200</fadetime>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<visible>!IsEmpty(ListItem.Title)</visible>
-						</control>
+					<control type="image">
+						<posx>28</posx>
+						<posy>60</posy>
+						<width>204</width>
+						<height>300</height>
+						<texture background="true" fallback="DefaultThumb.png">$VAR[PosterThumb]</texture>
+						<fadetime>200</fadetime>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>!IsEmpty(ListItem.Title)</visible>
 					</control>
-					<!-- Media Type Case Overlays -->	
-					<control type="group">	
-						<visible>!IsEmpty(ListItem.Title) + Skin.HasSetting(CaseOveralys)</visible>	
-						<control type="image">
-							<posx>27</posx>
-							<posy>60</posy>
-							<width>221</width>
-							<height>318</height>
-							<texture background="true" fallback="DefaultThumb.png">$VAR[PosterThumb]</texture>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<animation type="Focus" reversible="false">
-								<effect type="zoom" center="auto" start="72" end="100" time="250" tween="sine" easing="inout" delay="150" />
-							</animation>
-						</control>			
-						<control type="image">
-							<posx>-20</posx>
-							<posy>26</posy>
-							<width>285</width>
-							<height>373</height>
-							<texture fallback="flags/Overlays/default.png">$VAR[MediaOverlay]</texture>
-							<animation type="Focus" reversible="false">
-								<effect type="zoom" center="auto" start="72" end="100" time="250" tween="sine" easing="inout" delay="150" />
-							</animation>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
-						</control>	
+					<control type="image">
+						<posx>28</posx>
+						<posy>60</posy>
+						<width>204</width>
+						<height>300</height>
+						<texture>frames/ClassicFrameGlass_Vertical.png</texture>
+						<fadetime>200</fadetime>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<colordiffuse>GlassDiffuse</colordiffuse>
+						<visible>!IsEmpty(ListItem.Title)</visible>
+					</control>
+					<control type="image">
+						<posx>8</posx>
+						<posy>37</posy>
+						<width>247</width>
+						<height>346</height>
+						<texture>frames/ClassicFrame_PosterSmall.png</texture>
+						<fadetime>200</fadetime>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>!IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="image">
 						<posx>191</posx>

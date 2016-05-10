@@ -2,42 +2,32 @@
 <shortcuts>
 	<shortcut>
 		<label>19023</label>
-		<label2>Live TV</label2>
-		<defaultID>19019</defaultID>
-		<icon>home/tvshows.png</icon>
-		<thumb />
+		<label2>32017</label2>
+		<icon>DefaultTVShows.png</icon>
 		<action>ActivateWindow(TVChannels)</action>
 	</shortcut>
 	<shortcut>
 		<label>22020</label>
-		<label2>Live TV</label2>
-		<defaultID>22020</defaultID>
-		<icon>home/epg.png</icon>
-		<thumb />
+		<label2>32017</label2>
+		<icon>DefaultTVShows.png</icon>
 		<action>ActivateWindow(TVGuide)</action>
 	</shortcut>
 	<shortcut>
 		<label>19163</label>
-		<label2>Live TV</label2>
-		<defaultID>19163</defaultID>
-		<icon>home/recordings.png</icon>
-		<thumb />
+		<label2>32017</label2>
+		<icon>DefaultTVShows.png</icon>
 		<action>ActivateWindow(TVRecordings)</action>
 	</shortcut>
 	<shortcut>
 		<label>19040</label>
-		<label2>Live TV</label2>
-		<defaultID>19040</defaultID>
-		<icon>home/timers.png</icon>
-		<thumb />
+		<label2>32017</label2>
+		<icon>DefaultTVShows.png</icon>
 		<action>ActivateWindow(TVTimers)</action>
 	</shortcut>
 	<shortcut>
 		<label>137</label>
-		<label2>Live TV</label2>
-		<defaultID>137</defaultID>
-		<icon>home/search-tv.png</icon>
-		<thumb />
+		<label2>32017</label2>
+		<icon>DefaultTVShows.png</icon>
 		<action>ActivateWindow(TVSearch)</action>
 	</shortcut>
 </shortcuts>

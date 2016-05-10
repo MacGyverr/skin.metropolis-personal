@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<variable name="HomeBackground">
-		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\dvd\)">home_art/playdisc.jpg</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),weather) + Skin.HasSetting(DynamicWeather)">resource://resource.images.weatherfanart.prairie/$INFO[Window(Weather).Property(Current.FanartCode)].jpg</value>
+<!--	<value condition="StringCompare(Container(9000).ListItem.Property(labelID),weather) + Skin.HasSetting(DynamicWeather)">resource://resource.images.weatherfanart.single/$INFO[Window(Weather).Property(Current.FanartCode)].jpg</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),weather) + Skin.HasSetting(DynamicWeather)">resource://resource.images.weatherfanart.multi/$INFO[Window(Weather).Property(Current.FanartCode)]/</value>
+-->		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\dvd\)">home_art/playdisc.jpg</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\movies\)">home_art/movies.jpg</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\tvshows\)">home_art/tvshows.jpg</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\videos\)">home_art/videos.jpg</value>
@@ -12,14 +15,11 @@
 		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\radio\)">home_art/radio.jpg</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\pictures\)">home_art/pictures.jpg</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\programs\)">home_art/programs.jpg</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\weather\) + IsEmpty(Skin.String(weatherfanart.path))">home_art/weather.jpg</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\weather\) + !IsEmpty(Skin.String(weatherfanart.path)) + System.HasAddon(script.image.resource.select)">$INFO[Skin.String(weatherfanart.path)]/$INFO[Window(Weather).Property(Current.FanartCode)]$VAR[Weather_Fanart_Animated]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\weather\)">home_art/weather.jpg</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\favourites\)">home_art/favourites.jpg</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\settings\)">home_art/settings.jpg</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\logoff\)">home_art/logoff.jpg</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\shutdown\)">home_art/shutdown.jpg</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\search\)">home_art/search.jpg</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\TV Guide\)">home_art/tvguide.jpg</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\settings\)">home_art/settings.jpg</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(background),home\shutdown\)">home_art/shutdown.jpg</value>
 		<value condition="!IsEmpty(Container(9000).ListItem.Property(background))">$INFO[Container(9000).ListItem.Property(background)]</value>
 	</variable>
 	<variable name="HomeBackgroundSkinShortcuts">
@@ -34,34 +34,18 @@
 		<value condition="StringCompare(Container(211).ListItem.Property(background),home\radio\)">home_art/radio.jpg</value>
 		<value condition="StringCompare(Container(211).ListItem.Property(background),home\pictures\)">home_art/pictures.jpg</value>
 		<value condition="StringCompare(Container(211).ListItem.Property(background),home\programs\)">home_art/programs.jpg</value>
-		<value condition="StringCompare(Container(211).ListItem.Property(background),home\weather\) + IsEmpty(Skin.String(weatherfanart.path))">home_art/weather.jpg</value>
-		<value condition="StringCompare(Container(211).ListItem.Property(background),home\weather\) + !IsEmpty(Skin.String(weatherfanart.path)) + System.HasAddon(script.image.resource.select)">$INFO[Skin.String(weatherfanart.path)]/$INFO[Window(Weather).Property(Current.FanartCode)]$VAR[Weather_Fanart_Animated]</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(background),home\weather\)">home_art/weather.jpg</value>
 		<value condition="StringCompare(Container(211).ListItem.Property(background),home\favourites\)">home_art/favourites.jpg</value>
-		<value condition="StringCompare(Container(211).ListItem.Property(background),home\settings\)">home_art/settings.jpg</value>
-		<value condition="StringCompare(Container(211).ListItem.Property(background),home\logoff\)">home_art/logoff.jpg</value>
-		<value condition="StringCompare(Container(211).ListItem.Property(background),home\shutdown\)">home_art/shutdown.jpg</value>
 		<value condition="StringCompare(Container(211).ListItem.Property(background),home\search\)">home_art/search.jpg</value>
-		<value condition="StringCompare(Container(211).ListItem.Property(background),home\TV Guide\)">home_art/tvguide.jpg</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(background),home\settings\)">home_art/settings.jpg</value>
+		<value condition="StringCompare(Container(211).ListItem.Property(background),home\shutdown\)">home_art/shutdown.jpg</value>
 		<value>$INFO[Container(211).ListItem.Property(background)]</value>
-	</variable>	
-	
-	<variable name="Weather_Fanart_Animated">
-		<value condition="Skin.HasSetting(weatherfanart.multi)">/</value>
-		<value>.jpg</value>
-	</variable>	
-	
+	</variable>
+
 	<variable name="ListItemTitle">
 		<value condition="Container.Content(albums) | Container.Content(songs)">$INFO[ListItem.Label]$INFO[ListItem.Label2, - ]</value>
 		<value condition="SubString(Container.FolderPath,plugin)">$INFO[ListItem.Season,,x]$INFO[ListItem.Episode,,. ]$INFO[ListItem.Label]</value>
 		<value>$INFO[ListItem.Label]</value>
-	</variable>
-
-	<variable name="MediaOverlay">
-		<value condition="IsEmpty(ListItem.VideoResolution)">flags/Overlays/default.png</value>
-		<value condition="[ListItem.IsStereoscopic | substring(listitem.filename,.3d)] + [substring(ListItem.VideoResolution,720) | substring(ListItem.VideoResolution,1080) | substring(ListItem.VideoResolution,4K)]">flags/Overlays/bluray3d.png</value>
-		<value condition="ListItem.IsStereoscopic | [substring(listitem.filename,.3d) + ![substring(ListItem.VideoResolution,720) | substring(ListItem.VideoResolution,1080) | substring(ListItem.VideoResolution,4K)]]">flags/Overlays/other3d.png</value>
-		<value condition="substring(listitem.filename,hddvd) | substring(listitem.filename,hd-dvd) | substring(listitem.filename,.evo,Right)">flags/Overlays/hddvd.png</value>
-		<value>$INFO[ListItem.VideoResolution,flags/Overlays/,.png]</value>
 	</variable>
 
 	<variable name="NextAiredFanart">
@@ -91,104 +75,87 @@
 		<value condition="Skin.HasSetting(GlobalFanartLight)">FanartDiffuseLight</value>
 		<value>FanartDiffuse</value>
 	</variable>
-	
+
 	<variable name="GlobalWidgetContent">
-		<!-- built-in library content -->	
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyAddedMovies)">videodb://recentlyaddedmovies/</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyAddedEpisodes)">videodb://recentlyaddedepisodes/</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyAddedMusicVideos)">videodb://recentlyaddedmusicvideos/</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyAddedAlbums)">musicdb://recentlyaddedalbums/</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyPlayedAlbums)">musicdb://recentlyplayedalbums/ </value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryAddons)">addons://sources/executable/</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryFavourites)">favourites://</value>		<!-- built-in library content -->
+		<!-- built-in library content -->
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LibraryRecentlyAddedMovies)">videodb://recentlyaddedmovies/</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LibraryRecentlyAddedEpisodes)">videodb://recentlyaddedepisodes/</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LibraryRecentlyAddedMusicVideos)">videodb://recentlyaddedmusicvideos/</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LibraryRecentlyAddedAlbums)">musicdb://recentlyaddedalbums/</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LibraryRecentlyPlayedAlbums)">musicdb://recentlyplayedalbums/</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LibraryAddons)">addons://sources/executable/</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LibraryFavourites)">favourites://</value>
 
 		<!-- service.library.data.provider content -->
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LDPRecentlyAddedMovies)">plugin://service.library.data.provider?type=recentmovies&amp;reload=$INFO[Window(Home).Property(recentmovies)]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LDPRecommendedMovies)">plugin://service.library.data.provider?type=recommendedmovies&amp;reload=$INFO[Window(Home).Property(recommendedmovies)]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LDPRandomMovies)">plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window.Property(randommovies)]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LDPRecentlyAddedEpisodes)">plugin://service.library.data.provider?type=recentepisodes&amp;reload=$INFO[Window.Property(recentepisodes)]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LDPRecommendedEpisodes)">plugin://service.library.data.provider?type=recommendedepisodes&amp;reload=$INFO[Window.Property(recommendedepisodes)]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LDPRandomEpisodes)">plugin://service.library.data.provider?type=randomepisodes&amp;reload=$INFO[Window.Property(randomepisodes)]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LDPRecentlyAddedVideos)">plugin://service.library.data.provider?type=recentvideos&amp;reload=$INFO[Window.Property(recentvideos)]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LDPRecentlyAddedAlbums)">plugin://service.library.data.provider?type=recentalbums&amp;reload=$INFO[Window.Property(recentalbums)]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LDPRecommendedAlbums)">plugin://service.library.data.provider?type=recommendedalbums&amp;reload=$INFO[Window.Property(recommendedalbums)]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LDPRandomAlbums)">plugin://service.library.data.provider?type=randomalbums&amp;reload=$INFO[Window.Property(randomalbums)]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LDPRandomSongs)">plugin://service.library.data.provider?type=randomsongs&amp;reload=$INFO[Window.Property(randomsongs)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LDPRecentlyAddedMovies)">plugin://service.library.data.provider?type=recentmovies&amp;reload=$INFO[Window(Home).Property(recentmovies)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LDPRecommendedMovies)">plugin://service.library.data.provider?type=recommendedmovies&amp;reload=$INFO[Window(Home).Property(recommendedmovies)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LDPRandomMovies)">plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window.Property(randommovies)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LDPRecentlyAddedEpisodes)">plugin://service.library.data.provider?type=recentepisodes&amp;reload=$INFO[Window.Property(recentepisodes)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LDPRecommendedEpisodes)">plugin://service.library.data.provider?type=recommendedepisodes&amp;reload=$INFO[Window.Property(recommendedepisodes)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LDPRandomEpisodes)">plugin://service.library.data.provider?type=randomepisodes&amp;reload=$INFO[Window.Property(randomepisodes)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LDPRecentlyAddedVideos)">plugin://service.library.data.provider?type=recentvideos&amp;reload=$INFO[Window.Property(recentvideos)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LDPRecentlyAddedAlbums)">plugin://service.library.data.provider?type=recentalbums&amp;reload=$INFO[Window.Property(recentalbums)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LDPRecommendedAlbums)">plugin://service.library.data.provider?type=recommendedalbums&amp;reload=$INFO[Window.Property(recommendedalbums)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LDPRandomAlbums)">plugin://service.library.data.provider?type=randomalbums&amp;reload=$INFO[Window.Property(randomalbums)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LDPRandomSongs)">plugin://service.library.data.provider?type=randomsongs&amp;reload=$INFO[Window.Property(randomsongs)]</value>
 
 		<!-- script.extendedinfo content -->
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),InTheatersMovies)">plugin://script.extendedinfo?info=intheaters</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),ComingSoonMovies)">plugin://script.extendedinfo?info=comingsoon</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),Opening)">plugin://script.extendedinfo?info=opening</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),BoxOffice)">plugin://script.extendedinfo?info=boxoffice</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),Top10Rentals)">plugin://script.extendedinfo?info=toprentals</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),CurrentDVDs)">plugin://script.extendedinfo?info=currentdvdreleases</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),NewDVDs)">plugin://script.extendedinfo?info=newdvdreleases</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),UpcomingDVDs)">plugin://script.extendedinfo?info=upcomingdvds</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),InCinemasMovies)">plugin://script.extendedinfo?info=incinemas</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),UpcomingMovies)">plugin://script.extendedinfo?info=upcoming</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),PopularMovies)">plugin://script.extendedinfo?info=popularmovies</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),TopRatedMovies)">plugin://script.extendedinfo?info=topratedmovies</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),PopularTVShows)">plugin://script.extendedinfo?info=populartvshows</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),TopRatedTVShows)">plugin://script.extendedinfo?info=topratedtvshows</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),OnAirTVShows)">plugin://script.extendedinfo?info=onairtvshows</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),AiringTodayTVShows)">plugin://script.extendedinfo?info=airingtodaytvshows</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),TrendingMovies)">plugin://script.extendedinfo?info=trendingmovies</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),TrendingTVShows)">plugin://script.extendedinfo?info=trendingshows</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),AiringShows)">plugin://script.extendedinfo?info=airingshows</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),PremiereShows)">plugin://script.extendedinfo?info=premiereshows</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),XKCD)">plugin://script.extendedinfo?info=xkcd</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),Cyanide)">plugin://script.extendedinfo?info=cyanide</value>
-
-		<!-- plugin.program.super.favourites -->
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),SuperFavorites)">plugin://plugin.program.super.favourites/&reload=$INFO[Window(Home).Property]</value>
-		
-		<!-- Unfledged Smart-ish Widgets -->
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),SmartishMovies)">plugin://service.smartish.widgets?type=movies&amp;reload=$INFO[Window.Property(smartish.movies)]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),SmartishEpisodes)">plugin://service.smartish.widgets?type=episodes&amp;reload=$INFO[Window.Property(smartish.episodes)]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),SmartishAlbums)">plugin://service.smartish.widgets?type=albums&amp;reload=$INFO[Window.Property(smartish.albums)]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),SmartishPVR)">plugin://service.smartish.widgets?type=pvr&amp;reload=$INFO[Window.Property(smartish.pvr)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),InTheatersMovies)">plugin://script.extendedinfo?info=intheatermovies</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),ComingSoonMovies)">plugin://script.extendedinfo?info=comingsoonmovies</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),Opening)">plugin://script.extendedinfo?info=openingmovies</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),BoxOffice)">plugin://script.extendedinfo?info=boxofficemovies</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),Top10Rentals)">plugin://script.extendedinfo?info=toprentalmovies</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),CurrentDVDs)">plugin://script.extendedinfo?info=currentdvdmovies</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),NewDVDs)">plugin://script.extendedinfo?info=newdvdmovies</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),UpcomingDVDs)">plugin://script.extendedinfo?info=upcomingdvdmovies</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),InCinemasMovies)">plugin://script.extendedinfo?info=incinemas</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),UpcomingMovies)">plugin://script.extendedinfo?info=upcoming</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),PopularMovies)">plugin://script.extendedinfo?info=popularmovies</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),TopRatedMovies)">plugin://script.extendedinfo?info=topratedmovies</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),PopularTVShows)">plugin://script.extendedinfo?info=populartvshows</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),TopRatedTVShows)">plugin://script.extendedinfo?info=topratedtvshows</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),OnAirTVShows)">plugin://script.extendedinfo?info=onairtvshows</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),AiringTodayTVShows)">plugin://script.extendedinfo?info=airingtodaytvshows</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),TrendingMovies)">plugin://script.extendedinfo?info=trendingmovies</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),TrendingTVShows)">plugin://script.extendedinfo?info=trendingshows</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),AiringShows)">plugin://script.extendedinfo?info=airingepisodes</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),PremiereShows)">plugin://script.extendedinfo?info=premiereepisodes</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),XKCD)">plugin://script.extendedinfo?info=xkcd</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),Cyanide)">plugin://script.extendedinfo?info=cyanide</value>
 		<value>$INFO[Container(9000).ListItem.Property(widgetPlaylist)]</value>
-	</variable>	
-	
-	<!--setting the dynamic content target variable -->
+	</variable>
+
+	<!-- setting the dynamic content target variable -->
 	<variable name="GlobalWidgetType">
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgetType),music)">music</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgetType),programs)">programs</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgetType),pictures)">pictures</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(widgetType),video)">video</value>
 		<value>video</value>
 	</variable>
-		
-	<variable name="GlobalWidgetLabel">		
+
+	<variable name="GlobalWidgetLabel">
 		<!-- fixing the service.library.data.provider content labels-->
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LDPRecentlyAddedMovies)">$INFO[ListItem.Title] ($INFO[ListItem.Year])</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LDPRecommendedMovies)">$INFO[ListItem.Title] ($INFO[ListItem.Year])</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LDPRandomMovies)">$INFO[ListItem.Title] ($INFO[ListItem.Year])</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LDPRecentlyAddedEpisodes)">$INFO[ListItem.TVshowTitle] - $INFO[ListItem.Season]x$INFO[ListItem.Episode] - $INFO[ListItem.Title]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LDPRecommendedEpisodes)">$INFO[ListItem.TVshowTitle] - $INFO[ListItem.Season]x$INFO[ListItem.Episode] - $INFO[ListItem.Title]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LDPRandomEpisodes)">$INFO[ListItem.TVshowTitle] - $INFO[ListItem.Season]x$INFO[ListItem.Episode] - $INFO[ListItem.Title]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LDPRecentlyAddedAlbums)">$INFO[ListItem.Artist] - $INFO[ListItem.Title] ($INFO[ListItem.Year])</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LDPRecommendedAlbums)">$INFO[ListItem.Artist] - $INFO[ListItem.Title] ($INFO[ListItem.Year])</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LDPRandomAlbums)">$INFO[ListItem.Artist] - $INFO[ListItem.Title] ($INFO[ListItem.Year])</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LDPRandomSongs)">$INFO[ListItem.Artist] - $INFO[ListItem.Title]</value>
-		
-		<!-- fixing the service.library.data.provider content labels-->
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyAddedMovies)">$INFO[ListItem.Title] ($INFO[ListItem.Year])</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyAddedEpisodes)">$INFO[ListItem.TVshowTitle] - $INFO[ListItem.Season]x$INFO[ListItem.Episode] - $INFO[ListItem.Title]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyAddedAlbums)">$INFO[ListItem.Artist] - $INFO[ListItem.Title]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyAddedMusicVideos)">$INFO[ListItem.Label]</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),LibraryRecentlyPlayedAlbums)">$INFO[ListItem.Artist] - $INFO[ListItem.Title]</value>
-		
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LDPRecentlyAddedMovies)">$INFO[ListItem.Title]$INFO[ListItem.Year, (,)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LDPRecommendedMovies)">$INFO[ListItem.Title]$INFO[ListItem.Year, (,)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LDPRandomMovies)">$INFO[ListItem.Title]$INFO[ListItem.Year, (,)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LDPRecentlyAddedEpisodes)">$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Season]x$INFO[ListItem.Episode,,. ]$INFO[ListItem.Title]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LDPRecommendedEpisodes)">$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Season]x$INFO[ListItem.Episode,,. ]$INFO[ListItem.Title]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LDPRandomEpisodes)">$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Season]x$INFO[ListItem.Episode,,. ]$INFO[ListItem.Title]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LDPRecentlyAddedAlbums)">$INFO[ListItem.Artist] - $INFO[ListItem.Title]$INFO[ListItem.Year, (,)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LDPRecommendedAlbums)">$INFO[ListItem.Artist] - $INFO[ListItem.Title]$INFO[ListItem.Year, (,)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LDPRandomAlbums)">$INFO[ListItem.Artist] - $INFO[ListItem.Title]$INFO[ListItem.Year, (,)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),LDPRandomSongs)">$INFO[ListItem.Artist] - $INFO[ListItem.Title]</value>
+
 		<!-- fixing the playlists content labels-->
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),Playlist) + IsEmpty(Container(8000).ListItem.TVshowTitle)">$INFO[ListItem.Title] ($INFO[ListItem.Year])</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),Playlist) + !IsEmpty(Container(8000).ListItem.TVshowTitle)">$INFO[ListItem.TVshowTitle] - $INFO[ListItem.Season]x$INFO[ListItem.Episode] - $INFO[ListItem.Title]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),Playlist) + IsEmpty(Container(8000).ListItem.TVShowTitle)">$INFO[ListItem.Title]$INFO[ListItem.Year, (,)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),Playlist) + !StringCompare(ListItem.Title,ListItem.TVShowTitle) + !IsEmpty(Container(8000).ListItem.TVShowTitle)">$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Season,,x]$INFO[ListItem.Episode,,. ]$INFO[ListItem.Title]</value>
 		<value>$INFO[ListItem.Label]</value>
-	</variable>	
+	</variable>
 
 	<variable name="GlobalWidgetIcon">
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
-	
+
 	<variable name="RatingColor">
 		<value condition="!SubString(ListItem.Votes,$COMMA)">FFFF0000</value>
 		<value condition="SubString(ListItem.Votes,1$COMMA,Left)">FFFF5555</value>
@@ -198,163 +165,159 @@
 		<value condition="SubString(ListItem.Votes,5$COMMA,Left)">FFFFFF00</value>
 		<value condition="SubString(ListItem.Votes,$COMMA)">FF00FF00</value>
 	</variable>
-	
-	<variable name="Weather_Icon_Animated">
-		<value condition="Skin.HasSetting(weathericons.multi)">/</value>
-		<value>.png</value>
-	</variable>	
-	
-	<variable name="Weather_Icon_Resource">
-		<value condition="System.HasAddon(script.image.resource.select) + !IsEmpty(Skin.String(weathericons.path))">$INFO[Skin.String(weathericons.path)]</value>
-		<value>resource://resource.images.weathericons.white</value>
-	</variable>	
-	
+
+	<variable name="Weather_Fanart">
+		<value condition="!IsEmpty(Skin.String(CustomWeather)) + Skin.HasSetting(DynamicWeather)">$INFO[Skin.String(CustomWeather)]$INFO[Window(Weather).Property(Current.FanartCode)].jpg</value>
+		<value condition="!IsEmpty(Skin.String(CustomWeather)) + !Skin.HasSetting(DynamicWeather)">$INFO[Skin.String(CustomWeather)]</value>
+		<value condition="Skin.HasSetting(DynamicWeather)">resource://resource.images.weatherfanart.prairie/$INFO[Window(Weather).Property(Current.FanartCode)].jpg</value>
+		<value>home_art/weather.jpg</value>
+	</variable>
 	<variable name="Weather_Icons_Current">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Current.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Current.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Day0">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Day0.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Day0.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Day1">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Day1.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Day1.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Day2">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Day2.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Day2.FanartCode)].png</value>
 	</variable>			
 	<variable name="Weather_Icons_Day3">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Day3.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Day3.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Day4">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Day4.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Day4.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Day5">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Day5.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Day5.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Day6">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Day6.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Day6.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour1">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.1.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.1.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour2">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.2.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.2.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour3">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.3.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.3.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour4">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.4.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.4.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour5">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.5.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.5.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour6">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.6.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.6.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour7">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.7.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.7.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour8">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.8.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.8.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour9">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.9.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.9.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour10">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.10.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.10.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour11">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.11.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.11.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour12">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.12.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.12.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour13">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.13.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.13.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour14">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.14.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.14.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour15">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.15.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.15.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour16">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.16.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.16.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour17">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.17.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.17.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour18">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.18.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.18.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour19">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.19.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.19.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour20">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.20.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.20.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour21">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.21.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.21.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour22">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.22.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.22.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour23">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.23.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.23.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour24">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.24.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.24.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour25">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.25.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.25.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour26">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.26.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.26.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour27">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.27.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.27.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour28">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.28.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.28.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour29">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.29.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.29.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour30">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.30.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.30.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour31">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.31.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.31.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour32">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.32.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.32.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour33">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.33.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.33.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour34">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.34.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.34.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour35">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.35.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.35.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Hour36">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Hourly.36.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Hourly.36.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_36Hr1">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(36Hour.1.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(36Hour.1.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_36Hr2">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(36Hour.2.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(36Hour.2.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_36Hr3">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(36Hour.3.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(36Hour.3.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Weekend1">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Weekend.1.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Weekend.1.FanartCode)].png</value>
 	</variable>
 	<variable name="Weather_Icons_Weekend2">
-		<value>$VAR[Weather_Icon_Resource]/$INFO[Window(Weather).Property(Weekend.2.FanartCode)]$VAR[Weather_Icon_Animated]</value>
+		<value>$INFO[Skin.String(WeatherIcons)]/$INFO[Window(Weather).Property(Weekend.2.FanartCode)].png</value>
 	</variable>
 	<constant name="WeatherHomeLeft">325</constant>
 	<constant name="WeatherHomeTop">555</constant>
@@ -515,13 +478,13 @@
 		<value condition="[IsEmpty(ListItem.mpaa) + [substring(VideoPlayer.mpaa,France:-12) | Substring(VideoPlayer.mpaa,Interdit aux moins de 12 ans)]] | [!IsEmpty(ListItem.mpaa) + [substring(ListItem.mpaa,France:-12) | Substring(ListItem.mpaa,Interdit aux moins de 12 ans)]]">flags/Rating/csa12.png</value>
 		<value condition="[IsEmpty(ListItem.mpaa) + [substring(VideoPlayer.mpaa,France:-16) | Substring(VideoPlayer.mpaa,Interdit aux moins de 16 ans)]] | [!IsEmpty(ListItem.mpaa) + [substring(ListItem.mpaa,France:-16) | Substring(ListItem.mpaa,Interdit aux moins de 16 ans)]]">flags/Rating/csa16.png</value>
 		<value condition="[IsEmpty(ListItem.mpaa) + [substring(VideoPlayer.mpaa,France:-18) | Substring(VideoPlayer.mpaa,Interdit aux moins de 18 ans)]] | [!IsEmpty(ListItem.mpaa) + [substring(ListItem.mpaa,France:-18) | Substring(ListItem.mpaa,Interdit aux moins de 18 ans)]]">flags/Rating/csa18.png</value>
-		<!-- Korean -->		
+		<!-- Korean -->
 		<value condition="[IsEmpty(ListItem.mpaa) + substring(VideoPlayer.mpaa,전체)] | [!IsEmpty(ListItem.mpaa) + substring(ListItem.mpaa,전체)]">flags/Rating/KR_Certificate_All.png</value>
 		<value condition="[IsEmpty(ListItem.mpaa) + substring(VideoPlayer.mpaa,12세)] | [!IsEmpty(ListItem.mpaa) + substring(ListItem.mpaa,12세)]">flags/Rating/KR_Certificate_12.png</value>
 		<value condition="[IsEmpty(ListItem.mpaa) + substring(VideoPlayer.mpaa,15세)] | [!IsEmpty(ListItem.mpaa) + substring(ListItem.mpaa,15세)]">flags/Rating/KR_Certificate_15.png</value>
 		<value condition="[IsEmpty(ListItem.mpaa) + substring(VideoPlayer.mpaa,불가)] | [!IsEmpty(ListItem.mpaa) + substring(ListItem.mpaa,불가)]">flags/Rating/KR_Certificate_18.png</value>
 		<value condition="[IsEmpty(ListItem.mpaa) + substring(VideoPlayer.mpaa,제한)] | [!IsEmpty(ListItem.mpaa) + substring(ListItem.mpaa,제한)]">flags/Rating/KR_Certificate_R.png</value>
-		<!-- Brazil -->		
+		<!-- Brazil -->
 		<value condition="[!IsEmpty(ListItem.mpaa) + [substring(ListItem.mpaa,Brazil:Livre) | substring(ListItem.mpaa,Livre)]] | [IsEmpty(ListItem.mpaa) + [substring(VideoPlayer.mpaa,Brazil:Livre) | substring(VideoPlayer.mpaa,Livre)]]">flags/Rating/MPAA_Brazil_Livre.png</value>
 		<value condition="[!IsEmpty(ListItem.mpaa) + [substring(ListItem.mpaa,Brazil:10) | substring(ListItem.mpaa,10 anos)]] | [IsEmpty(ListItem.mpaa) + [substring(VideoPlayer.mpaa,Brazil:10) | substring(VideoPlayer.mpaa,10 anos)]]">flags/Rating/MPAA_Brazil_10.png</value>
 		<value condition="[!IsEmpty(ListItem.mpaa) + [substring(ListItem.mpaa,Brazil:12) | substring(ListItem.mpaa,12 anos)]] | [IsEmpty(ListItem.mpaa) + [substring(VideoPlayer.mpaa,Brazil:12) | substring(VideoPlayer.mpaa,12 anos)]]">flags/Rating/MPAA_Brazil_12.png</value>
@@ -565,5 +528,101 @@
 	<variable name="TVShowStatus">
 		<value condition="!IsEmpty(Window(Home).Property(NextAired.Label))">$INFO[Window(Home).Property(NextAired.Status)]</value>
 		<value>$LOCALIZE[31472]</value>
+	</variable>
+	
+	<variable name="LeftSideTitle">
+	<!--<value>$INFO[System.CurrentWindow] - $INFO[Container.FolderName] - $INFO[Container.FolderPath] - $INFO[ListItem.Path] - $INFO[ListItem.FolderPath]</value>	-->
+		<value condition="[SubString(System.CurrentWindow,Videos,right) | SubString(System.CurrentWindow,Music,right) | SubString(System.CurrentWindow,Programs,right) | SubString(System.CurrentWindow,Pictures,right)] + IsEmpty(Container.FolderPath)]">$INFO[System.CurrentWindow]</value>
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,library://video/movies/,right) | SubString(Container.FolderPath,library://video/tvshows/,right) | SubString(Container.FolderPath,sources://video/,right) | SubString(Container.FolderPath,special://videoplaylists/,right) | SubString(Container.FolderPath,addons://sources/video,right) | SubString(Container.FolderPath,addons://sources/executable,right) | SubString(Container.FolderPath,addons://sources/image,right)]">$INFO[System.CurrentWindow] | $INFO[Container.FolderName]</value>
+		
+		<!-- Left side movie titles -->
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://movies/genres/,right) | SubString(Container.FolderPath,videodb://movies/titles/,left) | SubString(Container.FolderPath,videodb://movies/years/,right) | SubString(Container.FolderPath,videodb://movies/actors/,right) | SubString(Container.FolderPath,videodb://movies/directors/,right) | SubString(Container.FolderPath,videodb://movies/studios/,right) | SubString(Container.FolderPath,videodb://movies/sets/,right) | SubString(Container.FolderPath,videodb://movies/countries/,right) | SubString(Container.FolderPath,videodb://movies/tags/,right) | SubString(Container.FolderPath,videodb://recentlyaddedmovies/,left)]">$INFO[System.CurrentWindow] | $LOCALIZE[342] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://movies/genres/,left) + !SubString(Container.FolderPath,videodb://movies/genres/,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[342] | $LOCALIZE[135] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://movies/years/,left) + !SubString(Container.FolderPath,videodb://movies/years/,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[342] | $LOCALIZE[345] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://movies/actors/,left) + !SubString(Container.FolderPath,videodb://movies/actors/,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[342] | $LOCALIZE[344] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://movies/directors/,left) + !SubString(Container.FolderPath,videodb://movies/directors/,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[342] | $LOCALIZE[20348] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://movies/studios/,left) + !SubString(Container.FolderPath,videodb://movies/studios/,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[342] | $LOCALIZE[20388] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://movies/sets/,left) + !SubString(Container.FolderPath,videodb://movies/sets/,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[342] | $LOCALIZE[20434] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://movies/countries/,left) + !SubString(Container.FolderPath,videodb://movies/countries/,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[342] | $LOCALIZE[20451] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://movies/tags/,left) + !SubString(Container.FolderPath,videodb://movies/tags/,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[342] | $LOCALIZE[20459] | $INFO[Container.FolderName]</value>		
+		<value condition="!Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://movies/,left)]">$LOCALIZE[342]</value>	
+
+		<!-- Left side tvshows titles -->
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [[SubString(Container.FolderPath,videodb://tvshows/genres/,right) | SubString(Container.FolderPath,videodb://tvshows/years/,right) | SubString(Container.FolderPath,videodb://tvshows/actors/,right) | SubString(Container.FolderPath,videodb://inprogresstvshows/,right) | SubString(Container.FolderPath,videodb://tvshows/studios/,right) | SubString(Container.FolderPath,videodb://tvshows/tags/,right) | SubString(Container.FolderPath,videodb://recentlyaddedepisodes/,left)]]">$INFO[System.CurrentWindow] | $LOCALIZE[20343] | $INFO[Container.FolderName]</value>	
+			<!-- These do not show the Genre in the title due to most titles having multiple genres and Kodi not keeping track of which singular genre you got here with -->
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://tvshows/genres/,left) + !SubString(Container.FolderPath,videodb://tvshows/genres/,right) + SubString(ListItem.DBTYPE,tvshow,left)]">$INFO[System.CurrentWindow] | $LOCALIZE[20343] | $LOCALIZE[135] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://tvshows/genres/,left) + !SubString(Container.FolderPath,videodb://tvshows/genres/,right) + [SubString(ListItem.DBTYPE,season,left) | [SubString(ListItem.DBTYPE,episode,left) + !substring(Container.FolderName,Season)]]]">$INFO[System.CurrentWindow] | $LOCALIZE[20343] | $LOCALIZE[135] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://tvshows/genres/,left) + !SubString(Container.FolderPath,videodb://tvshows/genres/,right) + SubString(ListItem.DBTYPE,episode,left) + substring(Container.FolderName,Season)]">$INFO[System.CurrentWindow] | $LOCALIZE[20343] | $LOCALIZE[135] | $INFO[Container.ShowTitle] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://tvshows/titles/,left) + !SubString(Container.FolderPath,videodb://tvshows/titles/,right) + !substring(Container.FolderName,Season)]">$INFO[System.CurrentWindow] | $LOCALIZE[20343] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://tvshows/titles/,left) + !SubString(Container.FolderPath,videodb://tvshows/titles/,right) + substring(Container.FolderName,Season)]">$INFO[System.CurrentWindow] | $LOCALIZE[20343] | $INFO[ListItem.TVShowTitle] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://tvshows/years/,left) + !SubString(Container.FolderPath,videodb://tvshows/years/,right) + SubString(ListItem.DBTYPE,tvshow,left)]">$INFO[System.CurrentWindow] | $LOCALIZE[20343] | $LOCALIZE[345] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://tvshows/years/,left) + !SubString(Container.FolderPath,videodb://tvshows/years/,right) + [SubString(ListItem.DBTYPE,season,left) | [SubString(ListItem.DBTYPE,episode,left) + !substring(Container.FolderName,Season)]]]">$INFO[System.CurrentWindow] | $LOCALIZE[20343] | $LOCALIZE[345] | $INFO[ListItem.Year] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://tvshows/years/,left) + !SubString(Container.FolderPath,videodb://tvshows/years/,right) + SubString(ListItem.DBTYPE,episode,left) + substring(Container.FolderName,Season)]">$INFO[System.CurrentWindow] | $LOCALIZE[20343] | $LOCALIZE[345] | $INFO[ListItem.Year] | $INFO[Container.ShowTitle] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://tvshows/actors/,left) + !SubString(Container.FolderPath,videodb://tvshows/actors/,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[20343] | $LOCALIZE[344] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://tvshows/studios/,left) + !SubString(Container.FolderPath,videodb://tvshows/studios/,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[20343] | $LOCALIZE[20388] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://tvshows/tags/,left) + !SubString(Container.FolderPath,videodb://tvshows/tags/,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[20343] | $LOCALIZE[20459] | $INFO[Container.FolderName]</value>	
+		<value condition="!Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://tvshows/,left) + [SubString(ListItem.DBTYPE,season,left) | [SubString(ListItem.DBTYPE,episode,left) + !substring(Container.FolderName,Season)]]]">$INFO[Container.FolderName]</value>	
+		<value condition="!Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://tvshows/,left) + SubString(ListItem.DBTYPE,episode,left) + substring(Container.FolderName,Season)]">$INFO[Container.ShowTitle]: $INFO[Container.FolderName]</value>	
+		<value condition="!Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://tvshows/,left)]">$LOCALIZE[20343]</value>	
+		<value condition="!Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://tvshows/,left) + SubString(ListItem.DBTYPE,tvshow,left)]">$INFO[Container.FolderName]</value>	
+		
+		<!-- Left side files titles -->
+		<value condition="[System.CurrentWindow(Videos) + Container.Content(files)]">$INFO[System.CurrentWindow] | $LOCALIZE[744] | $INFO[Container.FolderName]</value>	
+		
+		<!-- Left side playlist titles -->
+		<value condition="[SubString(Container.FolderPath,special://profile/playlists/video/,left) + !SubString(Container.FolderPath,videodb://tvshows/tags/,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[136] | $INFO[Container.FolderName]</value>
+
+		<!-- Left side video-addons titles -->
+		<value condition="[SubString(Container.FolderPath,plugin://plugin.video.,left)]">$INFO[System.CurrentWindow] | $LOCALIZE[24001] | $INFO[Container.FolderName]</value>	
+		
+		<!-- Left side music titles -->
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,musicdb://genres/,right) | SubString(Container.FolderPath,musicdb://artists/,right) | SubString(Container.FolderPath,musicdb://albums/,right) | SubString(Container.FolderPath,musicdb://songs/,right) | SubString(Container.FolderPath,musicdb://years/,right) | SubString(Container.FolderPath,library://music/top100/,right) | SubString(Container.FolderPath,musicdb://recentlyaddedalbums/,right) | SubString(Container.FolderPath,musicdb://recentlyplayedalbums/,right) | SubString(Container.FolderPath,musicdb://compilations/,right) | SubString(Container.FolderPath,special://musicplaylists/,right) | SubString(Container.FolderPath,library://music/musicroles/,right) | SubString(Container.FolderPath,sources://music/,right)]">$INFO[System.CurrentWindow] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,musicdb://genres/,left) + !SubString(Container.FolderPath,musicdb://genres/,right) + !SubString(ListItem.DBTYPE,album,left) + !SubString(ListItem.DBTYPE,song,left)]">$INFO[System.CurrentWindow] | $LOCALIZE[135] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,musicdb://genres/,left) + !SubString(Container.FolderPath,musicdb://genres/,right) + SubString(ListItem.DBTYPE,album,left)]">$INFO[System.CurrentWindow] | $LOCALIZE[135] | $INFO[ListItem.Genre] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,musicdb://genres/,left) + !SubString(Container.FolderPath,musicdb://genres/,right) + SubString(ListItem.DBTYPE,song,left)]">$INFO[System.CurrentWindow] | $LOCALIZE[135] | $INFO[ListItem.Genre] | $INFO[ListItem.Artist] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,musicdb://artists/,left) + !SubString(Container.FolderPath,musicdb://artists/,right) + !SubString(ListItem.DBTYPE,song,left)]">$INFO[System.CurrentWindow] | $LOCALIZE[133] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,musicdb://artists/,left) + !SubString(Container.FolderPath,musicdb://artists/,right) + SubString(ListItem.DBTYPE,song,left)]">$INFO[System.CurrentWindow] | $LOCALIZE[133] | $INFO[ListItem.Artist] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,musicdb://albums/,left) + !SubString(Container.FolderPath,musicdb://albums/,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[132] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,musicdb://songs/,left) + !SubString(Container.FolderPath,musicdb://songs/,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[134] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,musicdb://years/,left) + !SubString(Container.FolderPath,musicdb://years/,right) + !SubString(ListItem.DBTYPE,song,left)]">$INFO[System.CurrentWindow] | $LOCALIZE[652] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,musicdb://years/,left) + !SubString(Container.FolderPath,musicdb://years/,right) + SubString(ListItem.DBTYPE,song,left)]">$INFO[System.CurrentWindow] | $LOCALIZE[652] | $INFO[ListItem.Year] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,library://music/top100/,left) + !SubString(Container.FolderPath,library://music/top100/,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[271] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,musicdb://recentlyaddedalbums/,left) + !SubString(Container.FolderPath,musicdb://recentlyaddedalbums/,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[359] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,musicdb://recentlyplayedalbums/,left) + !SubString(Container.FolderPath,musicdb://recentlyplayedalbums/,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[517] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,musicdb://compilations/,left) + !SubString(Container.FolderPath,musicdb://compilations/,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[521] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,special://musicplaylists/,left) + !SubString(Container.FolderPath,special://musicplaylists/,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[20011] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,library://music/musicroles/,left) + !SubString(Container.FolderPath,library://music/musicroles/,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[29994] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(System.CurrentWindow,Music,left) + SubString(Container.Content,files,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[744] | $INFO[Container.FolderPath]</value>	
+		<value condition="!Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,musicdb://,left)]">$INFO[System.CurrentWindow]</value>			
+		
+		<!-- Left side pictures titles -->
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(System.CurrentWindow,Pictures,left) + !IsEmpty(Container.FolderPath + !SubString(Container.FolderPath,addons://sources/image,right)]">$INFO[System.CurrentWindow] | $INFO[Container.FolderPath]</value>	
+		
+		<!-- Left side musicvideo titles -->
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://musicvideos/,right) | SubString(Container.FolderPath,library://music/musicvideos/,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[20389]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://musicvideos/genres/,right) | SubString(Container.FolderPath,videodb://musicvideos/titles/,right) | SubString(Container.FolderPath,videodb://musicvideos/years/,right) | SubString(Container.FolderPath,videodb://musicvideos/artists/,right) | SubString(Container.FolderPath,videodb://musicvideos/albums/,right) | SubString(Container.FolderPath,videodb://musicvideos/directors/,right) | SubString(Container.FolderPath,videodb://musicvideos/studios/,right) | SubString(Container.FolderPath,videodb://musicvideos/tags/,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[20389] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://musicvideos/genres/,left) + !SubString(Container.FolderPath,videodb://musicvideos/genres/,right) + !SubString(ListItem.DBTYPE,album,left) + !SubString(ListItem.DBTYPE,song,left)]">$INFO[System.CurrentWindow] | $LOCALIZE[20389] | $LOCALIZE[135] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://musicvideos/years/,left) + !SubString(Container.FolderPath,videodb://musicvideos/years/,right) + SubString(ListItem.DBTYPE,musicvideo,left)]">$INFO[System.CurrentWindow] | $LOCALIZE[20389] | $LOCALIZE[652] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://musicvideos/artists/,left) + !SubString(Container.FolderPath,videodb://musicvideos/artists/,right) + !SubString(ListItem.DBTYPE,musicvideo,left)]">$INFO[System.CurrentWindow] | $LOCALIZE[20389] | $LOCALIZE[133] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://musicvideos/artists/,left) + !SubString(Container.FolderPath,videodb://musicvideos/artists/,right) + SubString(ListItem.DBTYPE,musicvideo,left)]">$INFO[System.CurrentWindow] | $LOCALIZE[20389] | $LOCALIZE[133] | $INFO[ListItem.Artist] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://musicvideos/albums/,left) + !SubString(Container.FolderPath,videodb://musicvideos/albums/,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[20389] | $LOCALIZE[132] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://musicvideos/directors/,left) + !SubString(Container.FolderPath,videodb://musicvideos/directors/,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[20389] | $LOCALIZE[20348] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://musicvideos/studios/,left) + !SubString(Container.FolderPath,videodb://musicvideos/studios/,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[20389] | $LOCALIZE[20388] | $INFO[Container.FolderName]</value>	
+		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://musicvideos/tags/,left) + !SubString(Container.FolderPath,videodb://musicvideos/tags/,right)]">$INFO[System.CurrentWindow] | $LOCALIZE[20389] | $LOCALIZE[20459] | $INFO[Container.FolderName]</value>	
+		<value condition="!Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,videodb://musicvideos/,left)]">$LOCALIZE[20389]</value>			
+
+		<!-- remaining old Left side titles-->
+		<value condition="Window.IsActive(musicplaylist)">$LOCALIZE[2] $LOCALIZE[559]</value>	
+		<value condition="Window.IsActive(systeminfo)">$LOCALIZE[130]</value>	
+		<value condition="Window.IsActive(LoginScreen)">$LOCALIZE[20096]</value>	
+		<!--<value condition=""></value>-->		
+		<value condition="IsEmpty(Container.FolderPath)">$INFO[System.CurrentWindow]</value>
+		<value>$INFO[Container.FolderName]</value>
+	</variable>
+	
+	<variable name="StarRating">
+		<value condition="[!Skin.HasSetting(PreferUserRating) + !IsEmpty(ListItem.Rating)] | [Skin.HasSetting(PreferUserRating) + IsEmpty(ListItem.UserRating)]">$INFO[ListItem.Rating]</value>
+		<value condition="Skin.HasSetting(PreferUserRating) + !IsEmpty(ListItem.UserRating)">$INFO[ListItem.UserRating]</value>
+		<value>NA</value>
 	</variable>
 </includes>

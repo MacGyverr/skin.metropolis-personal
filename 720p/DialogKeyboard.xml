@@ -35,7 +35,7 @@
 				<textcolor>DialogTextFO</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
-				<shadowcolor>Black</shadowcolor>
+				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="group">
 				<left>0</left>
@@ -584,6 +584,5 @@
 				</control>
 			</control>
 		</control>
-		<include condition="Skin.HasSetting(DebugMode)">Debug</include>
 	</controls>
 </window>

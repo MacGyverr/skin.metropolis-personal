@@ -48,6 +48,5 @@
 			<focusedcolor>DialogTextFO</focusedcolor>
 			<texturefocus border="1">ButtonFO2Wide.png</texturefocus>
 		</control>
-		<include condition="Skin.HasSetting(DebugMode)">Debug</include>
 	</controls>
 </window>

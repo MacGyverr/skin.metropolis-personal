@@ -2,21 +2,13 @@
 <includes>
 	<!-- Home3 Icons -->
 	<visible>Skin.HasSetting(Home3)</visible>
-	<include name="HomeStatsPosition3">	
-		<posx>40</posx>
-		<posy>570</posy>
+
+	<include name="HomeStatsPosition3">
+		<posx>26</posx>
+		<posy>560</posy>
 		<width>220</width>
 		<height>416</height>
 	</include>
-	<!--XXX Not used in this view -->
-<!--	<include name="Submenu_VerticalDetails3">
-		<width>220</width>
-		<height>160</height>
-		<orientation>vertical</orientation>
-		<itemgap>0</itemgap>
-		<onleft>9000</onleft>
-		<onright>9000</onright>
-	</include>  -->
 	<include name="HomeStatsDetails3">
 		<width>120</width>
 		<height>24</height>
@@ -33,7 +25,7 @@
 		<font>METF_HomeStatsText</font>
 		<textcolor>HomeStatsNumber</textcolor>
 	</include>
-	
+
 	<include name="Home3_Wide">
 		<control type="button" id="9002">
 			<description>Hidden Button to pass through navigation when recently added is disabled</description>
@@ -51,7 +43,6 @@
 			<ondown>9001</ondown>
 			<visible>false</visible>
 		</control>
-		
 		<control type="button" id="99991">
 			<description>Hidden Button to pass through navigation to hide submenus</description>
 			<posx>-20</posx>
@@ -68,84 +59,30 @@
 			<ondown>9001</ondown>
 			<visible>false</visible>
 		</control>
-		<!-- Kodi Logo and Skin Name -->
-		<control type="group">
-			<include>Animation_OpenCloseFade</include>
-			<include>Animation_FadedByMenu</include>
-			<control type="image">
-				<posx>-20</posx>
-				<posy>25</posy>
-				<width>240</width>
-				<height>54</height>
-				<aspectratio aligny="bottom">keep</aspectratio>
-				<colordiffuse>KodiLogoDiffuse</colordiffuse>
-				<texture>kodi-logo2.png</texture>
-			</control>
-			<control type="label">
-				<posx>75</posx>
-				<posy>67</posy>
-				<width>674</width>
-				<height>30</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>METF_Heading</font>
-				<textcolor>Home2SkinName</textcolor>
-				<label>$LOCALIZE[31011]</label>
-				<!--	<label>special://skin/extras/weather/$INFO[Window(Weather).Property(Current.FanartCode)].jpg</label>-->
-			</control>
-		</control>
 
 		<!-- Main menu background -->
 		<control type="multiimage">
-			<description>Multi-image background</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<include condition="Skin.HasSetting(HomeStretchBackgrounds)">Stretch_Fullscreen</include>
-			<include condition="!Skin.HasSetting(HomeStretchBackgrounds)">Scale_Fullscreen</include>
+			<include>Dimensions_Fullscreen</include>
 			<timeperimage>15000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>500</fadetime>
-			<imagepath>$VAR[HomeBackground]</imagepath>
-			<animation reversible="false" effect="zoom" center="auto" start="100" end="112" time="200" tween="sine" easing="inout">focus</animation>
-			<animation reversible="false" effect="zoom" center="auto" start="112" end="100" time="200" tween="sine" easing="inout">unfocus</animation>
-			<visible allowhiddenfocus="true">!Window.IsActive(videooverlay)</visible>
-		</control>		
-
-		<!-- Plot box -->
-		<control type="image">
-			<description>create a plot box out of the background</description>
-			<posx>0</posx>
-			<posy>544</posy>
-			<width>1280</width>
-			<height>176</height>
-			<texture>background.png</texture>
-			<aspectratio aligny="bottom">scale</aspectratio>
-		</control>	
-		<control type="image">
-			<description>now covering with diffused color is not see-through</description>
-			<posx>0</posx>
-			<posy>544</posy>
-			<width>1280</width>
-			<height>176</height>
-			<texture>background.png</texture>
-			<aspectratio aligny="bottom">scale</aspectratio>
-			<colordiffuse>BackgroundColor</colordiffuse>
-		</control>	
-		
-		<!-- Ken Burns Effect (just a lark) -->
-<!--				
-		<control type="image">
+			<imagepath background="true" diffuse="diffuse_fanart.png">$VAR[HomeBackground]</imagepath>
+			<aspectratio>scale</aspectratio>
+			<visible allowhiddenfocus="true">!Skin.HasSetting(HomeStretchBackgrounds)</visible>
+		</control>
+		<control type="multiimage">
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
-			<height>544</height>                                                               
-			<animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="!Skin.HasSetting(animation_bg)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="7000" tween="cubic" easing="inout" pulse="true" condition="!Skin.HasSetting(animation_bg)">Conditional</animation>
-			<animation effect="rotate" center="360,640" start="-2" end="2" time="11000" tween="cubic" easing="inout" pulse="true" condition="!Skin.HasSetting(animation_bg)">Conditional</animation>
-			<texture>$VAR[HomeBackground]</texture>
-		</control> 				
--->				
+			<height>542</height>
+			<timeperimage>15000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>500</fadetime>
+			<imagepath background="true">$VAR[HomeBackground]</imagepath>
+			<aspectratio>stretch</aspectratio>
+			<visible allowhiddenfocus="true">Skin.HasSetting(HomeStretchBackgrounds)</visible>
+		</control>
+
 		<!-- Sub-menus and upper-menus -->
 		<include>HomeDeck</include>
 
@@ -180,31 +117,19 @@
 			<orientation>horizontal</orientation>
 			<focusposition>2</focusposition>
 			<scrolltime>200</scrolltime>
-			<!-- Setting preloaditems to anything greater than zero currently causes -->
-			<!-- flickering/slowdown if any home items are hidden.  -->
-			<!-- See http://trac.kodi.tv/ticket/12145 and https://github.com/stoli/Metropolis/issues/21 -->
-			<!--<preloaditems>2</preloaditems>-->
-			<preloaditems>0</preloaditems>
+			<itemgap>0</itemgap>
+			<preloaditems>2</preloaditems>
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByMenu</include>
-			
-			<itemlayout width="300" height="60">
-<!--				<control type="image">
-					<posx>-110</posx>
-					<posy>5</posy>
-					<width>1</width>
-					<height>50</height>
-					<texture>FocusLine.png</texture>
-					<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
-				</control>
--->				<control type="image">
+			<itemlayout height="60" width="300">
+				<!--<control type="image">
 					<posx>189</posx>
 					<posy>5</posy>
 					<width>1</width>
 					<height>50</height>
 					<texture>FocusLine.png</texture>
 					<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
-				</control>
+				</control>-->
 				<control type="label">
 					<left>-110</left>
 					<top>0</top>
@@ -218,22 +143,14 @@
 				</control>
 			</itemlayout>
 			<focusedlayout height="60" width="300">
-<!--				<control type="image">
-					<posx>-110</posx>
-					<posy>5</posy>
-					<width>1</width>
-					<height>50</height>
-					<texture>FocusLine.png</texture>
-					<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
-				</control>
--->				<control type="image">
+				<!--<control type="image">
 					<posx>189</posx>
 					<posy>5</posy>
 					<width>1</width>
 					<height>50</height>
 					<texture>FocusLine.png</texture>
 					<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
-				</control>
+				</control>-->
 				<control type="label">
 					<left>-110</left>
 					<top>0</top>
@@ -245,6 +162,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
+					<visible>Control.HasFocus(9000)</visible>
 				</control>
 				<control type="label">
 					<left>-110</left>
@@ -264,14 +182,14 @@
 				<include>skinshortcuts-mainmenu</include>
 			</content>
 		</control>
-		
+
 		<!-- Help Arrow when submenu present -->
 		<control type="group">
 			<posx>0</posx>
 			<posy>2</posy>
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByMenu</include>
-			<visible>Control.HasFocus(9001) | [Control.HasFocus(9000) | Control.HasFocus(9001)] + SubString(Container(9000).ListItem.Property(hasSubmenu),True)</visible>
+			<visible>!Control.HasFocus(9001) + ![Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8003)] + SubString(Container(9000).ListItem.Property(hasSubmenu),True)</visible>
 			<control type="image">
 				<posx>625</posx>
 				<posy>508</posy>
@@ -281,20 +199,23 @@
 				<colordiffuse>HelpArrowDiffuse</colordiffuse>
 			</control>
 		</control>
-		<!-- Submenu  -->
-		
+
+		<!-- Submenus -->
 		<control type="list" id="9001">
+			<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+			<animation effect="fade" start="0" end="100" delay="300" time="200">Visible</animation>
+			<include>Animation_OpenCloseFade</include>
+			<include>Animation_FadedByMenu</include>
 			<posx>490</posx>
 			<posy>554</posy>
 			<width>300</width>
 			<height>170</height>
-			<onup>9000</onup>
+			<onup>9001</onup>
 			<ondown>9001</ondown>
 			<onleft>9000</onleft>
 			<onright>9000</onright>
 			<orientation>vertical</orientation>
-			<include>Animation_VisibleSlideDownFadeOut</include>
-			<visible allowhiddenfocus="true">Control.HasFocus(9001) | ![Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8003) | Control.HasFocus(8004)] + [Control.HasFocus(9000) + !Skin.HasSetting(HomeCleanLibrary)] + !StringCompare(Container(9000).ListItem.Property(Widget),WeatherForecast)</visible>
+			<visible allowhiddenfocus="true">Control.HasFocus(9001) + ![Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8003)]</visible>
 			<defaultcontrol always="true">1</defaultcontrol>
 			<scrolltime tween="sine" easing="out">240</scrolltime>
 			<itemlayout width="300" height="20">
@@ -341,6 +262,5 @@
 		</control>
 
 		<include>HomeStats</include>
-
 	</include>
 </includes>

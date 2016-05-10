@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
-	
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(AutoScroll)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(AutoScrollFast)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(ShowVideoPlotFullscreen)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(Enable_OSDClearArt)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(ViewPreferClearLogo)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(WeatherIcons2)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(MediaOverlay)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(MusicSongInfoOverlay)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(Home3)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(HomeStats)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(WeatherForecast)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(Show_PlotOutline)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(Scrollbar)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(NextAired)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(UseExtendedWeather)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(OneButtonSubtitles)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(CaseOveralys)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(CommandLabels)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(Enable_OSDFade)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(LibraryUpdated)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(SkinShortcuts-FullMenu)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetString(OSDFade,Complete)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetString(OSDFadeTime,5)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetString(DateFormat,DOW)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetString(DefaultOSD,714)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(HomeStretchBackgrounds)</onload>
-	<onload condition="!Skin.HasSetting(defallt)">Skin.SetBool(defallt)</onload>
+	<onload condition="!System.HasAddon(resource.images.weathericons.3d-coloured)">Skin.SetString(WeatherIcons,resource://resource.images.weathericons.outline)</onload>
 	<controls>
 		<control type="button" id="10">
 			<description>Weather</description>
@@ -63,7 +35,7 @@
 		</control>
 		<control type="button" id="50">
 			<description>TV Show Next Aired</description>
-			<onfocus>RunScript(script.tv.show.next.aired,silent=True&amp;alarm=360)</onfocus>
+			<onfocus>RunScript(script.tv.show.next.aired,silent=True)</onfocus>
 			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>

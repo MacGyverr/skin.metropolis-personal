@@ -3,21 +3,12 @@
 	<include name="Viewtype_Banner">
 		<control type="group">
 			<visible>Control.IsVisible(511)</visible>
-				<include condition="Stringcompare(Skin.String(BannerX),1)">BannerX1Y</include>
-				<include condition="Stringcompare(Skin.String(BannerX),2)">BannerX2Y</include>
-				<include condition="Stringcompare(Skin.String(BannerX),3)">BannerX3Y</include>
-				<include condition="Stringcompare(Skin.String(BannerX),4)">BannerX4Y</include>
-				<include condition="Stringcompare(Skin.String(BannerX),5)">BannerX5Y</include>
 			<!-- Browser -->
 			<control type="panel" id="511">
 				<viewtype label="$LOCALIZE[31286]">wide</viewtype>
 				<posx>40</posx>
-				<posy>60</posy>	
-				<include condition="Stringcompare(Skin.String(BannerX),1)">BannerX1H</include>
-				<include condition="Stringcompare(Skin.String(BannerX),2)">BannerX2H</include>
-				<include condition="Stringcompare(Skin.String(BannerX),3)">BannerX3H</include>
-				<include condition="Stringcompare(Skin.String(BannerX),4)">BannerX4H</include>
-				<include condition="Stringcompare(Skin.String(BannerX),5)">BannerX5H</include>
+				<posy>340</posy>
+				<height>180</height>
 				<width>1200</width>
 				<include condition="!Skin.HasSetting(ViewLockdown)">OnLeft7000</include>
 				<ondown>511</ondown>
@@ -36,7 +27,7 @@
 			<!-- Title -->
 			<control type="label">
 				<posx>40</posx>
-				<posy>0</posy>
+				<posy>280</posy>
 				<width>1200</width>
 				<height>30</height>
 				<align>center</align>
@@ -52,7 +43,7 @@
 			<!-- Details -->
 			<control type="grouplist">
 				<posx>40</posx>
-				<posy>30</posy>
+				<posy>310</posy>
 				<width>1200</width>
 				<height>30</height>
 				<align>center</align>
@@ -72,7 +63,7 @@
 				<visible>Window.IsActive(videolibrary)</visible>
 				<control type="image">
 					<posx>10</posx>
-					<posy>33</posy>
+					<posy>313</posy>
 					<width>24</width>
 					<height>24</height>
 					<texture>Arrow2Up.png</texture>
@@ -81,7 +72,7 @@
 				</control>
 				<control type="image">
 					<posx>1246</posx>
-					<posy>33</posy>
+					<posy>313</posy>
 					<width>24</width>
 					<height>24</height>
 					<texture>Arrow2Down.png</texture>

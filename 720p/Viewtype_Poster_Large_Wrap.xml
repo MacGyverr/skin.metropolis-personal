@@ -11,7 +11,7 @@
 				<visible>!Skin.HasSetting(NoViewPosterLargeWrap)</visible>
 				<include>PosterLargeViewCommon_Browser</include>
 			</control>
-			<include>PosterLargeViewCommon_Details</include>	
+			<include>PosterLargeViewCommon_Details</include>
 			<include>ScrollBar_Horizontal</include>
 		</control>
 	</include>

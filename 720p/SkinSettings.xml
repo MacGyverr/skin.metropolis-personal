@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>9000</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
+	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0)</onunload>
 	<controls>
 		<include>Global_Background</include>		
 		<control type="group">
@@ -105,16 +105,12 @@
 						<label>$LOCALIZE[31004]</label>
 						<onclick>noop</onclick>
 					</item>
-					<item id="10">
-						<description>Personal Extras</description>
-						<label>Personal Extras</label>
-						<onclick>noop</onclick>
-					</item>
 				</content>
 			</control>
 			<control type="group" id="9010">
 				<posx>440</posx>
 				<posy>100</posy>
+
 				<!-- General -->
 				<control type="grouplist" id="9001">
 					<visible>Container(9000).Hasfocus(1)</visible>
@@ -144,19 +140,41 @@
 						<onclick>Skin.ToggleSetting(HideClock)</onclick>
 						<selected>Skin.HasSetting(HideClock)</selected>
 					</control>
+					<control type="radiobutton" id="104">
+						<include>SettingsLabel</include>
+						<label>$LOCALIZE[31453]</label>
+						<onclick>Skin.ToggleSetting(ShowDate)</onclick>
+						<selected>Skin.HasSetting(ShowDate)</selected>
+						<visible>!Skin.HasSetting(HideClock)</visible>
+					</control>
+					<control type="radiobutton" id="105">
+						<include>SettingsLabel</include>
+						<label>$LOCALIZE[31447]</label>
+						<onclick condition="System.HasAddon(resource.images.weathericons.3d-coloured)">Skin.SetString(WeatherIcons,resource://resource.images.weathericons.3d-coloured)</onclick>
+						<onclick condition="!System.HasAddon(resource.images.weathericons.3d-coloured)">RunPlugin(plugin://resource.images.weathericons.3d-coloured)</onclick>
+						<selected>SubString(Skin.String(WeatherIcons),resource://resource.images.weathericons.3d-coloured)</selected>
+						<visible>!SubString(Skin.String(WeatherIcons),resource://resource.images.weathericons.3d-coloured)</visible>
+					</control>
 					<control type="radiobutton" id="106">
+						<label>$LOCALIZE[31447]</label>
+						<include>SettingsLabel</include>
+						<onclick>Skin.SetString(WeatherIcons,resource://resource.images.weathericons.outline)</onclick>
+						<selected>SubString(Skin.String(WeatherIcons),resource://resource.images.weathericons.3d-coloured)</selected>
+						<visible>SubString(Skin.String(WeatherIcons),resource://resource.images.weathericons.3d-coloured)</visible>
+					</control>
+					<control type="radiobutton" id="107">
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31056]</label>
 						<onclick>Skin.ToggleSetting(MediaOverlay)</onclick>
 						<selected>Skin.HasSetting(MediaOverlay)</selected>
 					</control>
-					<control type="radiobutton" id="107">
+					<control type="radiobutton" id="108">
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31005]</label>
 						<onclick>Skin.ToggleSetting(AutoScroll)</onclick>
 						<selected>Skin.HasSetting(AutoScroll)</selected>
 					</control>
-					<control type="radiobutton" id="108">
+					<control type="radiobutton" id="109">
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31006]</label>
 						<onclick>Skin.ToggleSetting(AutoScrollFast)</onclick>
@@ -164,25 +182,25 @@
 						<selected>Skin.HasSetting(AutoScrollFast)</selected>
 						<visible>Skin.HasSetting(AutoScroll)</visible>
 					</control>
-					<control type="radiobutton" id="109">
+					<control type="radiobutton" id="110">
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31336]</label>
 						<onclick>Skin.ToggleSetting(ViewLockdown)</onclick>
 						<selected>Skin.HasSetting(ViewLockdown)</selected>
 					</control>
-					<control type="radiobutton" id="110">
+					<control type="radiobutton" id="111">
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31338]</label>
 						<onclick>Skin.ToggleSetting(SimpleMediaFilter)</onclick>
 						<selected>Skin.HasSetting(SimpleMediaFilter)</selected>
 					</control>
-					<control type="radiobutton" id="111">
+					<control type="radiobutton" id="112">
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[21398]</label>
 						<onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
 						<selected>Skin.HasSetting(Use_Startup_Playlist)</selected>
 					</control>
-					<control type="button" id="112">
+					<control type="button" id="113">
 						<include>SettingsLabel</include>
 						<width>370</width>
 						<label>$LOCALIZE[15311]</label>
@@ -191,6 +209,7 @@
 						<visible>Skin.HasSetting(Use_Startup_Playlist)</visible>
 					</control>
 				</control>
+
 				<!-- Home Options -->
 				<control type="grouplist" id="9002">
 					<visible>Container(9000).Hasfocus(2)</visible>
@@ -233,19 +252,38 @@
 						<selected>Skin.HasSetting(HomeStats)</selected>
 						<visible>!Skin.HasSetting(Home2) | !Skin.HasSetting(Home3)</visible>
 					</control>
-					<control type="image" id="209">
+					<control type="radiobutton" id="205">
+						<include>SettingsLabel</include>
+						<label>$LOCALIZE[31037]</label>
+						<onclick>Skin.ToggleSetting(HomeStretchBackgrounds)</onclick>
+						<selected>Skin.HasSetting(HomeStretchBackgrounds)</selected>
+						<visible>!Skin.HasSetting(Home2)</visible>
+					</control>
+					<control type="radiobutton" id="206">
+						<include>SettingsLabel</include>
+						<label>$LOCALIZE[31034]</label>
+						<onclick>Skin.ToggleSetting(DynamicWeather)</onclick>
+						<selected>Skin.HasSetting(DynamicWeather)</selected>
+						<visible>!Skin.HasSetting(Home2)</visible>
+					</control>
+					<control type="radiobutton" id="207">
+						<include>SettingsLabel</include>
+						<label>$LOCALIZE[31036]</label>
+						<onclick>Skin.ToggleSetting(HideUnfocusedWidgets)</onclick>
+						<selected>Skin.HasSetting(HideUnfocusedWidgets)</selected>
+						<visible>![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]</visible>
+					</control>
+					<control type="image" id="208">
 						<include>Settings_Line</include>
 					</control>
-					<control type="button" id="210">
-						<description>Customize Main Menu</description>
+					<control type="button" id="209">
 						<include>SettingsLabel</include>
-						<label>Customize Main Menu</label>
+						<label>$LOCALIZE[31718]</label>
 						<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
 					</control>
-					<control type="button" id="211">
-						<description>Reset Main Menu to Defaults</description>
+					<control type="button" id="210">
 						<include>SettingsLabel</include>
-						<label>Reset Main Menu to Defaults</label>
+						<label>$LOCALIZE[31719]</label>
 						<onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
 					</control>
 				</control>
@@ -300,38 +338,64 @@
 					</control>
 					<control type="radiobutton" id="507">
 						<include>SettingsLabel</include>
+						<label>$LOCALIZE[31480]</label>
+						<onclick>Skin.ToggleSetting(Show_IMDbMediaFlag)</onclick>
+						<selected>Skin.HasSetting(Show_IMDbMediaFlag)</selected>
+					</control>
+					<control type="radiobutton" id="508">
+						<include>SettingsLabel</include>
+						<label>$LOCALIZE[31481]</label>
+						<onclick>Skin.ToggleSetting(Show_VotesMediaFlagAlways)</onclick>
+						<selected>Skin.HasSetting(Show_VotesMediaFlagAlways)</selected>
+						<visible>Skin.HasSetting(Show_IMDbMediaFlag)</visible>
+					</control>
+					<control type="radiobutton" id="509">
+						<include>SettingsLabel</include>
+						<label>$LOCALIZE[31013]</label>
+						<onclick>Skin.ToggleSetting(PreferUserRating)</onclick>
+						<selected>Skin.HasSetting(PreferUserRating)</selected>
+					</control>
+					<control type="radiobutton" id="510">
+						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31405]</label>
 						<onclick>Skin.ToggleSetting(Hide_MovieTagline)</onclick>
 						<selected>Skin.HasSetting(Hide_MovieTagline)</selected>
 					</control>
-					<control type="image" id="508">
+					<control type="radiobutton" id="511">
+						<include>SettingsLabel</include>
+						<label>$LOCALIZE[31482]</label>
+						<onclick>Skin.ToggleSetting(Show_BreadCrumbs)</onclick>
+						<selected>Skin.HasSetting(Show_BreadCrumbs)</selected>
+					</control>
+					<control type="image" id="512">
 						<include>Settings_Line</include>
 					</control>
-					<control type="radiobutton" id="509">
+					<control type="radiobutton" id="513">
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31399]</label>
 						<onclick>Skin.ToggleSetting(GlobalFanartLight)</onclick>
 						<selected>Skin.HasSetting(GlobalFanartLight)</selected>
 					</control>
-					<control type="radiobutton" id="510">
+					<control type="radiobutton" id="514">
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31406]</label>
 						<onclick>Skin.ToggleSetting(NoSegmentedFanart)</onclick>
 						<selected>Skin.HasSetting(NoSegmentedFanart)</selected>
 					</control>
-					<control type="radiobutton" id="511">
+					<control type="radiobutton" id="515">
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31422]</label>
 						<onclick>Skin.ToggleSetting(LogoViewSingleItem)</onclick>
 						<selected>Skin.HasSetting(LogoViewSingleItem)</selected>
 					</control>
-					<control type="radiobutton" id="512">
+					<control type="radiobutton" id="516">
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31712]</label>
 						<onclick>Skin.ToggleSetting(CropMVGalleryIcon)</onclick>
 						<selected>Skin.HasSetting(CropMVGalleryIcon)</selected>
 					</control>
 				</control>
+
 				<!-- View Types -->
 				<control type="grouplist" id="9005">
 					<visible>Container(9000).Hasfocus(5)</visible>
@@ -392,7 +456,7 @@
 						<selected>Skin.HasSetting(NoViewPosterWrap)</selected>
 					</control>
 					<!-- View 552 -->
-					<control type="radiobutton" id="622">
+					<control type="radiobutton" id="608">
 						<description>Poster Large Fixed</description>
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31441] $LOCALIZE[31479]</label>
@@ -400,7 +464,7 @@
 						<selected>Skin.HasSetting(NoViewPosterLargeFixed)</selected>
 					</control>
 					<!-- View 551 -->
-					<control type="radiobutton" id="608">
+					<control type="radiobutton" id="609">
 						<description>Poster Large Wrap</description>
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31441] $LOCALIZE[31430]</label>
@@ -408,7 +472,7 @@
 						<selected>Skin.HasSetting(NoViewPosterLargeWrap)</selected>
 					</control>
 					<!-- View 550 -->
-					<control type="radiobutton" id="609">
+					<control type="radiobutton" id="610">
 						<description>Poster Fanart</description>
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31441] $LOCALIZE[31424]</label>
@@ -416,7 +480,7 @@
 						<selected>Skin.HasSetting(NoViewPosterFanart)</selected>
 					</control>
 					<!-- View 504 -->
-					<control type="radiobutton" id="610">
+					<control type="radiobutton" id="611">
 						<description>Fanart</description>
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31441] $LOCALIZE[20445]</label>
@@ -424,7 +488,7 @@
 						<selected>Skin.HasSetting(NoViewFanart)</selected>
 					</control>
 					<!-- View 509 -->
-					<control type="radiobutton" id="611">
+					<control type="radiobutton" id="612">
 						<description>Fanart List</description>
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31441] $LOCALIZE[20445] $LOCALIZE[535]</label>
@@ -432,7 +496,7 @@
 						<selected>Skin.HasSetting(NoViewListFanart)</selected>
 					</control>
 					<!-- View 511 -->
-					<control type="radiobutton" id="612">
+					<control type="radiobutton" id="613">
 						<description>Banner</description>
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31441] $LOCALIZE[31286]</label>
@@ -440,7 +504,7 @@
 						<selected>Skin.HasSetting(NoViewBanner)</selected>
 					</control>
 					<!-- View 508 -->
-					<control type="radiobutton" id="613">
+					<control type="radiobutton" id="614">
 						<description>Banner Fanart</description>
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31441] $LOCALIZE[31442]</label>
@@ -448,7 +512,7 @@
 						<selected>Skin.HasSetting(NoViewBannerFanart)</selected>
 					</control>
 					<!-- View 510 -->
-					<control type="radiobutton" id="614">
+					<control type="radiobutton" id="615">
 						<description>Banner Poster</description>
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31441] $LOCALIZE[31439]</label>
@@ -456,7 +520,7 @@
 						<selected>Skin.HasSetting(NoViewBannerPoster)</selected>
 					</control>
 					<!-- View 52 -->
-					<control type="radiobutton" id="615">
+					<control type="radiobutton" id="616">
 						<description>Landscape</description>
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31441] $LOCALIZE[31291]</label>
@@ -464,7 +528,7 @@
 						<selected>Skin.HasSetting(NoViewLandscape)</selected>
 					</control>
 					<!-- View 56 -->
-					<control type="radiobutton" id="616">
+					<control type="radiobutton" id="617">
 						<description>Logo</description>
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31441] $LOCALIZE[31054]</label>
@@ -472,7 +536,7 @@
 						<selected>Skin.HasSetting(NoViewLogo)</selected>
 					</control>
 					<!-- View 512 -->
-					<control type="radiobutton" id="617">
+					<control type="radiobutton" id="618">
 						<description>Coverflow</description>
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31441] $LOCALIZE[33031]</label>
@@ -480,7 +544,7 @@
 						<selected>Skin.HasSetting(NoViewCoverflow)</selected>
 					</control>
 					<!-- View 500 -->
-					<control type="radiobutton" id="618">
+					<control type="radiobutton" id="619">
 						<description>Picture Grid</description>
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31441] $LOCALIZE[31293]</label>
@@ -488,7 +552,7 @@
 						<selected>Skin.HasSetting(NoViewPictureGrid)</selected>
 					</control>
 					<!-- View 559 -->
-					<control type="radiobutton" id="619">
+					<control type="radiobutton" id="620">
 						<description>Panel Square</description>
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31441] $LOCALIZE[31298]</label>
@@ -496,7 +560,7 @@
 						<selected>Skin.HasSetting(NoViewPanelSquare)</selected>
 					</control>
 					<!-- View 501 -->
-					<control type="radiobutton" id="620">
+					<control type="radiobutton" id="621">
 						<description>Tall Genre</description>
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31441] $LOCALIZE[31416]</label>
@@ -504,7 +568,7 @@
 						<selected>Skin.HasSetting(NoViewTallGenre)</selected>
 					</control>
 					<!-- View 950 -->
-					<control type="radiobutton" id="621">
+					<control type="radiobutton" id="622">
 						<description>Games</description>
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31441] $LOCALIZE[31460]</label>
@@ -532,11 +596,22 @@
 						<label2>$INFO[System.AddonTitle(Skin.String(LyricPath))]</label2>
 						<onclick>Skin.SetAddon(LyricPath,xbmc.python.lyrics)</onclick>
 					</control>
-					
+					<control type="image" id="702">
+						<include>Settings_Line</include>
+						<visible>System.HasAddon(script.artwork.downloader)</visible>
+					</control>
+					<control type="button" id="703">
+						<include>SettingsLabel</include>
+						<label>$LOCALIZE[31126]</label>
+						<onclick>RunScript(script.artwork.downloader, mode=custom, mediatype=tvshow, seasonposter, landscape, clearart, clearlogo, characterart)</onclick>
+						<onclick condition="!System.HasAddon(script.artwork.downloader)">RunPlugin(plugin://script.artwork.downloader)</onclick>
+						<visible>System.HasAddon(script.artwork.downloader)</visible>
+					</control>
 					<control type="radiobutton" id="704">
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31410]</label>
 						<onclick>Skin.ToggleSetting(ViewPreferLandscape)</onclick>
+						<onclick condition="!System.HasAddon(script.artwork.downloader)">RunPlugin(plugin://script.artwork.downloader)</onclick>
 						<selected>Skin.HasSetting(ViewPreferLandscape)</selected>
 						<visible>System.HasAddon(script.artwork.downloader)</visible>
 					</control>
@@ -544,6 +619,7 @@
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31470]</label>
 						<onclick>Skin.ToggleSetting(ViewPreferClearLogo)</onclick>
+						<onclick condition="!System.HasAddon(script.artwork.downloader)">RunPlugin(plugin://script.artwork.downloader)</onclick>
 						<selected>Skin.HasSetting(ViewPreferClearLogo)</selected>
 						<visible>System.HasAddon(script.artwork.downloader)</visible>
 					</control>
@@ -551,6 +627,7 @@
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31421]</label>
 						<onclick>Skin.ToggleSetting(Enable_OSDClearArt)</onclick>
+						<onclick condition="!System.HasAddon(script.artwork.downloader)">RunPlugin(plugin://script.artwork.downloader)</onclick>
 						<selected>Skin.HasSetting(Enable_OSDClearArt)</selected>
 						<visible>System.HasAddon(script.artwork.downloader)</visible>
 					</control>
@@ -587,30 +664,54 @@
 					</control>
 					<control type="image" id="711">
 						<include>Settings_Line</include>
-						<visible>System.HasAddon(script.tv.show.next.aired) | System.HasAddon(script.tvtunes)</visible>
 					</control>
 					<control type="radiobutton" id="712">
-						<include>SettingsLabel</include>
-						<label>$LOCALIZE[31426]</label>
-						<onclick>Skin.ToggleSetting(NextAired)</onclick>
-						<selected>Skin.HasSetting(NextAired)</selected>
-						<visible>System.HasAddon(script.tv.show.next.aired)</visible>
-					</control>
-					<control type="radiobutton" id="713">
-						<include>SettingsLabel</include>
-						<label>$LOCALIZE[31437]</label>
-						<onclick>Skin.ToggleSetting(TvTunes)</onclick>
-						<selected>Skin.HasSetting(TvTunes)</selected>
-						<visible>System.HasAddon(script.tvtunes)</visible>
-					</control>
-					<control type="image" id="714">
-						<include>Settings_Line</include>
-					</control>
-					<control type="radiobutton" id="715">
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31710]</label>
 						<onclick>Skin.ToggleSetting(UseExtendedWeather)</onclick>
 						<selected>Skin.HasSetting(UseExtendedWeather)</selected>
+					</control>
+					<control type="image" id="713">
+						<include>Settings_Line</include>
+					</control>
+					<control type="radiobutton" id="714">
+						<include>SettingsLabel</include>
+						<label>Enable Optional TV Show Next Aired Script</label>
+						<onclick condition="System.HasAddon(script.tv.show.next.aired)">Skin.ToggleSetting(NextAired)</onclick>
+						<onclick condition="!System.HasAddon(script.tv.show.next.aired)">RunPlugin(plugin://script.tv.show.next.aired)</onclick>
+						<selected>Skin.HasSetting(NextAired)</selected>
+					</control>
+					<control type="radiobutton" id="715">
+						<label>Install Optional Global Search Script</label>
+						<include>SettingsLabel</include>
+						<onclick condition="System.HasAddon(script.globalsearch)">Skin.ToggleSetting(EnableGlobalSearch)</onclick>
+						<onclick condition="!System.HasAddon(script.globalsearch)">RunPlugin(plugin://script.globalsearch)</onclick>
+						<selected>Skin.HasSetting(EnableGlobalSearch)</selected>
+						<visible>!System.HasAddon(script.globalsearch)</visible>
+					</control>
+					<control type="radiobutton" id="716">
+						<label>Install Optional Video Extras Script</label>
+						<include>SettingsLabel</include>
+						<onclick condition="System.HasAddon(script.videoextras)">Skin.ToggleSetting(EnableVideoExtras)</onclick>
+						<onclick condition="!System.HasAddon(script.videoextras)">RunPlugin(plugin://script.videoextras)</onclick>
+						<selected>Skin.HasSetting(EnableVideoExtras)</selected>
+						<visible>!System.HasAddon(script.videoextras)</visible>
+					</control>
+					<control type="radiobutton" id="717">
+						<label>Install Optional Cinema Experience Script</label>
+						<include>SettingsLabel</include>
+						<onclick condition="System.HasAddon(script.cinema.experience)">Skin.ToggleSetting(EnableCinemaExperience)</onclick>
+						<onclick condition="!System.HasAddon(script.cinema.experience)">RunPlugin(plugin://script.cinema.experience)</onclick>
+						<selected>Skin.HasSetting(EnableCinemaExperience)</selected>
+						<visible>!System.HasAddon(script.cinema.experience)</visible>
+					</control>
+					<control type="radiobutton" id="718">
+						<label>Install Optional Artist Slideshow Script</label>
+						<include>SettingsLabel</include>
+						<onclick condition="System.HasAddon(script.artistslideshow)">Skin.ToggleSetting(EnableArtistSlideshow)</onclick>
+						<onclick condition="!System.HasAddon(script.artistslideshow)">RunPlugin(plugin://script.artistslideshow)</onclick>
+						<selected>Skin.HasSetting(EnableArtistSlideshow)</selected>
+						<visible>!System.HasAddon(script.artistslideshow)</visible>
 					</control>
 				</control>
 				<!-- Video Settings -->
@@ -819,6 +920,7 @@
 						</control>
 					</control>
 				</control>
+
 				<!-- Music Settings -->
 				<control type="grouplist" id="9009">
 					<visible>Container(9000).Hasfocus(8)</visible>
@@ -898,6 +1000,7 @@
 						<visible>Skin.HasSetting(VisBgFanart) | Skin.HasSetting(VisBgExtraFanart) | Skin.HasSetting(VisBgArtistSlideshow)</visible>
 					</control>
 				</control>
+
 				<!-- Picture Settings -->
 				<control type="grouplist" id="9013">
 					<visible>Container(9000).Hasfocus(11)</visible>
@@ -916,6 +1019,7 @@
 						<selected>Skin.HasSetting(HidePictureFanart)</selected>
 					</control>
 				</control>
+
 				<!-- Debug -->
 				<control type="grouplist" id="9008">
 					<visible>Container(9000).Hasfocus(9)</visible>
@@ -931,7 +1035,7 @@
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31108]</label>
 						<onclick>Skin.ToggleSetting(DebugMode)</onclick>
-						<onclick>ReloadSkin()</onclick>
+						<onclick>Skin.ToggleDebug</onclick>
 						<selected>Skin.HasSetting(DebugMode)</selected>
 					</control>
 					<control type="radiobutton" id="1002">
@@ -941,173 +1045,24 @@
 						<onclick>ReloadSkin()</onclick>
 						<selected>Skin.HasSetting(DebugGrid)</selected>
 					</control>
-					<control type="image" id="1003">
+					<control type="radiobutton" id="1003">
+						<include>SettingsLabel</include>
+						<label>Enable Debug Info</label>
+						<onclick>Skin.ToggleSetting(DebugInfo)</onclick>
+						<onclick>ReloadSkin()</onclick>
+						<selected>Skin.HasSetting(DebugInfo)</selected>
+						<visible>Skin.HasSetting(DebugGrid)</visible>
+					</control>
+					<control type="image" id="1004">
 						<include>Settings_Line</include>
 					</control>
-					<control type="button" id="1004">
+					<control type="button" id="1005">
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31431]</label>
 						<onclick>Skin.ResetSettings</onclick>
 						<onclick>ReloadSkin()</onclick>
 					</control>
 				</control>
-				
-				<!-- Personal Extras -->
-				<control type="grouplist" id="9099">
-					<visible>Container(9000).Hasfocus(10)</visible>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>840</width>
-					<height>418</height>
-					<itemgap>0</itemgap>
-					<scrolltime>0</scrolltime>
-					<onleft>9000</onleft>
-					<onright>9000</onright>
-					<control type="radiobutton" id="729">
-						<include>SettingsLabel</include>
-						<label>Cycle Artwork in Video Info</label>
-						<onclick>Skin.ToggleSetting(CycleArt)</onclick>
-						<selected>Skin.HasSetting(CycleArt)</selected>
-					</control>						
-				
-					<control type="radiobutton" id="821">
-						<include>SettingsLabel</include>
-						<label>Media Case Overlays</label>
-						<onclick>Skin.ToggleSetting(CaseOveralys)</onclick>
-						<selected>Skin.HasSetting(CaseOveralys)</selected>
-					</control>
-
-					<control type="button" id="104">
-						<include>SettingsLabel</include>
-						<onfocus condition="IsEmpty(Skin.String(DateFormat))">Skin.SetString(DateFormat,YMD)</onfocus>
-						<label2>$INFO[Skin.String(DateFormat)]</label2>
-						<label>Date Format</label>
-						<onclick condition="Stringcompare(Skin.String(DateFormat),DOW) | IsEmpty(Skin.String(DateFormat))">Skin.SetString(DateFormat,YMD)</onclick>
-						<onclick condition="Stringcompare(Skin.String(DateFormat),YMD)">Skin.SetString(DateFormat,MDY)</onclick>
-						<onclick condition="Stringcompare(Skin.String(DateFormat),MDY)">Skin.SetString(DateFormat,DMY)</onclick>
-						<onclick condition="Stringcompare(Skin.String(DateFormat),DMY)">Skin.SetString(DateFormat,DOW)</onclick>
-						<visible>!Skin.HasSetting(HideClock)</visible>
-					</control>			
-					<control type="radiobutton" id="822">
-						<description>Display OSD Command Labels</description>
-						<include>SettingsLabel</include>
-						<label>Display OSD Command Labels</label>
-						<onclick>Skin.ToggleSetting(CommandLabels)</onclick>
-						<selected>Skin.HasSetting(CommandLabels)</selected>
-					</control>	
-					<control type="radiobutton" id="513">
-						<description>Always show Scrollbar</description>
-						<include>SettingsLabel</include>
-						<label>Always Display Scrollbar</label>
-						<onclick>Skin.ToggleSetting(Scrollbar)</onclick>
-						<selected>Skin.HasSetting(Scrollbar)</selected>
-					</control>			
-					<control type="radiobutton" id="205">
-						<include>SettingsLabel</include>
-						<label>Use Horizontal Widgets</label>
-						<onclick>Skin.ToggleSetting(HorizontalWidgets)</onclick>
-						<selected>Skin.HasSetting(HorizontalWidgets)</selected>
-					</control>
-					<control type="radiobutton" id="206">
-						<include>SettingsLabel</include>
-						<label>$LOCALIZE[31035]</label>
-						<onclick>Skin.ToggleSetting(HomeCleanLibrary)</onclick>
-						<selected>Skin.HasSetting(HomeCleanLibrary)</selected>
-					</control>
-				 	<control type="radiobutton" id="10004">
- 						<include>SettingsLabel</include>
-						<label>Stretch Backgrounds</label>
-						<onclick>Skin.ToggleSetting(HomeStretchBackgrounds)</onclick>
-						<selected>Skin.HasSetting(HomeStretchBackgrounds)</selected>
-						<visible>!Skin.HasSetting(Home2)</visible>
-					</control>
-					<control type="image" id="10204">
-						<include>Settings_Line</include>
-					</control>		
-	<!--				<control type="radiobutton" id="105">
-						<include>SettingsLabel</include>
-						<label>$LOCALIZE[31447]</label>
-						<onclick>Skin.ToggleSetting(WeatherIcons2)</onclick>
-						<selected>Skin.HasSetting(WeatherIcons2)</selected>
-					</control>
--->
-
-				<control type="button" id="10006">
-					<description>Select weather fanart</description>
-					<label>Select Weather Fanart Package</label>
-					<include>SettingsLabel</include>
-					<onclick>RunScript(script.image.resource.select,property=weatherfanart&amp;type=resource.images.weatherfanart)</onclick>
-					<visible>System.HasAddon(script.image.resource.select)</visible>
-				</control>
-				<control type="button" id="10005">
-					<description>Select weather icons</description>
-					<label>Select Weather Icon Package</label>
-					<include>SettingsLabel</include>
-					<onclick>RunScript(script.image.resource.select,property=weathericons&amp;type=resource.images.weathericons)</onclick>
-					<visible>System.HasAddon(script.image.resource.select)</visible>
-				</control>	
-
-					<control type="image" id="10304">
-						<include>Settings_Line</include>
-					</control>	
-				
-					<control type="label" id="703">
-						<include>SettingsLabel</include>
-						<label>Extra Artwork Downloader</label>
-			<!--		<onclick>RunScript(script.artwork.downloader, mode=custom, mediatype=tvshow, seasonposter, landscape, clearart, clearlogo, characterart)</onclick>
-			-->			<visible>System.HasAddon(script.artwork.downloader)</visible>
-					</control>
-					<control type="button" id="725">
-						<include>SettingsLabel</include>
-						<label> - Download [COLOR=DialogTextFO]All Artwork[/COLOR] for all TV Shows</label>
-						<onclick>RunScript(script.artwork.downloader, mode=custom, mediatype=tvshow, seasonposter, landscape, clearart, clearlogo, characterart)</onclick>
-						<visible>System.HasAddon(script.artwork.downloader)</visible>
-					</control>
-					<control type="button" id="720">
-						<include>SettingsLabel</include>
-						<label> - Download [COLOR=DialogTextFO]logo.png[/COLOR] for all TV Shows</label>
-						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,clearlogo)</onclick>
-						<visible>System.HasAddon(script.artwork.downloader)</visible>
-					</control>
-					<control type="button" id="721">
-						<include>SettingsLabel</include>
-						<label> - Download [COLOR=DialogTextFO]clearart.png[/COLOR] for all TV Shows</label>
-						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,clearart)</onclick>
-						<visible>System.HasAddon(script.artwork.downloader)</visible>
-					</control>
-					<control type="button" id="722">
-						<include>SettingsLabel</include>
-						<label> - Download [COLOR=DialogTextFO]landscape.jpg[/COLOR] for all TV Shows</label>
-						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,landscape)</onclick>
-						<visible>System.HasAddon(script.artwork.downloader)</visible>
-					</control>
-					<control type="button" id="723">
-						<include>SettingsLabel</include>
-						<label> - Download [COLOR=DialogTextFO]banner.jpg[/COLOR] for all TV Shows</label>
-						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,banner)</onclick>
-						<visible>System.HasAddon(script.artwork.downloader)</visible>
-					</control>
-					<control type="button" id="724">
-						<include>SettingsLabel</include>
-						<label> - Download [COLOR=DialogTextFO]poster.jpg[/COLOR] for all TV Shows</label>
-						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,poster)</onclick>
-						<visible>System.HasAddon(script.artwork.downloader)</visible>
-					</control>
-					<control type="button" id="726">
-						<include>SettingsLabel</include>
-						<label> - Download [COLOR=DialogTextFO]disc.png[/COLOR] for all Movies</label>
-						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=movie,discart)</onclick>
-						<visible>System.HasAddon(script.artwork.downloader)</visible>
-					</control>
-					<control type="button" id="727">
-						<include>SettingsLabel</include>
-						<label> - Download [COLOR=DialogTextFO]logo.png[/COLOR] for all Movies</label>
-						<onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=movie,clearlogo)</onclick>
-						<visible>System.HasAddon(script.artwork.downloader)</visible>
-					</control>					
-				
-				</control>
-				
 			</control>
 			<control type="image">
 				<include>Animation_CommonFadeNoHide</include>
@@ -1116,7 +1071,7 @@
 				<height>24</height>
 				<width>24</width>
 				<texture>Arrow2Up.png</texture>
-				<visible>[Container(9000).Hasfocus(2) + Container(9002).HasPrevious] | [Container(9000).Hasfocus(5) + Container(9005).HasPrevious] | [Container(9000).Hasfocus(10) + Container(9012).HasPrevious] | [Container(9000).Hasfocus(3) + Container(9007).HasPrevious] | [Container(9000).Hasfocus(6) + Container(9006).HasPrevious]</visible>
+				<visible>[Container(9000).Hasfocus(2) + Container(9002).HasPrevious] | [Container(9000).Hasfocus(5) + Container(9005).HasPrevious] | [Container(9000).Hasfocus(3) + Container(9007).HasPrevious] | [Container(9000).Hasfocus(6) + Container(9006).HasPrevious]</visible>
 			</control>
 			<control type="image">
 				<include>Animation_CommonFadeNoHide</include>
@@ -1125,7 +1080,7 @@
 				<height>24</height>
 				<width>24</width>
 				<texture>Arrow2Down.png</texture>
-				<visible>[Container(9000).Hasfocus(2) + Container(9002).HasNext] | [Container(9000).Hasfocus(5) + Container(9005).HasNext] | [Container(9000).Hasfocus(10) + Container(9012).HasPrevious] | [Container(9000).Hasfocus(3) + Container(9007).HasPrevious] | [Container(9000).Hasfocus(6) + Container(9006).HasPrevious]</visible>
+				<visible>[Container(9000).Hasfocus(2) + Container(9002).HasNext] | [Container(9000).Hasfocus(5) + Container(9005).HasNext] | [Container(9000).Hasfocus(3) + Container(9007).HasPrevious] | [Container(9000).Hasfocus(6) + Container(9006).HasPrevious]</visible>
 			</control>
 		</control>
 		<include>Global_ContextFilter</include>
@@ -1134,6 +1089,5 @@
 		<include>Global_MediaOverlay</include>
 		<include>Setting_Heading</include>
 		<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>
-		<include condition="Skin.HasSetting(DebugMode)">Debug</include>
 	</controls>
 </window>

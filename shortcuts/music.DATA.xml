@@ -1,107 +1,81 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <shortcuts>
 	<shortcut>
-		<action>ActivateWindow(MusicLibrary,MusicLibrary,return)</action>
-		<label>15100</label>
+		<label>31438</label>
 		<label2>32019</label2>
-		<defaultID>15100</defaultID>
-		<icon>DefaultFolder.png</icon>
-		<thumb />
+		<icon>DefaultShortcut.png</icon>
+		<action>ActivateWindow(MusicLibrary,musicdb://recentlyaddedalbums/,return)</action>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(MusicLibrary,Addons,return)</action>
-		<label>1038</label>
+		<label>24001</label>
 		<label2>32019</label2>
-		<defaultID>1038</defaultID>
 		<icon>DefaultAddonMusic.png</icon>
-		<thumb />
+		<action>ActivateWindow(MusicFiles,Addons,return)</action>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(MusicLibrary,Genres,return)</action>
 		<label>135</label>
 		<label2>32019</label2>
-		<defaultID>135</defaultID>
-		<icon>DefaultMusicArtists.png</icon>
-		<thumb />
+		<icon>DefaultMusicGenres.png</icon>
+		<action>ActivateWindow(MusicLibrary,musicdb://genres/,return)</action>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(MusicLibrary,Years,return)</action>
 		<label>652</label>
 		<label2>32019</label2>
-		<defaultID>652</defaultID>
-		<icon>DefaultMusicArtists.png</icon>
-		<thumb />
+		<icon>DefaultMusicYears.png</icon>
+		<action>ActivateWindow(MusicLibrary,musicdb://years/,return)</action>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(MusicLibrary,Artists,return)</action>
 		<label>133</label>
 		<label2>32019</label2>
-		<defaultID>133</defaultID>
 		<icon>DefaultMusicArtists.png</icon>
-		<thumb />
+		<action>ActivateWindow(MusicLibrary,musicdb://artists/,return)</action>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(MusicLibrary,Albums,return)</action>
 		<label>132</label>
 		<label2>32019</label2>
-		<defaultID>132</defaultID>
 		<icon>DefaultMusicAlbums.png</icon>
-		<thumb />
+		<action>ActivateWindow(MusicLibrary,musicdb://albums/,return)</action>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(MusicLibrary,Songs,return)</action>
 		<label>134</label>
 		<label2>32019</label2>
-		<defaultID>134</defaultID>
 		<icon>DefaultMusicSongs.png</icon>
-		<thumb />
+		<action>ActivateWindow(MusicLibrary,musicdb://songs/,return)</action>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(Videos,MusicVideoTitles,return)</action>
-		<label>3</label>
-		<label2>32019</label2>
-		<defaultID>3</defaultID>
-		<icon>DefaultMusicSongs.png</icon>
-		<thumb />
-	</shortcut>
-	<shortcut>
-		<action>ActivateWindow(MusicLibrary,Playlists,return)</action>
 		<label>136</label>
 		<label2>32019</label2>
-		<defaultID>136</defaultID>
-		<icon>DefaultMusicSongs.png</icon>
-		<thumb />
+		<icon>DefaultMusicPlaylists.png</icon>
+		<action>ActivateWindow(MusicLibrary,musicdb://playlists/,return)</action>
 	</shortcut>
 	<shortcut>
-		<action>PlayerControl(Partymode(music))</action>
 		<label>589</label>
 		<label2>32019</label2>
-		<defaultID>589</defaultID>
-		<icon>DefaultMusicSongs.png</icon>
-		<thumb />
+		<icon>DefaultMusicPlaylists.png</icon>
+		<action>PlayerControl(Partymode(music))</action>
 	</shortcut>
 	<shortcut>
-		<action>CleanLibrary(music)</action>
+		<label>31289</label>
+		<label2>32019</label2>
+		<icon>DefaultFolder.png</icon>
+		<action>ActivateWindow(MusicFiles)</action>
+	</shortcut>
+	<shortcut>
 		<label>31465</label>
-		<label2>32019</label2>
-		<defaultID>31465</defaultID>
-		<icon>DefaultMusicSongs.png</icon>
-		<thumb />
+		<label2>32034</label2>
+		<icon>DefaultShortcut.png</icon>
+		<action>CleanLibrary(music)</action>
 	</shortcut>
 	<shortcut>
-		<action>UpdateLibrary(music)</action>
 		<label>653</label>
-		<label2>32019</label2>
-		<defaultID>653</defaultID>
-		<icon>DefaultMusicSongs.png</icon>
-		<thumb />
+		<label2>32034</label2>
+		<icon>DefaultShortcut.png</icon>
+		<action>UpdateLibrary(music)</action>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(MusicSettings)</action>
 		<label>5</label>
-		<label2>32019</label2>
-		<defaultID>5</defaultID>
-		<icon>DefaultMusicSongs.png</icon>
-		<thumb />
+		<label2>32034</label2>
+		<icon>DefaultShortcut.png</icon>
+		<action>ActivateWindow(MusicSettings)</action>
 	</shortcut>
 </shortcuts>

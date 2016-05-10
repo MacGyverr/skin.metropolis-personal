@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
 	<views>10,11,12</views>
 	<controls>
 		<include>Global_Background</include>
@@ -1275,6 +1274,5 @@
 		<include>Global_Weather</include>
 		<include>Global_Time</include>
 		<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>
-		<include condition="Skin.HasSetting(DebugMode)">Debug</include>
 	</controls>
 </window>

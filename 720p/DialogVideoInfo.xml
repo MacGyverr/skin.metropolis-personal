@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="2003">
 	<onload condition="System.HasAddon(script.videoextras)">RunScript(script.videoextras,check,"$INFO[ListItem.FilenameAndPath]")</onload>
+	<onload condition="Skin.HasSetting(NextAired) + !SubString(Window(Videos).Property(CinemaExperienceRunning),True) + Container.Content(tvshows)">RunScript(script.tv.show.next.aired,backend=True)</onload>
 	<defaultcontrol always="true">7003</defaultcontrol>
 	<controls>
 		<control type="button" id="7050">
@@ -132,9 +133,9 @@
 				<font>METF_MPAA</font>
 				<textcolor>MPAADescription</textcolor>
 				<label>$INFO[ListItem.mpaa]</label>
-				<visible>[Container.Content(movies) + !IsEmpty(ListItem.mpaa) + ![StringCompare(ListItem.mpaa,Rated PG) | StringCompare(ListItem.mpaa,Rated PG-13) | StringCompare(ListItem.mpaa,Rated R) | StringCompare(ListItem.mpaa,Rated G) | StringCompare(ListItem.mpaa,Rated NC-17) | StringCompare(ListItem.mpaa,Rated TV-14) | StringCompare(ListItem.mpaa,Rated TV-G) | StringCompare(ListItem.mpaa,Rated TV-MA) | StringCompare(ListItem.mpaa,Rated TV-PG) | StringCompare(ListItem.mpaa,Rated TV-Y) | StringCompare(ListItem.mpaa,Rated TV-Y7)]] + !Skin.HasSetting(ShowVideoPath)</visible>
-			</control>	 
-
+				<visible>!ControlGroup(7003).HasFocus(7) + Container.Content(movies) + !IsEmpty(ListItem.mpaa) + !Skin.HasSetting(ShowVideoPath)</visible>
+			</control>
+			<!-- Video Path -->
 			<control type="fadelabel">
 				<posx>-8</posx>
 				<posy>489</posy>
@@ -147,8 +148,8 @@
 				<font>METF_MPAA</font>
 				<textcolor>MPAADescription</textcolor>
 				<label>$INFO[ListItem.FilenameAndPath]</label>
-				<visible>!SubString(ListItem.FilenameAndPath," ") + [Container.Content(movies) | Container.Content(videos) | Container.Content(episodes) | Container.Content(MusicVideos)] + Skin.HasSetting(ShowVideoPath)</visible>
-			</control>	
+				<visible>!ControlGroup(7003).HasFocus(7) + !SubString(ListItem.FilenameAndPath," ") + [Container.Content(movies) | Container.Content(videos) | Container.Content(episodes) | Container.Content(MusicVideos)] + Skin.HasSetting(ShowVideoPath)</visible>
+			</control>
 			<control type="textbox">
 				<posx>-8</posx>
 				<posy>489</posy>
@@ -158,8 +159,43 @@
 				<font>METF_MPAA</font>
 				<textcolor>MPAADescription</textcolor>
 				<label>$INFO[ListItem.FilenameAndPath]</label>
-				<visible>SubString(ListItem.FilenameAndPath," ") + [Container.Content(movies) | Container.Content(videos) | Container.Content(episodes) | Container.Content(MusicVideos)] + Skin.HasSetting(ShowVideoPath)</visible>
-			</control>	
+				<visible>!ControlGroup(7003).HasFocus(7) + SubString(ListItem.FilenameAndPath," ") + [Container.Content(movies) | Container.Content(videos) | Container.Content(episodes) | Container.Content(MusicVideos)] + Skin.HasSetting(ShowVideoPath)</visible>
+			</control>
+			<!-- TV Show Next Aired info -->
+			<control type="label">
+				<posx>-8</posx>
+				<posy>489</posy>
+				<width>515</width>
+				<height>60</height>
+				<align>center</align>
+				<font>METF_InfoText</font>
+				<textcolor>TextNF</textcolor>
+				<label>[COLOR=MediaDetailsInfo]$LOCALIZE[31427]:[/COLOR] $INFO[Window(Home).Property(NextAired.NextTitle),,[CR]]$INFO[Window(Home).Property(NextAired.AirTime),, - ]$INFO[Window(Home).Property(NextAired.NextDate)]</label>
+				<visible>!ControlGroup(7003).HasFocus(7) + Container.Content(TVShows) + !IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
+			</control>
+			<!-- User Rating info -->			
+			<control type="image">
+				<posx>-8</posx>
+				<posy>495</posy>
+				<width>515</width>
+				<height>30</height>
+				<aligny>center</aligny>
+				<texture fallback="LeftRating/rating0.png">$INFO[ListItem.Rating,rating,.png]</texture>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<colordiffuse>MediaFlagDiffuse</colordiffuse>
+				<visible>ControlGroup(7003).HasFocus(7) | [String.IsEmpty(ListItem.UserRating) + IsEmpty(Window(Home).Property(NextAired.NextDate)) + IsEmpty(ListItem.mpaa)]</visible>
+			</control>
+			<control type="image">
+				<posx>-8</posx>
+				<posy>495</posy>
+				<width>515</width>
+				<height>30</height>
+				<aligny>center</aligny>
+				<texture>$INFO[ListItem.UserRating,LeftRating/rating,.png]</texture>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<colordiffuse>MediaFlagDiffuse</colordiffuse>
+				<visible>ControlGroup(7003).HasFocus(7) | [!String.IsEmpty(ListItem.UserRating) + IsEmpty(Window(Home).Property(NextAired.NextDate)) + IsEmpty(ListItem.mpaa)]</visible>
+			</control>
 			<control type="group">
 				<posx>550</posx>
 				<posy>225</posy>
@@ -220,19 +256,7 @@
 					<font>METF_HelpText</font>
 					<textcolor>HelpText</textcolor>
 					<label>$LOCALIZE[31407]</label>
-					<visible>!Control.HasFocus(300) + !Control.HasFocus(50) + !Skin.HasSetting(HideHelpText)</visible>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>160</posy>
-					<width>340</width>
-					<height>25</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>METF_HelpText</font>
-					<textcolor>HelpText</textcolor>
-					<label>*Select Item for more info*</label>
-					<visible>Control.HasFocus(300) + !Control.HasFocus(50) + !Skin.HasSetting(HideHelpText)</visible>
+					<visible>!Control.IsVisible(50) + !Skin.HasSetting(HideHelpText)</visible>
 				</control>
 			</control>
 			<!-- Plot -->
@@ -296,12 +320,12 @@
 					<item>
 						<label>$LOCALIZE[31471]</label>
 						<onclick>noop</onclick>
-						<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
+						<visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[20339]</label>
 						<onclick>SendClick(2003,13)</onclick>
-						<visible>![Container.Content(tvshows) | Container.Content(seasons)]</visible>
+						<visible>![Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[344]</label>
@@ -485,9 +509,9 @@
 			<include>Animation_FadedByMenu</include>
 			<include>Animation_CommonFade</include>
 			<include>Animation_OpenCloseFade</include>
-			<posx>352</posx>
+			<posx>334</posx>
 			<posy>555</posy>
-			<width>515</width>
+			<width>552</width>
 			<height>70</height>
 			<itemgap>10</itemgap>
 			<align>center</align>
@@ -541,32 +565,17 @@
 				<include>Animation_ButtonFocus</include>
 				<visible>System.HasAddon(script.artwork.downloader) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
 			</control>
-			<!-- TV Tunes -->
-			<control type="button" id="21">
-				<include>VideoInfoButton</include>
-				<texturenofocus>buttons/button_tvtunes.png</texturenofocus>
-				<texturefocus>buttons/button_tvtunesFO.png</texturefocus>
-				<visible>Skin.HasSetting(TvTunes) + System.HasAddon(script.tvtunes) + [Container.Content(TVShows) | Container.Content(movies) | Container.Content(musicvideos)]</visible>
-				<include>Animation_ButtonFocus</include>
-				<label>$LOCALIZE[31956]</label>
-				<onclick>RunScript(script.tvtunes,mode=solo)</onclick>
-			</control>
 			<!-- Video Extras -->
-			<control type="button" id="22">
+			<control type="button" id="21">
 				<description>Extras</description>
 				<include>VideoInfoButton</include>
 				<texturenofocus>buttons/button_videoextras.png</texturenofocus>
 				<texturefocus>buttons/button_videoextrasFO.png</texturefocus>
 				<include>Animation_ButtonFocus</include>
-	<!--		<onclick condition="!Container.Content(tvshows)">RunScript(script.videoextras,display,"$INFO[ListItem.FilenameAndPath]")</onclick>
-				<onclick condition="Container.Content(tvshows)">RunScript(script.videoextras,display,"$INFO[ListItem.Path]")</onclick>
-	-->			<onclick condition="!Container.Content(tvshows)">RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[ListItem.DBID])</onclick>
-				<onclick condition="Container.Content(tvshows)">RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[ListItem.DBID])</onclick>
-	<!--		<label>$INFO[System.AddonTitle(script.videoextras)]</label>
+				<onclick>RunScript(script.videoextras,display,"$INFO[ListItem.FilenameAndPath]")</onclick>
+				<label>$INFO[System.AddonTitle(script.videoextras)]</label>
 				<visible>System.HasAddon(script.videoextras)</visible>
-	-->			<label>Extended Info Script</label>
-				<visible>System.HasAddon(script.extendedinfo)</visible>
-				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos)]</visible>
+				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
 			</control>
 			<!-- Refresh -->
 			<control type="button" id="6">
@@ -574,6 +583,13 @@
 				<texturenofocus>buttons/button_refresh.png</texturenofocus>
 				<texturefocus>buttons/button_refreshFO.png</texturefocus>
 				<include>Animation_ButtonFocus</include>
+			</control>
+			<!-- User ratings -->
+			<control type="button" id="7">
+				<description>Set rating</description>
+				<include>VideoInfoButton</include>
+				<texturenofocus>buttons/button_thumb.png</texturenofocus>
+				<texturefocus>buttons/button_thumbFO.png</texturefocus>
 			</control>
 		</control>
 		<!-- Control Button Text -->
@@ -600,16 +616,10 @@
 				<visible>ControlGroup(7003).HasFocus(20)</visible>
 			</control>
 			<control type="label">
-				<description>Tv Tunes Downloader</description>
-				<include>VideoInfoButtonLabel</include>
-				<label>$LOCALIZE[31127]</label>
-				<visible>ControlGroup(7003).HasFocus(21)</visible>
-			</control>
-			<control type="label">
 				<description>Video Extras</description>
 				<include>VideoInfoButtonLabel</include>
-				<label>$INFO[System.AddonTitle(script.extendedinfo)]</label>
-				<visible>ControlGroup(7003).HasFocus(22)</visible>
+				<label>$INFO[System.AddonTitle(script.videoextras)]</label>
+				<visible>ControlGroup(7003).HasFocus(21)</visible>
 			</control>
 			<control type="label">
 				<description>Trailer</description>
@@ -628,6 +638,12 @@
 				<include>VideoInfoButtonLabel</include>
 				<label>$LOCALIZE[184]</label>
 				<visible>ControlGroup(7003).HasFocus(6)</visible>
+			</control>
+			<control type="label">
+				<description>Set rating</description>
+				<include>VideoInfoButtonLabel</include>
+				<label>$LOCALIZE[38023]</label>
+				<visible>ControlGroup(7003).HasFocus(7)</visible>
 			</control>
 		</control>
 		<control type="group">
@@ -705,103 +721,8 @@
 					<height>182</height>
 					<texture fallback="home_art/movies.jpg">$INFO[ListItem.Art(fanart)]</texture>
 					<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
-					<visible>!Skin.HasSetting(CycleArt) + !Container.Content(episodes)</visible>
-				</control> 	
-				
-				<!-- Cyclic Artwork Images --> 	 						
-				<control type="group">
-						<visible>Skin.HasSetting(CycleArt) + !Container.Content(episodes)</visible>
-					<control type="group">
-						<visible>Substring(Control.GetLabel(7009),fanart)</visible>
-						<animation effect="fade" start="0" end="100" time="450" delay="150" >Visible</animation>
-						<animation effect="fade" start="100" end="0" time="450" delay="150" >Hidden</animation>
-						<control type="label">
-							<include>ArtworkLabel</include>
-							<label>Fanart</label>
-						</control>
-						<control type="image">
-							<include>ArtworkPlacement</include>
-							<texture fallback="DefaultThumb3.png">$INFO[ListItem.Art(fanart)]</texture>
-							<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
-						</control>
-					</control>
-					<control type="group">
-						<visible>Substring(Control.GetLabel(7009),clearart)</visible>
-						<animation effect="fade" start="0" end="100" time="450" delay="150" >Visible</animation>
-						<animation effect="fade" start="100" end="0" time="450" delay="150" >Hidden</animation>
-						<control type="label">
-							<include>ArtworkLabel</include>
-							<label>ClearArt</label>
-						</control>
-						<control type="image">
-							<include>ArtworkPlacement</include>
-							<texture fallback="DefaultThumb3.png">$INFO[ListItem.Art(clearart)]</texture>
-							<aspectratio aligny="center">keep</aspectratio>
-						</control>
-					</control>
-					<control type="group">
-						<visible>Substring(Control.GetLabel(7009),clearlogo)</visible>
-						<animation effect="fade" start="0" end="100" time="450" delay="150" >Visible</animation>
-						<animation effect="fade" start="100" end="0" time="450" delay="150" >Hidden</animation>
-						<control type="label">
-							<include>ArtworkLabel</include>
-							<label>ClearLogo</label>
-						</control>
-						<control type="image">
-							<include>ArtworkPlacement</include>
-							<texture fallback="DefaultThumb3.png">$INFO[ListItem.Art(clearlogo)]</texture>
-							<aspectratio aligny="center">keep</aspectratio>
-						</control>
-					</control>		
-					<control type="group">
-						<visible>Substring(Control.GetLabel(7009),landscape)</visible>
-						<animation effect="fade" start="0" end="100" time="450" delay="150" >Visible</animation>
-						<animation effect="fade" start="100" end="0" time="450" delay="150" >Hidden</animation>
-						<control type="label">
-							<include>ArtworkLabel</include>
-							<label>Landscape</label>
-						</control>
-						<control type="image">
-							<include>ArtworkPlacement</include>
-							<texture fallback="DefaultThumb3.png">$INFO[ListItem.Art(landscape)]</texture>
-							<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
-						</control>
-					</control>	
-					<control type="group">
-						<visible>Substring(Control.GetLabel(7009),banner)</visible>
-						<animation effect="fade" start="0" end="100" time="450" delay="150" >Visible</animation>
-						<animation effect="fade" start="100" end="0" time="450" delay="150" >Hidden</animation>
-						<control type="label">
-							<include>ArtworkLabel</include>
-							<label>Banner</label>
-						</control>
-						<control type="image">
-							<include>ArtworkPlacement</include>
-							<texture fallback="DefaultThumb3.png">$INFO[ListItem.Art(banner)]</texture>
-							<aspectratio aligny="center">keep</aspectratio>
-						</control>
-					</control>	
-					<control type="fadelabel" id="7009">
-						<animation effect="fade" start="0" end="0" time="0" condition="true" >Conditional</animation>
-						<left>0</left>
-						<top>0</top>
-						<width>500</width>
-						<height>40</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>METF_PlotText</font>
-						<textcolor>TextNF</textcolor>
-						<scroll>false</scroll>
-						<label>fanart</label>
-						<label>clearart</label>
-						<label>clearlogo</label>
-						<label>landscape</label>
-						<label>banner</label>
-						<scrollspeed>20</scrollspeed>
-						<pauseatend>1000</pauseatend>
-					</control>
+					<visible>!Container.Content(episodes)</visible>
 				</control>
-				
 				<!-- TV Show Episode Fanart Image -->
 				<control type="image">
 					<posx>918</posx>
@@ -843,6 +764,5 @@
 		<include>Global_ContextFilter</include>
 		<include condition="Skin.HasSetting(Hide_ExtraMediaFlags)">MediaInfo2</include>
 		<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>
-		<include condition="Skin.HasSetting(DebugMode)">Debug</include>
 	</controls>
 </window>

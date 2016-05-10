@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="29">
 	<defaultcontrol always="true">52</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
-	
-	
+
 	<controls>
 		<include>Global_Background</include>		
 		<control type="group">
@@ -222,6 +220,5 @@
 		<include>Global_Time</include>
 		<include>Global_Heading</include>
 		<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>
-		<include condition="Skin.HasSetting(DebugMode)">Debug</include>
 	</controls>
 </window>

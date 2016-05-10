@@ -60,6 +60,5 @@
 				<textureslidernibfocus border="2">osd/SliderNibFO.png</textureslidernibfocus>
 			</control>
 		</control>
-		<include condition="Skin.HasSetting(DebugMode)">Debug</include>
 	</controls>
 </window>

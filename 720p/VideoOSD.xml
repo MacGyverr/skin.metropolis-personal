@@ -191,6 +191,7 @@
 						<width>60</width>
 						<texture>osd/osd_button_repeat_nf.png</texture>
 						<visible>!Playlist.IsRepeat | !Playlist.IsRepeatOne</visible>
+						<visible>!Control.HasFocus(801)</visible>
 					</control>
 					<control type="image">
 						<posx>-60</posx>
@@ -254,124 +255,6 @@
 			</control>
 		</control>
 
-		
-		
-	<!-- OSD commands on Top -->
-		<control type="label">
-			<include>OSD-label</include>
-			<description>Rewind</description>
-			<label>Rewind</label>
-			<visible>ControlGroup(2001).HasFocus(3)</visible>
-		</control>
-		<control type="label">
-			<include>OSD-label</include>
-			<description>Play</description>
-			<label>$LOCALIZE[208] / Pause</label>
-			<visible>ControlGroup(2001).HasFocus(4)</visible>
-		</control>
-		<control type="label">
-			<include>OSD-label</include>
-			<description>Stop</description>
-			<label>Stop</label>
-			<visible>ControlGroup(2001).HasFocus(5)</visible>
-		</control>
-		<control type="label">
-			<include>OSD-label</include>
-			<description>Forward</description>
-			<label>Forward</label>
-			<visible>ControlGroup(2001).HasFocus(6)</visible>
-		</control>
-		<control type="label">
-			<include>OSD-label</include>
-			<description>DVD Menu</description>
-			<label>DVD Menu</label>
-			<visible>ControlGroup(2001).HasFocus(7)</visible>
-		</control>
-		<control type="label">
-			<include>OSD-label</include>
-			<description>Previous</description>
-			<label>210</label>
-			<visible>ControlGroup(2001).HasFocus(9)</visible>
-		</control>
-		<control type="label">
-			<include>OSD-label</include>
-			<description>Next</description>
-			<label>209</label>
-			<visible>ControlGroup(2001).HasFocus(10)</visible>
-		</control>
-		<control type="label">
-			<include>OSD-label</include>
-			<description>Playlists</description>
-			<label>136</label>
-			<visible>ControlGroup(2001).HasFocus(11)</visible>
-		</control>
-		<control type="label">
-			<include>OSD-label</include>
-			<description>Bookmarks</description>
-			<label>298</label>
-			<visible>ControlGroup(2001).HasFocus(12)</visible>
-		</control>
-		<control type="label">
-			<include>OSD-label</include>
-			<description>Video Settings</description>
-			<label>Video Settings</label>
-			<visible>ControlGroup(2001).HasFocus(13)</visible>
-		</control>
-		<control type="label">
-			<include>OSD-label</include>
-			<description>OSD Subtitles</description>
-			<label>Subtitle Search</label>
-			<visible>ControlGroup(2001).HasFocus(14)</visible>
-		</control>
-		<control type="label">
-			<include>OSD-label</include>
-			<description>One Button OSD Subtitles</description>
-			<label>Subtitle Search</label>
-			<visible>ControlGroup(2001).HasFocus(15)</visible>
-		</control>
-		<control type="label">
-			<include>OSD-label</include>
-			<description>One Button OSD Subtitles</description>
-			<label>Toggle Subtitles</label>
-			<visible>ControlGroup(2001).HasFocus(16)</visible>
-		</control>
-		<control type="label">
-			<include>OSD-label</include>
-			<description>OSD Subtitles</description>
-			<label>Subtitle Search</label>
-			<visible>ControlGroup(2001).HasFocus(17)</visible>
-		</control>
-		<control type="label">
-			<include>OSD-label</include>
-			<description>Audio Settings</description>
-			<label>Audio Settings</label>
-			<visible>ControlGroup(2001).HasFocus(800)</visible>
-		</control>
-		<control type="label">
-			<include>OSD-label</include>
-			<description>Repeat All</description>
-			<label>Current: Repeat All</label>
-			<visible>ControlGroup(2001).HasFocus(801) + Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
-		</control>
-		<control type="label">
-			<include>OSD-label</include>
-			<description>Repeat One</description>
-			<label>Current: Repeat Off</label>
-			<visible>[ControlGroup(2001).HasFocus(802) | ControlGroup(2001).HasFocus(801)] + !Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
-		</control>	
-		<control type="label">
-			<include>OSD-label</include>
-			<description>Repeat Off</description>
-			<label>Current: Repeat This File</label>
-			<visible>ControlGroup(2001).HasFocus(801) + Playlist.IsRepeatOne</visible>
-		</control>		
-<!--		<control type="label">
-			<include>OSD-label</include>
-			<description>Repeat</description>
-			<label>486</label>
-			<visible>ControlGroup(2001).HasFocus(801) | ControlGroup(2001).HasFocus(802)</visible>
-		</control>			
--->	
 		<!-- LiveTV OSD -->
 		<control type="group">
 			<visible>VideoPlayer.Content(LiveTV)</visible>
@@ -522,6 +405,5 @@
 			</control>
 		</control>
 		<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>
-		<include condition="Skin.HasSetting(DebugMode)">Debug</include>
 	</controls>
 </window>

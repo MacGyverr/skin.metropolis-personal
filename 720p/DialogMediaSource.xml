@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="129">
 	<defaultcontrol always="true">10</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
 	<include>Animation_OpenCloseFade</include>
 	<coordinates>
 		<system>1</system>
@@ -187,7 +186,6 @@
 					<ondown>11</ondown>
 				</control>
 			</control>
-			<include condition="Skin.HasSetting(DebugMode)">Debug</include>
 		</control>
 	</controls>
 </window>

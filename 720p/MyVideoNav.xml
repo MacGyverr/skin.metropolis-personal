@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="25">
-	<onload condition="Skin.HasSetting(NextAired) + !SubString(Window(Videos).Property(CinemaExperienceRunning),True) + Container.Content(tvshows)">RunScript(script.tv.show.next.aired,backend=True)</onload>
-	<views>55,905,509,54,58,59,559,53,57,551,552,550,504,511,508,510,52,56,512,501,514</views>
+	<views>55,905,509,54,58,59,559,53,57,552,551,550,504,511,508,510,52,56,512,501</views>
 	<defaultcontrol always="true">55</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<include>Global_Background</include>
 		<include>Global_Background_Fanart</include>
@@ -14,8 +12,8 @@
 		<include>Viewtype_Poster_Fixed</include>		<!-- 53 -->
 		<include>Viewtype_Poster_Wrap</include>			<!-- 57 -->
 		<include>Viewtype_PosterAndFanart</include>		<!-- 550 -->
-		<include>Viewtype_Poster_Large_Wrap</include>		<!-- 551 -->
 		<include>Viewtype_Poster_Large_Fixed</include>		<!-- 552 -->
+		<include>Viewtype_Poster_Large_Wrap</include>		<!-- 551 -->
 		<include>Viewtype_Coverflow</include>			<!-- 512 -->
 		<include>Viewtype_Landscape</include>			<!-- 52 -->
 		<include>Viewtype_Fanart</include>			<!-- 504 -->
@@ -28,7 +26,6 @@
 		<include>Viewtype_Panel_Square</include>		<!-- 559 -->
 		<include>Viewtype_Logo</include>			<!-- 56 -->
 		<include>Viewtype_TallGenre</include>			<!-- 501 -->
-		<include>Viewtype_Artwork_Check</include>			<!-- 514 -->
 		<include>Global_ContextFilter</include>
 		<include condition="!Skin.HasSetting(Hide_MediaFlags)">MediaInfo</include>
 		<include condition="!Skin.HasSetting(Hide_ExtraMediaFlags)">MediaInfo2</include>
@@ -66,106 +63,6 @@
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<pulseonselect>false</pulseonselect>
-				</control>	
-				<control type="button" id="91">
-					<description>Banner Size is x1</description>
-					<width>340</width>
-					<height>40</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>METF_DialogLarge</font>
-					<label>$LOCALIZE[31286] $LOCALIZE[289] x2</label>
-					<textoffsetx>20</textoffsetx>
-					<textcolor>TextNF</textcolor>
-					<focusedcolor>DialogTextFO</focusedcolor>
-					<disabledcolor>TextDisabled</disabledcolor>
-					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<pulseonselect>false</pulseonselect>
-					<onclick>Skin.SetString(BannerX,2)</onclick>
-					<onclick>back</onclick>
-					<visible>Stringcompare(Skin.String(BannerX),1) | IsEmpty(Skin.String(BannerX))</visible>
-					<visible>Control.IsVisible(511)</visible>
-				</control>
-				<control type="button" id="92">
-					<description>Banner Size is x2</description>
-					<width>340</width>
-					<height>40</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>METF_DialogLarge</font>
-					<label>$LOCALIZE[31286] $LOCALIZE[289] x3</label>
-					<textoffsetx>20</textoffsetx>
-					<textcolor>TextNF</textcolor>
-					<focusedcolor>DialogTextFO</focusedcolor>
-					<disabledcolor>TextDisabled</disabledcolor>
-					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<pulseonselect>false</pulseonselect>
-					<onclick>Skin.SetString(BannerX,3)</onclick>
-					<onclick>back</onclick>
-					<visible>Stringcompare(Skin.String(BannerX),2)</visible>
-					<visible>Control.IsVisible(511)</visible>
-				</control>
-				<control type="button" id="93">
-					<description>Banner Size is x3</description>
-					<width>340</width>
-					<height>40</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>METF_DialogLarge</font>
-					<label>$LOCALIZE[31286] $LOCALIZE[289] x4</label>
-					<textoffsetx>20</textoffsetx>
-					<textcolor>TextNF</textcolor>
-					<focusedcolor>DialogTextFO</focusedcolor>
-					<disabledcolor>TextDisabled</disabledcolor>
-					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<pulseonselect>false</pulseonselect>
-					<onclick>Skin.SetString(BannerX,4)</onclick>
-					<onclick>back</onclick>
-					<visible>Stringcompare(Skin.String(BannerX),3)</visible>
-					<visible>Control.IsVisible(511)</visible>
-				</control>
-				<control type="button" id="94">
-					<description>Banner Size is x4</description>
-					<width>340</width>
-					<height>40</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>METF_DialogLarge</font>
-					<label>$LOCALIZE[31286] $LOCALIZE[289] x5</label>
-					<textoffsetx>20</textoffsetx>
-					<textcolor>TextNF</textcolor>
-					<focusedcolor>DialogTextFO</focusedcolor>
-					<disabledcolor>TextDisabled</disabledcolor>
-					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<pulseonselect>false</pulseonselect>
-					<onclick>Skin.SetString(BannerX,5)</onclick>
-					<onclick>back</onclick>
-					<visible>Stringcompare(Skin.String(BannerX),4)</visible>
-					<visible>Control.IsVisible(511)</visible>
-				</control>
-				<control type="button" id="95">
-					<description>Banner Size is x5</description>
-					<width>340</width>
-					<height>40</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>METF_DialogLarge</font>
-					<label>$LOCALIZE[31286] $LOCALIZE[289] x1</label>
-					<textoffsetx>20</textoffsetx>
-					<textcolor>TextNF</textcolor>
-					<focusedcolor>DialogTextFO</focusedcolor>
-					<disabledcolor>TextDisabled</disabledcolor>
-					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<pulseonselect>false</pulseonselect>
-					<onclick>Skin.SetString(BannerX,1)</onclick>
-					<onclick>back</onclick>
-					<visible>Stringcompare(Skin.String(BannerX),5)</visible>
-					<visible>Control.IsVisible(511)</visible>
 				</control>
 				<control type="button" id="3">
 					<description>Sort</description>
@@ -320,8 +217,6 @@
 		<include>Global_Time</include>
 		<include>Global_Heading</include>
 		<include>Global_MediaOverlay</include>
-		<include>NextAiredInfo</include>
 		<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>
-		<include condition="Skin.HasSetting(DebugMode)">Debug</include>
 	</controls>
 </window>

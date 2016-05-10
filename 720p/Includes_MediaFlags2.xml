@@ -100,7 +100,7 @@
 				</control>
 			</control>
 
-			<!-- Video Aspect-->
+			<!-- Video Aspect -->
 			<control type="group">
 				<width>90</width>
 				<height>62</height>
@@ -168,80 +168,11 @@
 				</control>
 			</control>
 
-			<!-- IMDB Votes -->			
-			<control type="group">
-				<width>90</width>
-				<height>62</height>
-				<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(MusicVideos)</visible>
-				<control type="label">
-					<posx>12</posx>
-					<posy>3</posy>
-					<width>80</width>
-					<height>20</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<label>205</label>
-					<textcolor>OSDProgressBar</textcolor>
-					<font>METF_Votes_Title</font>
-				</control>
-				<control type="label">
-					<posx>12</posx>
-					<posy>12</posy>
-					<width>80</width>
-					<height>40</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<label fallback="NA">$INFO[ListItem.Votes]</label>
-					<textcolor>MediaFlagDiffuse</textcolor>
-					<font>METF_Votes</font>
-				</control>
-				
-				<control type="image">
-					<width>104</width>
-					<height>54</height>
-					<texture>flags/flag_framesquare.png</texture>
-					<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
-				</control>
-			</control>
-			<!-- IMDB Votes Fullscreen video-->			
-			<control type="group">
-				<width>90</width>
-				<height>62</height>
-				<visible>![Container.Content(movies) | Container.Content(episodes) | Container.Content(MusicVideos)]</visible>
-				<control type="label">
-					<posx>12</posx>
-					<posy>3</posy>
-					<width>80</width>
-					<height>20</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<label>205</label>
-					<textcolor>OSDProgressBar</textcolor>
-					<font>METF_Votes_Title</font>
-				</control>
-				<control type="label">
-					<posx>12</posx>
-					<posy>12</posy>
-					<width>80</width>
-					<height>40</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<label fallback="NA">$INFO[VideoPlayer.Votes]</label>
-					<textcolor>MediaFlagDiffuse</textcolor>
-					<font>METF_Votes</font>
-				</control>
-				<control type="image">
-					<width>104</width>
-					<height>54</height>
-					<texture>flags/flag_framesquare.png</texture>
-					<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
-				</control>
-			</control>	
 			<!-- Audio Language and Subtitles : Flag=Audio Language, CC=has subtitles -->
 			<control type="group">
 				<width>58</width>
 				<height>62</height>
-				<visible>[!IsEmpty(ListItem.SubtitleLanguage) + IsEmpty(VideoPlayer.SubtitleLanguage)] | [IsEmpty(ListItem.SubtitleLanguage) + !IsEmpty(VideoPlayer.SubtitleLanguage)] | !IsEmpty(ListItem.AudioLanguage) + !Substring(ListItem.AudioLanguage,und) + !Substring(ListItem.AudioLanguage,unk)</visible>
+				<visible>[[!IsEmpty(ListItem.SubtitleLanguage) + IsEmpty(VideoPlayer.SubtitleLanguage)] | [IsEmpty(ListItem.SubtitleLanguage) + !IsEmpty(VideoPlayer.SubtitleLanguage)]] | [!IsEmpty(ListItem.AudioLanguage) + ![Substring(ListItem.AudioLanguage,und) | Substring(ListItem.AudioLanguage,unk)]]</visible>
 				<control type="image">
 					<posx>2</posx>
 					<width>66</width>
@@ -254,7 +185,7 @@
 					<left>6</left>
 					<width>60</width>
 					<height>55</height>
-					<texture background="true" diffuse="flags/nocc.png">$INFO[ListItem.AudioLanguage,flags/Subtitles/,.png]</texture>
+					<texture background="true" diffuse="flags/nocc.png">resource://resource.images.languageflags.colour/$INFO[ListItem.AudioLanguage].png</texture>
 					<aspectratio aligny="center" scalediffuse="true">stretch</aspectratio>
 					<visible>[IsEmpty(ListItem.SubtitleLanguage) + IsEmpty(VideoPlayer.SubtitleLanguage)] + !IsEmpty(ListItem.AudioLanguage) + !Substring(ListItem.AudioLanguage,und)</visible>
 				</control>
@@ -263,8 +194,8 @@
 					<left>6</left>
 					<width>60</width>
 					<height>55</height>
-					<texture background="true" diffuse="flags/cc.png">$INFO[ListItem.AudioLanguage,flags/Subtitles/,.png]</texture>
-					<visible>[[!IsEmpty(ListItem.SubtitleLanguage) + IsEmpty(VideoPlayer.SubtitleLanguage)] | [IsEmpty(ListItem.SubtitleLanguage) + !IsEmpty(VideoPlayer.SubtitleLanguage)]] + !IsEmpty(ListItem.AudioLanguage)</visible>
+					<texture background="true" diffuse="flags/cc.png">resource://resource.images.languageflags.colour/$INFO[ListItem.AudioLanguage].png</texture>
+					<visible>[[!IsEmpty(ListItem.SubtitleLanguage) + IsEmpty(VideoPlayer.SubtitleLanguage)] | [IsEmpty(ListItem.SubtitleLanguage) + !IsEmpty(VideoPlayer.SubtitleLanguage)]] + [!IsEmpty(ListItem.AudioLanguage) + ![Substring(ListItem.AudioLanguage,und) | Substring(ListItem.AudioLanguage,unk)]]</visible>
 					<aspectratio aligny="center" scalediffuse="true">stretch</aspectratio>
 				</control>
 				<control type="image">
@@ -273,64 +204,10 @@
 					<width>60</width>
 					<height>55</height>
 					<texture background="true">flags/cc.png</texture>
-					<visible>[[!IsEmpty(ListItem.SubtitleLanguage) + IsEmpty(VideoPlayer.SubtitleLanguage)] | [IsEmpty(ListItem.SubtitleLanguage) + !IsEmpty(VideoPlayer.SubtitleLanguage)]] + IsEmpty(ListItem.AudioLanguage)</visible>
+					<visible>[[!IsEmpty(ListItem.SubtitleLanguage) + IsEmpty(VideoPlayer.SubtitleLanguage)] | [IsEmpty(ListItem.SubtitleLanguage) + !IsEmpty(VideoPlayer.SubtitleLanguage)]] + [IsEmpty(ListItem.AudioLanguage) | [Substring(ListItem.AudioLanguage,und) | Substring(ListItem.AudioLanguage,unk)]]</visible>
 					<aspectratio aligny="center" scalediffuse="true">stretch</aspectratio>
 				</control>
 			</control>
-	
-			<!-- MPAA Flag (only shown in fullscreen video info) -->
-			<!--
-				XXX: this doesn't really belong with the other media flags.
-				commenting out for now until people complain about it.
-			<control type="group">
-				<width>58</width>
-				<height>62</height>
-				<visible>IsEmpty(ListItem.mpaa) + !IsEmpty(VideoPlayer.mpaa)</visible>
-				<control type="image">
-					<include>MediaFlagsVarsSquare</include>
-					<texture>$VAR[MediaFlag_MPAA]</texture>
-					<colordiffuse>MediaFlagDiffuse</colordiffuse>
-				</control>
-				<control type="image">
-					<posx>2</posx>
-					<width>66</width>
-					<height>54</height>
-					<texture>flags/flag_framesquare.png</texture>
-					<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
-				</control>
-			</control>
-			-->
-
-			<!-- Star Rating (only shown in fullscreen video info) -->
-			<!--
-				XXX: this doesn't really belong with the other media flags.
-				commenting out for now until people complain about it.
-			<control type="group">
-				<width>58</width>
-				<height>62</height>
-				<visible>IsEmpty(ListItem.Rating) + !IsEmpty(VideoPlayer.Rating)</visible>
-				<control type="image">
-					<include>MediaFlagsVarsSquare</include>
-					<texture>Star.png</texture>
-					<colordiffuse>RatingStarDiffuse</colordiffuse>
-				</control>
-				<control type="label">
-					<include>MediaFlagsVarsSquare</include>
-					<align>center</align>
-					<aligny>center</aligny>
-					<label fallback="NA">$INFO[VideoPlayer.Rating]</label>
-					<textcolor>MediaFlagDiffuse</textcolor>
-					<font>METF_StarRating</font>
-				</control>
-				<control type="image">
-					<posx>2</posx>
-					<width>66</width>
-					<height>54</height>
-					<texture>flags/flag_framesquare.png</texture>
-					<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
-				</control>
-			</control>
-			-->
 		</control>
 	</include>
 </includes>

@@ -58,6 +58,5 @@
 			<shadowcolor>FF000000</shadowcolor>
 			<font>METF_FontAMPM</font>
 		</control>
-		<include condition="Skin.HasSetting(DebugMode)">Debug</include>
 	</controls>
 </window>

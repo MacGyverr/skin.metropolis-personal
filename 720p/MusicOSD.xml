@@ -294,7 +294,7 @@
 					<texturefocus>osd/osd_button_vis_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_vis_nf.png</texturenofocus>
 					<enable>Visualisation.HasPresets</enable>
-					<onclick>ActivateWindow(122)</onclick>
+					<onclick>ActivateWindow(visualisationpresetlist)</onclick>
 				</control>
 				<control type="button" id="14">
 					<description>Visualisation Settings</description>
@@ -307,6 +307,5 @@
 			</control>
 		</control>
 		<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>
-		<include condition="Skin.HasSetting(DebugMode)">Debug</include>
 	</controls>
 </window>

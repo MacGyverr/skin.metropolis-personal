@@ -194,7 +194,7 @@
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<fadetime>300</fadetime>
 					<visible>Window.IsActive(videolibrary) + ![Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums) | Container.Content(addons)] + IsEmpty(ListItem.Title)</visible>
-				</control>	
+				</control>
 				<control type="image">
 					<posx>37</posx>
 					<posy>160</posy>
@@ -216,32 +216,17 @@
 					<fadetime>300</fadetime>
 					<visible>Container.Content(seasons) | Container.Content(episodes)</visible>
 				</control>
-				<control type="group">	
-					<visible>!Skin.HasSetting(CaseOveralys)</visible>
 				<!-- Frame for poster -->
-					<control type="image">
-						<posx>20</posx>
-						<posy>135</posy>
-						<width>335</width>
-						<height>490</height>
-						<texture>frames/ClassicFrame_PosterMedium.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<fadetime>300</fadetime>
-						<visible>[!IsEmpty(ListItem.Title) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)]] | [Container.Content(seasons) | Container.Content(episodes)]</visible>
-					</control>
+				<control type="image">
+					<posx>20</posx>
+					<posy>135</posy>
+					<width>335</width>
+					<height>490</height>
+					<texture>frames/ClassicFrame_PosterMedium.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>300</fadetime>
+					<visible>[!IsEmpty(ListItem.Title) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)]] | [Container.Content(seasons) | Container.Content(episodes)]</visible>
 				</control>
-				<!-- Media Type Case Overlays -->	
-				<control type="group">	
-					<visible>!IsEmpty(ListItem.Title) + Skin.HasSetting(CaseOveralys)</visible>		
-					<control type="image">
-						<posx>-22</posx>
-						<posy>118</posy>
-						<width>380</width>
-						<height>510</height>
-						<texture fallback="flags/Overlays/default.png">$VAR[MediaOverlay]</texture>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
-					</control>	
-				</control>	
 				<!-- Pictures, Addons, Music Videos, and Album/Artist Cover -->
 				<control type="image">
 					<posx>37</posx>
